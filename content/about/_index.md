@@ -5,7 +5,7 @@ template = "about.html"
 +++
 
 <p align="center">
-  <img src="about/me_selfi_2021.jpg" alt="selfi" width="400" height="400" title="Selfi">
+  <img src="/about/me_selfi_2021.jpg" alt="selfi" width="400" height="400" title="Selfi">
 </p>
 
 <h3 align="center">취미로 코딩하는 성형외과 전문의</h3>

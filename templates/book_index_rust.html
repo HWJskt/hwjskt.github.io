@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 
+{% block user_custom_stylesheet %}
+    {# TODO: book 의 css를 불러온 후, deep-thought의 css를 덮어썼다. #}
+    <link rel="stylesheet" href="{{ get_url(path='book.css') | safe }}">
+    <link rel="stylesheet" href="{{ get_url(path='deep-thought.css') | safe }}">
+    {# TODO: 본문형식을 맞춰본다 #}
+    <link rel="stylesheet" href="{{ get_url(path='newsprint.css') | safe }}">
+{% endblock %}
+
 {% block title %}
     {# TODO: 제목이 자동으로 나오면 좋겠다  #}
     {{ config.title }} | Rust
