@@ -1,0 +1,11 @@
+title = "Team"
+data = "2023-03-22"
+
+[Doctors]
+[Doctors.1]
+name = "Navin"
+image = "content/team/bio-photo.jpg"
+[Doctors.2]
+name = "Ishan"
+image = "content/team/bio-photo-2.jpg"
+

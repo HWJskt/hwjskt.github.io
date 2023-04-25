@@ -1,0 +1,9 @@
+{% macro post_list(arg) %}
+
+  <div>
+    {% for single_post in arg.pages %}
+      {{ single_post.title }}  {{ single_post.taxonomies.tags}} <br>
+    {% endfor %}
+  </div>
+
+{% endmacro %}

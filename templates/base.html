@@ -1,0 +1,17 @@
+{% extends "DeepThought/templates/base.html" %}
+
+{% block user_custom_stylesheet %}
+    {# TODO: book 의 css를 불러온 후, deep-thought의 css를 덮어썼다. #}
+    <link rel="stylesheet" href="{{ get_url(path='book.css') | safe }}">
+    <link rel="stylesheet" href="{{ get_url(path='deep-thought.css') }}">
+    {# TODO: 본문형식을 맞춰본다 #}
+    <link rel="stylesheet" href="{{ get_url(path='newsprint.css') | safe }}">
+{% endblock %}
+
+{% block title %}
+Dr.Jung
+{% endblock title %}
+
+
+{% block header %}
+{% endblock %}

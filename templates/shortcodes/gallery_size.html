@@ -1,0 +1,12 @@
+<div>
+  {% for asset in page.assets -%}
+    {%- if asset is matching("[.](jpg|png)$") -%}
+      {% set image = resize_image(path=asset, width=240, height=180) %}
+      <a>
+        {% set meta = get_image_metadata(path=asset) %}
+        {{ asset }} image (.{{meta.format}}) has format is {{ meta.width }}x{{ meta.height }}
+        <br>
+      </a>
+    {%- endif %}
+  {%- endfor %}
+</div>

@@ -1,0 +1,43 @@
+{% extends "book_index_rust.html" %}
+
+
+{% block book_content %}
+    <h1>{{ page.title }}</h1>
+    {{ page.content | safe }}
+{% endblock book_content %}
+
+{# section을 넘어가는 링크를 할때는 _index.md 경로를 지정해줘야한다.  #}
+{# set index = get_section(path="rust/_index.md") 여기서 rust/ 를 추가해주었다. #}
+
+{% block prev_link %}
+    {% if page.lower %}
+        <a class="previous" href="{{ page.lower.permalink }}"><</a>
+    {% else %}
+        {# No page before, find the link for the section it's in if there is one #}
+        {% set parent = get_section(path=page.ancestors | reverse | first) %}
+        <a class="previous" href="{{ parent.permalink }}"><</a>
+    {% endif %}
+{% endblock prev_link %}
+
+{% block next_link %}
+    {% if page.higher %}
+        <a class="next" href="{{ page.higher.permalink }}">></a>
+    {% else %}
+        {# No page after, find the link for the following section #}
+        {% set index = get_section(path="rust/_index.md") %}
+        {% set found_current = false %}
+        {% for s in index.subsections %}
+            {% set subsection = get_section(path=s) %}
+            {% if found_current %}
+                <a class="next" href="{{ subsection.permalink }}">></a>
+                {# no break #}
+                {% set_global found_current = false %}
+            {% endif %}
+            {% for p in subsection.pages %}
+                {% if p.permalink == page.permalink %}
+                    {% set_global found_current = true %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+{% endblock next_link %}
