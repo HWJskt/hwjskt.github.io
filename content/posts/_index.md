@@ -1,6 +1,6 @@
 +++
 title = "Posts"
-description = "포스트입니다."
+description = "개발관련 포스트입니다."
 sort_by = "date"
 paginate_by = 5
 template = "posts-section.html"

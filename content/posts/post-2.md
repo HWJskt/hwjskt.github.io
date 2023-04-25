@@ -1,6 +1,7 @@
 +++
 title="blog Deployment using Github Pages"
 date=2023-04-25
+template ="posts-page.html"
 
 [extra]
 toc = true

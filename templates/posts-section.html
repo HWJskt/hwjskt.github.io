@@ -9,6 +9,7 @@
   <div class="container">
     <div class="has-text-centered">
       <h1 class="title is-2">{{ section.title }}</h1>
+      <P> </P>
       <p class="subtitle is-4">{{ section.description }}</p>
     </div>
     <div class="content">
@@ -29,7 +30,8 @@
               {{ page.title }}
             </a>
           </h2>
-          <p class="subtitle">{{ page.description }}</p>
+          {# 아래를 주석처리하면 title 과 summery 사이에 공간이 생겨 보기가 좋다 #}
+          <!-- <p class="subtitle">{{ page.description }}</p> -->
 
           <div class="content mt-2">
             {{ page.summary | safe }}

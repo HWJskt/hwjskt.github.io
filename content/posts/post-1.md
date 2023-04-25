@@ -1,7 +1,7 @@
 +++
 title="테마 2가지 사용하기"
 date=2023-04-20
-
+template ="posts-page.html"
 [extra]
 toc = true
 
