@@ -1,4 +1,4 @@
-name: Zola on GitHub Pages
+name: Zola on GitHub Pages for Blog
 
 on:
   push:
