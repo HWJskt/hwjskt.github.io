@@ -19,7 +19,7 @@
 {% block content %}
     {# TODO: content block이 중복되서 book의 content 를 book_content 라는 블록으로 이름바꿈 #}
     <section>
-        <div class="menu is-2 is-hidden-mobile-book">
+        <div class="menu is-2">
             {% block before_menu %}
             {% endblock before_menu %}
             <aside role="navigation">
@@ -99,10 +99,27 @@
 
         {% block js_body %}
             {% if config.build_search_index %}
-            <script type="text/javascript" src="{{ get_url(path='elasticlunr.min.js') | safe }}"></script>
-            <script type="text/javascript" src="{{ get_url(path='search_index.en.js') | safe }}"></script>
+                <script type="text/javascript" src="{{ get_url(path='elasticlunr.min.js') | safe }}"></script>
+                <script type="text/javascript" src="{{ get_url(path='search_index.en.js') | safe }}"></script>
             {% endif %}
             <script type="text/javascript" src="{{ get_url(path='book.js') | safe }}"></script>
+
+            {# TODO: 화면 넓이가 600이 되면 menu 가 사라지고, page 가 넓어지게 바꾸는 기능 #}
+            <script>
+                var divMenuElement = document.querySelector("div.menu");
+                var divPageElement = document.querySelector("div.page");
+          
+                window.addEventListener("resize", function() {
+                  if (window.innerWidth <= 600) {
+                    divMenuElement.classList.add("menu-hidden");
+                    divPageElement.classList.add("page-without-menu");
+                  } else {
+                    divMenuElement.classList.remove("menu-hidden");
+                    divPageElement.classList.remove("page-without-menu");
+                  }
+                });
+              </script>
+
         {% endblock js_body %}
         </div>
     </section>
