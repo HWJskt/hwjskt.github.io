@@ -14,18 +14,15 @@
 {% endblock title %}
 
 {% block header %}
-
 {% endblock %}
 
 {% block content %}
     {# TODO: content block이 중복되서 book의 content 를 book_content 라는 블록으로 이름바꿈 #}
-    <body>
-        <div class="menu">
+    <section>
+        <div class="menu is-2 is-hidden-mobile-book">
             {% block before_menu %}
-            {# lt.side menu 가 상단 navbar에 가리지 않게 내린다  #}
-            <div><br><br><br></div>
             {% endblock before_menu %}
-            <nav role="navigation">
+            <aside role="navigation">
                 <ul>
                     {% block menu %}
                         {% set index = get_section(path="rust/_index.md") %}
@@ -56,14 +53,12 @@
                         {% endfor %}
                     {% endblock menu %}
                 </ul>
-            </nav>
+            </aside>
             {% block after_menu %}
             {% endblock after_menu %}
         </div>
 
         <div class="page">
-            {# page 의 주 내용 위치를 nav bar와 겹치지 않게 위치 수정  #}
-            <div><br><br><br></div>
             <div class="page__header">
                 <div class="menu-icon">
                     <span></span>
@@ -109,6 +104,7 @@
             {% endif %}
             <script type="text/javascript" src="{{ get_url(path='book.js') | safe }}"></script>
         {% endblock js_body %}
-    </body>
+        </div>
+    </section>
 
 {% endblock content %}

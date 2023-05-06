@@ -1,25 +1,27 @@
 @charset "utf-8";
 
-@import "book_normalize";
+// normalize 는 불필요
+// @import "book_normalize";
 
-* {
-  box-sizing: border-box;
-}
+// 아래 내용이 있으면 nav 가 달라져 해당 메뉴 클릭하면 메뉴 글꼴이 달라진다.
+// * {
+//   box-sizing: border-box;
+// }
 
-html {
-  font-size: 62.5%;
-}
+// html {
+//   font-size: 62.5%;
+// }
 
-body, html {
-  height: 100%;
-}
+// body, html {
+//   height: 100%;
+// }
 
-body {
-  text-rendering: optimizeLegibility;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.2px;
-}
+// body {
+//   text-rendering: optimizeLegibility;
+//   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+//   font-size: 14px;
+//   letter-spacing: 0.2px;
+// }
 
 
 @mixin min-screen($min-width: $body-width) {
@@ -40,3 +42,11 @@ $sidebar-width: 300px;
 @import "book_header";
 @import "book_content";
 
+
+// 개인 내용 추가
+@media screen and (max-width: 768px) {
+  .page {
+    width: 100%;
+    left: 0 px;
+  }
+}
