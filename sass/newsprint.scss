@@ -95,16 +95,62 @@ ol li {
 	list-style-type: decimal;
 	list-style-position: outside;
 }
-// 주석 해제하면 앞에 점이 붙는다.
-// ul li {
-// 	list-style-type: disc;
-// 	list-style-position: outside;
-// }
+
+ul li {
+	list-style-type: disc;
+	list-style-position: outside;
+}
 
 ol,
 ul {
 	list-style: none;
 }
+
+// book 테마의 오른쪽 메뉴 css를 다시 정의
+.bookmenu {
+	height: 100%;
+	position: absolute;
+	left: 0;
+	overflow-y: auto;
+	width: 300px;
+	color: #364149;
+	background: #fafafa;
+	border-right: 1px solid rgba(0, 0, 0, 0.07);
+	transition: 0.5s;
+  
+	ul {
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+  
+	  a {
+		display: block;
+		color: #364149;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		text-decoration: none;
+		padding: 10px 15px;
+  
+		&:hover {
+		  text-decoration: underline;
+		}
+	  }
+	  
+	  li {
+		list-style: none
+	  }
+
+	  li.active > a {
+		color: #008cff;
+		text-decoration: none;
+	  }
+  
+	  ul {
+		padding-left: 20px;
+	  }
+	}
+  }
 
 blockquote,
 q {
@@ -197,6 +243,7 @@ h5,
 h6 {
 	margin-bottom: 1.5em;
 }
+
 /* blockquote */
 
 blockquote {
@@ -205,12 +252,14 @@ blockquote {
 	margin-left: 2em;
 	padding-left: 1em;
 }
+
 /* lists */
 
 ul,
 ol {
 	margin: 0 0 1.5em 1.5em;
 }
+
 /* tables */
 .md-meta,.md-before, .md-after {
 	color:#999;
