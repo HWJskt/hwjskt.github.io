@@ -1,4 +1,4 @@
-@mixin menu-icon() {
+@mixin book-menu-icon() {
   @keyframes clickfirst {
     0% {
       transform: translateY(6px) rotate(0deg);
@@ -124,7 +124,7 @@
 .page__header {
   height: 50px;
 
-  .menu-icon {
+  .book-menu-icon {
     height: 50px;
     width: 50px;
     font-size: 24px;
@@ -135,7 +135,7 @@
     transition: background .5s;
     cursor: pointer;
 
-    @include menu-icon();
+    @include book-menu-icon();
 
     &:hover {
       span {
@@ -144,7 +144,7 @@
     }
   }
 
-  .search-icon {
+  .book-search-icon {
     height: 50px;
     width: 50px;
     position: relative;

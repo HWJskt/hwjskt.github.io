@@ -10,7 +10,7 @@ template ="book_page_rust.html"
 - cargo : Rust의 build system, package manager  
 
 - `$ cargo new hello_cargo` 명령어를 실행하면 hello_cargo 폴더만들고, 그안에 git 도 설치됩니다. 실행하면 다음과 같은 파일 구조가 만들어집니다.  
-
+  
 ``` 
 ├── .git
 ├── .gitignore
@@ -53,6 +53,8 @@ Cargo는 Rust의 빌드 시스템이자 패키지 관리자입니다. 대부분�
 
 대부분의 Rust 프로젝트가 Cargo를 사용하기 때문에 이 책의 나머지 부분에서도 Cargo를 사용하고 있다고 가정합니다. Cargo는 [설치](https://doc.rust-lang.org/book/ch01-01-installation.html#installation) 섹션에서 논의된 공식 설치 프로그램을 사용한 경우 Rust와 함께 설치됩니다. 다른 방법으로 Rust를 설치했다면, 터미널에 다음을 입력하여 Cargo가 설치되어 있는지 확인하세요:
 
+<br>
+
 ```
 $ cargo --version
 ```
@@ -72,6 +74,8 @@ $ cd hello_cargo
 
 *첫 번째 명령은 hello_cargo* 라는 새 디렉터리와 프로젝트를 만듭니다. 우리는 프로젝트 이름을 *hello_cargo* 로 지정 했고, Cargo는 같은 이름의 디렉토리에 파일을 생성합니다.
 
+<br>
+
 *hello_cargo* 디렉토리 로 이동하여 파일을 확인해보십시오. Cargo가 우리를 위해 두 개의 파일과 하나의 디렉토리를 생성한 것을 볼 수 있습니다: 
 
 ```
@@ -86,6 +90,8 @@ $ cd hello_cargo
 또한 *.gitignore* 파일과 함께 새로운 Git 리포지토리를 초기화했습니다. 기존 Git 리포지토리 내에서 `cargo new`실행하는 경우 Git 파일이 생성되지 않습니다. `cargo new --vcs=git` 를 사용하여 이 동작을 재정의할 수 있습니다 
 
 > 참고: Git은 일반적인 버전 제어 시스템입니다.  `--vcs`플래그 를 사용하여 `cargo new` 를 바꿀 수 있습니다. 그러면 다른 버전 제어 시스템을 사용하거나, 버전 제어 시스템을 사용하지 않도록 변경할 수 있습니다. 사용 가능한 옵션을 보려면 `cargo new --help`실행하십시오.  
+
+<br>
 
 텍스트 편집기에서 *Cargo.toml* 을 엽니다. 목록 1-2의 코드와 유사해야 합니다.
 
@@ -110,6 +116,8 @@ Listing 1-2: `cargo new`에 의해 생성된 *Cargo.toml 의 내용*
 다음 세 줄은 Cargo가 프로그램을 컴파일하는 데 필요한 구성 정보(사용할 Rust의 name, version 및 edition)를 설정합니다. [부록 E](https://doc.rust-lang.org/book/appendix-05-editions.html)에서 `edition` 키 에 대해 이야기하겠습니다.  
 마지막 줄의 `[dependencies]` 는 프로젝트의 종속성을 나열하는 섹션의 시작 부분입니다. Rust에서는 코드 패키지를 *크레이트(crates)* 라고 합니다. 이 프로젝트에는 다른 크레이트가 필요하지 않지만, 2장의 첫 번째 프로젝트에는 필요할 것이므로, 이 [dependencies] 섹션을 사용할 것입니다.
 
+<br>
+
 이제 src/main.rs를 열고 살펴보십시오.  
 파일 이름: src/main.rs  
 
@@ -128,6 +136,8 @@ fn main() {
 ```
 
 *Cargo는 소스 파일이 src* 디렉토리 안에 있을 것으로 예상합니다. 최상위 프로젝트 디렉토리는 README 파일, 라이센스 정보, 구성 파일 및 코드와 관련되지 않은 모든 항목을 위한 것입니다. Cargo를 사용하면 프로젝트를 정리하는 데 도움이 됩니다. 모든 것은 그것을 위한 장소가 있고, 모든 것이 제자리에 있습니다.  
+
+<br>
 
 이전 장의 "Hello, world!"에서 했던 것처럼 Cargo를 사용하지 않고 프로젝트를 시작한 경우, 프로젝트에서 Cargo를 사용하는 프로젝트로 변환할 수 있습니다. 프로젝트 코드를 *src* 디렉토리로 이동하고 적절한 *Cargo.toml* 파일을 생성합니다.
 
@@ -160,6 +170,8 @@ $ cargo build
         └── incremental
 ```
 
+<br>
+
 다음 명령으로 실행 파일을 실행할 수 있습니다.  
 
 ```
@@ -168,6 +180,8 @@ Hello, world!
 ```
 
 모든 것이 잘 되었으면 터미널에 `Hello, world!` 가 인쇄되어야 합니다. 처음으로 `cargo build`실행하면 Cargo가 최상위 레벨에 새 파일인 *Cargo.lock* 을 생성하게 됩니다. 이 파일은 프로젝트의 정확한 종속성 버전을 추적합니다. 이 프로젝트에는 종속성이 없으므로 파일이 약간 희박합니다. 이 파일을 수동으로 변경할 필요가 없습니다. Cargo는 당신을 위해 내용물을 관리합니다.  
+
+<br>
 
 방금 `cargo build`로 프로젝트를 빌드하고, `./target/debug/hello_cargo`를 사용하여 실행했습니다.  그런데 `cargo run` 이라는 하나의 명령어를 사용해서 코드를 컴파일한 다음 실행할 수 도 있습니다.   
 
@@ -190,6 +204,8 @@ $ cargo run
 Hello, world!
 ```
 
+<br>
+
 Cargo는 `cargo check`이라는 명령도 제공합니다. 이 명령은 코드를 신속하게 검사하여 컴파일되는지 확인합니다. 하지만 실행 파일을 생성하지는 않습니다.
 
 ```
@@ -207,6 +223,7 @@ Cargo에 대해 지금까지 배운 내용을 요약해 보겠습니다.
 - `cargo run`을 사용하여 한 번에 프로젝트를 빌드하고 실행할 수 있습니다.  
 - `cargo check`을 사용하여 바이너리를 생성하지 않고 오류를 확인하기 위해 프로젝트를 빌드할 수 있습니다.  
 - Cargo는 빌드 결과를 코드와 같은 디렉토리에 저장하지 않고,  *target/debug* 디렉토리에 저장합니다.  
+
 
 Cargo 사용의 또 다른 이점은 작업 중인 운영 체제에 관계없이 명령이 동일하다는 것입니다. 따라서 이제부터 Linux,  macOS 대 Windows에 대한 특정 지침을 더 이상 제공하지 않습니다.
 

@@ -1,10 +1,24 @@
 function initToggleMenu() {
-  var $menu = document.querySelector(".menu");
-  var $menuIcon = document.querySelector(".menu-icon");
+  var $menu = document.querySelector(".book-menu");
+  var $menuIcon = document.querySelector(".book-menu-icon");
   var $page = document.querySelector(".page");
   $menuIcon.addEventListener("click", function() {
     $menu.classList.toggle("menu-hidden");
     $page.classList.toggle("page-without-menu");
+  });
+
+  // 화면 넓이가 600이 되면 menu 가 사라지고, page 가 넓어지게 바꾸는 기능
+  var divMenuElement = document.querySelector("div.book-menu");
+  var divPageElement = document.querySelector("div.page");
+
+  window.addEventListener("resize", function() {
+    if (window.innerWidth <= 600) {
+      divMenuElement.classList.add("menu-hidden");
+      divPageElement.classList.add("page-without-menu");
+    } else {
+      divMenuElement.classList.remove("menu-hidden");
+      divPageElement.classList.remove("page-without-menu");
+    }
   });
 }
 
@@ -160,7 +174,7 @@ function initSearch() {
   if (!$searchInput) {
     return;
   }
-  var $searchIcon = document.querySelector(".search-icon");
+  var $searchIcon = document.querySelector(".book-search-icon");
   $searchIcon.addEventListener("click", toggleSearchMode);
 
   var $searchResults = document.querySelector(".search-results");
@@ -221,3 +235,5 @@ if (document.readyState === "complete" ||
     initSearch();
   });
 }
+
+

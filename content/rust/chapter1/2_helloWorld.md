@@ -29,6 +29,8 @@ template ="book_page_rust.html"
 Rust 코드를 저장할 디렉토리를 만드는 것으로 시작합니다. 당신의 코드가 어디에 있는지는 Rust에게 중요하지 않지만 이 책의 연습과 프로젝트를 위해 우리는 당신의 홈 디렉토리에 *프로젝트* 디렉토리를 만들고 거기에 모든 프로젝트를 보관할 것을 제안합니다.  
 터미널을 열고 다음 명령을 입력하여 *projects* 디렉토리를 만들고, *projects* 디렉토리 내에 "Hello, world!" 프로젝트 디렉토리인 *hello_world* 디렉토리를 만듭니다.  
 
+<br>
+
 Windows의 Linux, macOS 및 PowerShell의 경우 다음을 입력합니다.  
 
 ```
@@ -52,10 +54,10 @@ Windows CMD의 경우 다음을 입력합니다.
 
 ### [Rust 프로그램 작성 및 실행](https://doc.rust-lang.org/book/ch01-02-hello-world.html#writing-and-running-a-rust-program)
 
-다음으로 새 소스 파일을 만들고 이름을 *main.rs* 로 지정합니다. Rust 파일은 항상 *.rs* 확장자로 끝납니다. 파일 이름에 두 개 이상의 단어를 사용하는 경우 규칙은 밑줄을 사용하여 구분하는 것입니다. 예를 들어 *helloworld.rs* 대신 *hello_world.rs* 를 사용합니다.
-
+다음으로 새 소스 파일을 만들고 이름을 *main.rs* 로 지정합니다. Rust 파일은 항상 *.rs* 확장자로 끝납니다. 파일 이름에 두 개 이상의 단어를 사용하는 경우 규칙은 밑줄을 사용하여 구분하는 것입니다. 예를 들어 *helloworld.rs* 대신 *hello_world.rs* 를 사용합니다.  
 이제 방금 만든 *main.rs* 파일을 열고 Listing 1-1의 코드를 입력합니다.
 
+<br>
 
 파일명: main.rs
 
@@ -66,6 +68,8 @@ fn main() {
 ```
 
 목록 1-1: `Hello, world!` 를 프린트하는 프로그램
+
+<br>
 
 파일을 저장하고 *~/projects/hello_world* 디렉터리의 터미널 창으로 돌아갑니다. Linux 또는 macOS에서 다음 명령을 입력하여 파일을 컴파일하고 실행합니다.
 
@@ -134,6 +138,8 @@ $ rustc main.rs
 ```
 
 C 또는 C++ 배경 지식이 있는 경우 이것이 `gcc` 또는 `clang`와 유사하다는 것을 알 수 있습니다. 성공적으로 컴파일한 후 Rust는 바이너리 실행 파일을 생성합니다.  
+  
+<br>
 
 Linux, macOS 및 Windows의 PowerShell에서는 셸에 `ls` 명령을 입력하여 실행 파일을 볼 수 있습니다.
 
@@ -142,7 +148,11 @@ $ ls
 > main  main.rs
 ```
 
-Linux 및 macOS에서는 두 개의 파일이 표시됩니다. Windows에서 PowerShell을 사용하면 CMD를 사용하여 볼 수 있는 것과 동일한 세 개의 파일이 표시됩니다. Windows에서 CMD를 사용하면 다음을 입력합니다.
+Linux 및 macOS에서는 두 개의 파일이 표시됩니다. 
+
+<br>
+
+Windows에서 PowerShell을 사용하면 CMD를 사용하여 동일한 세 개의 파일을 확인할 수 있습니다. Windows에서 CMD를 사용하면 다음을 입력합니다.
 
 ```
 > dir /B %= the /B option says to only show the file names =%
@@ -151,7 +161,11 @@ main.pdb
 main.rs
 ```
 
-여기에는 확장자가 *.rs* 인 소스 코드 파일, 실행 파일( Windows에서는 *main.exe*, 다른 모든 플랫폼에서는 *main*), Windows를 사용하는 경우 확장자가 *.pdb* 인 디버깅 정보가 포함된 파일이 표시됩니다. 여기에서 다음과 같이 *main* 또는 *main.exe* 파일을 실행합니다.
+여기에는 확장자가 *.rs* 인 소스 코드 파일, 실행 파일( Windows에서는 *main.exe*, 다른 모든 플랫폼에서는 *main*), Windows를 사용하는 경우 확장자가 *.pdb* 인 디버깅 정보가 포함된 파일이 표시됩니다. 
+
+<br>
+
+여기에서 다음과 같이 *main* 또는 *main.exe* 파일을 실행합니다.
 
 ```
 $ ./main (Linux 및 macOS)
@@ -160,7 +174,11 @@ $ ./main (Linux 및 macOS)
 
 *main.rs* 가 "Hello, world!"프로그램인 경우,  `Hello, world!` 가 터미널에 인쇄됩니다.  
 
+<br>
+
 Ruby, Python 또는 JavaScript와 같은 동적 언어에 더 익숙한 경우 별도의 단계로 프로그램을 컴파일하고 실행하는 데 익숙하지 않을 수 있습니다.  
 Rust는 *미리 컴파일된* 언어입니다. 즉, 프로그램을 컴파일하고 다른 사람에게 실행 파일을 제공할 수 있으며 Rust가 설치되지 않은 상태에서도 실행할 수 있습니다. 누군가에게 *.rb* , *.py* 또는 *.js* 파일을 제공하는 경우 Ruby, Python 또는 JavaScript 구현이 각각 설치되어 있어야 합니다. 그러나 이러한 언어에서는 프로그램을 컴파일하고 실행하는 데 하나의 명령만 필요합니다. 언어 설계에서는 모든 것이 트레이드 오프입니다.
+
+<br>
 
  `rustc`로 간단하게 컴파일하는 것은 간단한 프로그램에 적합하지만 프로젝트가 커짐에 따라 모든 옵션을 관리하고 코드를 쉽게 공유할 수 있게 만들고 싶을 것입니다. 다음으로 실제 Rust 프로그램을 작성하는 데 도움이 되는 Cargo 도구를 소개합니다.
