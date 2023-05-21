@@ -8,15 +8,64 @@ template ="book_section_rust.html"
 
 ## 요약
 
-- 크레이트 : Rust 소스 코드 파일의 모음
+- 프로젝트 생성 : `cargo new 프로젝트이름`
 
-- 레지스트리 : [Crates.io](https://crates.io/) 의 데이터 사본 
+  <br>
 
-- Crates.io : 사람들이 오픈 소스 Rust 프로젝트를 게시하는 곳
+- 표준 라이브러리를 가져오는 명령어 :
+
+  - `use std::라이브러리이름`
+  - `use std::메소드이름::타입이름`
+
+- 크레이트를 가져오는 명령어 : `use 크레이트이름::트레잇이름`
+
+  - 크레이트 : Rust 소스 코드 파일의 모음
+
+  - 트레잇 : 크레이트에 포함된 메서드(하나 또는 여러개)
+
+  - 레지스트리 : [Crates.io](https://crates.io/) 의 데이터 사본 
+
+  - Crates.io : 사람들이 오픈 소스 Rust 프로젝트를 게시하는 곳
+
+  <br>
+
+- 변수생성 :
+
+  - `let 변수이름` : 변경불가능 
+
+  - `let mut 변수이름` : 변경가능
+
+  - `let 변수이름 : 타입`, `let mut 변수이름 : 타입` : 타입명시
+
+  - `let mut 변수이름 = String::new()` : 빈 문자열 변수 생성
+
+- 변수이름은 재사용(덮어쓰기, shadowing) 가능
+
+  <br>
+
+- `match, cmp`, `loop, break` 를 사용할 수 있다.
+
+  <br>
+
+- 일부 메서드는 "결과값"과 "Result 타입"을 함께 반환
+
+  - Result 타입 : 여러가지 변형(variant, 종류라고 이해하면 될듯)을 가지는 열거형(enumeration)
+
+  - Result 타입의 variant : Ok(T) 와 Err(E) 
+
+<br>
+
+- 오류해결
+  - Result 를 반환하는 메소드 뒤에 `.expect`를 붙인다
+  - `메소드().expect("메세지")` : 메소드에서 반환하는 Result 타입의 variant가 Err 이면, 메세지 출력후 프로그램 중단
 
 
 
 <!-- more -->
+
+# [추리게임 프로그래밍](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html#programming-a-guessing-game)
+
+
 
 함께 실습 프로젝트를 통해 Rust에 뛰어들어 봅시다! 이 장에서는 실제 프로그램에서 사용하는 방법을 보여줌으로써 몇 가지 일반적인 Rust 개념을 소개합니다. `let`, `match`, 메서드, 관련 함수, 외부 크레이트 등에 대해 배우게 됩니다! 다음 장에서는 이러한 아이디어에 대해 자세히 살펴보겠습니다. 이 장에서는 기본 사항만 연습합니다.
 
