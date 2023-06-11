@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='&#x2F;icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='&#x2F;icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" integrity="sha384-oGm59HWAkwO32h2w8u0B98wKBZJwd6MbWtAJwQKCTffZjOXHXrnyv9Syjovgc+UV" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://hwjskt.github.io/deep-thought.css" rel="stylesheet" />
+  
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/book.css">
+    <link rel="stylesheet" href="https://hwjskt.github.io/deep-thought.css">
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/newsprint.css">
+
+
+  <title>
+    
+    
+    Dr.JUNG | Rust
+
+  </title>
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176984489-2"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-176984489-2");
+  </script>
+  
+  
+
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;">Dr.JUNG</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;about">
+            AboutMe
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;docs">
+            Docs
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;rust">
+            Rust
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  
+    
+    <section>
+        <div class="book-menu is-2">
+            
+            
+            <aside role="navigation">
+                <ul>
+                    
+                        
+                        
+                        <li >
+                            <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;">Introduction</a>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;">
+                                    <strong>1.</strong>
+                                    Getting Started
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;1-installation&#x2F;">
+                                                    <strong>1.1.</strong>
+                                                    Installation
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;2-helloworld&#x2F;">
+                                                    <strong>1.2.</strong>
+                                                    Hello, World!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;3-hellocargo&#x2F;">
+                                                    <strong>1.3.</strong>
+                                                    Hello, Cargo!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter2&#x2F;">
+                                    <strong>2.</strong>
+                                    Programming a Guessing Game
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;">
+                                    <strong>3.</strong>
+                                    Common Programming Concepts
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;1-variables-and-mutability&#x2F;">
+                                                    <strong>3.1.</strong>
+                                                    Variables and Mutability
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;2-data-types&#x2F;">
+                                                    <strong>3.2.</strong>
+                                                    Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;3-functions&#x2F;">
+                                                    <strong>3.3.</strong>
+                                                    Functions
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;4-comments&#x2F;">
+                                                    <strong>3.4.</strong>
+                                                    Comments
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;5-control-flow&#x2F;">
+                                                    <strong>3.5.</strong>
+                                                    Control Flow
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;hwaryopyosi&#x2F;">
+                                                    <strong>3.6.</strong>
+                                                    ## 여기까지 정리완료 ##
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;">
+                                    <strong>4.</strong>
+                                    Understanding Ownership
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;1-what-is-ownership&#x2F;">
+                                                    <strong>4.1.</strong>
+                                                    What is Ownership?
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;2-references-and-borrowing&#x2F;">
+                                                    <strong>4.2.</strong>
+                                                    References and Borrowing
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;3-the-slice-type&#x2F;">
+                                                    <strong>4.3.</strong>
+                                                    The Slice Type
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;">
+                                    <strong>5.</strong>
+                                    Using Structs to Structure Related Data
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;1-defining-and-instantiating-structs&#x2F;">
+                                                    <strong>5.1.</strong>
+                                                    Defining and Instantiating Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;2-an-example-program-using-structs&#x2F;">
+                                                    <strong>5.2.</strong>
+                                                    An Example Program Using Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;3-method-syntax&#x2F;">
+                                                    <strong>5.3.</strong>
+                                                    Method Syntax
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;">
+                                    <strong>6.</strong>
+                                    Enums and Pattern Matching
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;1-defining-an-enum&#x2F;">
+                                                    <strong>6.1.</strong>
+                                                    Defining an Enum
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;2-the-match-control-flow-construct&#x2F;">
+                                                    <strong>6.2.</strong>
+                                                    The match Control Flow Construct
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;3-concise-control-flow-with-if-let&#x2F;">
+                                                    <strong>6.3.</strong>
+                                                    Concise Control Flow with if let.md
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;">
+                                    <strong>7.</strong>
+                                    Managing Growing Projects with Packages, Crates, and Modules
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;1-packages-and-crates&#x2F;">
+                                                    <strong>7.1.</strong>
+                                                    Packages and Crates
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;2-defining-modules-to-control-scope-and-privacy&#x2F;">
+                                                    <strong>7.2.</strong>
+                                                    Defining Modules to Control Scope and Privacy
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;3-paths-for-referring-to-an-item-in-the-module-tree&#x2F;">
+                                                    <strong>7.3.</strong>
+                                                    Paths for Referring to an Item in the Module Tree
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;4-bringing-paths-into-scope-with-the-use-keyword&#x2F;">
+                                                    <strong>7.4.</strong>
+                                                    Bringing Paths Into Scope with the use Keyword
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;5-separating-modules-into-different-files&#x2F;">
+                                                    <strong>7.5.</strong>
+                                                    Separating Modules into Different Files
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;">
+                                    <strong>8.</strong>
+                                    Common Collections
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;1-storing-lists-of-values-with-vectors&#x2F;">
+                                                    <strong>8.1.</strong>
+                                                    Storing Lists of Values with Vectors
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;">
+                                                    <strong>8.2.</strong>
+                                                    Storing UTF-8 Encoded Text with Strings
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;3-storing-keys-with-associated-values-in-hash-maps&#x2F;">
+                                                    <strong>8.3.</strong>
+                                                    Storing Keys with Associated Values in Hash Maps
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter9&#x2F;">
+                                    <strong>9.</strong>
+                                    Error Handling
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter9&#x2F;1-unrecoverable-errors-with-panic&#x2F;">
+                                                    <strong>9.1.</strong>
+                                                    Unrecoverable Errors with panic!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter9&#x2F;2-recoverable-errors-with-result&#x2F;">
+                                                    <strong>9.2.</strong>
+                                                    Recoverable Errors with Result
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter9&#x2F;3-to-panic-or-not-to-panic&#x2F;">
+                                                    <strong>9.3.</strong>
+                                                    To panic! or Not to panic!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter10&#x2F;">
+                                    <strong>10.</strong>
+                                    Generic Types, Traits, and Lifetimes
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter10&#x2F;1-generic-data-types&#x2F;">
+                                                    <strong>10.1.</strong>
+                                                    Generic Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="active">
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter10&#x2F;2-traits-defining-shared-behavior&#x2F;">
+                                                    <strong>10.2.</strong>
+                                                    Traits: Defining Shared Behavior
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter10&#x2F;3-validating-references-with-lifetimes&#x2F;">
+                                                    <strong>10.3.</strong>
+                                                    Validating References with Lifetimes
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter22&#x2F;">
+                                    <strong>11.</strong>
+                                    *** 목차들 ***
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter99&#x2F;">
+                                    <strong>12.</strong>
+                                     
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter99&#x2F;1&#x2F;">
+                                                    <strong>12.1.</strong>
+                                                     
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter99&#x2F;2&#x2F;">
+                                                    <strong>12.2.</strong>
+                                                     
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter99&#x2F;3&#x2F;">
+                                                    <strong>12.3.</strong>
+                                                     
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter11-17&#x2F;">
+                                    <strong>13.</strong>
+                                    11-17
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter11-17&#x2F;trans&#x2F;">
+                                                    <strong>13.1.</strong>
+                                                    11-17 translation
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter17-21&#x2F;">
+                                    <strong>14.</strong>
+                                    18-21
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter17-21&#x2F;trans&#x2F;">
+                                                    <strong>14.1.</strong>
+                                                    18-21 translation
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </aside>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="book-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="book-search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <h1>Traits: Defining Shared Behavior</h1>
+    <h2 id="yohya">요약</h2>
+<h2 id="teugsseon-ggonyu-haengddon-jjeonyi"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch10-02-traits.html#traits-defining-shared-behavior">특성: 공유 행동 정의</a></h2>
+<p><em>특성은</em> 특정 유형이 가지고 있고 다른 유형과 공유할 수 있는 기능을 정의합니다. 특성을 사용하여 추상적인 방식으로 공유 동작을 정의할 수 있습니다. <em>특성 경계를</em> 사용하여 제네릭 유형이 특정 동작이 있는 모든 유형이 될 수 있음을 지정할 수 있습니다.</p>
+<blockquote>
+<p>참고: 특성은 약간의 차이는 있지만 종종 다른 언어에서 <em>인터페이스</em> 라고 하는 기능과 유사합니다.</p>
+</blockquote>
+<h3 id="teugsseon-jjeonyi"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch10-02-traits.html#defining-a-trait">특성 정의</a></h3>
+<p>유형의 동작은 해당 유형에서 호출할 수 있는 메서드로 구성됩니다. 모든 유형에서 동일한 메서드를 호출할 수 있는 경우 다른 유형은 동일한 동작을 공유합니다. 특성 정의는 어떤 목적을 달성하는 데 필요한 일련의 동작을 정의하기 위해 메서드 서명을 함께 그룹화하는 방법입니다.</p>
+<p>예를 들어 다양한 종류와 양의 텍스트를 포함하는 여러 구조체가 있다고 가정해 보겠습니다. <code>NewsArticle</code>특정 위치에 보관된 뉴스 기사를 포함하는 구조체와 <code>Tweet</code>새 트윗인지 여부를 나타내는 메타데이터와 함께 최대 280자를 포함할 수 있는 구조체가 있습니다. , 리트윗 또는 다른 트윗에 대한 답글.</p>
+<p>또는 인스턴스 <code>aggregator</code>에 저장될 수 있는 데이터의 요약을 표시할 수 있는 이름이 지정된 미디어 수집기 라이브러리 크레이트를 만들고 싶습니다. 이렇게 하려면 각 유형의 요약이 필요하며 인스턴스에서 메서드를 호출하여 해당 요약을 요청합니다. 목록 10-12는 이 동작을 표현하는 공개 특성의 정의를 보여줍니다.<code>NewsArticle``Tweet``summarize``Summary</code></p>
+<p>파일 이름: src/lib.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">pub trait </span><span style="color:#abb2bf;">Summary {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">summarize</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">) -&gt; String;
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>Listing 10-12: 메서드가 <code>Summary</code>제공하는 동작으로 구성된 트레이트<code>summarize</code></p>
+<p>여기에서 우리는 키워드를 사용하여 특성을 선언 한 다음 이 경우 <code>trait</code>특성의 이름을 사용합니다. 우리는 또한 몇 가지 예에서 볼 수 있듯이 이 상자에 의존하는 상자가 이 특성을 사용할 수 있도록 <code>Summary</code>특성을 로 선언했습니다. <code>pub</code>중괄호 안에는 이 특성을 구현하는 유형의 동작을 설명하는 메서드 서명을 선언합니다. 이 경우에는 <code>fn summarize(&amp;self) -&gt; String</code>.</p>
+<p>메서드 서명 뒤에 중괄호 안에 구현을 제공하는 대신 세미콜론을 사용합니다. 이 특성을 구현하는 각 유형은 메서드 본문에 대한 고유한 사용자 지정 동작을 제공해야 합니다. 컴파일러는 특성이 있는 모든 유형이 이 서명으로 정의된 <code>Summary</code>메서드를 갖도록 강제합니다.<code>summarize</code></p>
+<p>특성은 본문에 여러 메서드를 가질 수 있습니다. 메서드 시그니처는 한 줄에 하나씩 나열되고 각 줄은 세미콜론으로 끝납니다.</p>
+<h3 id="yuhyeonge-teugsseon-guhyeon"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch10-02-traits.html#implementing-a-trait-on-a-type">유형에 특성 구현</a></h3>
+<p>이제 특성 메서드의 원하는 서명을 정의했으므로 <code>Summary</code>미디어 수집기의 유형에 구현할 수 있습니다. 목록 10-13 은 헤드라인, 작성자 및 위치를 사용하여 의 반환 값을 생성하는 구조체 <code>Summary</code>의 특성 구현을 보여줍니다. 구조체의 경우 트윗 콘텐츠가 이미 280자로 제한되어 있다고 가정하고 트윗의 전체 텍스트가 뒤에 오는 사용자 이름으로 정의합니다.<code>NewsArticle``summarize``Tweet``summarize</code></p>
+<p>파일 이름: src/lib.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">pub struct </span><span style="color:#abb2bf;">NewsArticle {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">pub </span><span style="color:#eb6772;">headline</span><span style="color:#abb2bf;">: String,
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">pub </span><span style="color:#eb6772;">location</span><span style="color:#abb2bf;">: String,
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">pub </span><span style="color:#eb6772;">author</span><span style="color:#abb2bf;">: String,
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">pub </span><span style="color:#eb6772;">content</span><span style="color:#abb2bf;">: String,
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">impl </span><span style="color:#abb2bf;">Summary </span><span style="color:#cd74e8;">for </span><span style="color:#abb2bf;">NewsArticle {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">summarize</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">) -&gt; String {
+</span><span style="color:#abb2bf;">        format!(`{}, by {} ({})`, </span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">.headline, </span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">.author, </span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">.location)
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">pub struct </span><span style="color:#abb2bf;">Tweet {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">pub </span><span style="color:#eb6772;">username</span><span style="color:#abb2bf;">: String,
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">pub </span><span style="color:#eb6772;">content</span><span style="color:#abb2bf;">: String,
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">pub </span><span style="color:#eb6772;">reply</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">bool</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">pub </span><span style="color:#eb6772;">retweet</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">bool</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">impl </span><span style="color:#abb2bf;">Summary </span><span style="color:#cd74e8;">for </span><span style="color:#abb2bf;">Tweet {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">summarize</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">) -&gt; String {
+</span><span style="color:#abb2bf;">        format!(`{}: {}`, </span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">.username, </span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">.content)
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>Listing 10-13: 및 유형 <code>Summary</code>에 대한 특성 구현<code>NewsArticle``Tweet</code></p>
+<p>유형에 특성을 구현하는 것은 일반 메서드를 구현하는 것과 유사합니다. 차이점은 뒤에 <code>impl</code>구현하려는 특성 이름을 입력한 다음 <code>for</code>키워드를 사용한 다음 특성을 구현하려는 유형의 이름을 지정한다는 것입니다. 블록 내에서 <code>impl</code>특성 정의가 정의한 메서드 시그니처를 넣습니다. 각 서명 뒤에 세미콜론을 추가하는 대신 중괄호를 사용하고 특성의 메서드가 특정 유형에 대해 갖고 싶은 특정 동작으로 메서드 본문을 채웁니다.</p>
+<p>이제 라이브러리가 및 <code>Summary</code>에 대해 특성을 구현했으므로 크레이트 사용자는 일반 메서드를 호출하는 것과 같은 방식으로 및 의 인스턴스에서 특성 메서드를 호출할 수 있습니다. 유일한 차이점은 사용자가 특성과 유형을 범위로 가져와야 한다는 것입니다. 다음은 바이너리 크레이트가 라이브러리 크레이트를 어떻게 사용할 수 있는지에 대한 예입니다.<code>NewsArticle``Tweet``NewsArticle``Tweet``aggregator</code></p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">use </span><span style="color:#abb2bf;">aggregator::{Summary, Tweet};
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> tweet </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> Tweet {
+</span><span style="color:#abb2bf;">        username: String::from(`horse_ebooks`),
+</span><span style="color:#abb2bf;">        content: String::from(
+</span><span style="color:#abb2bf;">            `of course, </span><span style="color:#adb7c9;">as</span><span style="color:#abb2bf;"> you probably already know, people`,
+</span><span style="color:#abb2bf;">        ),
+</span><span style="color:#abb2bf;">        reply: </span><span style="color:#db9d63;">false</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        retweet: </span><span style="color:#db9d63;">false</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    };
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`</span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;"> new tweet: {}`, tweet.</span><span style="color:#5ebfcc;">summarize</span><span style="color:#abb2bf;">());
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>이 코드는 <code>1 new tweet: horse_ebooks: of course, as you probably already know, people</code>.</p>
+<p>크레이트 에 의존하는 다른 크레이트 <code>aggregator</code>도 특성을 범위로 가져와 자체 유형에 <code>Summary</code>구현할 수 있습니다. <code>Summary</code>주의해야 할 한 가지 제한 사항은 트레이트 또는 유형 중 적어도 하나가 크레이트에 로컬인 경우에만 유형에 트레이트를 구현할 수 있다는 것입니다. 예를 들어, 유형이 우리 크레이트 에 로컬이기 때문에 크레이트 기능 의 일부로 <code>Display</code>사용자 정의 유형과 같은 표준 라이브러리 특성을 구현할 수 있습니다. 특성이 우리 크레이트에 로컬이기 때문에 우리는 크레이트에서 on을 구현할 수도 있습니다.<code>Tweet``aggregator``Tweet``aggregator``Summary``Vec&lt;T&gt;``aggregator``Summary``aggregator</code></p>
+<p>그러나 외부 유형에 외부 특성을 구현할 수는 없습니다. 예를 들어, and 가 표준 라이브러리에 정의되어 있고 우리 크레이트에 국한되지 않기 때문에 우리는 크레이트 내에서 <code>Display</code>특성을 구현할 수 없습니다. <em>이 제한은 coherence</em> 라는 속성의 일부 이며, 특히 부모 유형이 없기 때문에 이름이 지정된 <em>고아 규칙 의 일부입니다.</em> 이 규칙은 다른 사람의 코드가 귀하의 코드를 손상시킬 수 없으며 그 반대의 경우도 마찬가지입니다. 규칙이 없으면 두 개의 크레이트가 동일한 유형에 대해 동일한 특성을 구현할 수 있으며 러스트는 어떤 구현을 사용할지 알 수 없습니다.<code>Vec&lt;T&gt;``aggregator``Display``Vec&lt;T&gt;``aggregator</code></p>
+<h3 id="gibbo-guhyeon"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch10-02-traits.html#default-implementations">기본 구현</a></h3>
+<p>때로는 모든 유형의 모든 메소드에 대한 구현을 요구하는 대신 특성의 일부 또는 모든 메소드에 대한 기본 동작을 갖는 것이 유용합니다. 그런 다음 특정 유형에 특성을 구현하면서 각 메서드의 기본 동작을 유지하거나 재정의할 수 있습니다.</p>
+<p>Listing 10-14에서 우리는 Listing 10-12에서 했던 것처럼 메서드 서명만 정의하는 대신 특성의 <code>summarize</code>메서드 에 대한 기본 문자열을 지정합니다.<code>Summary</code></p>
+<p>파일 이름: src/lib.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">pub trait </span><span style="color:#abb2bf;">Summary {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">summarize</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">) -&gt; String {
+</span><span style="color:#abb2bf;">        String::from(`(Read more</span><span style="color:#adb7c9;">...</span><span style="color:#abb2bf;">)`)
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>Listing 10-14: 메서드 <code>Summary</code>의 기본 구현으로 트레이트 정의하기<code>summarize</code></p>
+<p>의 인스턴스를 요약하기 위해 기본 구현을 사용하려면 로 <code>NewsArticle</code>빈 블록을 지정합니다.<code>impl``impl Summary for NewsArticle {}</code></p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">summarize`더 이상 메서드를 직접 정의하지 않지만 기본 구현을 제공하고 특성을 구현하도록 `NewsArticle`지정했습니다. 결과적으로 다음과 같이 의 인스턴스에서 메서드를 계속 호출할 수 있습니다.`NewsArticle``Summary``summarize``NewsArticle
+</span><span style="color:#abb2bf;">    let article = NewsArticle {
+</span><span style="color:#abb2bf;">        headline: String::from(`Penguins win the Stanley Cup Championship!`),
+</span><span style="color:#abb2bf;">        location: String::from(`Pittsburgh, PA, USA`),
+</span><span style="color:#abb2bf;">        author: String::from(`Iceburgh`),
+</span><span style="color:#abb2bf;">        content: String::from(
+</span><span style="color:#abb2bf;">            `The Pittsburgh Penguins once again are the best \
+</span><span style="color:#abb2bf;">             hockey team in the NHL.`,
+</span><span style="color:#abb2bf;">        ),
+</span><span style="color:#abb2bf;">    };
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`New article available! {}`, article.summarize());
+</span></code></pre>
+<p>이 코드는 <code>New article available! (Read more...)</code>.</p>
+<p><code>Summary</code>기본 구현을 만들려면 Listing 10-13의 on 구현에 대해 아무것도 변경할 필요가 없습니다 <code>Tweet</code>. 그 이유는 기본 구현을 재정의하는 구문이 기본 구현이 없는 특성 메서드를 구현하는 구문과 동일하기 때문입니다.</p>
+<p>기본 구현은 다른 메서드에 기본 구현이 없더라도 동일한 트레이트에서 다른 메서드를 호출할 수 있습니다. 이러한 방식으로 특성은 많은 유용한 기능을 제공할 수 있으며 구현자는 그 중 일부만 지정하면 됩니다. 예를 들어 구현이 필요한 메서드를 <code>Summary</code>갖도록 특성을 정의한 <code>summarize_author</code>다음 <code>summarize</code>해당 메서드를 호출하는 기본 구현이 있는 메서드를 정의할 수 있습니다 <code>summarize_author</code>.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">pub trait </span><span style="color:#abb2bf;">Summary {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">summarize_author</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">) -&gt; String;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">summarize</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">) -&gt; String {
+</span><span style="color:#abb2bf;">        format!(`(Read more from {}</span><span style="color:#adb7c9;">...</span><span style="color:#abb2bf;">)`, </span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">.</span><span style="color:#5ebfcc;">summarize_author</span><span style="color:#abb2bf;">())
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>이 버전의 를 사용하려면 유형에 특성을 구현할 때 <code>Summary</code>정의하기만 하면 됩니다.<code>summarize_author</code></p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">impl </span><span style="color:#abb2bf;">Summary </span><span style="color:#cd74e8;">for </span><span style="color:#abb2bf;">Tweet {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">summarize_author</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">) -&gt; String {
+</span><span style="color:#abb2bf;">        format!(`</span><span style="color:#adb7c9;">@</span><span style="color:#abb2bf;">{}`, </span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">.username)
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>를 정의한 후 구조체의 인스턴스를 <code>summarize_author</code>호출할 수 있으며 의 기본 구현은 우리가 제공한 정의를 호출합니다. 우리가 구현했기 때문에 특성 은 더 이상 코드를 작성할 필요 없이 메서드 의 동작을 제공했습니다.<code>summarize``Tweet``summarize``summarize_author``summarize_author``Summary``summarize</code></p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> tweet </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> Tweet {
+</span><span style="color:#abb2bf;">        username: String::from(`horse_ebooks`),
+</span><span style="color:#abb2bf;">        content: String::from(
+</span><span style="color:#abb2bf;">            `of course, </span><span style="color:#adb7c9;">as</span><span style="color:#abb2bf;"> you probably already know, people`,
+</span><span style="color:#abb2bf;">        ),
+</span><span style="color:#abb2bf;">        reply: </span><span style="color:#db9d63;">false</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        retweet: </span><span style="color:#db9d63;">false</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    };
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`</span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;"> new tweet: {}`, tweet.</span><span style="color:#5ebfcc;">summarize</span><span style="color:#abb2bf;">());
+</span></code></pre>
+<p>이 코드는 <code>1 new tweet: (Read more from @horse_ebooks...)</code>.</p>
+<p>동일한 메서드의 재정의 구현에서 기본 구현을 호출하는 것은 불가능합니다.</p>
+<h3 id="maeggabbyeosurosseyi-teugsseon"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch10-02-traits.html#traits-as-parameters">매개변수로서의 특성</a></h3>
+<p>이제 특성을 정의하고 구현하는 방법을 알았으므로 특성을 사용하여 다양한 유형을 허용하는 함수를 정의하는 방법을 탐색할 수 있습니다. 우리는 목록 10-13의 및 유형에서 <code>Summary</code>구현한 특성을 사용하여 특성을 구현하는 유형의 매개변수 에서 메소드를 호출하는 함수를 정의합니다. 이를 위해 다음과 같은 구문을 사용합니다.<code>NewsArticle``Tweet``notify``summarize``item``Summary``impl Trait</code></p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">pub fn </span><span style="color:#5cb3fa;">notify</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">item</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">impl Summary) {
+</span><span style="color:#abb2bf;">    println!(`Breaking news! {}`, item.</span><span style="color:#5ebfcc;">summarize</span><span style="color:#abb2bf;">());
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>매개변수 에 대한 구체적인 유형 대신 키워드와 특성 이름을 <code>item</code>지정합니다. <code>impl</code>이 매개변수는 지정된 특성을 구현하는 모든 유형을 허용합니다. 의 본문에서 와 같이 특성 에서 오는 <code>notify</code>모든 메서드를 호출할 수 있습니다. 또는 의 모든 인스턴스를 호출하고 전달할 수 있습니다. a 또는 an 과 같은 다른 유형으로 함수를 호출하는 코드는 해당 유형이 를 구현하지 않기 때문에 컴파일되지 않습니다.<code>item``Summary``summarize``notify``NewsArticle``Tweet``String``i32``Summary</code></p>
+<h4 id="teugsseon-bainwedd-gumun"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch10-02-traits.html#trait-bound-syntax">특성 바인딩 구문</a></h4>
+<p>구문 은 간단한 경우에 작동하지만 실제로는 <em>특성 경계</em><code>impl Trait</code> 로 알려진 더 긴 형식의 구문 설탕입니다. 다음과 같이 보입니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">pub fn </span><span style="color:#5cb3fa;">notify</span><span style="color:#abb2bf;">&lt;T: Summary&gt;(</span><span style="color:#eb6772;">item</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">T) {
+</span><span style="color:#abb2bf;">    println!(`Breaking news! {}`, item.</span><span style="color:#5ebfcc;">summarize</span><span style="color:#abb2bf;">());
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>이 긴 형식은 이전 섹션의 예와 동일하지만 더 장황합니다. 콜론과 꺾쇠 괄호 안에 제네릭 형식 매개 변수 선언과 함께 특성 범위를 배치합니다.</p>
+<p>구문 <code>impl Trait</code>은 편리하고 단순한 경우에 더 간결한 코드를 작성하는 반면, 더 완전한 특성 바인딩 구문은 다른 경우에 더 복잡함을 표현할 수 있습니다. 예를 들어 <code>Summary</code>. 구문을 사용하면 <code>impl Trait</code>다음과 같습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">pub fn </span><span style="color:#5cb3fa;">notify</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">item1</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">impl Summary, </span><span style="color:#eb6772;">item2</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">impl Summary) {
+</span></code></pre>
+<p><code>impl Trait</code>이 함수가 서로 다른 유형을 허용 <code>item1</code>하고 가지도록 하려면 사용하는 것이 적절합니다 <code>item2</code>(두 유형 모두 구현하는 한 <code>Summary</code>). 그러나 두 매개변수가 동일한 유형을 갖도록 하려면 다음과 같이 특성 경계를 사용해야 합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">pub fn </span><span style="color:#5cb3fa;">notify</span><span style="color:#abb2bf;">&lt;T: Summary&gt;(</span><span style="color:#eb6772;">item1</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">T, </span><span style="color:#eb6772;">item2</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">T) {
+</span></code></pre>
+<p>및 매개 변수 <code>T</code>의 유형으로 지정된 제네릭 유형은 및 에 대한 인수로 전달된 값의 구체적인 유형이 동일해야 하도록 함수를 제한합니다.<code>item1``item2``item1``item2</code></p>
+<h4 id="gumunheu-sahyonhahye-hyereo-teugsseon-ggyeonggy-jijjeon"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch10-02-traits.html#specifying-multiple-trait-bounds-with-the--syntax"><code>+</code>구문을 사용하여 여러 특성 경계 지정</a></h4>
+<p>하나 이상의 특성 경계를 지정할 수도 있습니다. on <code>notify</code>뿐만 아니라 표시 형식을 사용하고 싶다고 가정해 보겠습니다. 정의 에서 and 를 모두 구현해야 한다고 지정합니다. 다음 구문을 사용하여 그렇게 할 수 있습니다.<code>summarize``item``notify``item``Display``Summary``+</code></p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">pub fn </span><span style="color:#5cb3fa;">notify</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">item</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">impl Summary</span><span style="color:#abb2bf;"> + </span><span style="color:#eb6772;">Display</span><span style="color:#abb2bf;">)) {
+</span></code></pre>
+<p>구문 <code>+</code>은 제네릭 형식에 대한 특성 범위에서도 유효합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">pub fn </span><span style="color:#5cb3fa;">notify</span><span style="color:#abb2bf;">&lt;T: Summary </span><span style="color:#adb7c9;">+</span><span style="color:#abb2bf;"> Display&gt;(</span><span style="color:#eb6772;">item</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">T) {
+</span></code></pre>
+<p>두 개의 특성 경계가 지정되면 의 본문은 format 을 <code>notify</code>호출 <code>summarize</code>하고 사용할 수 있습니다.<code>{}``item</code></p>
+<h4 id="wherejjeoro-dde-myeonghwaghan-teugsseon-ggyeonggy"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch10-02-traits.html#clearer-trait-bounds-with-where-clauses"><code>where</code>절로 더 명확한 특성 경계</a></h4>
+<p>너무 많은 특성 범위를 사용하면 단점이 있습니다. 각 제네릭에는 고유한 특성 경계가 있으므로 여러 제네릭 유형 매개변수가 있는 함수는 함수 이름과 해당 매개변수 목록 사이에 많은 특성 경계 정보를 포함할 수 있으므로 함수 서명을 읽기 어렵게 만듭니다. 이러한 이유로 Rust는 <code>where</code>함수 서명 뒤의 절 내부에 특성 범위를 지정하기 위한 대체 구문을 가지고 있습니다. 따라서 다음과 같이 작성하는 대신:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">some_function</span><span style="color:#abb2bf;">&lt;T: Display </span><span style="color:#adb7c9;">+ </span><span style="color:#abb2bf;">Clone, U: Clone </span><span style="color:#adb7c9;">+</span><span style="color:#abb2bf;"> Debug&gt;(</span><span style="color:#eb6772;">t</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">T, </span><span style="color:#eb6772;">u</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">U) -&gt; </span><span style="color:#cd74e8;">i32 </span><span style="color:#abb2bf;">{
+</span></code></pre>
+<p><code>where</code>다음과 같은 절을 사용할 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">some_function</span><span style="color:#abb2bf;">&lt;T, U&gt;(</span><span style="color:#eb6772;">t</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">T, </span><span style="color:#eb6772;">u</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">U) -&gt; </span><span style="color:#cd74e8;">i32
+</span><span style="color:#cd74e8;">where
+</span><span style="color:#abb2bf;">    T: Display + Clone,
+</span><span style="color:#abb2bf;">    U: Clone + Debug,
+</span><span style="color:#abb2bf;">{
+</span></code></pre>
+<p>이 함수의 시그니처는 덜 복잡합니다. 함수 이름, 매개변수 목록 및 반환 유형이 서로 가깝고 많은 특성 범위가 없는 함수와 비슷합니다.</p>
+<h3 id="teugsseonheu-guhyeonhaneun-banhwan-hyeongssi"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch10-02-traits.html#returning-types-that-implement-traits">특성을 구현하는 반환 형식</a></h3>
+<p><code>impl Trait</code>다음과 같이 반환 위치의 구문을 사용하여 특성을 구현하는 일부 유형의 값을 반환할 수도 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">returns_summarizable</span><span style="color:#abb2bf;">() -&gt; impl Summary {
+</span><span style="color:#abb2bf;">    Tweet {
+</span><span style="color:#abb2bf;">        username: String::from(`horse_ebooks`),
+</span><span style="color:#abb2bf;">        content: String::from(
+</span><span style="color:#abb2bf;">            `of course, </span><span style="color:#adb7c9;">as</span><span style="color:#abb2bf;"> you probably already know, people`,
+</span><span style="color:#abb2bf;">        ),
+</span><span style="color:#abb2bf;">        reply: </span><span style="color:#db9d63;">false</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        retweet: </span><span style="color:#db9d63;">false</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p><code>impl Summary</code>반환 유형에 를 사용하여 함수가 구체적인 유형의 이름을 지정하지 않고 특성을 <code>returns_summarizable</code>구현하는 일부 유형을 반환하도록 지정합니다. <code>Summary</code>이 경우 는 <code>returns_summarizable</code>를 반환 <code>Tweet</code>하지만 이 함수를 호출하는 코드는 이를 알 필요가 없습니다.</p>
+<p>구현하는 특성에 의해서만 반환 유형을 지정하는 기능은 13장에서 다룰 클로저와 반복자의 맥락에서 특히 유용합니다. 클로저와 반복자는 컴파일러만 아는 유형이나 지정하기에 매우 긴 유형을 만듭니다. 구문 <code>impl Trait</code>을 사용하면 함수가 <code>Iterator</code>매우 긴 유형을 작성할 필요 없이 특성을 구현하는 일부 유형을 반환하도록 간결하게 지정할 수 있습니다.</p>
+<p>그러나 <code>impl Trait</code>단일 유형을 반환하는 경우에만 사용할 수 있습니다. 예를 들어 반환 유형이 다음과 같이 지정된 a <code>NewsArticle</code>또는 a를 반환하는 다음 코드는 작동하지 않습니다.<code>Tweet``impl Summary</code></p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">returns_summarizable</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">switch</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">bool</span><span style="color:#abb2bf;">) -&gt; impl Summary {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">if</span><span style="color:#abb2bf;"> switch {
+</span><span style="color:#abb2bf;">        NewsArticle {
+</span><span style="color:#abb2bf;">            headline: String::from(
+</span><span style="color:#abb2bf;">                `Penguins win the Stanley Cup Championship</span><span style="color:#adb7c9;">!</span><span style="color:#abb2bf;">`,
+</span><span style="color:#abb2bf;">            ),
+</span><span style="color:#abb2bf;">            location: String::from(`Pittsburgh, </span><span style="color:#db9d63;">PA</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">USA</span><span style="color:#abb2bf;">`),
+</span><span style="color:#abb2bf;">            author: String::from(`Iceburgh`),
+</span><span style="color:#abb2bf;">            content: String::from(
+</span><span style="color:#abb2bf;">                `The Pittsburgh Penguins once again are the best \
+</span><span style="color:#abb2bf;">                 hockey team </span><span style="color:#adb7c9;">in</span><span style="color:#abb2bf;"> the </span><span style="color:#db9d63;">NHL</span><span style="color:#abb2bf;">.`,
+</span><span style="color:#abb2bf;">            ),
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">    } </span><span style="color:#cd74e8;">else </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">        Tweet {
+</span><span style="color:#abb2bf;">            username: String::from(`horse_ebooks`),
+</span><span style="color:#abb2bf;">            content: String::from(
+</span><span style="color:#abb2bf;">                `of course, </span><span style="color:#adb7c9;">as</span><span style="color:#abb2bf;"> you probably already know, people`,
+</span><span style="color:#abb2bf;">            ),
+</span><span style="color:#abb2bf;">            reply: </span><span style="color:#db9d63;">false</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">            retweet: </span><span style="color:#db9d63;">false</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>구문이 컴파일러에서 구현되는 방식에 대한 제한으로 인해 a <code>NewsArticle</code>또는 a를 반환하는 것은 허용되지 않습니다. 17장의 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch17-02-trait-objects.html#using-trait-objects-that-allow-for-values-of-different-types"><code>다른 유형의 값을 허용하는 트레이트 개체 사용</code></a> 섹션에서 이 동작을 사용하여 함수를 작성하는 방법을 다룰 것입니다.<code>Tweet``impl Trait</code></p>
+<h3 id="teugsseon-ggyeonggyreul-sahyonhahye-messeddereul-joggeoburo-guhyeon"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch10-02-traits.html#using-trait-bounds-to-conditionally-implement-methods">특성 경계를 사용하여 메서드를 조건부로 구현</a></h3>
+<p>제네릭 타입 매개변수를 사용 하는 블록에 바인딩된 트레이트를 사용함으로써 <code>impl</code>지정된 트레이트를 구현하는 타입에 대해 조건부로 메서드를 구현할 수 있습니다. 예를 들어 목록 10-15의 유형은 <code>Pair&lt;T&gt;</code>항상 <code>new</code>새로운 인스턴스를 반환하는 함수를 구현합니다 <code>Pair&lt;T&gt;</code>( 블록 유형에 대한 유형 별칭인 5장의 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch05-03-method-syntax.html#defining-methods"><code>메소드 정의</code></a> 섹션에서 기억하십시오 . 이 경우에는 입니다.) . 그러나 다음 블록 에서는 내부 유형이 비교를 가능하게 하는 특성 <em>과</em> 인쇄를 가능하게 하는 특성 을 구현하는 경우 에만 메소드를 구현합니다.<code>Self``impl``Pair&lt;T&gt;``impl``Pair&lt;T&gt;``cmp_display``T``PartialOrd``Display</code></p>
+<p>파일 이름: src/lib.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">use </span><span style="color:#abb2bf;">std::fmt::Display;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">Pair&lt;T&gt; {
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">x</span><span style="color:#abb2bf;">: T,
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">y</span><span style="color:#abb2bf;">: T,
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">impl</span><span style="color:#abb2bf;">&lt;T&gt; Pair&lt;T&gt; {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">new</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">x</span><span style="color:#abb2bf;">: T, </span><span style="color:#eb6772;">y</span><span style="color:#abb2bf;">: T) -&gt; </span><span style="color:#cd74e8;">Self </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">Self </span><span style="color:#abb2bf;">{ x, y }
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">impl</span><span style="color:#abb2bf;">&lt;T: Display </span><span style="color:#adb7c9;">+ </span><span style="color:#abb2bf;">PartialOrd&gt; Pair&lt;T&gt; {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">cmp_display</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">) {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">if </span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">.x </span><span style="color:#adb7c9;">&gt;= </span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">.y {
+</span><span style="color:#abb2bf;">            println!(`The largest member is x </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">{}`, </span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">.x);
+</span><span style="color:#abb2bf;">        } </span><span style="color:#cd74e8;">else </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">            println!(`The largest member is y </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">{}`, </span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">.y);
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>Listing 10-15: 트레잇 경계에 따라 제네릭 타입에 대한 조건부 구현 메서드</p>
+<p>또한 다른 특성을 구현하는 모든 유형에 대한 특성을 조건부로 구현할 수 있습니다. 트레잇 범위를 만족하는 모든 유형에 대한 트레잇 구현을 <em>블랭킷 구현</em> 이라고 하며 Rust 표준 라이브러리에서 광범위하게 사용됩니다. 예를 들어 표준 라이브러리는 <code>ToString</code>특성을 구현하는 모든 유형에서 <code>Display</code>특성을 구현합니다. <code>impl</code>표준 라이브러리의 블록은 다음 코드와 유사합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">impl</span><span style="color:#abb2bf;">&lt;T: Display&gt; ToString </span><span style="color:#cd74e8;">for </span><span style="color:#abb2bf;">T {
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// --snip--
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>표준 라이브러리에는 이 포괄적인 구현이 있기 때문에 특성을 구현하는 모든 유형에서 특성 <code>to_string</code>에 의해 정의된 메서드를 호출할 수 있습니다. 예를 들어 정수는 다음을 구현하기 때문에 정수를 다음과 같이 해당 값 으로 변환할 수 있습니다.<code>ToString``Display``String``Display</code></p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#db9d63;">3.</span><span style="color:#5ebfcc;">to_string</span><span style="color:#abb2bf;">();
+</span></code></pre>
+<p>일괄 구현은 <code>구현자</code> 섹션의 특성에 대한 문서에 나타납니다.</p>
+<p>특성 및 특성 범위를 사용하면 제네릭 형식 매개 변수를 사용하여 중복을 줄이는 코드를 작성할 수 있을 뿐만 아니라 제네릭 형식이 특정 동작을 수행하도록 컴파일러에 지정할 수도 있습니다. 그런 다음 컴파일러는 특성 바인딩 정보를 사용하여 코드와 함께 사용되는 모든 구체적인 유형이 올바른 동작을 제공하는지 확인할 수 있습니다. 동적 형식 언어에서는 메서드를 정의하지 않은 형식에서 메서드를 호출하면 런타임에 오류가 발생합니다. 그러나 Rust는 이러한 오류를 컴파일 시간으로 이동하므로 코드가 실행되기 전에 문제를 수정해야 합니다. 또한 컴파일 타임에 이미 확인했기 때문에 런타임에 동작을 확인하는 코드를 작성할 필요가 없습니다. 이렇게 하면 제네릭의 유연성을 포기하지 않고도 성능이 향상됩니다.</p>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        <a class="previous" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter10&#x2F;1-generic-data-types&#x2F;"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        <a class="next" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter10&#x2F;3-validating-references-with-lifetimes&#x2F;">></a>
+    
+
+            </div>
+        </div>
+
+        
+            
+                <script type="text/javascript" src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+                <script type="text/javascript" src="https://hwjskt.github.io/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://hwjskt.github.io/book.js"></script>
+        
+        </div>
+    </section>
+
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+  
+  
+
+  
+  
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js" integrity="sha384-Pulw7+h73841BQIK0LzJCydKRPChJUF9w8h8W0o3h+cLtoyNPJS847bQauLWOTwg" crossorigin="anonymous"></script>
+  
+  <script src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+  <script src="https://hwjskt.github.io/search_index.en.js"></script><script src="https://hwjskt.github.io/js/site.js"></script>
+
+  
+  
+
+  
+  
+</body>
+
+</html>

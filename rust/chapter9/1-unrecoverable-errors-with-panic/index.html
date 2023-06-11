@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='&#x2F;icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='&#x2F;icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" integrity="sha384-oGm59HWAkwO32h2w8u0B98wKBZJwd6MbWtAJwQKCTffZjOXHXrnyv9Syjovgc+UV" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://hwjskt.github.io/deep-thought.css" rel="stylesheet" />
+  
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/book.css">
+    <link rel="stylesheet" href="https://hwjskt.github.io/deep-thought.css">
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/newsprint.css">
+
+
+  <title>
+    
+    
+    Dr.JUNG | Rust
+
+  </title>
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176984489-2"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-176984489-2");
+  </script>
+  
+  
+
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;">Dr.JUNG</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;about">
+            AboutMe
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;docs">
+            Docs
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;rust">
+            Rust
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  
+    
+    <section>
+        <div class="book-menu is-2">
+            
+            
+            <aside role="navigation">
+                <ul>
+                    
+                        
+                        
+                        <li >
+                            <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;">Introduction</a>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;">
+                                    <strong>1.</strong>
+                                    Getting Started
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;1-installation&#x2F;">
+                                                    <strong>1.1.</strong>
+                                                    Installation
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;2-helloworld&#x2F;">
+                                                    <strong>1.2.</strong>
+                                                    Hello, World!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;3-hellocargo&#x2F;">
+                                                    <strong>1.3.</strong>
+                                                    Hello, Cargo!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter2&#x2F;">
+                                    <strong>2.</strong>
+                                    Programming a Guessing Game
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;">
+                                    <strong>3.</strong>
+                                    Common Programming Concepts
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;1-variables-and-mutability&#x2F;">
+                                                    <strong>3.1.</strong>
+                                                    Variables and Mutability
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;2-data-types&#x2F;">
+                                                    <strong>3.2.</strong>
+                                                    Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;3-functions&#x2F;">
+                                                    <strong>3.3.</strong>
+                                                    Functions
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;4-comments&#x2F;">
+                                                    <strong>3.4.</strong>
+                                                    Comments
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;5-control-flow&#x2F;">
+                                                    <strong>3.5.</strong>
+                                                    Control Flow
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;hwaryopyosi&#x2F;">
+                                                    <strong>3.6.</strong>
+                                                    ## 여기까지 정리완료 ##
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;">
+                                    <strong>4.</strong>
+                                    Understanding Ownership
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;1-what-is-ownership&#x2F;">
+                                                    <strong>4.1.</strong>
+                                                    What is Ownership?
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;2-references-and-borrowing&#x2F;">
+                                                    <strong>4.2.</strong>
+                                                    References and Borrowing
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;3-the-slice-type&#x2F;">
+                                                    <strong>4.3.</strong>
+                                                    The Slice Type
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;">
+                                    <strong>5.</strong>
+                                    Using Structs to Structure Related Data
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;1-defining-and-instantiating-structs&#x2F;">
+                                                    <strong>5.1.</strong>
+                                                    Defining and Instantiating Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;2-an-example-program-using-structs&#x2F;">
+                                                    <strong>5.2.</strong>
+                                                    An Example Program Using Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;3-method-syntax&#x2F;">
+                                                    <strong>5.3.</strong>
+                                                    Method Syntax
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;">
+                                    <strong>6.</strong>
+                                    Enums and Pattern Matching
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;1-defining-an-enum&#x2F;">
+                                                    <strong>6.1.</strong>
+                                                    Defining an Enum
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;2-the-match-control-flow-construct&#x2F;">
+                                                    <strong>6.2.</strong>
+                                                    The match Control Flow Construct
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;3-concise-control-flow-with-if-let&#x2F;">
+                                                    <strong>6.3.</strong>
+                                                    Concise Control Flow with if let.md
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;">
+                                    <strong>7.</strong>
+                                    Managing Growing Projects with Packages, Crates, and Modules
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;1-packages-and-crates&#x2F;">
+                                                    <strong>7.1.</strong>
+                                                    Packages and Crates
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;2-defining-modules-to-control-scope-and-privacy&#x2F;">
+                                                    <strong>7.2.</strong>
+                                                    Defining Modules to Control Scope and Privacy
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;3-paths-for-referring-to-an-item-in-the-module-tree&#x2F;">
+                                                    <strong>7.3.</strong>
+                                                    Paths for Referring to an Item in the Module Tree
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;4-bringing-paths-into-scope-with-the-use-keyword&#x2F;">
+                                                    <strong>7.4.</strong>
+                                                    Bringing Paths Into Scope with the use Keyword
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;5-separating-modules-into-different-files&#x2F;">
+                                                    <strong>7.5.</strong>
+                                                    Separating Modules into Different Files
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;">
+                                    <strong>8.</strong>
+                                    Common Collections
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;1-storing-lists-of-values-with-vectors&#x2F;">
+                                                    <strong>8.1.</strong>
+                                                    Storing Lists of Values with Vectors
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;">
+                                                    <strong>8.2.</strong>
+                                                    Storing UTF-8 Encoded Text with Strings
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;3-storing-keys-with-associated-values-in-hash-maps&#x2F;">
+                                                    <strong>8.3.</strong>
+                                                    Storing Keys with Associated Values in Hash Maps
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter9&#x2F;">
+                                    <strong>9.</strong>
+                                    Error Handling
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li class="active">
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter9&#x2F;1-unrecoverable-errors-with-panic&#x2F;">
+                                                    <strong>9.1.</strong>
+                                                    Unrecoverable Errors with panic!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter9&#x2F;2-recoverable-errors-with-result&#x2F;">
+                                                    <strong>9.2.</strong>
+                                                    Recoverable Errors with Result
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter9&#x2F;3-to-panic-or-not-to-panic&#x2F;">
+                                                    <strong>9.3.</strong>
+                                                    To panic! or Not to panic!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter10&#x2F;">
+                                    <strong>10.</strong>
+                                    Generic Types, Traits, and Lifetimes
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter10&#x2F;1-generic-data-types&#x2F;">
+                                                    <strong>10.1.</strong>
+                                                    Generic Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter10&#x2F;2-traits-defining-shared-behavior&#x2F;">
+                                                    <strong>10.2.</strong>
+                                                    Traits: Defining Shared Behavior
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter10&#x2F;3-validating-references-with-lifetimes&#x2F;">
+                                                    <strong>10.3.</strong>
+                                                    Validating References with Lifetimes
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter22&#x2F;">
+                                    <strong>11.</strong>
+                                    *** 목차들 ***
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter99&#x2F;">
+                                    <strong>12.</strong>
+                                     
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter99&#x2F;1&#x2F;">
+                                                    <strong>12.1.</strong>
+                                                     
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter99&#x2F;2&#x2F;">
+                                                    <strong>12.2.</strong>
+                                                     
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter99&#x2F;3&#x2F;">
+                                                    <strong>12.3.</strong>
+                                                     
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter11-17&#x2F;">
+                                    <strong>13.</strong>
+                                    11-17
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter11-17&#x2F;trans&#x2F;">
+                                                    <strong>13.1.</strong>
+                                                    11-17 translation
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter17-21&#x2F;">
+                                    <strong>14.</strong>
+                                    18-21
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter17-21&#x2F;trans&#x2F;">
+                                                    <strong>14.1.</strong>
+                                                    18-21 translation
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </aside>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="book-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="book-search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <h1>Unrecoverable Errors with panic!</h1>
+    <h2 id="yohya">요약</h2>
+<h2 id="bboguhal-su-heobneun-paenig-oryu"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch09-01-unrecoverable-errors-with-panic.html#unrecoverable-errors-with-panic">복구할 수 없는 <code>패닉!</code> 오류</a></h2>
+<p>때로는 코드에서 나쁜 일이 발생하고 이에 대해 할 수 있는 일이 없습니다. 이러한 경우 Rust는 <code>패닉!</code> 매크로. 실제로 패닉을 일으키는 방법에는 두 가지가 있습니다. 코드를 패닉 상태로 만드는 작업(예: 끝을 지나 배열에 액세스)을 수행하거나 <code>패닉!</code>을 명시적으로 호출하는 것입니다. 매크로. 두 경우 모두 프로그램에 패닉이 발생합니다. 기본적으로 이러한 패닉은 실패 메시지를 인쇄하고, 풀고, 스택을 정리하고, 종료합니다. 환경 변수를 통해 패닉이 발생할 때 러스트가 호출 스택을 표시하도록 하여 패닉의 원인을 쉽게 추적할 수 있습니다.</p>
+<blockquote>
+<h3 id="paenige-ddahan-heunddaeuro-ssetaeg-pulgi-ddoneun-jjundda"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch09-01-unrecoverable-errors-with-panic.html#unwinding-the-stack-or-aborting-in-response-to-a-panic">패닉에 대한 응답으로 스택 풀기 또는 중단</a></h3>
+<p>기본적으로 패닉이 발생하면 프로그램은 <em>풀기</em> 시작합니다. 즉, Rust가 스택을 백업하고 만나는 각 함수에서 데이터를 정리합니다. 그러나, 이 걷기 및 청소는 많은 작업입니다. 따라서 Rust는 정리하지 않고 프로그램을 종료하는 <em>즉시 중단</em> 의 대안을 선택할 수 있습니다.</p>
+<p>프로그램이 사용하고 있던 메모리는 운영 체제에서 정리해야 합니다. <em>프로젝트에서 결과 바이너리를 가능한 한 작게 만들어야 하는 경우 Cargo.toml</em> 파일 의 적절한 <code>[profile]</code> 섹션에 <code>panic = 'abort'</code>를 추가하여 패닉 시 해제에서 중단으로 전환할 수 있습니다. . 예를 들어 릴리스 모드에서 패닉 상태에서 중단하려면 다음을 추가하십시오.</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#6c7079;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#abb2bf;">[profile.release]
+</span><span style="color:#eb6772;">panic </span><span style="color:#abb2bf;">= </span><span style="color:#9acc76;">&#39;abort&#39;
+</span></code></pre>
+</blockquote>
+<p><code>패닉!</code> 간단한 프로그램에서:</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    panic!(`crash and burn`);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>프로그램을 실행하면 다음과 같이 표시됩니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> panic v0.1.0 (file:///projects/panic)
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">Finished</span><span style="color:#abb2bf;"> dev </span><span style="color:#cd74e8;">[</span><span style="color:#abb2bf;">unoptimized + debuginfo</span><span style="color:#cd74e8;">]</span><span style="color:#abb2bf;"> target(s) </span><span style="color:#eb6772;">in</span><span style="color:#abb2bf;"> 0.25s
+</span><span style="color:#abb2bf;">     </span><span style="color:#eb6772;">Running </span><span style="color:#abb2bf;">`</span><span style="color:#eb6772;">target/debug/panic</span><span style="color:#abb2bf;">`
+</span><span style="color:#eb6772;">thread </span><span style="color:#9acc76;">&#39;main&#39;</span><span style="color:#abb2bf;"> panicked at </span><span style="color:#9acc76;">&#39;crash and burn&#39;</span><span style="color:#abb2bf;">, src/main.rs:2:5
+</span><span style="color:#eb6772;">note:</span><span style="color:#abb2bf;"> run with `</span><span style="color:#eb6772;">RUST_BACKTRACE</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">1</span><span style="color:#abb2bf;">` environment variable to display a backtrace
+</span></code></pre>
+<p><code>패닉!</code> 마지막 두 줄에 포함된 오류 메시지가 발생합니다. 첫 번째 줄은 패닉 메시지와 소스 코드에서 패닉이 발생한 위치를 보여줍니다. <em>src/main.rs:2:5</em> 는 두 번째 줄, <em>src/main.rs</em> 파일의 다섯 번째 문자임을 나타냅니다.</p>
+<p>이 경우 표시된 줄은 코드의 일부이며 해당 줄로 이동하면 <code>패닉!</code> 매크로 호출. 다른 경우에는 <code>패닉!</code> 호출은 우리 코드가 호출하는 코드에 있을 수 있으며 오류 메시지에 의해 보고된 파일 이름과 줄 번호는 <code>패닉!</code> 매크로가 호출되지만 결국 <code>패닉!</code> 부르다. <code>panic!</code> 함수의 역추적을 사용할 수 있습니다. 문제를 일으키는 코드 부분을 파악하기 위해 전화가 왔습니다. 다음에 백트레이스에 대해 더 자세히 설명하겠습니다.</p>
+<h3 id="paenig-hyeocujjeo"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch09-01-unrecoverable-errors-with-panic.html#using-a-panic-backtrace"><code>패닉!</code> 역추적</a></h3>
+<p>다른 예를 살펴보고 <code>패닉!</code> 호출은 매크로를 직접 호출하는 코드가 아니라 코드의 버그 때문에 라이브러리에서 발생합니다. 목록 9-1에는 유효한 인덱스 범위를 벗어난 벡터의 인덱스에 액세스하려고 시도하는 코드가 있습니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> v </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">vec![</span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">3</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    v[</span><span style="color:#db9d63;">99</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 9-1: 벡터의 끝을 넘어 요소에 액세스하려고 시도하면 <code>패닉!</code> 호출이 발생합니다.</p>
+<p>여기에서 우리는 벡터의 100번째 요소(인덱싱이 0에서 시작하기 때문에 인덱스 99에 있음)에 액세스하려고 시도하지만 벡터에는 3개의 요소만 있습니다. 이 상황에서 Rust는 당황할 것입니다. <code>[]</code>를 사용하면 요소를 반환해야 하지만 유효하지 않은 인덱스를 전달하면 Rust가 반환할 수 있는 올바른 요소가 없습니다.</p>
+<p>C에서 데이터 구조의 끝을 넘어 읽으려는 시도는 정의되지 않은 동작입니다. 메모리가 해당 구조에 속하지 않더라도 데이터 구조의 해당 요소에 해당하는 메모리 위치에 있는 모든 것을 얻을 수 있습니다. 이를 <em>버퍼 오버 읽기</em> 라고 하며 공격자가 데이터 구조 뒤에 저장된 허용되지 않아야 하는 데이터를 읽는 방식으로 인덱스를 조작할 수 있는 경우 보안 취약성을 초래할 수 있습니다.</p>
+<p>이러한 종류의 취약성으로부터 프로그램을 보호하기 위해 존재하지 않는 인덱스에서 요소를 읽으려고 하면 Rust는 실행을 중지하고 계속 진행을 거부합니다. 그것을 시도하고 보자 :</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> panic v0.1.0 (file:///projects/panic)
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">Finished</span><span style="color:#abb2bf;"> dev </span><span style="color:#cd74e8;">[</span><span style="color:#abb2bf;">unoptimized + debuginfo</span><span style="color:#cd74e8;">]</span><span style="color:#abb2bf;"> target(s) </span><span style="color:#eb6772;">in</span><span style="color:#abb2bf;"> 0.27s
+</span><span style="color:#abb2bf;">     </span><span style="color:#eb6772;">Running </span><span style="color:#abb2bf;">`</span><span style="color:#eb6772;">target/debug/panic</span><span style="color:#abb2bf;">`
+</span><span style="color:#eb6772;">thread </span><span style="color:#9acc76;">&#39;main&#39;</span><span style="color:#abb2bf;"> panicked at </span><span style="color:#9acc76;">&#39;index out of bounds: the len is 3 but the index is 99&#39;</span><span style="color:#abb2bf;">, src/main.rs:4:5
+</span><span style="color:#eb6772;">note:</span><span style="color:#abb2bf;"> run with `</span><span style="color:#eb6772;">RUST_BACKTRACE</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">1</span><span style="color:#abb2bf;">` environment variable to display a backtrace
+</span></code></pre>
+<p>이 오류는 색인 99에 액세스하려고 시도하는 <code>main.rs</code>의 4번째 줄을 가리킵니다. 다음 줄은 <code>RUST_BACKTRACE</code> 환경 변수를 설정하여 오류의 원인이 된 정확한 역추적을 얻을 수 있음을 알려줍니다. 역 <em>추적</em>이 지점에 도달하기 위해 호출된 모든 함수의 목록입니다. Rust의 백트레이스는 다른 언어에서와 마찬가지로 작동합니다. 백트레이스를 읽는 핵심은 맨 위에서 시작하여 작성한 파일이 보일 때까지 읽는 것입니다. 그곳이 문제의 발원지입니다. 해당 지점 위의 줄은 코드가 호출한 코드입니다. 아래 줄은 코드를 호출한 코드입니다. 이러한 전후 줄에는 핵심 Rust 코드, 표준 라이브러리 코드 또는 사용 중인 크레이트가 포함될 수 있습니다. <code>RUST_BACKTRACE</code> 환경 변수를 0을 제외한 모든 값으로 설정하여 백트레이스를 가져오도록 합시다. Listing 9-2는 여러분이 보게 될 것과 유사한 출력을 보여줍니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> RUST_BACKTRACE=1 cargo run
+</span><span style="color:#eb6772;">thread </span><span style="color:#9acc76;">&#39;main&#39;</span><span style="color:#abb2bf;"> panicked at </span><span style="color:#9acc76;">&#39;index out of bounds: the len is 3 but the index is 99&#39;</span><span style="color:#abb2bf;">, src/main.rs:4:5
+</span><span style="color:#eb6772;">stack</span><span style="color:#abb2bf;"> backtrace:
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">0:</span><span style="color:#abb2bf;"> rust_begin_unwind
+</span><span style="color:#abb2bf;">             </span><span style="color:#eb6772;">at</span><span style="color:#abb2bf;"> /rustc/e092d0b6b43f2de967af0887873151bb1c0b18d3/library/std/src/panicking.rs:584:5
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">1:</span><span style="color:#abb2bf;"> core::panicking::panic_fmt
+</span><span style="color:#abb2bf;">             </span><span style="color:#eb6772;">at</span><span style="color:#abb2bf;"> /rustc/e092d0b6b43f2de967af0887873151bb1c0b18d3/library/core/src/panicking.rs:142:14
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">2:</span><span style="color:#abb2bf;"> core::panicking::panic_bounds_check
+</span><span style="color:#abb2bf;">             </span><span style="color:#eb6772;">at</span><span style="color:#abb2bf;"> /rustc/e092d0b6b43f2de967af0887873151bb1c0b18d3/library/core/src/panicking.rs:84:5
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">3: </span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">usize as core::slice::index::SliceIndex</span><span style="color:#adb7c9;">&lt;</span><span style="color:#cd74e8;">[</span><span style="color:#abb2bf;">T</span><span style="color:#cd74e8;">]</span><span style="color:#adb7c9;">&gt;&gt;</span><span style="color:#abb2bf;">::index
+</span><span style="color:#abb2bf;">             </span><span style="color:#eb6772;">at</span><span style="color:#abb2bf;"> /rustc/e092d0b6b43f2de967af0887873151bb1c0b18d3/library/core/src/slice/index.rs:242:10
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">4:</span><span style="color:#abb2bf;"> core::slice::index::</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">impl core::ops::index::Index</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">I</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> for </span><span style="color:#cd74e8;">[</span><span style="color:#abb2bf;">T</span><span style="color:#cd74e8;">]</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;">::index
+</span><span style="color:#abb2bf;">             </span><span style="color:#eb6772;">at</span><span style="color:#abb2bf;"> /rustc/e092d0b6b43f2de967af0887873151bb1c0b18d3/library/core/src/slice/index.rs:18:9
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">5: </span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">alloc::vec::Vec</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">T,A</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> as core::ops::index::Index</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">I</span><span style="color:#adb7c9;">&gt;&gt;</span><span style="color:#abb2bf;">::index
+</span><span style="color:#abb2bf;">             </span><span style="color:#eb6772;">at</span><span style="color:#abb2bf;"> /rustc/e092d0b6b43f2de967af0887873151bb1c0b18d3/library/alloc/src/vec/mod.rs:2591:9
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">6:</span><span style="color:#abb2bf;"> panic::main
+</span><span style="color:#abb2bf;">             </span><span style="color:#eb6772;">at</span><span style="color:#abb2bf;"> ./src/main.rs:4:5
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">7:</span><span style="color:#abb2bf;"> core::ops::function::FnOnce::call_once
+</span><span style="color:#abb2bf;">             </span><span style="color:#eb6772;">at</span><span style="color:#abb2bf;"> /rustc/e092d0b6b43f2de967af0887873151bb1c0b18d3/library/core/src/ops/function.rs:248:5
+</span><span style="color:#eb6772;">note:</span><span style="color:#abb2bf;"> Some details are omitted, run with `</span><span style="color:#eb6772;">RUST_BACKTRACE</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">full</span><span style="color:#abb2bf;">` for a verbose backtrace.
+</span></code></pre>
+<p>Listing 9-2: <code>panic!</code> 호출에 의해 생성된 백트레이스 환경 변수 <code>RUST_BACKTRACE</code>가 설정되면 표시됩니다.</p>
+<p>출력이 엄청나네요! 표시되는 정확한 출력은 운영 체제 및 Rust 버전에 따라 다를 수 있습니다. 이 정보로 백트레이스를 얻으려면 디버그 기호를 활성화해야 합니다. 여기에 있는 것처럼 <code>--release</code> 플래그 없이 <code>cargo build</code> 또는 <code>cargo run</code>을 사용할 때 디버그 기호가 기본적으로 활성화됩니다.</p>
+<p>목록 9-2의 출력에서 백트레이스의 6행은 문제를 일으키는 프로젝트의 <em>src/main.rs</em> 4행을 가리킵니다. 프로그램이 패닉 상태가 되는 것을 원하지 않으면 우리가 작성한 파일을 언급하는 첫 번째 줄이 가리키는 위치에서 조사를 시작해야 합니다. 목록 9-1에서 일부러 패닉을 일으키는 코드를 작성했는데 패닉을 해결하는 방법은 벡터 인덱스 범위를 벗어나는 요소를 요청하지 않는 것입니다. 나중에 코드 패닉이 발생하면 패닉을 유발하는 값과 대신 코드가 수행해야 하는 작업을 파악해야 합니다.</p>
+<p><code>패닉!</code>으로 돌아오겠습니다. <code>패닉!</code>을 사용해야 할 때와 사용하지 말아야 할 때 [<code>패닉!](https://doc.rust-lang.org/book/ch09-03-to-panic-or-not-to-panic.html#to-panic-or-not-to-panic) </code> 또는 이 장 뒷부분의 [<code>패닉!`` 섹션을 참조하십시오 . ](https://doc.rust-lang.org/book/ch09-03-to-panic-or-not-to-panic.html#to-panic-or-not-to-panic)다음으로 </code>결과`를 사용하여 오류를 복구하는 방법을 살펴보겠습니다.</p>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        
+        
+        <a class="previous" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter9&#x2F;"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        <a class="next" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter9&#x2F;2-recoverable-errors-with-result&#x2F;">></a>
+    
+
+            </div>
+        </div>
+
+        
+            
+                <script type="text/javascript" src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+                <script type="text/javascript" src="https://hwjskt.github.io/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://hwjskt.github.io/book.js"></script>
+        
+        </div>
+    </section>
+
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+  
+  
+
+  
+  
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js" integrity="sha384-Pulw7+h73841BQIK0LzJCydKRPChJUF9w8h8W0o3h+cLtoyNPJS847bQauLWOTwg" crossorigin="anonymous"></script>
+  
+  <script src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+  <script src="https://hwjskt.github.io/search_index.en.js"></script><script src="https://hwjskt.github.io/js/site.js"></script>
+
+  
+  
+
+  
+  
+</body>
+
+</html>
