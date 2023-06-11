@@ -8,35 +8,6 @@ template ="book_section_rust.html"
 
 
 
-4_Understanding Ownership
-
-4_1_What is Ownership?
-
-4_2_References and Borrowing
-
-4_3_The Slice Type
-
-<br>
-
-
-5_Using Structs to Structure Related Data
-
-5_1_Defining and Instantiating Structs
-
-5_2_An Example Program Using Structs
-
-5_3_Method Syntax
-
-<br>
-
-6_Enums and Pattern Matching
-
-6_1_Defining an Enum
-
-6_2_The match Control Flow Construct
-
-6_3_Concise Control Flow with if let
-
 <br>
 
 7_Managing Growing Projects with Packages, Crates, and Modules
@@ -60,8 +31,6 @@ template ="book_section_rust.html"
 8_2_Storing UTF-8 Encoded Text with Strings
 
 8_3_Storing Keys with Associated Values in Hash Maps
-
-
 
 9_Error Handling
 

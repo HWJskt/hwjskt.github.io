@@ -44,7 +44,7 @@ Patterns pop up in a number of places in Rust, and you’ve been using them a lo
 
 As discussed in Chapter 6, we use patterns in the arms of "match" expressions. Formally, "match" expressions are defined as the keyword "match", a value to match on, and one or more match arms that consist of a pattern and an expression to run if the value matches that arm’s pattern, like this:
 
-```text
+```
 match VALUE {
     PATTERN => EXPRESSION,
     PATTERN => EXPRESSION,
@@ -167,7 +167,7 @@ let x = 5;
 
 Every time you"ve used a "let" statement like this you"ve been using patterns, although you might not have realized it! More formally, a "let" statement looks like this:
 
-```text
+```
 let PATTERN = EXPRESSION;
 ```
 
@@ -892,13 +892,13 @@ Listing 18-28: Combining multiple patterns with a match guard
 
 The match condition states that the arm only matches if the value of "x" is equal to "4", "5", or "6" *and* if "y" is "true". When this code runs, the pattern of the first arm matches because "x" is "4", but the match guard "if y" is false, so the first arm is not chosen. The code moves on to the second arm, which does match, and this program prints "no". The reason is that the "if" condition applies to the whole pattern "4 | 5 | 6", not only to the last value "6". In other words, the precedence of a match guard in relation to a pattern behaves like this:
 
-```text
+```
 (4 | 5 | 6) if y => ...
 ```
 
 rather than this:
 
-```text
+```
 4 | 5 | (6 if y) => ...
 ```
 
@@ -1672,7 +1672,7 @@ Sometimes, you might write a trait definition that depends on another trait: for
 
 For example, let’s say we want to make an "OutlinePrint" trait with an "outline_print" method that will print a given value formatted so that it"s framed in asterisks. That is, given a "Point" struct that implements the standard library trait "Display" to result in "(x, y)", when we call "outline_print" on a "Point" instance that has "1" for "x" and "3" for "y", it should print the following:
 
-```text
+```
 **********
 *        *
 * (1, 3) *
@@ -2581,7 +2581,7 @@ For now, our handling of the stream consists of calling "unwrap" to terminate ou
 
 Let’s try running this code! Invoke "cargo run" in the terminal and then load *127.0.0.1:7878* in a web browser. The browser should show an error message like “Connection reset,” because the server isn’t currently sending back any data. But when you look at your terminal, you should see several messages that were printed when the browser connected to the server!
 
-```text
+```
      Running "target/debug/hello"
 Connection established!
 Connection established!
@@ -2673,7 +2673,7 @@ Let’s break down this request data to understand what the browser is asking of
 
 HTTP is a text-based protocol, and a request takes this format:
 
-```text
+```
 Method Request-URI HTTP-Version CRLF
 headers CRLF
 message-body
@@ -2697,7 +2697,7 @@ Now that we know what the browser is asking for, let’s send back some data!
 
 We’re going to implement sending data in response to a client request. Responses have the following format:
 
-```text
+```
 HTTP-Version Status-Code Reason-Phrase CRLF
 headers CRLF
 message-body
@@ -2707,7 +2707,7 @@ The first line is a *status line* that contains the HTTP version used in the res
 
 Here is an example response that uses HTTP version 1.1, has a status code of 200, an OK reason phrase, no headers, and no body:
 
-```text
+```
 HTTP/1.1 200 OK\r\n\r\n
 ```
 
@@ -4174,7 +4174,7 @@ fn match(needle: &str, haystack: &str) -> bool {
 
 you’ll get this error:
 
-```text
+```
 error: expected identifier, found keyword "match"
  --> src/main.rs:4:4
   |
@@ -4622,7 +4622,7 @@ fn main() {
 
 Running "cargo clippy" on this project results in this error:
 
-```text
+```
 error: approximate value of "f{32, 64}::consts::PI" found
  --> src/main.rs:2:13
   |
@@ -4757,13 +4757,13 @@ Most Rust developers primarily use the stable channel, but those who want to try
 
 Here’s an example of how the development and release process works: let’s assume that the Rust team is working on the release of Rust 1.5. That release happened in December of 2015, but it will provide us with realistic version numbers. A new feature is added to Rust: a new commit lands on the "master" branch. Each night, a new nightly version of Rust is produced. Every day is a release day, and these releases are created by our release infrastructure automatically. So as time passes, our releases look like this, once a night:
 
-```text
+```
 nightly: * - - * - - *
 ```
 
 Every six weeks, it’s time to prepare a new release! The "beta" branch of the Rust repository branches off from the "master" branch used by nightly. Now, there are two releases:
 
-```text
+```
 nightly: * - - * - - *
                      |
 beta:                *
@@ -4771,7 +4771,7 @@ beta:                *
 
 Most Rust users do not use beta releases actively, but test against beta in their CI system to help Rust discover possible regressions. In the meantime, there’s still a nightly release every night:
 
-```text
+```
 nightly: * - - * - - * - - * - - *
                      |
 beta:                *
@@ -4779,7 +4779,7 @@ beta:                *
 
 Let’s say a regression is found. Good thing we had some time to test the beta release before the regression snuck into a stable release! The fix is applied to "master", so that nightly is fixed, and then the fix is backported to the "beta" branch, and a new release of beta is produced:
 
-```text
+```
 nightly: * - - * - - * - - * - - * - - *
                      |
 beta:                * - - - - - - - - *
@@ -4787,7 +4787,7 @@ beta:                * - - - - - - - - *
 
 Six weeks after the first beta was created, it’s time for a stable release! The "stable" branch is produced from the "beta" branch:
 
-```text
+```
 nightly: * - - * - - * - - * - - * - - * - * - *
                      |
 beta:                * - - - - - - - - *
@@ -4797,7 +4797,7 @@ stable:                                *
 
 Hooray! Rust 1.5 is done! However, we’ve forgotten one thing: because the six weeks have gone by, we also need a new beta of the *next* version of Rust, 1.6. So after "stable" branches off of "beta", the next version of "beta" branches off of "nightly" again:
 
-```text
+```
 nightly: * - - * - - * - - * - - * - - * - * - *
                      |                         |
 beta:                * - - - - - - - - *       *

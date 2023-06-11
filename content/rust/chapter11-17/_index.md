@@ -1148,7 +1148,7 @@ We create a *tests* directory at the top level of our project directory, next to
 
 Let’s create an integration test. With the code in Listing 11-12 still in the *src/lib.rs* file, make a *tests* directory, and create a new file named *tests/integration_test.rs*. Your directory structure should look like this:
 
-```text
+```
 adder
 ├── Cargo.lock
 ├── Cargo.toml
@@ -1277,7 +1277,7 @@ Having "common" appear in the test results with "running 0 tests" displayed for 
 
 To avoid having "common" appear in the test output, instead of creating *tests/common.rs*, we’ll create *tests/common/mod.rs*. The project directory now looks like this:
 
-```text
+```
 ├── Cargo.lock
 ├── Cargo.toml
 ├── src
@@ -1485,7 +1485,7 @@ Now we’ll add functionality to read the file specified in the "file_path" argu
 
 Filename: poem.txt
 
-```text
+```
 I"m nobody! Who are you?
 Are you nobody, too?
 Then there"s a pair of us - don"t tell!
@@ -2550,7 +2550,7 @@ $ cargo run > output.txt
 
 The ">" syntax tells the shell to write the contents of standard output to *output.txt* instead of the screen. We didn’t see the error message we were expecting printed to the screen, so that means it must have ended up in the file. This is what *output.txt* contains:
 
-```text
+```
 Problem parsing arguments: not enough arguments
 ```
 
@@ -2599,7 +2599,7 @@ We won’t see any output to the terminal, and *output.txt* will contain our res
 
 Filename: output.txt
 
-```text
+```
 Are you nobody, too?
 How dreary to be somebody!
 ```
@@ -3520,7 +3520,7 @@ To determine whether to use loops or iterators, you need to know which implement
 
 We ran a benchmark by loading the entire contents of *The Adventures of Sherlock Holmes* by Sir Arthur Conan Doyle into a "String" and looking for the word *the* in the contents. Here are the results of the benchmark on the version of "search" using the "for" loop and the version using iterators:
 
-```text
+```
 test bench_search_for  ... bench:  19,620,300 ns/iter (+/- 915,700)
 test bench_search_iter ... bench:  19,234,900 ns/iter (+/- 657,200)
 ```
@@ -3706,7 +3706,7 @@ Most documentation comments don’t need all of these sections, but this is a go
 
 Adding example code blocks in your documentation comments can help demonstrate how to use your library, and doing so has an additional bonus: running "cargo test" will run the code examples in your documentation as tests! Nothing is better than documentation with examples. But nothing is worse than examples that don’t work because the code has changed since the documentation was written. If we run "cargo test" with the documentation for the "add_one" function from Listing 14-1, we will see a section in the test results like this:
 
-```text
+```
    Doc-tests my_crate
 
 running 1 test
@@ -4032,7 +4032,7 @@ $ cargo new adder
 
 At this point, we can build the workspace by running "cargo build". The files in your *add* directory should look like this:
 
-```text
+```
 ├── Cargo.lock
 ├── Cargo.toml
 ├── adder
@@ -4068,7 +4068,7 @@ $ cargo new add_one --lib
 
 Your *add* directory should now have these directories and files:
 
-```text
+```
 ├── Cargo.lock
 ├── Cargo.toml
 ├── add_one
@@ -4406,7 +4406,7 @@ A *cons list* is a data structure that comes from the Lisp programming language 
 
 For example, here’s a pseudocode representation of a cons list containing the list 1, 2, 3 with each pair in parentheses:
 
-```text
+```
 (1, (2, (3, Nil)))
 ```
 
@@ -4496,7 +4496,7 @@ Figure 15-1: An infinite "List" consisting of infinite "Cons" variants
 
 Because Rust can’t figure out how much space to allocate for recursively defined types, the compiler gives an error with this helpful suggestion:
 
-```text
+```
 help: insert some indirection (e.g., a "Box", "Rc", or "&") to make "List" representable
   |
 2 |     Cons(i32, Box<List>),
@@ -5652,7 +5652,7 @@ Creating the "leaf" node looks similar to Listing 15-27 with the exception of th
 
 At this point, when we try to get a reference to the parent of "leaf" by using the "upgrade" method, we get a "None" value. We see this in the output from the first "println!" statement:
 
-```text
+```
 leaf parent = None
 ```
 
@@ -5660,7 +5660,7 @@ When we create the "branch" node, it will also have a new "Weak<Node>" reference
 
 When we print the parent of "leaf" again, this time we’ll get a "Some" variant holding "branch": now "leaf" can access its parent! When we print "leaf", we also avoid the cycle that eventually ended in a stack overflow like we had in Listing 15-26; the "Weak<Node>" references are printed as "(Weak)":
 
-```text
+```
 leaf parent = Some(Node { value: 5, parent: RefCell { value: (Weak) },
 children: RefCell { value: [Node { value: 3, parent: RefCell { value: (Weak) },
 children: RefCell { value: [] } }] } })
@@ -5823,7 +5823,7 @@ Listing 16-1: Creating a new thread to print one thing while the main thread pri
 
 Note that when the main thread of a Rust program completes, all spawned threads are shut down, whether or not they have finished running. The output from this program might be a little different every time, but it will look similar to the following:
 
-```text
+```
 hi number 1 from the main thread!
 hi number 1 from the spawned thread!
 hi number 2 from the main thread!
@@ -5872,7 +5872,7 @@ Listing 16-2: Saving a "JoinHandle" from "thread::spawn" to guarantee the thread
 
 Calling "join" on the handle blocks the thread currently running until the thread represented by the handle terminates. *Blocking* a thread means that thread is prevented from performing work or exiting. Because we’ve put the call to "join" after the main thread’s "for" loop, running Listing 16-2 should produce output similar to this:
 
-```text
+```
 hi number 1 from the main thread!
 hi number 2 from the main thread!
 hi number 1 from the spawned thread!
@@ -5917,7 +5917,7 @@ fn main() {
 
 The main thread will wait for the spawned thread to finish and then run its "for" loop, so the output won’t be interleaved anymore, as shown here:
 
-```text
+```
 hi number 1 from the spawned thread!
 hi number 2 from the spawned thread!
 hi number 3 from the spawned thread!
@@ -6017,7 +6017,7 @@ If Rust allowed us to run this code, there’s a possibility the spawned thread 
 
 To fix the compiler error in Listing 16-3, we can use the error message’s advice:
 
-```text
+```
 help: to force the closure to take ownership of "v" (and any other referenced variables), use the "move" keyword
   |
 6 |     let handle = thread::spawn(move || {
@@ -6164,7 +6164,7 @@ We’ve used "recv" in this example for simplicity; we don’t have any other wo
 
 When we run the code in Listing 16-8, we’ll see the value printed from the main thread:
 
-```text
+```
 Got: hi
 ```
 
@@ -6261,7 +6261,7 @@ In the main thread, we’re not calling the "recv" function explicitly anymore: 
 
 When running the code in Listing 16-10, you should see the following output with a 1-second pause in between each line:
 
-```text
+```
 Got: hi
 Got: from
 Got: the
@@ -6323,7 +6323,7 @@ This time, before we create the first spawned thread, we call "clone" on the tra
 
 When you run the code, your output should look something like this:
 
-```text
+```
 Got: hi
 Got: more
 Got: from
@@ -6575,7 +6575,7 @@ Listing 16-15: Using an "Arc<T>" to wrap the "Mutex<T>" to be able to share owne
 
 This code will print the following:
 
-```text
+```
 Result: 10
 ```
 

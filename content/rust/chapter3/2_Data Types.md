@@ -16,19 +16,15 @@ template ="book_page_rust.html"
   <br>
 
 - 스칼라 타입: 단일 값
-
-- * 정수타입: 부호있는 타입, 부호없이 양수만 있는 타입이 있다
-
-  * 소수점 타입: 모두 부호가 있다.
-
-  * boolean 타입: true, false
-
-  * 문자 타입: 한글자(영어, 한글, 이모지 등), 작은따옴표 사용
+  - 정수타입: 부호있는 타입, 부호없이 양수만 있는 타입이 있다
+  - 소수점 타입: 모두 부호가 있다.
+  - boolean 타입: true, false
+  - 문자 타입: 한글자(영어, 한글, 이모지 등), 작은따옴표 사용
 
     <br>
 
 - 복합 타입: 값의 그룹
-- - (튜플 타입): 길이 고정, 값의 타입은 다양
+  - (튜플 타입): 길이 고정, 값의 타입은 다양
   - \[배열 타입]: 길이 고정, 값의 타입은 하나
 
 <!-- more -->
@@ -45,7 +41,7 @@ let guess: u32 = `42`.parse().expect(`Not a number!`);
 
 앞의 코드에 표시된 `: u32` 타입 주석을 추가하지 않으면 Rust는 다음과 같은 오류를 표시할 것입니다. 이는 컴파일러가 어떤 타입을 사용하려는지 알기 위해 더 많은 정보가 필요함을 의미합니다.
 
-```console
+```
 $ cargo build
    Compiling no_type_annotations v0.1.0 (file:///projects/no_type_annotations)
 error[E0282]: type annotations needed
@@ -110,7 +106,7 @@ error: could not compile `no_type_annotations` due to previous error
 
 > ##### [정수 오버플로](https://doc.rust-lang.org/book/ch03-02-data-types.html#integer-overflow)
 >
-> 0에서 255 사이의 값을 보유할 수 있는 `u8` 타입의 변수가 있다고 가정해 보겠습니다. 변수를 해당 범위 밖의 값(예: 256)으로 변경하려고 하면 정수 오버플로가 발생하여 두 가지 중 하나가 발생할 수 *있습니다* . 
+> 0에서 255 사이의 값을 보유할 수 있는 `u8` 타입의 변수가 있다고 가정해 보겠습니다. 변수를 해당 범위 밖의 값(예: 256)으로 변경하려고 하면 정수 오버플로가 발생하여 두 가지 중 하나가 발생할 수 *있습니다* .
 >
 > 디버그 모드에서 컴파일할 때, Rust는 정수 오버플로에 대한 검사를 포함해서 이러한 동작이 발생하면 런타임에 프로그램 패닉을 유발합니다 *.* Rust는 프로그램이 오류와 함께 종료될 때 *패닉이라는* 용어를 사용합니다. 9장의 [`패닉!`이 있는 복구할 수 없는 오류`](https://doc.rust-lang.org/book/ch09-01-unrecoverable-errors-with-panic.html) 섹션 에서 패닉에 대해 더 깊이 논의할 것입니다.
 >
@@ -154,14 +150,14 @@ fn main() {
 
     // subtraction
     let difference = 95.5 - 4.3;
-    
+
     // multiplication
     let product = 4 * 30;
-    
+
     // division
     let quotient = 56.7 / 32.2;
     let truncated = -5 / 3; // Results in -1
-    
+
     // remainder
     let remainder = 43 % 5;
 }
@@ -232,7 +228,7 @@ fn main() {
     let tup = (500, 6.4, 1);
 
     let (x, y, z) = tup;
-    
+
     println!(`The value of y is: {y}`);
 }
 ```
@@ -250,9 +246,9 @@ fn main() {
     let x: (i32, f64, u8) = (500, 6.4, 1);
 
     let five_hundred = x.0;
-    
+
     let six_point_four = x.1;
-    
+
     let one = x.2;
 }
 ```
@@ -340,31 +336,31 @@ fn main() {
     let a = [1, 2, 3, 4, 5];
 
     println!(`Please enter an array index.`);
-    
+
     let mut index = String::new();
-    
+
     io::stdin()
         .read_line(&mut index)
         .expect(`Failed to read line`);
-    
+
     let index: usize = index
         .trim()
         .parse()
         .expect(`Index entered was not a number`);
-    
+
     let element = a[index];
-    
+
     println!(`The value of the element at index {index} is: {element}`);
 }
 ```
 
-이 코드는 성공적으로 컴파일됩니다. `cargo run`을 사용하여 이 코드를 실행하고 `0`, `1`, `2`, `3` 또는 `4`를 입력하면 프로그램이 배열의 해당 인덱스에서 해당 값을 인쇄합니다. 
+이 코드는 성공적으로 컴파일됩니다. `cargo run`을 사용하여 이 코드를 실행하고 `0`, `1`, `2`, `3` 또는 `4`를 입력하면 프로그램이 배열의 해당 인덱스에서 해당 값을 인쇄합니다.
 
 <br>
 
 대신 `10`과 같이 배열의 끝을 지나 숫자를 입력하면 다음과 같은 출력이 표시됩니다.
 
-```console
+```
 thread 'main' panicked at 'index out of bounds: the len is 5 but the index is 10', src/main.rs:19:19
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 ```

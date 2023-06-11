@@ -1130,7 +1130,7 @@ Rust에서 통합 테스트는 완전히 라이브러리 외부에 있습니다.
 
 통합 테스트를 만들어 봅시다. 목록 11-12의 코드가 *src/lib.rs 파일에 있는 상태에서* *테스트* 디렉토리를 만들고 *tests/integration_test.rs* 라는 새 파일을 만듭니다. 디렉토리 구조는 다음과 같아야 합니다.
 
-```text
+```
 adder
 ├── Cargo.lock
 ├── Cargo.toml
@@ -1259,7 +1259,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 *테스트 출력에 `common`이 표시되지 않도록 하려면 tests/common.rs 를* 생성하는 대신 *tests/common/mod.rs 를* 생성합니다. 이제 프로젝트 디렉토리는 다음과 같습니다.
 
-```text
+```
 ├── Cargo.lock
 ├── Cargo.toml
 ├── src
@@ -1441,7 +1441,7 @@ In file sample.txt
 
 파일명: 시.txt
 
-```text
+```
 I`m nobody! Who are you?
 Are you nobody, too?
 Then there`s a pair of us - don`t tell!
@@ -2470,7 +2470,7 @@ $ cargo run > output.txt
 
 `>` 구문은 표준 출력의 내용을 화면 대신 *output.txt* 에 쓰도록 쉘에 지시합니다. 예상했던 오류 메시지가 화면에 표시되지 않았으므로 파일에 오류가 있음을 의미합니다. 이것이 *output.txt* 에 포함된 내용입니다.
 
-```text
+```
 Problem parsing arguments: not enough arguments
 ```
 
@@ -2519,7 +2519,7 @@ $ cargo run -- to poem.txt > output.txt
 
 파일 이름: output.txt
 
-```text
+```
 Are you nobody, too?
 How dreary to be somebody!
 ```
@@ -3392,7 +3392,7 @@ Listing 13-22: `search` 함수 구현에서 반복자 어댑터 메서드 사용
 
 *Arthur Conan Doyle 경의 Sherlock Holmes의 모험* 전체 내용을 `문자열`로 로드 하고 내용에서 *the라는* 단어를 찾아 벤치마크를 실행했습니다. 다음은 `for` 루프를 사용하는 `search` 버전과 반복자를 사용하는 버전에 대한 벤치마크 결과입니다.
 
-```text
+```
 test bench_search_for  ... bench:  19,620,300 ns/iter (+/- 915,700)
 test bench_search_iter ... bench:  19,234,900 ns/iter (+/- 657,200)
 ```
@@ -3550,7 +3550,7 @@ Listing 14-1에서 `# Examples` Markdown 제목을 사용하여 `Examples`라는
 
 문서 주석에 예제 코드 블록을 추가하면 라이브러리 사용 방법을 시연하는 데 도움이 될 수 있으며 추가 보너스가 있습니다. `cargo test`를 실행하면 문서의 코드 예제가 테스트로 실행됩니다! 예제가 있는 문서보다 더 좋은 것은 없습니다. 그러나 문서가 작성된 이후 코드가 변경되었기 때문에 작동하지 않는 예제보다 더 나쁜 것은 없습니다. Listing 14-1의 `add_one` 함수에 대한 문서와 함께 `cargo test`를 실행하면 테스트 결과에 다음과 같은 섹션이 표시됩니다.
 
-```text
+```
    Doc-tests my_crate
 
 running 1 test
@@ -3866,7 +3866,7 @@ $ cargo new adder
 
 이 시점에서 `cargo build`를 실행하여 작업 공간을 빌드할 수 있습니다. *추가* 디렉토리 의 파일은 다음과 같아야 합니다.
 
-```text
+```
 ├── Cargo.lock
 ├── Cargo.toml
 ├── adder
@@ -3902,7 +3902,7 @@ $ cargo new add_one --lib
 
 *이제 추가* 디렉토리 에 다음 디렉토리와 파일이 있어야 합니다.
 
-```text
+```
 ├── Cargo.lock
 ├── Cargo.toml
 ├── add_one
@@ -4206,7 +4206,7 @@ cons *list* 는 Lisp 프로그래밍 언어와 그 방언에서 나온 데이터
 
 예를 들어, 다음은 목록 1, 2, 3을 포함하는 cons 목록의 의사 코드 표현이며 각 쌍은 괄호 안에 있습니다.
 
-```text
+```
 (1, (2, (3, Nil)))
 ```
 
@@ -4296,7 +4296,7 @@ Rust가 목록 15-2의 `List` 열거형과 같은 재귀 유형에 필요한 공
 
 Rust는 재귀적으로 정의된 유형에 할당할 공간을 파악할 수 없기 때문에 컴파일러는 다음과 같은 유용한 제안과 함께 오류를 표시합니다.
 
-```text
+```
 help: insert some indirection (e.g., a `Box`, `Rc`, or `&`) to make `List` representable
   |
 2 |     Cons(i32, Box<List>),
@@ -5410,7 +5410,7 @@ Listing 15-28: 상위 노드 "branch"에 대한 약한 참조가 있는 "리프"
 
 이 시점에서 "업그레이드" 메서드를 사용하여 "리프"의 부모에 대한 참조를 얻으려고 하면 "없음" 값을 얻습니다. 첫 번째 "println!"의 출력에서 이것을 볼 수 있습니다. 성명:
 
-```text
+```
 leaf parent = None
 ```
 
@@ -5418,7 +5418,7 @@ leaf parent = None
 
 "leaf"의 부모를 다시 인쇄하면 이번에는 "branch"를 포함하는 "Some" 변형을 얻게 됩니다. 이제 "leaf"는 부모에 액세스할 수 있습니다! "리프"를 인쇄할 때 목록 15-26에서와 같이 결국 스택 오버플로로 끝나는 주기도 피합니다. 약한" 참조는 "(약함)"으로 인쇄됩니다.
 
-```text
+```
 leaf parent = Some(Node { value: 5, parent: RefCell { value: (Weak) },
 children: RefCell { value: [Node { value: 3, parent: RefCell { value: (Weak) },
 children: RefCell { value: [] } }] } })
@@ -5563,7 +5563,7 @@ fn main() {
 
 Rust 프로그램의 메인 스레드가 완료되면 생성된 모든 스레드는 실행 완료 여부에 관계없이 종료됩니다. 이 프로그램의 출력은 매번 조금씩 다를 수 있지만 다음과 유사하게 표시됩니다.
 
-```text
+```
 hi number 1 from the main thread!
 hi number 1 from the spawned thread!
 hi number 2 from the main thread!
@@ -5612,7 +5612,7 @@ fn main() {
 
 핸들에서 "join"을 호출하면 핸들이 나타내는 스레드가 종료될 때까지 현재 실행 중인 스레드가 차단됩니다. 스레드를 *차단한다는 것은 스레드가 작업을 수행하거나 종료하는 것을 방지함을 의미합니다.* 메인 스레드의 "for" 루프 뒤에 "join"에 대한 호출을 넣었기 때문에 목록 16-2를 실행하면 다음과 유사한 출력이 생성되어야 합니다.
 
-```text
+```
 hi number 1 from the main thread!
 hi number 2 from the main thread!
 hi number 1 from the spawned thread!
@@ -5657,7 +5657,7 @@ fn main() {
 
 메인 스레드는 생성된 스레드가 완료될 때까지 기다린 다음 "for" 루프를 실행하므로 다음과 같이 출력이 더 이상 인터리브되지 않습니다.
 
-```text
+```
 hi number 1 from the spawned thread!
 hi number 2 from the spawned thread!
 hi number 3 from the spawned thread!
@@ -5757,7 +5757,7 @@ Rust가 이 코드를 실행하도록 허용하면 생성된 스레드가 전혀
 
 목록 16-3의 컴파일러 오류를 수정하기 위해 오류 메시지의 조언을 사용할 수 있습니다.
 
-```text
+```
 help: to force the closure to take ownership of "v" (and any other referenced variables), use the "move" keyword
   |
 6 |     let handle = thread::spawn(move || {
@@ -5896,7 +5896,7 @@ Listing 16-8: 메인 스레드에서 "hi" 값을 받고 출력하기
 
 목록 16-8의 코드를 실행하면 메인 스레드에서 출력된 값을 볼 수 있습니다.
 
-```text
+```
 Got: hi
 ```
 
@@ -5993,7 +5993,7 @@ Listing 16-10: 여러 메시지를 보내고 각 메시지 사이에 일시 중�
 
 목록 16-10의 코드를 실행할 때 각 줄 사이에 1초간 일시 중지가 있는 다음 출력이 표시되어야 합니다.
 
-```text
+```
 Got: hi
 Got: from
 Got: the
@@ -6055,7 +6055,7 @@ Listing 16-11: 여러 생산자로부터 여러 메시지 보내기
 
 코드를 실행하면 출력은 다음과 같아야 합니다.
 
-```text
+```
 Got: hi
 Got: more
 Got: from
@@ -6299,7 +6299,7 @@ Listing 16-15: "호" 사용하기"를 래핑하려면 "뮤텍스" 여러 스레�
 
 이 코드는 다음을 인쇄합니다.
 
-```text
+```
 Result: 10
 ```
 
