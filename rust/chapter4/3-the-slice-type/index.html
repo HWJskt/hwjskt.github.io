@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='&#x2F;icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='&#x2F;icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" integrity="sha384-oGm59HWAkwO32h2w8u0B98wKBZJwd6MbWtAJwQKCTffZjOXHXrnyv9Syjovgc+UV" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://hwjskt.github.io/deep-thought.css" rel="stylesheet" />
+  
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/book.css">
+    <link rel="stylesheet" href="https://hwjskt.github.io/deep-thought.css">
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/newsprint.css">
+
+
+  <title>
+    
+    
+    Dr.JUNG | Rust
+
+  </title>
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176984489-2"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-176984489-2");
+  </script>
+  
+  
+
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;">Dr.JUNG</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;about">
+            AboutMe
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;docs">
+            Docs
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;rust">
+            Rust
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  
+    
+    <section>
+        <div class="book-menu is-2">
+            
+            
+            <aside role="navigation">
+                <ul>
+                    
+                        
+                        
+                        <li >
+                            <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;">Introduction</a>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;">
+                                    <strong>1.</strong>
+                                    Getting Started
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;1-installation&#x2F;">
+                                                    <strong>1.1.</strong>
+                                                    Installation
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;2-helloworld&#x2F;">
+                                                    <strong>1.2.</strong>
+                                                    Hello, World!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;3-hellocargo&#x2F;">
+                                                    <strong>1.3.</strong>
+                                                    Hello, Cargo!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter2&#x2F;">
+                                    <strong>2.</strong>
+                                    Programming a Guessing Game
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;">
+                                    <strong>3.</strong>
+                                    Common Programming Concepts
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;1-variables-and-mutability&#x2F;">
+                                                    <strong>3.1.</strong>
+                                                    Variables and Mutability
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;2-data-types&#x2F;">
+                                                    <strong>3.2.</strong>
+                                                    Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;3-functions&#x2F;">
+                                                    <strong>3.3.</strong>
+                                                    Functions
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;4-comments&#x2F;">
+                                                    <strong>3.4.</strong>
+                                                    Comments
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;5-control-flow&#x2F;">
+                                                    <strong>3.5.</strong>
+                                                    Control Flow
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;">
+                                    <strong>4.</strong>
+                                    Understanding Ownership
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;1-what-is-ownership&#x2F;">
+                                                    <strong>4.1.</strong>
+                                                    What is Ownership?
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;2-references-and-borrowing&#x2F;">
+                                                    <strong>4.2.</strong>
+                                                    References and Borrowing
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="active">
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;3-the-slice-type&#x2F;">
+                                                    <strong>4.3.</strong>
+                                                    The Slice Type
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;">
+                                    <strong>5.</strong>
+                                    Using Structs to Structure Related Data
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;1-defining-and-instantiating-structs&#x2F;">
+                                                    <strong>5.1.</strong>
+                                                    Defining and Instantiating Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;2-an-example-program-using-structs&#x2F;">
+                                                    <strong>5.2.</strong>
+                                                    An Example Program Using Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;3-method-syntax&#x2F;">
+                                                    <strong>5.3.</strong>
+                                                    Method Syntax
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;">
+                                    <strong>6.</strong>
+                                    Enums and Pattern Matching
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;1-defining-an-enum&#x2F;">
+                                                    <strong>6.1.</strong>
+                                                    Defining an Enum
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;2-the-match-control-flow-construct&#x2F;">
+                                                    <strong>6.2.</strong>
+                                                    The match Control Flow Construct
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;3-concise-control-flow-with-if-let&#x2F;">
+                                                    <strong>6.3.</strong>
+                                                    Concise Control Flow with if let.md
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;">
+                                    <strong>7.</strong>
+                                    Managing Growing Projects with Packages, Crates, and Modules
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;1-packages-and-crates&#x2F;">
+                                                    <strong>7.1.</strong>
+                                                    Packages and Crates
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;2-defining-modules-to-control-scope-and-privacy&#x2F;">
+                                                    <strong>7.2.</strong>
+                                                    Defining Modules to Control Scope and Privacy
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;3-paths-for-referring-to-an-item-in-the-module-tree&#x2F;">
+                                                    <strong>7.3.</strong>
+                                                    Paths for Referring to an Item in the Module Tree
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;4-bringing-paths-into-scope-with-the-use-keyword&#x2F;">
+                                                    <strong>7.4.</strong>
+                                                    Bringing Paths Into Scope with the use Keyword
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;5-separating-modules-into-different-files&#x2F;">
+                                                    <strong>7.5.</strong>
+                                                    Separating Modules into Different Files
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;">
+                                    <strong>8.</strong>
+                                    Common Collections
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;1-storing-lists-of-values-with-vectors&#x2F;">
+                                                    <strong>8.1.</strong>
+                                                    Storing Lists of Values with Vectors
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;">
+                                                    <strong>8.2.</strong>
+                                                    Storing UTF-8 Encoded Text with Strings
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;3-storing-keys-with-associated-values-in-hash-maps&#x2F;">
+                                                    <strong>8.3.</strong>
+                                                    Storing Keys with Associated Values in Hash Maps
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </aside>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="book-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="book-search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <h1>The Slice Type</h1>
+    <h2 id="yohya">요약</h2>
+<ul>
+<li>문자열을 슬라이스 할 수 있다.</li>
+<li>문자열은 UTF-8 형식이어야 한다.</li>
+<li>array 도 슬라이스 할 수 있다.</li>
+</ul>
+<h2 id="sseuraisse-taib"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch04-03-slices.html#the-slice-type">슬라이스 타입</a></h2>
+<p><em>슬라이스를 사용하면</em> 전체 컬렉션이 아닌, 컬렉션의 연속적인 요소 시퀀스를 참조할 수 있습니다. 슬라이스는 일종의 참조이므로 소유권이 없습니다.</p>
+<p>여기에 작은 프로그래밍 문제가 있습니다. 여러 단어들로 구성된 문자열을 공백으로 분리한 다음, 첫 번째 단어를 반환하는 함수를 작성하세요. 함수가 문자열에서 공백을 찾지 못하면 전체 문자열이 한 단어여야 하므로 전체 문자열이 반환되어야 합니다.</p>
+<p>슬라이스가 해결하는 문제를 이해하기 위해 슬라이스를 사용하지 않고 이 함수의 시그니처를 작성하는 방법을 살펴보겠습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">first_word</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">s</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">String) -&gt; </span><span style="color:#adb7c9;">?
+</span></code></pre>
+<p><code>first_word</code> 함수는 매개변수로 <code>&amp;String</code>을 가집니다. 우리는 소유권을 원하지 않으므로 여기까지는 괜찮습니다. 그러나 우리는 무엇을 반환해야 합니까? 문자열의 <em>일부</em> 에 대해 말할 방법이 없습니다. 그러나 공백으로 표시된 단어 끝의 인덱스를 반환할 수 있습니다. Listing 4-7과 같이 시도해 봅시다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">first_word</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">s</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">String) -&gt; </span><span style="color:#cd74e8;">usize </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> bytes </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> s.</span><span style="color:#5ebfcc;">as_bytes</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">for </span><span style="color:#abb2bf;">(i, </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">item) </span><span style="color:#adb7c9;">in</span><span style="color:#abb2bf;"> bytes.</span><span style="color:#5ebfcc;">iter</span><span style="color:#abb2bf;">().</span><span style="color:#5ebfcc;">enumerate</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">if</span><span style="color:#abb2bf;"> item </span><span style="color:#adb7c9;">== </span><span style="color:#cd74e8;">b</span><span style="color:#9acc76;">&#39; &#39; </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">            </span><span style="color:#cd74e8;">return</span><span style="color:#abb2bf;"> i;
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    s.</span><span style="color:#5ebfcc;">len</span><span style="color:#abb2bf;">()
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 4-7: 바이트 인덱스 값을 <code>String</code> 매개변수로 반환하는 <code>first_word</code> 함수</p>
+<p>요소별로 <code>문자열</code> 요소를 살펴보고 값이 공백인지 확인해야 하므로 <code>as_bytes</code> 메서드를 사용하여 <code>문자열</code>을 바이트 배열로 변환합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> bytes </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> s.</span><span style="color:#5ebfcc;">as_bytes</span><span style="color:#abb2bf;">();
+</span></code></pre>
+<p>다음으로 <code>iter</code> 메서드를 사용하여 바이트 배열에 대한 반복자를 만듭니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">for </span><span style="color:#abb2bf;">(i, </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">item) </span><span style="color:#adb7c9;">in</span><span style="color:#abb2bf;"> bytes.</span><span style="color:#5ebfcc;">iter</span><span style="color:#abb2bf;">().</span><span style="color:#5ebfcc;">enumerate</span><span style="color:#abb2bf;">() {
+</span></code></pre>
+<p><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch13-02-iterators.html">13장</a> 에서 이터레이터에 대해 더 자세히 논의할 것입니다. 지금은 <code>iter</code>가 컬렉션의 각 요소를 반환하는 메서드이고 <code>enumerate</code>가 <code>iter</code>의 결과를 래핑하고 대신 튜플의 일부로 각 요소를 반환한다는 것을 알아두세요. <code>enumerate</code>에서 반환된 튜플의 첫 번째 요소는 인덱스이고 두 번째 요소는 요소에 대한 참조입니다. 지수를 직접 계산하는 것보다 조금 더 편리합니다.</p>
+<p><code>enumerate</code> 메서드는 튜플을 반환하기 때문에 패턴을 사용하여 해당 튜플을 분해할 수 있습니다. <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch06-02-match.html#patterns-that-bind-to-values">6장</a> 에서 패턴에 대해 더 논의할 것입니다. <code>for</code> 루프에서 튜플의 인덱스에 <code>i</code>가 있고 튜플의 단일 바이트에 <code>&amp;item</code>이 있는 패턴을 지정합니다. <code>.iter().enumerate()</code>에서 요소에 대한 참조를 가져오므로 패턴에서 <code>&amp;</code>를 사용합니다.</p>
+<p><code>for</code> 루프 내에서 바이트 리터럴 구문을 사용하여 공백을 나타내는 바이트를 검색합니다. 공백을 찾으면 위치를 반환합니다. 그렇지 않으면 <code>s.len()</code>을 사용하여 문자열의 길이를 반환합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">if</span><span style="color:#abb2bf;"> item </span><span style="color:#adb7c9;">== </span><span style="color:#cd74e8;">b</span><span style="color:#9acc76;">&#39; &#39; </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">            </span><span style="color:#cd74e8;">return</span><span style="color:#abb2bf;"> i;
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    s.</span><span style="color:#5ebfcc;">len</span><span style="color:#abb2bf;">()
+</span></code></pre>
+<p>이제 문자열에서 첫 번째 단어의 끝 인덱스를 찾을 수 있는 방법이 있지만 문제가 있습니다. 자체적으로 <code>usize</code>를 반환하지만 <code>&amp;String</code> 컨텍스트에서 의미 있는 숫자일 뿐입니다. 즉, <code>문자열</code>과는 별개의 값이기 때문에 앞으로도 유효하다는 보장이 없습니다. 목록 4-7의 <code>first_word</code> 함수를 사용하는 목록 4-8의 프로그램을 고려하십시오.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello world`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> word </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">first_word</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">s); </span><span style="font-style:italic;color:#5f697a;">// word will get the value 5
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    s.</span><span style="color:#5ebfcc;">clear</span><span style="color:#abb2bf;">(); </span><span style="font-style:italic;color:#5f697a;">// this empties the String, making it equal to ``
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// word still has the value 5 here, but there&#39;s no more string that
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// we could meaningfully use the value 5 with. word is now totally invalid!
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 4-8: <code>first_word</code> 함수 호출 결과 저장 및 <code>문자열</code> 내용 변경</p>
+<p>이 프로그램은 오류 없이 컴파일되며 <code>s.clear()</code>를 호출한 후 <code>word</code>를 사용해도 오류가 발생하지 않습니다.  <code>word</code>는 <code>s</code>의 상태와 전혀 연결되어 있지 않기 때문에 <code>word</code>는 여전히 값 <code>5</code>를 포함합니다. 변수 <code>s</code>와 함께 값 <code>5</code>를 사용하여 첫 번째 단어를 추출하려고 시도할 수 있지만 <code>word</code>에 <code>5</code>를 저장한 이후로 <code>s</code>의 내용이 변경되었기 때문에 이것은 버그가 됩니다.</p>
+<p><code>word</code>의 인덱스가 <code>s</code>의 데이터와 동기화되지 않는 것에 대해 걱정하는 것은 지루하고 오류가 발생하기 쉽습니다! <code>second_word</code> 함수를 작성하면 이러한 인덱스를 관리하기가 훨씬 더 어려워집니다. 시그니쳐는 다음과 같아야 합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">second_word</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">s</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">String) -&gt; (</span><span style="color:#cd74e8;">usize</span><span style="color:#abb2bf;">, </span><span style="color:#cd74e8;">usize</span><span style="color:#abb2bf;">) {
+</span></code></pre>
+<p>이제 우리는 시작 <em>및</em> 종료 인덱스를 추적하고 있으며, 특정 상태의 데이터에서 계산되었지만 해당 상태에 전혀 연결되지 않은 더 많은 값을 가지고 있습니다. 동기화를 유지해야 하는 세 개의 관련 없는 변수가 떠다니고 있습니다.</p>
+<p>운 좋게도 Rust는 이 문제에 대한 해결책을 가지고 있습니다: 스트링 슬라이스(string slices)입니다.</p>
+<h3 id="sseteuring-sseuraisse"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch04-03-slices.html#string-slices">스트링 슬라이스</a></h3>
+<p>스트링 슬라이스은 <code>문자열</code>의 일부에 대한 참조이며 다음과 같습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello world`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">s[</span><span style="color:#db9d63;">0</span><span style="color:#adb7c9;">..</span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> world </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">s[</span><span style="color:#db9d63;">6</span><span style="color:#adb7c9;">..</span><span style="color:#db9d63;">11</span><span style="color:#abb2bf;">];
+</span></code></pre>
+<p><code>hello</code>는 전체 <code>문자열</code>에 대한 참조가 아니라,  <code>[0..5]</code> 비트에 지정된 <code>문자열</code> 부분에 대한 참조입니다. <code>[starting_index..ending_index]</code>를 지정하여 괄호 안의 범위를 사용하여 슬라이스를 만듭니다. 여기서 <code>starting_index</code>는 슬라이스의 첫 번째 위치이고 <code>ending_index</code>는 슬라이스의 마지막 위치보다 하나 더 많습니다. 내부적으로 슬라이스 데이터 구조는 <code>ending_index</code>에서 <code>starting_index</code>를 뺀 값에 해당하는 슬라이스의 시작 위치와 길이를 저장합니다. 따라서 <code>let world = &amp;s[6..11];</code>의 경우, <code>world</code>는 <code>s</code>의 인덱스 6에 있는 바이트에 대한 포인터에 길이 값(length)이 <code>5</code>인 하는 슬라이스입니다.</p>
+<p>그림 4-6은 이를 다이어그램으로 보여줍니다.</p>
+<p><img src="https://doc.rust-lang.org/book/img/trpl04-06.svg" alt="3개의 테이블: 힙의 문자열 데이터 hello world 테이블에서 인덱스 0의 바이트를 가리키는 s의 스택 데이터를 나타내는 테이블.  세 번째 테이블은 길이 값이 5이고 힙 데이터 테이블의 바이트 6을 가리키는 슬라이스 세계의 스택 데이터를 나타냅니다." /></p>
+<p>그림 4-6: <code>문자열</code>의 일부를 참조하는 문자열 슬라이스</p>
+<p>Rust의 <code>..</code> 범위 구문을 사용할 때, 인덱스 0에서 시작하려면 <code>..</code> 앞에 있는 값을 생략할 수 있습니다. </p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> slice </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">s[</span><span style="color:#db9d63;">0</span><span style="color:#adb7c9;">..</span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">];
+</span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> slice </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">s[</span><span style="color:#adb7c9;">..</span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">];
+</span></code></pre>
+<p>마찬가지로 슬라이스에 <code>문자열</code>의 마지막 바이트가 포함되어 있으면 뒤에 있는 숫자를 삭제할 수 있습니다. 즉, 다음과 같이 동일합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> len </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> s.</span><span style="color:#5ebfcc;">len</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> slice </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">s[</span><span style="color:#db9d63;">3</span><span style="color:#adb7c9;">..</span><span style="color:#abb2bf;">len];
+</span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> slice </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">s[</span><span style="color:#db9d63;">3</span><span style="color:#adb7c9;">..</span><span style="color:#abb2bf;">];
+</span></code></pre>
+<p>두 값을 모두 삭제하여 전체 문자열의 조각을 가져올 수도 있습니다. 따라서 이들은 동일합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> len </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> s.</span><span style="color:#5ebfcc;">len</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> slice </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">s[</span><span style="color:#db9d63;">0</span><span style="color:#adb7c9;">..</span><span style="color:#abb2bf;">len];
+</span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> slice </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">s[</span><span style="color:#adb7c9;">..</span><span style="color:#abb2bf;">];
+</span></code></pre>
+<blockquote>
+<p>참고: 문자열 슬라이스 범위 인덱스는 유효한 UTF-8 문자 경계에서 발생해야 합니다. 멀티바이트 문자 중간에 문자열 조각을 만들려고 하면 프로그램이 오류와 함께 종료됩니다. 문자열 슬라이스를 소개하기 위해 이 섹션에서는 ASCII만 가정합니다. UTF-8 처리에 대한 자세한 내용은 8장의 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-02-strings.html#storing-utf-8-encoded-text-with-strings">UTF-8 인코딩된 텍스트를 문자열로 저장</a> 섹션에 있습니다.</p>
+</blockquote>
+<p>이 모든 정보를 염두에 두고 슬라이스를 반환하도록 <code>first_word</code>를 다시 작성해 보겠습니다. <code>문자열 조각</code>을 나타내는 유형은 <code>&amp;str</code>로 작성됩니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">first_word</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">s</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">String) -&gt; </span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">str </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> bytes </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> s.</span><span style="color:#5ebfcc;">as_bytes</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">for </span><span style="color:#abb2bf;">(i, </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">item) </span><span style="color:#adb7c9;">in</span><span style="color:#abb2bf;"> bytes.</span><span style="color:#5ebfcc;">iter</span><span style="color:#abb2bf;">().</span><span style="color:#5ebfcc;">enumerate</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">if</span><span style="color:#abb2bf;"> item </span><span style="color:#adb7c9;">== </span><span style="color:#cd74e8;">b</span><span style="color:#9acc76;">&#39; &#39; </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">            </span><span style="color:#cd74e8;">return </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">s[</span><span style="color:#db9d63;">0</span><span style="color:#adb7c9;">..</span><span style="color:#abb2bf;">i];
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">s[</span><span style="color:#adb7c9;">..</span><span style="color:#abb2bf;">]
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>우리는 Listing 4-7에서 했던 것과 같은 방법으로 단어의 끝에 대한 색인을 얻습니다. 공백의 첫 번째 항목을 찾는 것입니다. 공백을 찾으면 문자열의 시작과 공백의 인덱스를 시작 및 끝 인덱스로 사용하여 문자열 슬라이스를 반환합니다.</p>
+<p>이제 <code>first_word</code>를 호출하면 기본 데이터에 연결된 단일 값을 반환합니다. 값은 슬라이스의 시작점에 대한 참조와 슬라이스의 요소 수로 구성됩니다.</p>
+<p>슬라이스를 반환하는 것은 <code>second_word</code> 함수에서도 작동합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">second_word</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">s</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">String) -&gt; </span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">str </span><span style="color:#abb2bf;">{
+</span></code></pre>
+<p>이제 컴파일러가 <code>문자열</code>에 대한 참조가 유효한지 확인하기 때문에 엉망으로 만들기 훨씬 더 어려운 간단한 API가 있습니다. Listing 4-8에 있는 프로그램의 버그를 기억하십니까? 첫 번째 단어의 끝에 인덱스를 얻었지만 문자열을 지워서 인덱스가 유효하지 않게 되었을 때의 버그를 기억하십니까? 해당 코드는 논리적으로 잘못되었지만 즉각적인 오류는 표시되지 않았습니다. 빈 문자열과 함께 첫 번째 단어 색인을 계속 사용하려고 하면 나중에 문제가 나타납니다. 슬라이스는 이 버그를 불가능하게 만들고 코드에 문제가 있음을 훨씬 빨리 알려줍니다. <code>first_word</code>의 슬라이스 버전을 사용하면 컴파일 타임 오류가 발생합니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello world`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> word </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">first_word</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">s);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    s.</span><span style="color:#5ebfcc;">clear</span><span style="color:#abb2bf;">(); </span><span style="font-style:italic;color:#5f697a;">// error!
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`the first word is: {}`, word);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>다음은 컴파일러 오류입니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> ownership v0.1.0 (file:///projects/ownership)
+</span><span style="color:#eb6772;">error[E0502]:</span><span style="color:#abb2bf;"> cannot borrow `</span><span style="color:#eb6772;">s</span><span style="color:#abb2bf;">` as mutable because it is also borrowed as immutable
+</span><span style="color:#abb2bf;">  </span><span style="color:#eb6772;">--</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> src/main.rs:18:5
+</span><span style="color:#abb2bf;">   </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">16 </span><span style="color:#adb7c9;">|     </span><span style="color:#5ebfcc;">let</span><span style="color:#abb2bf;"> word </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> first_word(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">s);
+</span><span style="color:#abb2bf;">   </span><span style="color:#adb7c9;">|                           </span><span style="color:#eb6772;">--</span><span style="color:#abb2bf;"> immutable borrow occurs here
+</span><span style="color:#eb6772;">17 </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">18 </span><span style="color:#adb7c9;">|     </span><span style="color:#5cb3fa;">s.clear</span><span style="color:#abb2bf;">(); // error!
+</span><span style="color:#abb2bf;">   |     ^^^^^^^^^ mutable borrow occurs here
+</span><span style="color:#abb2bf;">19 |
+</span><span style="color:#abb2bf;">20 |     println!(`</span><span style="color:#eb6772;">the</span><span style="color:#abb2bf;"> first word is: {}`, word)</span><span style="color:#adb7c9;">;
+</span><span style="color:#abb2bf;">   </span><span style="color:#adb7c9;">|                                       </span><span style="color:#eb6772;">----</span><span style="color:#abb2bf;"> immutable borrow later used here
+</span><span style="color:#abb2bf;">
+</span><span style="color:#eb6772;">For</span><span style="color:#abb2bf;"> more information about this error, try `</span><span style="color:#eb6772;">rustc --explain</span><span style="color:#abb2bf;"> E0502`.
+</span><span style="color:#eb6772;">error:</span><span style="color:#abb2bf;"> could not compile `</span><span style="color:#eb6772;">ownership</span><span style="color:#abb2bf;">` due to previous error
+</span></code></pre>
+<p>무언가에 대한 불변 참조가 있으면 가변 참조도 사용할 수 없다는 차용 규칙을 상기하십시오. <code>clear</code>는 <code>String</code>을 잘라야(변경) 하기 때문에 가변  참조를 가져와야 합니다. <code>clear</code>를 호출하고 나서 사용한 <code>println!</code>은  <code>word</code>의 참조를 사용합니다. 그래서 불변 참조가 해당 시점에서 여전히 활성 상태여야 합니다. Rust는 <code>clear</code>의 가변 참조와 <code>word</code>의 불변 참조가 동시에 존재하는 것을 허용하지 않기 때문에 컴파일이 실패합니다. Rust는 API를 사용하기 쉽게 만들었을 뿐만 아니라 컴파일 시간에 전체 오류 클래스를 제거했습니다!</p>
+<h4 id="sseuraisserosseyi-munjahyeo-riteoreol"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch04-03-slices.html#string-literals-as-slices">슬라이스로서의 문자열 리터럴</a></h4>
+<p>바이너리 내부에 저장되는 문자열 리터럴에 대해 이야기했던 것을 기억하십시오. 이제 슬라이스에 대해 알았으므로 문자열 리터럴을 제대로 이해할 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> `Hello, world</span><span style="color:#adb7c9;">!</span><span style="color:#abb2bf;">`;
+</span></code></pre>
+<p>여기서 <code>s</code>의 유형은 <code>&amp;str</code>입니다. 바이너리의 특정 지점을 가리키는 슬라이스입니다. 이것이 문자열 리터럴이 불변인 이유이기도 합니다. <code>&amp;str</code>은 불변 참조입니다.</p>
+<h4 id="munjahyeo-joggaheu-maeggabbyeosuro"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch04-03-slices.html#string-slices-as-parameters">문자열 조각을 매개변수로</a></h4>
+<p>리터럴과 <code>문자열</code> 값의 조각을 사용할 수 있다는 사실을 알면 <code>first_word</code>에서 한 가지 더 개선할 수 있으며, 이것이 시그니처입니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">first_word</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">s</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">String) -&gt; </span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">str </span><span style="color:#abb2bf;">{
+</span></code></pre>
+<p>더 경험이 많은 Rustacean은 <code>&amp;String</code> 값과 <code>&amp;str</code> 값 모두에 대해 동일한 함수를 사용할 수 있기 때문에 목록 4-9에 표시된 서명을 대신 작성할 것입니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">first_word</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">s</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">str</span><span style="color:#abb2bf;">) -&gt; </span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">str </span><span style="color:#abb2bf;">{
+</span></code></pre>
+<p>Listing 4-9: <code>s</code> 매개변수 유형에 문자열 슬라이스를 사용하여 <code>first_word</code> 함수 개선</p>
+<p>문자열 슬라이스가 있으면 직접 전달할 수 있습니다. <code>문자열</code>이 있는 경우 <code>문자열</code> 조각이나 <code>문자열</code>에 대한 참조를 전달할 수 있습니다. 이러한 유연성은 15장의 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch15-02-deref.html#implicit-deref-coercions-with-functions-and-methods">암시적 역참조 강제 변환</a> 섹션 에서 다룰 기능인 <em>역참조</em> 강제를 활용합니다.</p>
+<p><code>문자열</code>에 대한 참조 대신, 문자열 슬라이스를 사용하도록 함수를 정의하면 기능 손실 없이 API가 더 일반적이고 유용해집니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> my_string </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello world`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// `first_word` works on slices of `String`s, whether partial or whole
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> word </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">first_word</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">my_string[</span><span style="color:#db9d63;">0</span><span style="color:#adb7c9;">..</span><span style="color:#db9d63;">6</span><span style="color:#abb2bf;">]);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> word </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">first_word</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">my_string[</span><span style="color:#adb7c9;">..</span><span style="color:#abb2bf;">]);
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// `first_word` also works on references to `String`s, which are equivalent
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// to whole slices of `String`s
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> word </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">first_word</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">my_string);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> my_string_literal </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> `hello world`;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// `first_word` works on slices of string literals, whether partial or whole
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> word </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">first_word</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">my_string_literal[</span><span style="color:#db9d63;">0</span><span style="color:#adb7c9;">..</span><span style="color:#db9d63;">6</span><span style="color:#abb2bf;">]);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> word </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">first_word</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">my_string_literal[</span><span style="color:#adb7c9;">..</span><span style="color:#abb2bf;">]);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// Because string literals *are* string slices already,
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// this works too, without the slice syntax!
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> word </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">first_word</span><span style="color:#abb2bf;">(my_string_literal);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<h3 id="dareun-sseuraisseddeu"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch04-03-slices.html#other-slices">다른 슬라이스들</a></h3>
+<p>상상할 수 있듯이 스트링 슬라이스는 스트링에 관한 내용입니다. 그러나 보다 일반적인 슬라이스 유형도 있습니다. 다음 배열을 고려하십시오.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> a </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">[</span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">3</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">4</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">];
+</span></code></pre>
+<p>문자열의 일부를 참조하려는 것처럼 배열의 일부를 참조하고 싶을 수도 있습니다. 우리는 이렇게 할 것입니다:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> a </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">[</span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">3</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">4</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> slice </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">a[</span><span style="color:#db9d63;">1</span><span style="color:#adb7c9;">..</span><span style="color:#db9d63;">3</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">assert_eq!(slice, </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">[</span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">3</span><span style="color:#abb2bf;">]);
+</span></code></pre>
+<p>이 슬라이스의 유형은 <code>&amp;[i32]</code>입니다. 첫 번째 요소에 대한 참조와 길이를 저장하여 스트링 슬라이스와 동일한 방식으로 작동합니다. 모든 종류의 다른 컬렉션에 대해 이러한 종류의 슬라이스를 사용하게 됩니다. 8장에서 벡터에 대해 이야기할 때 이러한 모음에 대해 자세히 논의할 것입니다.</p>
+<h2 id="yohya-1"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch04-03-slices.html#summary">요약</a></h2>
+<p>소유권, 차용 및 슬라이스의 개념은 컴파일 타임에 Rust 프로그램의 메모리 안전을 보장합니다. Rust 언어는 다른 시스템 프로그래밍 언어와 같은 방식으로 메모리 사용을 제어할 수 있지만, 데이터 소유자가 범위를 벗어날 때 데이터 소유자가 해당 데이터를 자동으로 정리하면 추가 코드를 작성하고 디버깅할 필요가 없습니다. 이 컨트롤을 얻으려면.</p>
+<p>소유권은 Rust의 다른 많은 부분이 작동하는 방식에 영향을 미치므로 책의 나머지 부분에서 이러한 개념에 대해 더 자세히 이야기할 것입니다. 5장으로 이동하여 <code>구조체(struct)</code>에서 데이터 조각을 함께 그룹화하는 방법을 살펴보겠습니다.</p>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        <a class="previous" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;2-references-and-borrowing&#x2F;"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        
+        
+        
+        
+            
+            
+            
+                
+            
+                
+            
+                
+            
+        
+            
+            
+            
+        
+            
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+            
+            
+                
+            
+                
+            
+                
+                    
+                
+            
+        
+            
+            
+                <a class="next" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;">></a>
+                
+                
+            
+            
+                
+            
+                
+            
+                
+            
+        
+            
+            
+            
+                
+            
+                
+            
+                
+            
+        
+            
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+            
+            
+                
+            
+                
+            
+                
+            
+        
+    
+
+            </div>
+        </div>
+
+        
+            
+                <script type="text/javascript" src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+                <script type="text/javascript" src="https://hwjskt.github.io/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://hwjskt.github.io/book.js"></script>
+        
+        </div>
+    </section>
+
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+  
+  
+
+  
+  
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js" integrity="sha384-Pulw7+h73841BQIK0LzJCydKRPChJUF9w8h8W0o3h+cLtoyNPJS847bQauLWOTwg" crossorigin="anonymous"></script>
+  
+  <script src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+  <script src="https://hwjskt.github.io/search_index.en.js"></script><script src="https://hwjskt.github.io/js/site.js"></script>
+
+  
+  
+
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='&#x2F;icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='&#x2F;icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" integrity="sha384-oGm59HWAkwO32h2w8u0B98wKBZJwd6MbWtAJwQKCTffZjOXHXrnyv9Syjovgc+UV" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://hwjskt.github.io/deep-thought.css" rel="stylesheet" />
+  
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/book.css">
+    <link rel="stylesheet" href="https://hwjskt.github.io/deep-thought.css">
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/newsprint.css">
+
+
+  <title>
+    
+    
+    Dr.JUNG | Rust
+
+  </title>
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176984489-2"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-176984489-2");
+  </script>
+  
+  
+
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;">Dr.JUNG</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;about">
+            AboutMe
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;docs">
+            Docs
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;rust">
+            Rust
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  
+    
+    <section>
+        <div class="book-menu is-2">
+            
+            
+            <aside role="navigation">
+                <ul>
+                    
+                        
+                        
+                        <li >
+                            <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;">Introduction</a>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;">
+                                    <strong>1.</strong>
+                                    Getting Started
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;1-installation&#x2F;">
+                                                    <strong>1.1.</strong>
+                                                    Installation
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;2-helloworld&#x2F;">
+                                                    <strong>1.2.</strong>
+                                                    Hello, World!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;3-hellocargo&#x2F;">
+                                                    <strong>1.3.</strong>
+                                                    Hello, Cargo!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter2&#x2F;">
+                                    <strong>2.</strong>
+                                    Programming a Guessing Game
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;">
+                                    <strong>3.</strong>
+                                    Common Programming Concepts
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;1-variables-and-mutability&#x2F;">
+                                                    <strong>3.1.</strong>
+                                                    Variables and Mutability
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;2-data-types&#x2F;">
+                                                    <strong>3.2.</strong>
+                                                    Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;3-functions&#x2F;">
+                                                    <strong>3.3.</strong>
+                                                    Functions
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;4-comments&#x2F;">
+                                                    <strong>3.4.</strong>
+                                                    Comments
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;5-control-flow&#x2F;">
+                                                    <strong>3.5.</strong>
+                                                    Control Flow
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;">
+                                    <strong>4.</strong>
+                                    Understanding Ownership
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;1-what-is-ownership&#x2F;">
+                                                    <strong>4.1.</strong>
+                                                    What is Ownership?
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;2-references-and-borrowing&#x2F;">
+                                                    <strong>4.2.</strong>
+                                                    References and Borrowing
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;3-the-slice-type&#x2F;">
+                                                    <strong>4.3.</strong>
+                                                    The Slice Type
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;">
+                                    <strong>5.</strong>
+                                    Using Structs to Structure Related Data
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;1-defining-and-instantiating-structs&#x2F;">
+                                                    <strong>5.1.</strong>
+                                                    Defining and Instantiating Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;2-an-example-program-using-structs&#x2F;">
+                                                    <strong>5.2.</strong>
+                                                    An Example Program Using Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;3-method-syntax&#x2F;">
+                                                    <strong>5.3.</strong>
+                                                    Method Syntax
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;">
+                                    <strong>6.</strong>
+                                    Enums and Pattern Matching
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;1-defining-an-enum&#x2F;">
+                                                    <strong>6.1.</strong>
+                                                    Defining an Enum
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;2-the-match-control-flow-construct&#x2F;">
+                                                    <strong>6.2.</strong>
+                                                    The match Control Flow Construct
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;3-concise-control-flow-with-if-let&#x2F;">
+                                                    <strong>6.3.</strong>
+                                                    Concise Control Flow with if let.md
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;">
+                                    <strong>7.</strong>
+                                    Managing Growing Projects with Packages, Crates, and Modules
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;1-packages-and-crates&#x2F;">
+                                                    <strong>7.1.</strong>
+                                                    Packages and Crates
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="active">
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;2-defining-modules-to-control-scope-and-privacy&#x2F;">
+                                                    <strong>7.2.</strong>
+                                                    Defining Modules to Control Scope and Privacy
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;3-paths-for-referring-to-an-item-in-the-module-tree&#x2F;">
+                                                    <strong>7.3.</strong>
+                                                    Paths for Referring to an Item in the Module Tree
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;4-bringing-paths-into-scope-with-the-use-keyword&#x2F;">
+                                                    <strong>7.4.</strong>
+                                                    Bringing Paths Into Scope with the use Keyword
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;5-separating-modules-into-different-files&#x2F;">
+                                                    <strong>7.5.</strong>
+                                                    Separating Modules into Different Files
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;">
+                                    <strong>8.</strong>
+                                    Common Collections
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;1-storing-lists-of-values-with-vectors&#x2F;">
+                                                    <strong>8.1.</strong>
+                                                    Storing Lists of Values with Vectors
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;">
+                                                    <strong>8.2.</strong>
+                                                    Storing UTF-8 Encoded Text with Strings
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;3-storing-keys-with-associated-values-in-hash-maps&#x2F;">
+                                                    <strong>8.3.</strong>
+                                                    Storing Keys with Associated Values in Hash Maps
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </aside>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="book-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="book-search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <h1>Defining Modules to Control Scope and Privacy</h1>
+    <h2 id="yohya">요약</h2>
+<ul>
+<li>
+<p>모듈</p>
+<ul>
+<li>크레이트 루트 파일에서 선언 (<code>mod</code>)</li>
+<li>모듈 파일에서 하위 모듈을 선언할 수 있다.</li>
+<li>모듈 선언 : priviate 는  <code>mod</code> , public 은 <code>pub mod</code> 이용</li>
+<li>모듈 내부에 structs, enums, constants, traits, functions 정의가능</li>
+</ul>
+</li>
+<li>
+<p>경로(paths)</p>
+<ul>
+<li>:: 를 이용해서 접근한다.</li>
+<li><code>use</code> 키워드로 short cut 을 만들수도 있다.</li>
+</ul>
+</li>
+<li>
+<p>크레이트 루트</p>
+<ul>
+<li><em>src/main.rs</em> 와 <em>src/lib.rs</em> 파일을 지칭</li>
+<li>*크레이트의 모듈 구조(=모듈트리)의 루트에서 <code>크레이트</code>라는 모듈을 형성</li>
+</ul>
+</li>
+</ul>
+<h2 id="bbeowi-scope-mic-peuraibbesi-privacy-reul-jeeohagi-wihan-moddyu-jjeonyi"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch07-02-defining-modules-to-control-scope-and-privacy.html#defining-modules-to-control-scope-and-privacy">범위(scope) 및 프라이버시(Privacy)를 제어하기 위한 모듈 정의</a></h2>
+<p>이 섹션에서는 모듈과 모듈 시스템의 다른 부분, 즉 항목 이름을 지정할 수 있는 <em>경로(paths)</em> 에 대해 설명합니다. 경로를 범위로 가져오는 <code>use</code> 키워드; 항목을 공개하기 위한 <code>pub</code> 키워드. 또한 <code>as</code> 키워드, 외부 패키지 및 glob 연산자에 대해서도 설명합니다.</p>
+<p>먼저 나중에 코드를 구성할 때 쉽게 참조할 수 있도록 규칙 목록부터 시작하겠습니다. 그러면 각 규칙에 대해 자세히 설명하겠습니다.</p>
+<h3 id="moddyu-citeu-siteu"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch07-02-defining-modules-to-control-scope-and-privacy.html#modules-cheat-sheet">모듈 치트 시트</a></h3>
+<p>여기에서는 모듈, 경로, <code>use</code> 키워드 및 <code>pub</code> 키워드가 컴파일러에서 작동하는 방법과 대부분의 개발자가 코드를 구성하는 방법에 대한 빠른 참조를 제공합니다. 우리는 이 장 전체에서 이러한 각 규칙의 예를 살펴보겠지만, 모듈이 작동하는 방식을 먼저 간략히 살펴보겠습니다.</p>
+<ul>
+<li>
+<p><strong>크레이트 루트에서 시작합니다</strong> : 크레이트를 컴파일할 때 컴파일러는 먼저 크레이트 루트 파일(일반적으로 라이브러리 크레이트의 경우 <em>src/lib.rs</em> 또는 바이너리 크레이트의 경우 <em>src/main.rs</em> )에서 컴파일할 코드를 찾습니다.</p>
+</li>
+<li>
+<p><strong>모듈 선언하는 방법</strong></p>
+<p>: 크레이트 루트 파일에서 새 모듈을 선언할 수 있습니다. 예를 들어 <code>garden</code> 모듈을 다음과 같이 선언합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">mod </span><span style="color:#abb2bf;">garden;
+</span></code></pre>
+<p>컴파일러는 다음 위치에서 모듈의 코드를 찾습니다.</p>
+<ul>
+<li>인라인에서, <code>mod garden</code> 다음의, 세미콜론을 대체하는 중괄호 내</li>
+<li><em>src/garden.rs</em> 파일에서</li>
+<li><em>src/garden/mod.rs</em> 파일에서</li>
+</ul>
+</li>
+<li>
+<p><strong>하위 모듈 선언하는 방법</strong></p>
+<p>: 크레이트 루트 이외의 모든 파일에서 하위 모듈을 선언할 수 있습니다. 예를 들어 <em>src/garden.rs</em>에서 <em>mod vegetables</em> 를 선언할 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">mod </span><span style="color:#abb2bf;">vegetables;
+</span></code></pre>
+<p>컴파일러는 다음 위치에서 상위 모듈의 이름이 지정된 디렉토리 내에서 하위 모듈의 코드를 찾습니다.</p>
+<ul>
+<li>인라인,  <code>mod vegetables</code> 바로 뒤에, 세미콜론 대신 중괄호 안에 </li>
+</ul>
+</li>
+<li>
+<p><em>src/garden/vegetables.rs</em> 파일에서</p>
+<ul>
+<li><em>src/garden/vegetables/mod.rs</em> 파일에서</li>
+</ul>
+</li>
+<li>
+<p><strong>모듈 코드로 접근하는 경로</strong> </p>
+<p>: 모듈이 크레이트의 일부가 되면, privacy rules이 허용하는 한, 동일한 크레이트 내에서 해당 모듈의 코드를 참조할 수 있습니다.  이 때 코드로 접근하는 경로를 사용합니다. 예를 들어 garden vegetables 모듈의 <code>Asparagus</code> 타입은 <code>crate::garden::vegetables::Asparagus</code>에서 찾을 수 있습니다.</p>
+</li>
+<li>
+<p><strong>비공개(private) 대 공개(public)</strong> </p>
+<p>: 모듈 내의 코드는 기본적으로 상위 모듈에서 비공개입니다. 모듈을 공개하려면 <code>mod</code> 대신 <code>pub mod</code>로 모듈을 선언하십시오. 공용 모듈 내의 항목도 공용으로 만들려면 선언 전에 <code>pub</code>를 사용하십시오.</p>
+</li>
+<li>
+<p><strong><code>use</code> 키워드</strong> : 같은 범위 내에서 <code>use</code> 키워드는 긴 경로의 반복을 줄여주는 바로 가기를 만듭니다. <code>crate::garden::vegetables::Asparagus</code>를 참조할 수 있는 모든 범위에서 <code>use crate::garden::vegetables::Asparagus;</code>로 바로 가기를 만듭니다. 그런 다음 범위에서 해당 타입을 사용하려면 <code>Asparagus</code>만 작성하면 됩니다.</p>
+</li>
+</ul>
+<p>여기에서 이러한 규칙을 설명하는 <code>backyard</code>라는 이름의 바이너리 크레이트를 만듭니다. <code>backyard</code>라고도 하는 크레이트의 디렉토리에는 다음 파일과 디렉토리가 포함되어 있습니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">backyard
+</span><span style="color:#abb2bf;">├── Cargo.lock
+</span><span style="color:#abb2bf;">├── Cargo.toml
+</span><span style="color:#abb2bf;">└── src
+</span><span style="color:#abb2bf;">    ├── garden
+</span><span style="color:#abb2bf;">    │   └── vegetables.rs
+</span><span style="color:#abb2bf;">    ├── garden.rs
+</span><span style="color:#abb2bf;">    └── main.rs
+</span></code></pre>
+<p>이 경우 크레이트 루트 파일은 <em>src/main.rs</em> 이며 다음을 포함합니다:</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">use crate</span><span style="color:#abb2bf;">::garden::vegetables::Asparagus;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">pub mod </span><span style="color:#abb2bf;">garden;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> plant </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> Asparagus {};
+</span><span style="color:#abb2bf;">    println!(`I</span><span style="color:#cd74e8;">&#39;m</span><span style="color:#abb2bf;"> growing {:</span><span style="color:#adb7c9;">?</span><span style="color:#abb2bf;">}</span><span style="color:#adb7c9;">!</span><span style="color:#abb2bf;">`, plant);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p><code>pub mod garden;</code> 줄은 <em>src/garden.rs</em> 에서 찾은 코드를 포함하도록 컴파일러에 지시합니다.</p>
+<p>파일명: src/garden.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">pub mod </span><span style="color:#abb2bf;">vegetables;
+</span></code></pre>
+<p>여기 <code>pub mod vegetables;</code> <em>src/garden/vegetables.rs</em> 의 코드 도 포함되어 있음을 의미합니다. 해당 코드는 다음과 같습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">#[</span><span style="color:#eb6772;">derive</span><span style="color:#abb2bf;">(Debug)]
+</span><span style="color:#cd74e8;">pub struct </span><span style="color:#abb2bf;">Asparagus {}
+</span></code></pre>
+<p>이제 이러한 규칙에 대해 자세히 알아보고 실제로 시연해 보겠습니다.</p>
+<h3 id="moddyuro-ggwaryeon-koddereul-ggerubhwa"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch07-02-defining-modules-to-control-scope-and-privacy.html#grouping-related-code-in-modules">모듈로 관련 코드를 그룹화</a></h3>
+<p><em>모듈</em>을 사용하면 크레이트 내에 있는 코드의 가독성을 좋게하고, 손쉽게 재사용하도록 구성할 수 있습니다. 모듈은 또한 모듈 내의 코드가 기본적으로 비공개이기 때문에 항목의 *프라이버시(privacy)*를 제어할 수 있습니다. 개인 항목(private item)은 외부에서 사용할 수 없는 내부 구현 세부 정보입니다. 우리는 모듈과 그 안에 있는 항목을 공개하도록 선택할 수 있습니다. 이렇게 하면 외부 코드가 모듈을 사용하고 의존할 수 있도록 노출됩니다.</p>
+<p>예를 들어 레스토랑의 기능을 제공하는 라이브러리 크레이트를 작성해 보겠습니다. 우리는 함수의 시그니쳐를 정의하지만, 식당 구현보다는 코드 구성에 집중하기 위해 본문을 비워 둡니다.</p>
+<p>레스토랑 업계에서 레스토랑의 일부는 <em>프론트 오브 하우스(front of house)</em> , 다른 일부는 <em>백 오브 하우스(back of house)</em> 라고 합니다. 프론트 오브 하우스는 고객이 있는 곳입니다. 여기에는 호스트가 고객을 앉히고 서버가 주문 및 지불을 받고 바텐더가 음료를 만드는 곳이 포함됩니다. 백오브하우스는 셰프와 요리사가 주방에서 일하고, 식기 세척기가 청소하고, 관리자가 관리 업무를 수행하는 곳입니다.</p>
+<p>이러한 방식으로 크레이트를 구성하기 위해 함수를 중첩된 모듈로 구성할 수 있습니다. <code>cargo new restaurant --lib</code>를 실행하여 <code>restaurant</code>라는 새 라이브러리를 만듭니다. 그런 다음 목록 7-1의 코드를 <em>src/lib.rs</em> 에 입력하여 일부 모듈 및 함수 서명을 정의합니다. 집 앞 부분은 다음과 같습니다.</p>
+<p>파일 이름: src/lib.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">mod </span><span style="color:#abb2bf;">front_of_house {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">mod </span><span style="color:#abb2bf;">hosting {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">add_to_waitlist</span><span style="color:#abb2bf;">() {}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">seat_at_table</span><span style="color:#abb2bf;">() {}
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">mod </span><span style="color:#abb2bf;">serving {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">take_order</span><span style="color:#abb2bf;">() {}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">serve_order</span><span style="color:#abb2bf;">() {}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">take_payment</span><span style="color:#abb2bf;">() {}
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 7-1: 함수를 포함하는 다른 모듈을 포함하는 <code>front_of_house</code> 모듈</p>
+<p><code>mod</code> 키워드 뒤에 모듈 이름(이 경우 <code>front_of_house</code>)을 사용하여 모듈을 정의합니다. 그러면 모듈 본문이 중괄호 안에 들어갑니다. <code>hosting</code> 및 <code>serving</code> 모듈처럼 모듈 내부에  다른 모듈을 배치할 수 있습니다. 모듈은 또한 구조체(structs), 열거형(enums), 상수(constants), 특성(traits) 및 목록 7-1에서와 같이 함수(function)와 같은 다른 항목에 대한 정의를 보유할 수 있습니다.</p>
+<p>모듈을 사용하여, 관련 정의를 함께 그룹화하고 관련된 이유를 명명할 수 있습니다. 이 코드를 사용하는 프로그래머는 모든 정의를 읽을 필요 없이 그룹을 기반으로 코드를 탐색할 수 있으므로 관련된 정의를 더 쉽게 찾을 수 있습니다. 이 코드에 새로운 기능을 추가하는 프로그래머는 프로그램을 체계적으로 유지하기 위해 코드를 어디에 배치해야 하는지 알 것입니다.</p>
+<p>앞에서 우리는 <em>src/main.rs</em> 와 <em>src/lib.rs를</em> 크레이트 루트라고 부른다고 언급했습니다. 크레이트 루트라는 이름이 붙은 이유는, 이 두 파일 중 하나의 내용이, <em>모듈 트리</em>로 알려진 크레이트 모듈 구조의 루트에서 <code>크레이트</code>라는 모듈을 형성하기 때문입니다.</p>
+<p>목록 7-2는 목록 7-1의 구조에 대한 모듈 트리를 보여줍니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">crate
+</span><span style="color:#abb2bf;"> └── front_of_house
+</span><span style="color:#abb2bf;">     ├── hosting
+</span><span style="color:#abb2bf;">     │   ├── add_to_waitlist
+</span><span style="color:#abb2bf;">     │   └── seat_at_table
+</span><span style="color:#abb2bf;">     └── serving
+</span><span style="color:#abb2bf;">         ├── take_order
+</span><span style="color:#abb2bf;">         ├── serve_order
+</span><span style="color:#abb2bf;">         └── take_payment
+</span></code></pre>
+<p>목록 7-2: 목록 7-1의 코드에 대한 모듈 트리</p>
+<p>이 트리는 일부 모듈이 서로 중첩되는 방식을 보여줍니다. 예를 들어 <code>hosting</code>은 <code>front_of_house</code> 내부에 중첩됩니다. 트리는 또한 일부 모듈이 서로 <em>형제</em> 임을 보여줍니다. 즉, 동일한 모듈에서 정의된다는 의미입니다. <code>hosting</code> 및 <code>serving</code>은 <code>front_of_house</code> 내에 정의된 형제입니다. 모듈 A가 모듈 B 안에 포함되어 있으면 모듈 A는 모듈 B의 <em>자식 이고 모듈 B는 모듈 A의</em> <em>부모</em> 라고 말합니다. 전체 모듈 트리는 <code>crate</code>라는 암시적 모듈 아래에 뿌리를 두고 있습니다.</p>
+<p>모듈 트리는 컴퓨터에 있는 파일 시스템의 디렉토리 트리를 상기시킬 수 있습니다. 이것은 매우 적절한 비교입니다! 파일 시스템의 디렉토리와 마찬가지로 모듈을 사용하여 코드를 구성합니다. 그리고 디렉토리의 파일과 마찬가지로 모듈을 찾을 방법이 필요합니다.</p>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        <a class="previous" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;1-packages-and-crates&#x2F;"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        <a class="next" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;3-paths-for-referring-to-an-item-in-the-module-tree&#x2F;">></a>
+    
+
+            </div>
+        </div>
+
+        
+            
+                <script type="text/javascript" src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+                <script type="text/javascript" src="https://hwjskt.github.io/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://hwjskt.github.io/book.js"></script>
+        
+        </div>
+    </section>
+
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+  
+  
+
+  
+  
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js" integrity="sha384-Pulw7+h73841BQIK0LzJCydKRPChJUF9w8h8W0o3h+cLtoyNPJS847bQauLWOTwg" crossorigin="anonymous"></script>
+  
+  <script src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+  <script src="https://hwjskt.github.io/search_index.en.js"></script><script src="https://hwjskt.github.io/js/site.js"></script>
+
+  
+  
+
+  
+  
+</body>
+
+</html>

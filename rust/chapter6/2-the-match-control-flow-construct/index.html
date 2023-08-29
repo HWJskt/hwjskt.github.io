@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='&#x2F;icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='&#x2F;icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" integrity="sha384-oGm59HWAkwO32h2w8u0B98wKBZJwd6MbWtAJwQKCTffZjOXHXrnyv9Syjovgc+UV" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://hwjskt.github.io/deep-thought.css" rel="stylesheet" />
+  
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/book.css">
+    <link rel="stylesheet" href="https://hwjskt.github.io/deep-thought.css">
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/newsprint.css">
+
+
+  <title>
+    
+    
+    Dr.JUNG | Rust
+
+  </title>
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176984489-2"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-176984489-2");
+  </script>
+  
+  
+
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;">Dr.JUNG</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;about">
+            AboutMe
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;docs">
+            Docs
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;rust">
+            Rust
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  
+    
+    <section>
+        <div class="book-menu is-2">
+            
+            
+            <aside role="navigation">
+                <ul>
+                    
+                        
+                        
+                        <li >
+                            <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;">Introduction</a>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;">
+                                    <strong>1.</strong>
+                                    Getting Started
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;1-installation&#x2F;">
+                                                    <strong>1.1.</strong>
+                                                    Installation
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;2-helloworld&#x2F;">
+                                                    <strong>1.2.</strong>
+                                                    Hello, World!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;3-hellocargo&#x2F;">
+                                                    <strong>1.3.</strong>
+                                                    Hello, Cargo!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter2&#x2F;">
+                                    <strong>2.</strong>
+                                    Programming a Guessing Game
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;">
+                                    <strong>3.</strong>
+                                    Common Programming Concepts
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;1-variables-and-mutability&#x2F;">
+                                                    <strong>3.1.</strong>
+                                                    Variables and Mutability
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;2-data-types&#x2F;">
+                                                    <strong>3.2.</strong>
+                                                    Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;3-functions&#x2F;">
+                                                    <strong>3.3.</strong>
+                                                    Functions
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;4-comments&#x2F;">
+                                                    <strong>3.4.</strong>
+                                                    Comments
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;5-control-flow&#x2F;">
+                                                    <strong>3.5.</strong>
+                                                    Control Flow
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;">
+                                    <strong>4.</strong>
+                                    Understanding Ownership
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;1-what-is-ownership&#x2F;">
+                                                    <strong>4.1.</strong>
+                                                    What is Ownership?
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;2-references-and-borrowing&#x2F;">
+                                                    <strong>4.2.</strong>
+                                                    References and Borrowing
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;3-the-slice-type&#x2F;">
+                                                    <strong>4.3.</strong>
+                                                    The Slice Type
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;">
+                                    <strong>5.</strong>
+                                    Using Structs to Structure Related Data
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;1-defining-and-instantiating-structs&#x2F;">
+                                                    <strong>5.1.</strong>
+                                                    Defining and Instantiating Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;2-an-example-program-using-structs&#x2F;">
+                                                    <strong>5.2.</strong>
+                                                    An Example Program Using Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;3-method-syntax&#x2F;">
+                                                    <strong>5.3.</strong>
+                                                    Method Syntax
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;">
+                                    <strong>6.</strong>
+                                    Enums and Pattern Matching
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;1-defining-an-enum&#x2F;">
+                                                    <strong>6.1.</strong>
+                                                    Defining an Enum
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="active">
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;2-the-match-control-flow-construct&#x2F;">
+                                                    <strong>6.2.</strong>
+                                                    The match Control Flow Construct
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;3-concise-control-flow-with-if-let&#x2F;">
+                                                    <strong>6.3.</strong>
+                                                    Concise Control Flow with if let.md
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;">
+                                    <strong>7.</strong>
+                                    Managing Growing Projects with Packages, Crates, and Modules
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;1-packages-and-crates&#x2F;">
+                                                    <strong>7.1.</strong>
+                                                    Packages and Crates
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;2-defining-modules-to-control-scope-and-privacy&#x2F;">
+                                                    <strong>7.2.</strong>
+                                                    Defining Modules to Control Scope and Privacy
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;3-paths-for-referring-to-an-item-in-the-module-tree&#x2F;">
+                                                    <strong>7.3.</strong>
+                                                    Paths for Referring to an Item in the Module Tree
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;4-bringing-paths-into-scope-with-the-use-keyword&#x2F;">
+                                                    <strong>7.4.</strong>
+                                                    Bringing Paths Into Scope with the use Keyword
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;5-separating-modules-into-different-files&#x2F;">
+                                                    <strong>7.5.</strong>
+                                                    Separating Modules into Different Files
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;">
+                                    <strong>8.</strong>
+                                    Common Collections
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;1-storing-lists-of-values-with-vectors&#x2F;">
+                                                    <strong>8.1.</strong>
+                                                    Storing Lists of Values with Vectors
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;">
+                                                    <strong>8.2.</strong>
+                                                    Storing UTF-8 Encoded Text with Strings
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;3-storing-keys-with-associated-values-in-hash-maps&#x2F;">
+                                                    <strong>8.3.</strong>
+                                                    Storing Keys with Associated Values in Hash Maps
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </aside>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="book-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="book-search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <h1>The match Control Flow Construct</h1>
+    <h2 id="yohya">요약</h2>
+<ul>
+<li>match 다음에 표현식 위치</li>
+<li>match 내부의 arm 형식은 패턴 =&gt; 코드,</li>
+<li>코드는 {} 로 둘러싸도 된다.</li>
+<li>arm의 패턴은 모든 가능성을 커버해야 합니다. </li>
+<li>범용 arm 을 사용할 수있는데 위치는 반드시 마지막</li>
+<li>범용 arm 에서 값을 사용하지 않을 예정이면 _ 를 사용</li>
+<li>아무것도 하지 않을 것이라는 코드는 빈 튜플 () 을 사용 </li>
+</ul>
+<h2 id="match-jeeo-heureum-gusseon"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch06-02-match.html#the-match-control-flow-construct">match 제어 흐름 구성</a></h2>
+<p>Rust에는 일련의 패턴과 값을 비교한 다음, 패턴이 일치하는지에 따라 코드를 실행할 수 있는 <code>match</code>라는 매우 강력한 제어 흐름 구조가 있습니다. 패턴은 리터럴 값, 변수 이름, 와일드카드 및 기타 여러 항목으로 구성될 수 있습니다. <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch18-00-patterns.html">18장</a> 에서는 모든 종류의 패턴과 그 기능을 다룹니다. <code>match</code>의 힘은 패턴의 표현력과 컴파일러가 가능한 모든 사례가 처리되었음을 확인한다는 것입니다.</p>
+<p><code>match</code> 표현을 동전 분류 기계와 같다고 생각하십시오. 동전은 다양한 크기의 구멍이 있는 트랙을 따라 미끄러져 내려오고 ,각 동전은 맞는 첫 번째 구멍을 통해 떨어집니다. 같은 방식으로 값은 <code>match</code>의 각 패턴을 통과하고, 값이 매칭되는 첫 번째 패턴에 해당하는 코드로 이동합니다. </p>
+<p>동전이라고 하면 <code>match</code>를 사용하여 예를 들어 보겠습니다! Listing 6-3과 같이 미지의 미국 동전을 가져와 계수기와 유사한 방식으로 어떤 동전인지 결정하고 그 값을 센트 단위로 반환하는 함수를 작성할 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">enum </span><span style="color:#abb2bf;">Coin {
+</span><span style="color:#abb2bf;">    Penny,
+</span><span style="color:#abb2bf;">    Nickel,
+</span><span style="color:#abb2bf;">    Dime,
+</span><span style="color:#abb2bf;">    Quarter,
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">value_in_cents</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">coin</span><span style="color:#abb2bf;">: Coin) -&gt; </span><span style="color:#cd74e8;">u8 </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">match</span><span style="color:#abb2bf;"> coin {           </span><span style="font-style:italic;color:#5f697a;">// match 다음에 표현식 위치
+</span><span style="color:#abb2bf;">        Coin::Penny </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">,  </span><span style="font-style:italic;color:#5f697a;">// arm 은 패턴 =&gt; 코드, 형식
+</span><span style="color:#abb2bf;">        Coin::Nickel </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        Coin::Dime </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#db9d63;">10</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        Coin::Quarter </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#db9d63;">25</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 6-3: 열거형(enum) 및 열거형의 변형(variant)을 패턴으로 갖는 <code>match</code> 식</p>
+<p><code>value_in_cents</code> 함수에서 <code>match</code>를 분석해 보겠습니다. 먼저 <code>match</code> 키워드와 표현식을 나열합니다. 이 경우 값은 <code>coin</code>입니다. 이것은 <code>if</code>와 함께 사용되는 조건식과 매우 유사해 보이지만 큰 차이점이 있습니다. <code>if</code>를 사용하면 조건이 부울 값으로 평가되어야 하지만 여기서는 모든 유형이 될 수 있습니다. 이 예제에서 <code>coin</code>의 유형은 첫 번째 줄에서 정의한 <code>Coin</code> 열거형입니다.</p>
+<p>다음은 <code>match</code> arm입니다. arm은 패턴과 일부 코드의 두 부분으로 구성됩니다. 여기에서 첫 번째 팔에는 <code>Coin::Penny</code> 값인 패턴이 있고 패턴과 실행할 코드를 구분하는 <code>=&gt;</code> 연산자가 있습니다. 이 경우 코드는 값 <code>1</code>일 뿐입니다. 각 팔은 쉼표로 다음 팔과 구분됩니다.</p>
+<p><code>match</code> 표현식이 실행되면 결과 값을 각 팔의 패턴과 순서대로 비교합니다. 패턴이 값과 일치하면 해당 패턴과 연결된 코드가 실행됩니다. 해당 패턴이 값과 일치하지 않으면, 동전 분류기에서와 같이 다음 팔로 이동해서 계속됩니다. 우리는 필요한 만큼 많은 arm을 가질 수 있습니다: Listing 6-3에서 <code>match</code>에는 4개의 팔이 있습니다.</p>
+<p>각 arm과 연관된 코드는 식(expression)이며 일치하는 arm에서 식의 결과 값은 전체 <code>match</code> 식에 대해 반환되는 값입니다.</p>
+<p>match arm 코드가 짧으면 일반적으로 중괄호를 사용하지 않습니다. Listing 6-3에서 각 arm은 값을 반환합니다. 매치 arm에서 여러 줄의 코드를 실행하려면 중괄호를 사용해야 하며 arm 다음에 오는 쉼표는 선택 사항입니다. 예를 들어 다음 코드는 <code>Lucky penny!</code>를 인쇄합니다. 메서드가 <code>Coin::Penny</code>로 호출될 때마다 블록의 마지막 값인 <code>1</code>을 반환합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">value_in_cents</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">coin</span><span style="color:#abb2bf;">: Coin) -&gt; </span><span style="color:#cd74e8;">u8 </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">match</span><span style="color:#abb2bf;"> coin {
+</span><span style="color:#abb2bf;">        Coin::Penny </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">            println!(</span><span style="color:#9acc76;">&quot;Lucky penny!&quot;</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">            </span><span style="color:#db9d63;">1
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">        Coin::Nickel </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        Coin::Dime </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#db9d63;">10</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        Coin::Quarter </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#db9d63;">25</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<h3 id="ggabe-bainweddddoneun-paeteon"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch06-02-match.html#patterns-that-bind-to-values**">값에 바인딩되는 패턴</a></h3>
+<p>일치 arm의 또 다른 유용한 기능은 패턴과 일치하는 값 부분에 바인딩할 수 있다는 것입니다. 열거형 변형(enum variants)에서 값을 추출할 수 있는 방법입니다.</p>
+<p>예를 들어 열거형 변형 중 하나를 변경하여 내부에 데이터를 보관하도록 하겠습니다. 1999년부터 2008년까지 미국은 50개 주마다 한 면이  다른 디자인의 쿼터를 주조했습니다. 다른 주화에는 주 디자인이 없으므로, 쿼터에만 이 추가 값이 있습니다.  이 정보를 <code>enum</code>에 추가할 수 있습니다. Listing 6-4에서 수행한 것처럼, 내부에 <code>UsState</code> 값을 포함하도록 <code>Quarter</code> 변형을 변경합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">#[</span><span style="color:#eb6772;">derive</span><span style="color:#abb2bf;">(Debug)] </span><span style="font-style:italic;color:#5f697a;">// so we can inspect the state in a minute
+</span><span style="color:#cd74e8;">enum </span><span style="color:#abb2bf;">UsState {
+</span><span style="color:#abb2bf;">    Alabama,
+</span><span style="color:#abb2bf;">    Alaska,
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// --snip--
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">enum </span><span style="color:#abb2bf;">Coin {
+</span><span style="color:#abb2bf;">    Penny,
+</span><span style="color:#abb2bf;">    Nickel,
+</span><span style="color:#abb2bf;">    Dime,
+</span><span style="color:#abb2bf;">    Quarter(UsState),  </span><span style="font-style:italic;color:#5f697a;">// 쿼터에 UsState 값을 포함
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 6-4: <code>Quarter</code> 변형이 <code>UsState</code> 값도 포함하는 <code>Coin</code> 열거형</p>
+<p>친구가 50개의 주 쿼터를 모두 수집하려고 한다고 상상해 봅시다. 동전 유형별로 느슨한 거스름돈을 정렬하는 동안, 각 분기와 관련된 주 이름을 불러서 친구가 가지고 있지 않은 것이 있으면 컬렉션에 추가할 수 있습니다.</p>
+<p>이 코드의 일치 표현식에서 변형 <code>Coin::Quarter</code>의 값과 일치하는 패턴에 <code>state</code>라는 변수를 추가합니다. <code>Coin::Quarter</code>가 일치하면 <code>state</code> 변수는 해당 분기의 상태 값에 바인딩됩니다. 그런 다음 해당 arm의 코드에서 다음과 같이 <code>상태</code>를 사용할 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">value_in_cents</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">coin</span><span style="color:#abb2bf;">: Coin) -&gt; </span><span style="color:#cd74e8;">u8 </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">match</span><span style="color:#abb2bf;"> coin {
+</span><span style="color:#abb2bf;">        Coin::Penny </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        Coin::Nickel </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        Coin::Dime </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#db9d63;">10</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        Coin::Quarter(state) </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">            println!(</span><span style="color:#9acc76;">&quot;State quarter from </span><span style="color:#db9d63;">{:?}</span><span style="color:#9acc76;">!&quot;</span><span style="color:#abb2bf;">, state);
+</span><span style="color:#abb2bf;">            </span><span style="color:#db9d63;">25
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p><code>value_in_cents(Coin::Quarter(UsState::Alaska))</code>를 호출하면 <code>coin</code>은 <code>Coin::Quarter(UsState::Alaska)</code>가 됩니다. 해당 값을 각 일치 부문과 비교할 때 <code>Coin::Quarter(state)</code>에 도달할 때까지 일치하는 항목이 없습니다. 이 시점에서 <code>state</code>에 대한 바인딩은 <code>UsState::Alaska</code> 값이 됩니다. 그런 다음 <code>println!</code>에서 해당 바인딩을 사용할 수 있습니다. <code>Quarter</code>에 대한 <code>Coin</code> 열거형 변형에서 내부 상태 값을 가져옵니다.</p>
+<h3 id="optiongwa-ilci"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch06-02-match.html#matching-with-optiont**">Option<T>과 일치</a></h3>
+<p>이전 섹션에서 <code>Option&lt;T&gt;</code>을 사용할 때 <code>Some</code> 케이스에서 내부 <code>T</code> 값을 가져오고 싶었습니다. <code>Coin</code> 열거형과 마찬가지로 <code>match</code>를 사용해서 <code>Option&lt;T&gt; </code>을 처리할 수도 있습니다. 동전을 비교하는 대신 <code>Option&lt;T&gt;</code>의 변형을 비교하겠습니다. <code>match</code> 표현식이 작동하는 방식은 동일하게 유지됩니다.</p>
+<p><code>Option&lt;i32&gt;</code>을 받는 함수를 작성하고 싶다고 가정해 보겠습니다. 내부에 값이 있으면 해당 값에 1을 더합니다. 내부에 값이 없으면 함수는 <code>None</code> 값을 반환하고 어떤 작업도 수행하지 않아야 합니다.</p>
+<p>이 함수는 <code>match</code> 덕분에 작성하기가 매우 쉽고 Listing 6-5와 같습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">plus_one</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">x</span><span style="color:#abb2bf;">: Option&lt;</span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">&gt;) -&gt; Option&lt;</span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">&gt; {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">match</span><span style="color:#abb2bf;"> x {
+</span><span style="color:#abb2bf;">            None </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#abb2bf;">None,
+</span><span style="color:#abb2bf;">            Some(i) </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#abb2bf;">Some(i </span><span style="color:#adb7c9;">+ </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">),
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> five </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">Some(</span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> six </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">plus_one</span><span style="color:#abb2bf;">(five);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> none </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">plus_one</span><span style="color:#abb2bf;">(None);
+</span></code></pre>
+<p>목록 6-5: <code>옵션</code>에 <code>match</code> 표현식을 사용하는 함수`</p>
+<p><code>plus_one</code>의 첫 번째 실행을 자세히 살펴보겠습니다. <code>plus_one(five)</code>를 호출하면 <code>plus_one</code> 본문의 변수 <code>x</code>는 <code>Some(5)</code> 값을 갖게 됩니다. 그런 다음 이를 각 매치 부문과 비교합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">            None </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#abb2bf;">None,
+</span></code></pre>
+<p><code>Some(5)</code> 값은 패턴 <code>None</code>과 일치하지 않으므로 다음 단계로 계속 진행합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">            Some(i) </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#abb2bf;">Some(i </span><span style="color:#adb7c9;">+ </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">),
+</span></code></pre>
+<p><code>Some(5)</code>는 <code>Some(i)</code>와 일치합니까? 그렇습니다! 동일한 변형이 있습니다. <code>i</code>는 <code>Some</code>에 포함된 값에 바인딩되므로 <code>i</code>는 값 <code>5</code>를 사용합니다. 그런 다음 매치 arm의 코드가 실행되므로 <code>i</code> 값에 1을 더하고 총 <code>6</code>이 포함된 새로운 <code>Some</code> 값을 생성합니다.</p>
+<p>이제 Listing 6-5에서 <code>x</code>가 <code>None</code>인 <code>plus_one</code>의 두 번째 호출을 살펴보겠습니다. <code>match</code>를 입력하고 첫 번째 팔과 비교합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">            None </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#abb2bf;">None,
+</span></code></pre>
+<p>일치합니다! 추가할 값이 없으므로 프로그램이 중지되고 <code>=&gt;</code> 오른쪽에 <code>None</code> 값이 반환됩니다. 첫 번째 arm이 일치했기 때문에 다른 arm은 비교되지 않습니다.</p>
+<p><code>match</code>와 열거형을 결합하면 많은 상황에서 유용합니다. Rust 코드에서 이 패턴을 많이 볼 수 있습니다. 열거형과 <code>match</code>하고 변수를 내부 데이터에 바인딩한 다음 이를 기반으로 코드를 실행합니다. 처음에는 조금 까다롭지만 익숙해지면 모든 언어로 제공되기를 바랄 것입니다. 지속적으로 사용자가 선호하는 제품입니다.</p>
+<h3 id="matchneun-ceoljjehabnida"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch06-02-match.html#matches-are-exhaustive**">match는 철저합니다</a></h3>
+<p>우리가 논의해야 할 <code>match</code>의 또 다른 측면이 있습니다. 팔의 패턴은 모든 가능성을 커버해야 합니다. 버그가 있고 컴파일되지 않는 <code>plus_one</code> 함수의 이 버전을 고려하십시오.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">plus_one</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">x</span><span style="color:#abb2bf;">: Option&lt;</span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">&gt;) -&gt; Option&lt;</span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">&gt; {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">match</span><span style="color:#abb2bf;"> x {
+</span><span style="color:#abb2bf;">            Some(i) </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#abb2bf;">Some(i </span><span style="color:#adb7c9;">+ </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">),
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">    }
+</span></code></pre>
+<p>우리는 <code>None</code> 인 경우를 처리하지 않았으므로 이 코드는 버그를 일으킬 것입니다. 운 좋게도 Rust가 잡는 방법을 알고 있는 버그입니다. 이 코드를 컴파일하려고 하면 다음 오류가 발생합니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> enums v0.1.0 (file:///projects/enums)
+</span><span style="color:#eb6772;">error[E0004]:</span><span style="color:#abb2bf;"> non-exhaustive patterns: `</span><span style="color:#eb6772;">None</span><span style="color:#abb2bf;">` not covered
+</span><span style="color:#abb2bf;"> </span><span style="color:#eb6772;">--</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> src/main.rs:3:15
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">3 </span><span style="color:#adb7c9;">|         </span><span style="color:#eb6772;">match</span><span style="color:#abb2bf;"> x {
+</span><span style="color:#abb2bf;">  |               ^ pattern `</span><span style="color:#eb6772;">None</span><span style="color:#abb2bf;">` not covered
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">note: `</span><span style="color:#eb6772;">Option</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">i32</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;">` defined here
+</span><span style="color:#abb2bf;"> --&gt; /rustc/d5a82bbd26e1ad8b7401f6a718a9c57c96905483/library/core/src/option.rs:518:1
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">  = note: 
+</span><span style="color:#abb2bf;">/rustc/d5a82bbd26e1ad8b7401f6a718a9c57c96905483/library/core/src/option.rs:522:5: not covered
+</span><span style="color:#abb2bf;">  = note: the matched value is of type `</span><span style="color:#eb6772;">Option</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">i32</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;">`
+</span><span style="color:#abb2bf;">help: ensure that all possible cases are being handled by adding a match arm with a wildcard pattern or an explicit pattern as shown
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">4 </span><span style="color:#eb6772;">~</span><span style="color:#abb2bf;">             Some(i) =&gt; Some(i + 1),
+</span><span style="color:#abb2bf;">5 </span><span style="color:#eb6772;">~</span><span style="color:#abb2bf;">             None =&gt; todo</span><span style="color:#adb7c9;">!</span><span style="color:#abb2bf;">(),
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">For more information about this error, try `</span><span style="color:#eb6772;">rustc --explain</span><span style="color:#abb2bf;"> E0004`.
+</span><span style="color:#abb2bf;">error: could not compile `</span><span style="color:#eb6772;">enums</span><span style="color:#abb2bf;">` due to previous error
+</span><span style="color:#abb2bf;">
+</span></code></pre>
+<p>Rust는 우리가 모든 가능한 경우를 다루지 않았다는 것과 우리가 어떤 패턴을 잊어버렸는지 알고 있습니다! Rust의 match는 <strong>철저</strong> 합니다. 코드가 유효하려면 모든 가능성을 처리해야 합니다. 특히 <code>Option&lt;T&gt;</code>의 경우, Rust는 우리가 <code>None</code> 사례를 명시적으로 처리하는 것을 잊는 것을 방지해줍니다. 이로써 null이 있을 수 있는 값을 가지고 있다고 가정하는 것을 방지하여 앞에서 논의한 수십억 달러의 실수를 불가능하게 만듭니다.</p>
+<h3 id="bbeohyon-paeteon-mic-jari-pyosija"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch06-02-match.html#catch-all-patterns-and-the-_-placeholder">범용 패턴 및 <code>_</code> 자리 표시자</a></h3>
+<p>열거형을 사용하면 몇 가지 특정 값에 대해 특별한 작업을 수행할 수도 있지만, 다른 모든 값에 대해서는 하나의 기본 작업을 수행합니다. 주사위 굴림에서 3을 굴리면 플레이어가 움직이지 않고, 대신 새 멋진 모자를 받는 게임을 구현한다고 상상해 보십시오. 주사위 굴림에서 7이 나오면 플레이어는 멋진 모자를 잃습니다. 다른 모든 값의 경우 플레이어는 게임 보드에서 해당 수의 공간을 이동합니다. 다음은 임의의 값이 아닌 하드코딩된 주사위 굴림의 결과와 본문이 없는 함수로 표현되는 다른 모든 논리를 사용하여 논리를 구현하는 <code>match</code>입니다. 왜냐하면 실제로 구현하는 것은 이 예제의 범위를 벗어나기 때문입니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> dice_roll </span><span style="color:#adb7c9;">= </span><span style="color:#db9d63;">9</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">match</span><span style="color:#abb2bf;"> dice_roll {
+</span><span style="color:#abb2bf;">        </span><span style="color:#db9d63;">3 </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#5ebfcc;">add_fancy_hat</span><span style="color:#abb2bf;">(),
+</span><span style="color:#abb2bf;">        </span><span style="color:#db9d63;">7 </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#5ebfcc;">remove_fancy_hat</span><span style="color:#abb2bf;">(),
+</span><span style="color:#abb2bf;">        other </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#5ebfcc;">move_player</span><span style="color:#abb2bf;">(other),  </span><span style="font-style:italic;color:#5f697a;">// 범용 arm 은 마지막에 위치
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">add_fancy_hat</span><span style="color:#abb2bf;">() {}
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">remove_fancy_hat</span><span style="color:#abb2bf;">() {}
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">move_player</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">num_spaces</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">u8</span><span style="color:#abb2bf;">) {}
+</span></code></pre>
+<p>처음 두 팔의 경우 패턴은 리터럴 값 <code>3</code> 및 <code>7</code>입니다. 다른 모든 가능한 값을 포함하는 마지막 팔의 경우 패턴은 <code>other</code>라는 이름을 지정하기 위해 선택한 변수입니다. <code>other</code> 암에 대해 실행되는 코드는 변수를 <code>move_player</code> 함수에 전달하여 사용합니다.</p>
+<p>이 코드는 <code>u8</code>이 가질 수 있는 모든 가능한 값을 나열하지 않았지만 마지막 패턴이 구체적으로 나열되지 않은 모든 값과 일치하기 때문에 컴파일됩니다. 이 범용(catch-all) 패턴은 <code>match</code>가 철저해야 한다는 요구 사항을 충족합니다. 패턴이 순서대로 평가되기 때문에 범용(catch-all) arm을 마지막에 두어야 합니다. 범용 arm을 더 일찍 넣으면 다른 arm은 실행되지 않으므로, catch-all 후에 arm을 추가하면 Rust가 경고합니다!</p>
+<p>Rust는 또한 포괄적인 것을 원하지만 포괄적인 패턴의 값을 <strong>사용하고 싶지 않을 때</strong> 사용할 수 있는 패턴이 있습니다. <code>_</code>는 모든 값과 일치하고 해당 값에 바인딩되지 않는 특수 패턴입니다. 이는 Rust에게 우리가 그 값을 사용하지 않을 것임을 알려주므로 Rust는 사용하지 않는 변수에 대해 경고하지 않습니다.</p>
+<p>게임의 규칙을 변경해 보겠습니다. 이제 3이나 7이 아닌 다른 것을 굴리면 다시 굴려야 합니다. 더 이상 범용 값을 사용할 필요가 없으므로 <code>other</code>라는 변수 대신 <code>_</code>를 사용하도록 코드를 변경할 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> dice_roll </span><span style="color:#adb7c9;">= </span><span style="color:#db9d63;">9</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">match</span><span style="color:#abb2bf;"> dice_roll {
+</span><span style="color:#abb2bf;">        </span><span style="color:#db9d63;">3 </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#5ebfcc;">add_fancy_hat</span><span style="color:#abb2bf;">(),
+</span><span style="color:#abb2bf;">        </span><span style="color:#db9d63;">7 </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#5ebfcc;">remove_fancy_hat</span><span style="color:#abb2bf;">(),
+</span><span style="color:#abb2bf;">        </span><span style="color:#adb7c9;">_ =&gt; </span><span style="color:#5ebfcc;">reroll</span><span style="color:#abb2bf;">(),
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">add_fancy_hat</span><span style="color:#abb2bf;">() {}
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">remove_fancy_hat</span><span style="color:#abb2bf;">() {}
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">reroll</span><span style="color:#abb2bf;">() {}}
+</span></code></pre>
+<p>이 예제는 또한 마지막 팔의 다른 모든 값을 명시적으로 무시하기 때문에 완전성 요구 사항을 충족합니다. 우리는 아무것도 잊지 않았습니다.</p>
+<p>마지막으로 게임의 규칙을 한 번 더 변경하여 3이나 7 이외의 것을 굴려도 자신의 차례에 아무 일도 일어나지 않도록 하겠습니다. <code>_</code> arm 에 해당하는 코드로 unit 값(<a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type">“튜플 유형”</a>  섹션에서 언급한 빈 튜플 타입)을 사용하여 표현할 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> dice_roll </span><span style="color:#adb7c9;">= </span><span style="color:#db9d63;">9</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">match</span><span style="color:#abb2bf;"> dice_roll {
+</span><span style="color:#abb2bf;">        </span><span style="color:#db9d63;">3 </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#5ebfcc;">add_fancy_hat</span><span style="color:#abb2bf;">(),
+</span><span style="color:#abb2bf;">        </span><span style="color:#db9d63;">7 </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#5ebfcc;">remove_fancy_hat</span><span style="color:#abb2bf;">(),
+</span><span style="color:#abb2bf;">        </span><span style="color:#adb7c9;">_ =&gt; </span><span style="color:#abb2bf;">(),
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">add_fancy_hat</span><span style="color:#abb2bf;">() {}
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">remove_fancy_hat</span><span style="color:#abb2bf;">() {}
+</span></code></pre>
+<p>여기에서 우리는 명시적으로 이전 버전의 패턴과 일치하지 않는 다른 값을 사용하지 않을 것이며 이 경우 어떤 코드도 실행하고 싶지 않다고 명시적으로 말하고 있습니다.</p>
+<p>패턴과 일치에 대한 자세한 내용은  <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch18-00-patterns.html">18장</a> 에서 다룰 것입니다. 지금은 <code>match</code> 표현이 다소 장황한 상황에서 유용할 수 있는 <code>if let</code> 구문으로 넘어갈 것입니다.</p>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        <a class="previous" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;1-defining-an-enum&#x2F;"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        <a class="next" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;3-concise-control-flow-with-if-let&#x2F;">></a>
+    
+
+            </div>
+        </div>
+
+        
+            
+                <script type="text/javascript" src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+                <script type="text/javascript" src="https://hwjskt.github.io/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://hwjskt.github.io/book.js"></script>
+        
+        </div>
+    </section>
+
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+  
+  
+
+  
+  
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js" integrity="sha384-Pulw7+h73841BQIK0LzJCydKRPChJUF9w8h8W0o3h+cLtoyNPJS847bQauLWOTwg" crossorigin="anonymous"></script>
+  
+  <script src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+  <script src="https://hwjskt.github.io/search_index.en.js"></script><script src="https://hwjskt.github.io/js/site.js"></script>
+
+  
+  
+
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='&#x2F;icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='&#x2F;icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" integrity="sha384-oGm59HWAkwO32h2w8u0B98wKBZJwd6MbWtAJwQKCTffZjOXHXrnyv9Syjovgc+UV" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://hwjskt.github.io/deep-thought.css" rel="stylesheet" />
+  
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/book.css">
+    <link rel="stylesheet" href="https://hwjskt.github.io/deep-thought.css">
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/newsprint.css">
+
+
+  <title>
+    
+    
+    Dr.JUNG | Rust
+
+  </title>
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176984489-2"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-176984489-2");
+  </script>
+  
+  
+
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;">Dr.JUNG</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;about">
+            AboutMe
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;docs">
+            Docs
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;rust">
+            Rust
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  
+    
+    <section>
+        <div class="book-menu is-2">
+            
+            
+            <aside role="navigation">
+                <ul>
+                    
+                        
+                        
+                        <li >
+                            <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;">Introduction</a>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;">
+                                    <strong>1.</strong>
+                                    Getting Started
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;1-installation&#x2F;">
+                                                    <strong>1.1.</strong>
+                                                    Installation
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;2-helloworld&#x2F;">
+                                                    <strong>1.2.</strong>
+                                                    Hello, World!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;3-hellocargo&#x2F;">
+                                                    <strong>1.3.</strong>
+                                                    Hello, Cargo!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter2&#x2F;">
+                                    <strong>2.</strong>
+                                    Programming a Guessing Game
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;">
+                                    <strong>3.</strong>
+                                    Common Programming Concepts
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;1-variables-and-mutability&#x2F;">
+                                                    <strong>3.1.</strong>
+                                                    Variables and Mutability
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;2-data-types&#x2F;">
+                                                    <strong>3.2.</strong>
+                                                    Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;3-functions&#x2F;">
+                                                    <strong>3.3.</strong>
+                                                    Functions
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;4-comments&#x2F;">
+                                                    <strong>3.4.</strong>
+                                                    Comments
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;5-control-flow&#x2F;">
+                                                    <strong>3.5.</strong>
+                                                    Control Flow
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;">
+                                    <strong>4.</strong>
+                                    Understanding Ownership
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;1-what-is-ownership&#x2F;">
+                                                    <strong>4.1.</strong>
+                                                    What is Ownership?
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;2-references-and-borrowing&#x2F;">
+                                                    <strong>4.2.</strong>
+                                                    References and Borrowing
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;3-the-slice-type&#x2F;">
+                                                    <strong>4.3.</strong>
+                                                    The Slice Type
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;">
+                                    <strong>5.</strong>
+                                    Using Structs to Structure Related Data
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;1-defining-and-instantiating-structs&#x2F;">
+                                                    <strong>5.1.</strong>
+                                                    Defining and Instantiating Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;2-an-example-program-using-structs&#x2F;">
+                                                    <strong>5.2.</strong>
+                                                    An Example Program Using Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;3-method-syntax&#x2F;">
+                                                    <strong>5.3.</strong>
+                                                    Method Syntax
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;">
+                                    <strong>6.</strong>
+                                    Enums and Pattern Matching
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;1-defining-an-enum&#x2F;">
+                                                    <strong>6.1.</strong>
+                                                    Defining an Enum
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;2-the-match-control-flow-construct&#x2F;">
+                                                    <strong>6.2.</strong>
+                                                    The match Control Flow Construct
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;3-concise-control-flow-with-if-let&#x2F;">
+                                                    <strong>6.3.</strong>
+                                                    Concise Control Flow with if let.md
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;">
+                                    <strong>7.</strong>
+                                    Managing Growing Projects with Packages, Crates, and Modules
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;1-packages-and-crates&#x2F;">
+                                                    <strong>7.1.</strong>
+                                                    Packages and Crates
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;2-defining-modules-to-control-scope-and-privacy&#x2F;">
+                                                    <strong>7.2.</strong>
+                                                    Defining Modules to Control Scope and Privacy
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;3-paths-for-referring-to-an-item-in-the-module-tree&#x2F;">
+                                                    <strong>7.3.</strong>
+                                                    Paths for Referring to an Item in the Module Tree
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;4-bringing-paths-into-scope-with-the-use-keyword&#x2F;">
+                                                    <strong>7.4.</strong>
+                                                    Bringing Paths Into Scope with the use Keyword
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;5-separating-modules-into-different-files&#x2F;">
+                                                    <strong>7.5.</strong>
+                                                    Separating Modules into Different Files
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;">
+                                    <strong>8.</strong>
+                                    Common Collections
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;1-storing-lists-of-values-with-vectors&#x2F;">
+                                                    <strong>8.1.</strong>
+                                                    Storing Lists of Values with Vectors
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;">
+                                                    <strong>8.2.</strong>
+                                                    Storing UTF-8 Encoded Text with Strings
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="active">
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;3-storing-keys-with-associated-values-in-hash-maps&#x2F;">
+                                                    <strong>8.3.</strong>
+                                                    Storing Keys with Associated Values in Hash Maps
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </aside>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="book-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="book-search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <h1>Storing Keys with Associated Values in Hash Maps</h1>
+    <h2 id="yohya">요약</h2>
+<ul>
+<li>
+<p>잘 안쓴다</p>
+</li>
+<li>
+<p>파이썬의 딕셔너리와 비슷</p>
+<ul>
+<li>key ,  value 를 매칭해서 저장한다.</li>
+<li>내부 값에 순서가 없다.</li>
+</ul>
+</li>
+<li>
+<p>모든 key 는 같은 타입,  모든 value 는 같은 타입</p>
+</li>
+<li>
+<p>해시 맵 만들기</p>
+<ul>
+<li>빈 해시 맵만 만들수 있다.</li>
+<li><code>new</code>사용</li>
+</ul>
+</li>
+<li>
+<p>해시 맵에 내용추가 : </p>
+<ul>
+<li>.insert 사용</li>
+<li>추가한 key ,  value은 해시맵이 소유한다. (다시 사용할 수 없다)</li>
+<li>참조한 건 소유권이 해시맵으로 넘어가지 않는다</li>
+</ul>
+</li>
+<li>
+<p>해시 맵의 내용 수정</p>
+<ul>
+<li><code>.insert</code> : 키,값이 없으면 새로 만들고,  키가 있으면, 값을 덮어쓴다</li>
+<li><code>.entry(key).or_insert(value)</code> : 키가 없을 때만 키,값 추가</li>
+</ul>
+</li>
+<li>
+<p>해시 맵의 내용 읽기</p>
+<ul>
+<li>[index]  : 값을 바로 얻음</li>
+<li>.get(index) : Option&lt;&amp;T&gt; 형태로 값을 얻음</li>
+</ul>
+</li>
+<li>
+<p>해시 맵 내부 값 iteration</p>
+<ul>
+<li>일반적인 for 문 사용가능</li>
+<li>참조한 벡터를 for 문이 사용중이면, for문 내부에서 벡터를 수정할수 없다</li>
+</ul>
+</li>
+</ul>
+<h2 id="haesi-maebe-hyeoggwaddoe-ggabgwa-hamgge-ki-jjejjan"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-03-hash-maps.html#storing-keys-with-associated-values-in-hash-maps">해시 맵에 연관된 값과 함께 키 저장</a></h2>
+<p>공통 컬렉션의 마지막은 <em>해시 맵(hash map)</em> 입니다. <code>HashMap&lt;K, V&gt;</code> 타입은  <code>K</code> 타입의 키를 <code>V</code> 타입의 값에 매핑한 내용을 저장합니다. 이 때 <em>해싱 함수를</em> 사용하는데, 이것은 키와 값을 메모리에 배치하는 방법을 결정합니다.   많은 프로그래밍 언어가 이러한 종류의 데이터 구조를 지원하지만 다른 이름(예: 해시, 맵, 객체, 해시 테이블, 사전 또는 연관 배열)을 사용하는 경우가 많습니다.</p>
+<p>해시 맵은 벡터와 마찬가지로 인덱스를 사용하지 않고 모든 타입의 키를 사용하여 데이터를 조회하려는 경우에 유용합니다. 예를 들어 게임에서 각 키가 팀의 이름이고 값이 각 팀의 점수인 해시 맵에서 각 팀의 점수를 추적할 수 있습니다. 팀 이름이 주어지면 점수를 검색할 수 있습니다.</p>
+<p>이 섹션에서는 해시 맵의 기본 API를 살펴보겠지만 표준 라이브러리에서 <code>HashMap&lt;K, V&gt;</code>에 정의된 함수에는 더 많은 장점이 숨어 있습니다. 항상 그렇듯이 자세한 내용은 표준 라이브러리 문서를 확인하세요.</p>
+<h3 id="ssa-haesi-maeb-ssaensseon"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-03-hash-maps.html#creating-a-new-hash-map">새 해시 맵 생성</a></h3>
+<p>빈 해시 맵을 만드는 한 가지 방법은 <code>new</code>를 사용하고 <code>insert</code>로 요소를 추가하는 것입니다. <em>목록 8-20에서 이름이 Blue</em> 및 <em>Yellow</em> 인 두 팀의 점수를 추적하고 있습니다. 파란색 팀은 10점으로 시작하고 노란색 팀은 50점으로 시작합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">use </span><span style="color:#abb2bf;">std::collections::HashMap;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> scores </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">HashMap::new();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    scores.</span><span style="color:#5ebfcc;">insert</span><span style="color:#abb2bf;">(String::from(`Blue`), </span><span style="color:#db9d63;">10</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    scores.</span><span style="color:#5ebfcc;">insert</span><span style="color:#abb2bf;">(String::from(`Yellow`), </span><span style="color:#db9d63;">50</span><span style="color:#abb2bf;">);
+</span></code></pre>
+<p>목록 8-20: 새 해시 맵 생성 및 일부 키와 값 삽입</p>
+<p>먼저 표준 라이브러리의 컬렉션 부분에서 <code>HashMap</code>을 <code>사용</code>해야 합니다. 세 가지 공통 컬렉션 중에서 가장 적게 사용되는 컬렉션이므로 서곡에서 자동으로 범위에 포함된 기능에 포함되지 않습니다. 해시 맵도 표준 라이브러리의 지원이 적습니다. 예를 들어 이를 구성하는 내장 매크로가 없습니다.</p>
+<p>벡터와 마찬가지로 해시 맵은 데이터를 힙에 저장합니다. 이 <code>HashMap</code>에는 <code>String</code> 타입의 키와 <code>i32</code> 타입의 값이 있습니다. 벡터와 마찬가지로 해시 맵은 동질적입니다. 모든 키는 서로 같은 타입이어야 하고 모든 값은 같은 타입이어야 합니다.</p>
+<h3 id="haesi-maebyi-ggabe-haesesse"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-03-hash-maps.html#accessing-values-in-a-hash-map">해시 맵의 값에 액세스</a></h3>
+<p>목록 8-21에 표시된 것처럼 <code>get</code> 메서드에 키를 제공하여 해시 맵에서 값을 가져올 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">use </span><span style="color:#abb2bf;">std::collections::HashMap;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> scores </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">HashMap::new();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    scores.</span><span style="color:#5ebfcc;">insert</span><span style="color:#abb2bf;">(String::from(`Blue`), </span><span style="color:#db9d63;">10</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    scores.</span><span style="color:#5ebfcc;">insert</span><span style="color:#abb2bf;">(String::from(`Yellow`), </span><span style="color:#db9d63;">50</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> team_name </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`Blue`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> score </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> scores.</span><span style="color:#5ebfcc;">get</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">team_name).</span><span style="color:#5ebfcc;">copied</span><span style="color:#abb2bf;">().</span><span style="color:#5ebfcc;">unwrap_or</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">);
+</span></code></pre>
+<p>목록 8-21: 해시 맵에 저장된 Blue 팀의 점수에 액세스</p>
+<p>여기에서 <code>score</code>는 파란색 팀과 관련된 값을 가지며 결과는 <code>10</code>이 됩니다. <code>get</code> 메서드는 <code>Option&lt;&amp;V&gt;</code>를 반환합니다. 해시 맵에 해당 키에 대한 값이 없으면 <code>get</code>은 <code>None</code>을 반환합니다. 이 프로그램은 <code>Option&lt;&amp;i32&gt;</code> 대신 <code>Option&lt;i32&gt;</code>을 얻기 위해 <code>copied()</code>을 호출하여 <code>Option</code>을 처리합니다. <code>unwrap_or</code>를 사용하여 <code>scores</code>에 키에 대한 항목이 없는 경우 <code>score</code>를 0으로 설정합니다.</p>
+<p><code>for</code> 루프를 사용하여 벡터와 유사한 방식으로 해시 맵의 각 키/값 쌍을 반복할 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">use </span><span style="color:#abb2bf;">std::collections::HashMap;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> scores </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">HashMap::new();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    scores.</span><span style="color:#5ebfcc;">insert</span><span style="color:#abb2bf;">(String::from(`Blue`), </span><span style="color:#db9d63;">10</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    scores.</span><span style="color:#5ebfcc;">insert</span><span style="color:#abb2bf;">(String::from(`Yellow`), </span><span style="color:#db9d63;">50</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">for </span><span style="color:#abb2bf;">(key, value) </span><span style="color:#adb7c9;">in &amp;</span><span style="color:#abb2bf;">scores {
+</span><span style="color:#abb2bf;">        println!(`{key}: {value}`);
+</span><span style="color:#abb2bf;">    }
+</span></code></pre>
+<p>이 코드는 임의의 순서로 각 쌍을 인쇄합니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">Yellow: 50
+</span><span style="color:#abb2bf;">Blue: 10
+</span></code></pre>
+<h3 id="haesi-maeb-mic-soyuggweo"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-03-hash-maps.html#hash-maps-and-ownership">해시 맵 및 소유권</a></h3>
+<p><code>i32</code>처럼, <code>Copy</code> 특성을 구현하는 타입의 경우 값이 해시 맵에 복사됩니다. <code>String</code>과 같은 소유된 값의 경우 목록 8-22에 표시된 것처럼 값이 이동되고 해시 맵이 해당 값의 소유자가 됩니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">use </span><span style="color:#abb2bf;">std::collections::HashMap;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> field_name </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`Favorite color`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> field_value </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`Blue`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> map </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">HashMap::new();
+</span><span style="color:#abb2bf;">    map.</span><span style="color:#5ebfcc;">insert</span><span style="color:#abb2bf;">(field_name, field_value);
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// field_name and field_value are invalid at this point, try using them and
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// see what compiler error you get!
+</span></code></pre>
+<p>Listing 8-22: 키와 값이 삽입되면 해시 맵이 키와 값을 소유함을 보여줌</p>
+<p>변수 <code>field_name</code> 및 <code>field_value</code>가 <code>insert</code> 호출로 해시 맵으로 이동된 후에는 사용할 수 없습니다.</p>
+<p>값에 대한 참조를 해시 맵에 삽입하면 값이 해시 맵으로 이동되지 않습니다. 참조가 가리키는 값은 적어도 해시 맵이 유효한 동안에는 유효해야 합니다. <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html#validating-references-with-lifetimes">10장의 <code>수명이 있는 참조 유효성 검사</code></a> 섹션 에서 이러한 문제에 대해 자세히 설명합니다.</p>
+<h3 id="haesi-maeb-heodeiteu"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-03-hash-maps.html#updating-a-hash-map">해시 맵 업데이트</a></h3>
+<p>키와 값 쌍의 수는 증가할 수 있지만 각 고유 키는 한 번에 하나의 값만 연결할 수 있습니다(반대의 경우도 마찬가지입니다. 예를 들어 파란색 팀과 노란색 팀 모두 <code> scores</code>해시 맵에 10 이라는 값을 가질 수 있습니다).</p>
+<p>해시 맵의 데이터를 변경하려면, 키에 이미 할당된 값이 있는 경우를 처리하는 방법을 결정해야 합니다. </p>
+<ul>
+<li>이전 값을 완전히 무시하고 이전 값을 새 값으로 바꿀 수 있습니다. </li>
+<li>이전 값을 유지하고 새 값을 무시하고 키에 이미 값이 <em>없는 경우에만</em>  새 값을 추가할 수 있습니다.</li>
+<li>또는 이전 값과 새 값을 결합할 수 있습니다. </li>
+</ul>
+<p>각 작업을 수행하는 방법을 살펴보겠습니다!</p>
+<h4 id="ggab-ddeoeosseugi"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-03-hash-maps.html#overwriting-a-value">값 덮어쓰기</a></h4>
+<p>키와 값을 해시 맵에 삽입한 다음 동일한 키를 다른 값으로 삽입하면 해당 키와 연결된 값이 대체됩니다. Listing 8-23의 코드가 <code>insert</code>를 두 번 호출하더라도 Blue 팀의 키 값을 두 번 모두 삽입하기 때문에 해시 맵에는 하나의 키/값 쌍만 포함됩니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">use </span><span style="color:#abb2bf;">std::collections::HashMap;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> scores </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">HashMap::new();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    scores.</span><span style="color:#5ebfcc;">insert</span><span style="color:#abb2bf;">(String::from(`Blue`), </span><span style="color:#db9d63;">10</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    scores.</span><span style="color:#5ebfcc;">insert</span><span style="color:#abb2bf;">(String::from(`Blue`), </span><span style="color:#db9d63;">25</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`{:</span><span style="color:#adb7c9;">?</span><span style="color:#abb2bf;">}`, scores);
+</span></code></pre>
+<p>Listing 8-23: 저장된 값을 특정 키로 바꾸기</p>
+<p>이 코드는 <code>{Blue: 25}</code>를 인쇄합니다. <code>10</code>의 원래 값을 덮어썼습니다.</p>
+<h4 id="kiga-heobneun-ggyeonueman-kiwa-ggab-cuga"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-03-hash-maps.html#adding-a-key-and-value-only-if-a-key-isnt-present">키가 없는 경우에만 키와 값 추가</a></h4>
+<p>특정 키가 값과 함께 해시 맵에 이미 존재하는지 확인한 후 다음 조치를 취하는 것이 일반적입니다. 키가 해시 맵에 존재하는 경우 기존 값은 그대로 유지되어야 합니다. 키가 없으면 키와 값을 삽입합니다.</p>
+<p>해시 맵에는 확인하려는 키를 매개변수로 사용하는 <code>entry</code>이라는 특수 API가 있습니다. <code>entry</code> 메서드의 반환 값은 존재하거나 존재하지 않을 수 있는 값을 나타내는 <code>Entry</code>라는 열거형입니다. Yellow 팀의 키에 연결된 값이 있는지 확인하고 싶다고 가정해 보겠습니다. 그렇지 않은 경우 값 50을 삽입하고 Blue 팀에도 동일하게 삽입하려고 합니다. <code>entry</code> API를 사용하는 코드는 Listing 8-24와 같습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">use </span><span style="color:#abb2bf;">std::collections::HashMap;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> scores </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">HashMap::new();
+</span><span style="color:#abb2bf;">    scores.</span><span style="color:#5ebfcc;">insert</span><span style="color:#abb2bf;">(String::from(`Blue`), </span><span style="color:#db9d63;">10</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    scores.</span><span style="color:#5ebfcc;">entry</span><span style="color:#abb2bf;">(String::from(`Yellow`)).</span><span style="color:#5ebfcc;">or_insert</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">50</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    scores.</span><span style="color:#5ebfcc;">entry</span><span style="color:#abb2bf;">(String::from(`Blue`)).</span><span style="color:#5ebfcc;">or_insert</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">50</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`{:</span><span style="color:#adb7c9;">?</span><span style="color:#abb2bf;">}`, scores);
+</span></code></pre>
+<p>Listing 8-24: <code>entry</code> 메서드를 사용하여 키에 아직 값이 없는 경우에만 삽입</p>
+<p><code>Entry</code>의 <code>or_insert</code> 메소드는 해당 <code>Entry</code> 키가 존재하는 경우 해당 <code>Entry</code> 키의 값에 대한 변경 가능한 참조를 반환하고, 그렇지 않은 경우 이 키의 새 값으로 매개변수를 삽입하고 변경 가능한 참조를 반환하도록 정의됩니다. 새로운 가치에. 이 기술은 논리를 직접 작성하는 것보다 훨씬 깨끗하며, 추가로 차용 검사기와 더 잘 작동합니다.</p>
+<p>목록 8-24의 코드를 실행하면 <code>{Yellow: 50, Blue: 10}</code>가 인쇄됩니다. <code>entry</code>에 대한 첫 번째 호출은 노란색 팀에 이미 값이 없기 때문에 값이 50인 노란색 팀의 키를 삽입합니다. <code>entry</code>에 대한 두 번째 호출은 Blue 팀이 이미 값 10을 가지고 있기 때문에 해시 맵을 변경하지 않습니다.</p>
+<h4 id="ijjeo-ggabheu-gibaneuro-ggab-heodeiteu"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-03-hash-maps.html#updating-a-value-based-on-the-old-value">이전 값을 기반으로 값 업데이트</a></h4>
+<p>해시 맵의 또 다른 일반적인 사용 사례는 키 값을 조회한 다음 이전 값을 기반으로 업데이트하는 것입니다. 예를 들어 Listing 8-25는 각 단어가 일부 텍스트에 나타나는 횟수를 세는 코드를 보여줍니다. 단어를 키로 사용하는 해시 맵을 사용하고 해당 단어를 본 횟수를 추적하기 위해 값을 증가시킵니다. 단어를 처음 본 경우 먼저 값 0을 삽입합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">use </span><span style="color:#abb2bf;">std::collections::HashMap;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> text </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> `hello world wonderful world`;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> map </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">HashMap::new();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">for</span><span style="color:#abb2bf;"> word </span><span style="color:#adb7c9;">in</span><span style="color:#abb2bf;"> text.</span><span style="color:#5ebfcc;">split_whitespace</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> count </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> map.</span><span style="color:#5ebfcc;">entry</span><span style="color:#abb2bf;">(word).</span><span style="color:#5ebfcc;">or_insert</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">        </span><span style="color:#adb7c9;">*</span><span style="color:#abb2bf;">count </span><span style="color:#adb7c9;">+= </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`{:</span><span style="color:#adb7c9;">?</span><span style="color:#abb2bf;">}`, map);
+</span></code></pre>
+<p>Listing 8-25: 단어와 카운트를 저장하는 해시 맵을 사용하여 단어의 발생 횟수 세기</p>
+<p>이 코드는 <code>{world: 2, hello: 1, wonderful: 1}</code>을 인쇄합니다. 동일한 키/값 쌍이 다른 순서로 인쇄된 것을 볼 수 있습니다. <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-03-hash-maps.html#accessing-values-in-a-hash-map"><code>해시 맵에서 값 액세스</code></a> 섹션에서 해시 맵을 반복하는 것이 임의의 순서로 발생한다는 것을 기억하십시오.</p>
+<p><code>split_whitespace</code> 메서드는 <code>text</code> 값의 공백으로 구분된 하위 슬라이스에 대한 반복자를 반환합니다. <code>or_insert</code> 메서드는 지정된 키의 값에 대한 변경 가능한 참조(<code>&amp;mut V</code>)를 반환합니다. 여기에서 <code>count</code> 변수에 가변 참조를 저장하므로 해당 값에 할당하려면 먼저 별표(<code>*</code>)를 사용하여 <code>count</code>를 역참조해야 합니다. 변경 가능한 참조는 <code>for</code> 루프의 끝에서 범위를 벗어나므로 이러한 모든 변경은 안전하고 차용 규칙에 의해 허용됩니다.</p>
+<h3 id="haekiss-hamsu"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-03-hash-maps.html#hashing-functions">해싱 함수</a></h3>
+<p>기본적으로 <code>HashMap</code>은 해시 테이블 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-03-hash-maps.html#siphash">1</a> 과 관련된 서비스 거부(DoS) 공격에 대한 저항을 제공할 수 있는 <em>SipHash</em> 라는 해싱 기능을 사용합니다. 이것은 사용 가능한 가장 빠른 해싱 알고리즘은 아니지만 성능 저하와 함께 제공되는 더 나은 보안을 위한 트레이드 오프는 그만한 가치가 있습니다. 코드를 프로파일링하고 기본 해시 함수가 용도에 비해 너무 느린 경우 다른 해시를 지정하여 다른 함수로 전환할 수 있습니다. <em>해셔</em>는 <code>BuildHasher</code> 특성을 구현하는 타입입니다. 우리는 10장에서 트레이트와 이를 구현하는 방법에 대해 이야기할 것입니다. 처음부터 자신의 해셔를 구현할 필요는 없습니다. <a rel="noopener nofollow noreferrer" target="_blank" href="https://crates.io/">crates.io</a>에는 많은 일반적인 해싱 알고리즘을 구현하는 해셔를 제공하는 다른 Rust 사용자가 공유하는 라이브러리가 있습니다.</p>
+<ol>
+<li>https://en.wikipedia.org/wiki/SipHash</li>
+</ol>
+<h2 id="yohya-1"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-03-hash-maps.html#summary">요약</a></h2>
+<p>벡터, 문자열 및 해시 맵은 데이터를 저장, 액세스 및 수정해야 할 때 프로그램에 필요한 많은 기능을 제공합니다. 다음은 해결하기 위해 갖추어야 할 몇 가지 연습입니다.</p>
+<ul>
+<li>정수 목록이 주어지면 벡터를 사용하고 목록의 중앙값(정렬할 때 중간 위치의 값)과 최빈값(가장 자주 발생하는 값, 여기에서 해시 맵이 도움이 됨)을 반환합니다.</li>
+<li>문자열을 돼지 라틴어로 변환합니다. 각 단어의 첫 자음이 단어의 끝으로 이동되고 “ay”가 추가되므로 “first”는 “irst-fay”가 됩니다. 모음으로 시작하는 단어는 대신 끝에 <code>hay</code>가 추가됩니다(<code>apple</code>은 <code>apple-hay</code>가 됨). UTF-8 인코딩에 대한 세부 사항을 명심하십시오!</li>
+<li>해시 맵과 벡터를 사용하여 사용자가 회사의 부서에 직원 이름을 추가할 수 있는 텍스트 인터페이스를 만듭니다. 예를 들어 <code>엔지니어링에 Sally 추가</code> 또는 <code>영업에 Amir 추가</code>가 있습니다. 그런 다음 사용자가 부서의 모든 사람 또는 부서별로 회사의 모든 사람 목록을 사전순으로 정렬하여 검색하도록 합니다.</li>
+</ul>
+<p>표준 라이브러리 API 문서는 이러한 연습에 도움이 될 벡터, 문자열 및 해시 맵에 있는 메서드를 설명합니다!</p>
+<p>작업이 실패할 수 있는 더 복잡한 프로그램에 들어가고 있으므로 오류 처리에 대해 논의하기에 완벽한 시기입니다. 다음에 그렇게 하겠습니다!</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">use </span><span style="color:#abb2bf;">std::collections::HashMap;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> numbers </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">vec![</span><span style="color:#db9d63;">4</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">8</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">6</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">4</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">3</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">8</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">4</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">7</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">9</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">4</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">6</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> median </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">calculate_median</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">numbers);
+</span><span style="color:#abb2bf;">    println!(</span><span style="color:#9acc76;">&quot;Median: </span><span style="color:#db9d63;">{}</span><span style="color:#9acc76;">&quot;</span><span style="color:#abb2bf;">, median);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> mode </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">calculate_mode</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">numbers);
+</span><span style="color:#abb2bf;">    println!(</span><span style="color:#9acc76;">&quot;Mode: </span><span style="color:#db9d63;">{}</span><span style="color:#9acc76;">&quot;</span><span style="color:#abb2bf;">, mode);
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">calculate_median</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">numbers</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">Vec&lt;</span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">&gt;) -&gt; </span><span style="color:#cd74e8;">f64 </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> sorted_numbers </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> numbers.</span><span style="color:#5ebfcc;">clone</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">    sorted_numbers.</span><span style="color:#5ebfcc;">sort</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> length </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> sorted_numbers.</span><span style="color:#5ebfcc;">len</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">if</span><span style="color:#abb2bf;"> length </span><span style="color:#adb7c9;">% </span><span style="color:#db9d63;">2 </span><span style="color:#adb7c9;">== </span><span style="color:#db9d63;">0 </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> middle1 </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> sorted_numbers[length </span><span style="color:#adb7c9;">/ </span><span style="color:#db9d63;">2 </span><span style="color:#adb7c9;">- </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> middle2 </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> sorted_numbers[length </span><span style="color:#adb7c9;">/ </span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">return </span><span style="color:#abb2bf;">(middle1 </span><span style="color:#adb7c9;">+</span><span style="color:#abb2bf;"> middle2) </span><span style="color:#adb7c9;">as </span><span style="color:#cd74e8;">f64 </span><span style="color:#adb7c9;">/ </span><span style="color:#db9d63;">2.0</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">    } </span><span style="color:#cd74e8;">else </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">return</span><span style="color:#abb2bf;"> sorted_numbers[length </span><span style="color:#adb7c9;">/ </span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">] </span><span style="color:#adb7c9;">as </span><span style="color:#cd74e8;">f64</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">calculate_mode</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">numbers</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">Vec&lt;</span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">&gt;) -&gt; </span><span style="color:#cd74e8;">i32 </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> freq_map: HashMap&lt;</span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">, </span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">&gt; </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">HashMap::new();
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">for </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">num </span><span style="color:#adb7c9;">in</span><span style="color:#abb2bf;"> numbers {
+</span><span style="color:#abb2bf;">        </span><span style="color:#adb7c9;">*</span><span style="color:#abb2bf;">freq_map.</span><span style="color:#5ebfcc;">entry</span><span style="color:#abb2bf;">(num).</span><span style="color:#5ebfcc;">or_insert</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">) </span><span style="color:#adb7c9;">+= </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> mode </span><span style="color:#adb7c9;">= </span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> max_freq </span><span style="color:#adb7c9;">= </span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">for </span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">num, </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">freq) </span><span style="color:#adb7c9;">in &amp;</span><span style="color:#abb2bf;">freq_map {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">if</span><span style="color:#abb2bf;"> freq </span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> max_freq {
+</span><span style="color:#abb2bf;">            mode </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> num;
+</span><span style="color:#abb2bf;">            max_freq </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> freq;
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    mode
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">  	</span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> input </span><span style="color:#adb7c9;">= </span><span style="color:#9acc76;">&quot;Convert strings to pig latin&quot;</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> words: Vec&lt;</span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">str</span><span style="color:#abb2bf;">&gt; </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> input.</span><span style="color:#5ebfcc;">split_whitespace</span><span style="color:#abb2bf;">().</span><span style="color:#5ebfcc;">collect</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">    
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> pig_latin_words: Vec&lt;String&gt; </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> words
+</span><span style="color:#abb2bf;">        .</span><span style="color:#5ebfcc;">iter</span><span style="color:#abb2bf;">()
+</span><span style="color:#abb2bf;">        .</span><span style="color:#5ebfcc;">map</span><span style="color:#abb2bf;">(|</span><span style="color:#eb6772;">word</span><span style="color:#abb2bf;">| </span><span style="color:#5ebfcc;">convert_to_pig_latin</span><span style="color:#abb2bf;">(word))
+</span><span style="color:#abb2bf;">        .</span><span style="color:#5ebfcc;">collect</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">    
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> pig_latin_sentence </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> pig_latin_words.</span><span style="color:#5ebfcc;">join</span><span style="color:#abb2bf;">(</span><span style="color:#9acc76;">&quot; &quot;</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    println!(</span><span style="color:#9acc76;">&quot;</span><span style="color:#db9d63;">{}</span><span style="color:#9acc76;">&quot;</span><span style="color:#abb2bf;">, pig_latin_sentence);
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">convert_to_pig_latin</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">word</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">str</span><span style="color:#abb2bf;">) -&gt; String {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> vowels </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">[</span><span style="color:#9acc76;">&#39;a&#39;</span><span style="color:#abb2bf;">, </span><span style="color:#9acc76;">&#39;e&#39;</span><span style="color:#abb2bf;">, </span><span style="color:#9acc76;">&#39;i&#39;</span><span style="color:#abb2bf;">, </span><span style="color:#9acc76;">&#39;o&#39;</span><span style="color:#abb2bf;">, </span><span style="color:#9acc76;">&#39;u&#39;</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> chars </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> word.</span><span style="color:#5ebfcc;">chars</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">    
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> first_char </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> chars.</span><span style="color:#5ebfcc;">next</span><span style="color:#abb2bf;">().</span><span style="color:#5ebfcc;">unwrap</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">    
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">if</span><span style="color:#abb2bf;"> vowels.</span><span style="color:#5ebfcc;">contains</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">first_char.</span><span style="color:#5ebfcc;">to_ascii_lowercase</span><span style="color:#abb2bf;">()) {
+</span><span style="color:#abb2bf;">        format!(</span><span style="color:#9acc76;">&quot;</span><span style="color:#db9d63;">{}</span><span style="color:#9acc76;">-hay&quot;</span><span style="color:#abb2bf;">, word)
+</span><span style="color:#abb2bf;">    } </span><span style="color:#cd74e8;">else </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> rest: String </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> chars.</span><span style="color:#5ebfcc;">collect</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">        format!(</span><span style="color:#9acc76;">&quot;</span><span style="color:#db9d63;">{}</span><span style="color:#9acc76;">-</span><span style="color:#db9d63;">{}</span><span style="color:#9acc76;">ay&quot;</span><span style="color:#abb2bf;">, rest, first_char)
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">use </span><span style="color:#abb2bf;">std::collections::{HashMap, BTreeMap};
+</span><span style="color:#cd74e8;">use </span><span style="color:#abb2bf;">std::io::{</span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">, Write};
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> departments: HashMap&lt;String, Vec&lt;String&gt;&gt; </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">HashMap::new();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">loop </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">        println!(</span><span style="color:#9acc76;">&quot;사용법: [부서]에 [직원 이름] 추가&quot;</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">        print!(</span><span style="color:#9acc76;">&quot;명령어 입력: &quot;</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">        io::stdout().</span><span style="color:#5ebfcc;">flush</span><span style="color:#abb2bf;">().</span><span style="color:#5ebfcc;">unwrap</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> input </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::new();
+</span><span style="color:#abb2bf;">        io::stdin().</span><span style="color:#5ebfcc;">read_line</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">mut</span><span style="color:#abb2bf;"> input).</span><span style="color:#5ebfcc;">expect</span><span style="color:#abb2bf;">(</span><span style="color:#9acc76;">&quot;입력을 읽을 수 없습니다.&quot;</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> input </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> input.</span><span style="color:#5ebfcc;">trim</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">if</span><span style="color:#abb2bf;"> input </span><span style="color:#adb7c9;">== </span><span style="color:#9acc76;">&quot;종료&quot; </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">            println!(</span><span style="color:#9acc76;">&quot;프로그램을 종료합니다.&quot;</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">            </span><span style="color:#cd74e8;">break</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> parts: Vec&lt;</span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">str</span><span style="color:#abb2bf;">&gt; </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> input.</span><span style="color:#5ebfcc;">split_whitespace</span><span style="color:#abb2bf;">().</span><span style="color:#5ebfcc;">collect</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">if</span><span style="color:#abb2bf;"> parts.</span><span style="color:#5ebfcc;">len</span><span style="color:#abb2bf;">() </span><span style="color:#adb7c9;">&gt;= </span><span style="color:#db9d63;">4 </span><span style="color:#adb7c9;">&amp;&amp;</span><span style="color:#abb2bf;"> parts[</span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">] </span><span style="color:#adb7c9;">== </span><span style="color:#9acc76;">&quot;에&quot; </span><span style="color:#adb7c9;">&amp;&amp;</span><span style="color:#abb2bf;"> parts[</span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">] </span><span style="color:#adb7c9;">== </span><span style="color:#9acc76;">&quot;추가&quot; </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">            </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> department </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> parts[</span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">            </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> employee </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> parts[</span><span style="color:#db9d63;">3</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">            departments.</span><span style="color:#5ebfcc;">entry</span><span style="color:#abb2bf;">(department.</span><span style="color:#5ebfcc;">to_string</span><span style="color:#abb2bf;">()).</span><span style="color:#5ebfcc;">or_default</span><span style="color:#abb2bf;">().</span><span style="color:#5ebfcc;">push</span><span style="color:#abb2bf;">(employee.</span><span style="color:#5ebfcc;">to_string</span><span style="color:#abb2bf;">());
+</span><span style="color:#abb2bf;">            println!(</span><span style="color:#9acc76;">&quot;&#39;</span><span style="color:#db9d63;">{}</span><span style="color:#9acc76;">&#39; 부서에 &#39;</span><span style="color:#db9d63;">{}</span><span style="color:#9acc76;">&#39;를 추가했습니다.&quot;</span><span style="color:#abb2bf;">, department, employee);
+</span><span style="color:#abb2bf;">        } </span><span style="color:#cd74e8;">else </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">            println!(</span><span style="color:#9acc76;">&quot;잘못된 명령어 형식입니다.&quot;</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(</span><span style="color:#9acc76;">&quot;부서별 직원 목록:&quot;</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> sorted_departments: BTreeMap&lt;String, Vec&lt;String&gt;&gt; </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">BTreeMap::new();
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">for </span><span style="color:#abb2bf;">(department, employees) </span><span style="color:#adb7c9;">in &amp;</span><span style="color:#abb2bf;">departments {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> sorted_employees </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> employees.</span><span style="color:#5ebfcc;">clone</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">        sorted_employees.</span><span style="color:#5ebfcc;">sort</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">        sorted_departments.</span><span style="color:#5ebfcc;">insert</span><span style="color:#abb2bf;">(department.</span><span style="color:#5ebfcc;">clone</span><span style="color:#abb2bf;">(), sorted_employees);
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">for </span><span style="color:#abb2bf;">(department, employees) </span><span style="color:#adb7c9;">in &amp;</span><span style="color:#abb2bf;">sorted_departments {
+</span><span style="color:#abb2bf;">        println!(</span><span style="color:#9acc76;">&quot;</span><span style="color:#db9d63;">{}</span><span style="color:#9acc76;"> 부서:&quot;</span><span style="color:#abb2bf;">, department);
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">for</span><span style="color:#abb2bf;"> employee </span><span style="color:#adb7c9;">in</span><span style="color:#abb2bf;"> employees {
+</span><span style="color:#abb2bf;">            println!(</span><span style="color:#9acc76;">&quot; - </span><span style="color:#db9d63;">{}</span><span style="color:#9acc76;">&quot;</span><span style="color:#abb2bf;">, employee);
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span></code></pre>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        <a class="previous" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        
+        
+        
+        
+            
+            
+            
+                
+            
+                
+            
+                
+            
+        
+            
+            
+            
+        
+            
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+            
+            
+                
+            
+                
+            
+                
+            
+        
+            
+            
+            
+                
+            
+                
+            
+                
+            
+        
+            
+            
+            
+                
+            
+                
+            
+                
+            
+        
+            
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+            
+            
+                
+            
+                
+            
+                
+                    
+                
+            
+        
+    
+
+            </div>
+        </div>
+
+        
+            
+                <script type="text/javascript" src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+                <script type="text/javascript" src="https://hwjskt.github.io/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://hwjskt.github.io/book.js"></script>
+        
+        </div>
+    </section>
+
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+  
+  
+
+  
+  
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js" integrity="sha384-Pulw7+h73841BQIK0LzJCydKRPChJUF9w8h8W0o3h+cLtoyNPJS847bQauLWOTwg" crossorigin="anonymous"></script>
+  
+  <script src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+  <script src="https://hwjskt.github.io/search_index.en.js"></script><script src="https://hwjskt.github.io/js/site.js"></script>
+
+  
+  
+
+  
+  
+</body>
+
+</html>

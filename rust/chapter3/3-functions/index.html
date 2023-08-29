@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='&#x2F;icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='&#x2F;icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" integrity="sha384-oGm59HWAkwO32h2w8u0B98wKBZJwd6MbWtAJwQKCTffZjOXHXrnyv9Syjovgc+UV" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://hwjskt.github.io/deep-thought.css" rel="stylesheet" />
+  
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/book.css">
+    <link rel="stylesheet" href="https://hwjskt.github.io/deep-thought.css">
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/newsprint.css">
+
+
+  <title>
+    
+    
+    Dr.JUNG | Rust
+
+  </title>
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176984489-2"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-176984489-2");
+  </script>
+  
+  
+
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;">Dr.JUNG</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;about">
+            AboutMe
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;docs">
+            Docs
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;rust">
+            Rust
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  
+    
+    <section>
+        <div class="book-menu is-2">
+            
+            
+            <aside role="navigation">
+                <ul>
+                    
+                        
+                        
+                        <li >
+                            <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;">Introduction</a>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;">
+                                    <strong>1.</strong>
+                                    Getting Started
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;1-installation&#x2F;">
+                                                    <strong>1.1.</strong>
+                                                    Installation
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;2-helloworld&#x2F;">
+                                                    <strong>1.2.</strong>
+                                                    Hello, World!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;3-hellocargo&#x2F;">
+                                                    <strong>1.3.</strong>
+                                                    Hello, Cargo!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter2&#x2F;">
+                                    <strong>2.</strong>
+                                    Programming a Guessing Game
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;">
+                                    <strong>3.</strong>
+                                    Common Programming Concepts
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;1-variables-and-mutability&#x2F;">
+                                                    <strong>3.1.</strong>
+                                                    Variables and Mutability
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;2-data-types&#x2F;">
+                                                    <strong>3.2.</strong>
+                                                    Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="active">
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;3-functions&#x2F;">
+                                                    <strong>3.3.</strong>
+                                                    Functions
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;4-comments&#x2F;">
+                                                    <strong>3.4.</strong>
+                                                    Comments
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;5-control-flow&#x2F;">
+                                                    <strong>3.5.</strong>
+                                                    Control Flow
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;">
+                                    <strong>4.</strong>
+                                    Understanding Ownership
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;1-what-is-ownership&#x2F;">
+                                                    <strong>4.1.</strong>
+                                                    What is Ownership?
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;2-references-and-borrowing&#x2F;">
+                                                    <strong>4.2.</strong>
+                                                    References and Borrowing
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;3-the-slice-type&#x2F;">
+                                                    <strong>4.3.</strong>
+                                                    The Slice Type
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;">
+                                    <strong>5.</strong>
+                                    Using Structs to Structure Related Data
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;1-defining-and-instantiating-structs&#x2F;">
+                                                    <strong>5.1.</strong>
+                                                    Defining and Instantiating Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;2-an-example-program-using-structs&#x2F;">
+                                                    <strong>5.2.</strong>
+                                                    An Example Program Using Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;3-method-syntax&#x2F;">
+                                                    <strong>5.3.</strong>
+                                                    Method Syntax
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;">
+                                    <strong>6.</strong>
+                                    Enums and Pattern Matching
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;1-defining-an-enum&#x2F;">
+                                                    <strong>6.1.</strong>
+                                                    Defining an Enum
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;2-the-match-control-flow-construct&#x2F;">
+                                                    <strong>6.2.</strong>
+                                                    The match Control Flow Construct
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;3-concise-control-flow-with-if-let&#x2F;">
+                                                    <strong>6.3.</strong>
+                                                    Concise Control Flow with if let.md
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;">
+                                    <strong>7.</strong>
+                                    Managing Growing Projects with Packages, Crates, and Modules
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;1-packages-and-crates&#x2F;">
+                                                    <strong>7.1.</strong>
+                                                    Packages and Crates
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;2-defining-modules-to-control-scope-and-privacy&#x2F;">
+                                                    <strong>7.2.</strong>
+                                                    Defining Modules to Control Scope and Privacy
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;3-paths-for-referring-to-an-item-in-the-module-tree&#x2F;">
+                                                    <strong>7.3.</strong>
+                                                    Paths for Referring to an Item in the Module Tree
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;4-bringing-paths-into-scope-with-the-use-keyword&#x2F;">
+                                                    <strong>7.4.</strong>
+                                                    Bringing Paths Into Scope with the use Keyword
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;5-separating-modules-into-different-files&#x2F;">
+                                                    <strong>7.5.</strong>
+                                                    Separating Modules into Different Files
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;">
+                                    <strong>8.</strong>
+                                    Common Collections
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;1-storing-lists-of-values-with-vectors&#x2F;">
+                                                    <strong>8.1.</strong>
+                                                    Storing Lists of Values with Vectors
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;">
+                                                    <strong>8.2.</strong>
+                                                    Storing UTF-8 Encoded Text with Strings
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;3-storing-keys-with-associated-values-in-hash-maps&#x2F;">
+                                                    <strong>8.3.</strong>
+                                                    Storing Keys with Associated Values in Hash Maps
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </aside>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="book-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="book-search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <h1>Functions</h1>
+    <h2 id="yohya">요약</h2>
+<ul>
+<li>
+<p>함수,변수 이름은 <code>소문자</code>와 <code>_</code>를 사용하는 스네이크 케이스 형식을 따름</p>
+</li>
+<li>
+<p>사용할 함수를 정의하는 위치는 main 함수 전,후 모두 가능</p>
+</li>
+<li>
+<p>구문과 표현식</p>
+<ul>
+<li>구문(Statements)은 어떤 작업을 수행하고, 값은 반환하지 않음.(예: 변수선언, 함수정의)</li>
+<li>표현식(Expressions)은 결과값을 반환.(예: 수학연산, 함수호출, 매크로호출, 새 범위를 만드는 {})</li>
+</ul>
+</li>
+</ul>
+<span id="continue-reading"></span><h2 id="hamsu"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch03-03-how-functions-work.html#functions">함수</a></h2>
+<p>함수는 Rust 코드에서 널리 사용됩니다. 당신은 이미 rust 언어에서 가장 중요한 함수 중 하나인 <code>main</code> 함수를 보았습니다. 이것은 많은 프로그램의 시작점입니다. 또한 새 함수를 선언할 수 있는 <code>fn</code> 키워드도 보았습니다.</p>
+<p>Rust는 함수 및 변수 이름에 대한 일반적인 스타일로 스네이크 케이스를 사용합니다. 여기서 모든 문자는 소문자이고 밑줄은 별도의 단어입니다.</p>
+<p>다음 프로그램은 함수를 정의하는 예시입니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    println!(`Hello, world</span><span style="color:#adb7c9;">!</span><span style="color:#abb2bf;">`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#5ebfcc;">another_function</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">another_function</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    println!(`Another function.`);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>Rust 에서 <code>fn</code> 뒤에 함수 이름과 괄호를 입력하여 함수를 정의합니다. 중괄호는 컴파일러에게 함수 본문이 시작되고 끝나는 위치를 알려줍니다.</p>
+<br />
+<p>함수를 호출하는 방법은 함수 이름 뒤에 괄호를 입력하는 것 입니다. <code>another_function</code>은 프로그램에 정의되어 있기 때문에 <code>main</code> 함수 내부에서 호출할 수 있습니다. 소스 코드에서 <code>main</code> 함수 다음에 <code>another_function</code>을 정의했습니다. <code>main</code> 함수 전에도 정의할 수 있었습니다. Rust는 당신이 당신의 함수를 정의하는 곳을 신경쓰지 않습니다. 어디든 호출자가 볼 수 있는 범위에 정의되어 있으면 됩니다.</p>
+<br>
+<p>함수를 더 자세히 살펴보기 위해 functions 라는 이름의 새 binary 프로젝트를 시작하겠습니다. src/main.rs 에 위 예제를 작성하고 실행합니다. 결과는 다음과 같아야 합니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">$ cargo run
+</span><span style="color:#abb2bf;">   Compiling functions v0.1.0 (file:///projects/functions)
+</span><span style="color:#abb2bf;">    Finished dev [unoptimized + debuginfo] target(s) in 0.28s
+</span><span style="color:#abb2bf;">     Running `target/debug/functions`
+</span><span style="color:#abb2bf;">Hello, world!
+</span><span style="color:#abb2bf;">Another function.
+</span></code></pre>
+<p>행은 <code>main</code> 함수에 나타나는 순서대로 실행됩니다. 먼저 <code>Hello, world!</code> 메시지가 출력된 다음, <code>another_function</code>이 호출되고 해당 메시지가 출력됩니다.</p>
+<h3 id="maeggabbyeosu-parameters"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch03-03-how-functions-work.html#parameters">매개변수(Parameters)</a></h3>
+<p>함수는 매개변수를 갖는 형식으로 정의할 수 있습니다. 함수에 매개변수가 있는 경우 해당 매개변수에 대한 구체적인 값을 함수에 제공할 수 있습니다. 기술적으로는 구체적인 값을 전달인자(arguments)라고 부르지만, 일상적인 대화에서 사람들은 함수의 정의나 호출에서 매개변수와 전달인자라는 단어를 같은 의미로 사용하는 경향이 있습니다.</p>
+<ul>
+<li>전달인자(arguments): 함수를 호출할 때 전달되는 구체적인 값</li>
+<li>매개변수(Parameters): 함수를 정의할 때 사용되는 변수이름</li>
+</ul>
+<p>이 버전의 <code>another_function</code>에서는 매개변수를 추가합니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#5ebfcc;">another_function</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">another_function</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">x</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">) {
+</span><span style="color:#abb2bf;">    println!(`The value of x is: {x}`);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>이 프로그램을 실행해 보십시오. 다음 출력을 얻어야 합니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">$ cargo run
+</span><span style="color:#abb2bf;">   Compiling functions v0.1.0 (file:///projects/functions)
+</span><span style="color:#abb2bf;">    Finished dev [unoptimized + debuginfo] target(s) in 1.21s
+</span><span style="color:#abb2bf;">     Running `target/debug/functions`
+</span><span style="color:#abb2bf;">The value of x is: 5
+</span></code></pre>
+<p><code>another_function</code> 선언에는 <code>x</code>라는 매개변수가 하나 있습니다. <code>x</code>의 유형은 <code>i32</code>로 지정됩니다. <code>another_function</code>에 <code>5</code>를 전달하면 <code>println!</code> 매크로는 <code>x</code>를 포함하는 중괄호 쌍이 형식 문자열에 있던 곳에 <code>5</code>를 넣습니다.</p>
+<p>함수를 선언할 때, 각 매개변수의 타입을 선언해야 합니다. 이는 Rust의 설계에서 신중한 결정입니다. 함수 정의에 타입 주석을 요구한다는 것은, 컴파일러가 타입을 파악하기 위해 코드의 다른 곳에서 우리가 사용하는 것을 통해 타입을 추측할 필요가 없어진다는 것을 의미합니다. 또한 컴파일러는 함수가 기대하는 타입을 알고 있는 경우 더 유용한 오류 메시지를 제공할 수 있습니다.</p>
+<br>
+<p>여러개의 매개변수를 정의하려면, 다음과 같이 매개변수 사이를 쉼표로 구분합니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#5ebfcc;">print_labeled_measurement</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">, `h`);
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">print_labeled_measurement</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">value</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">, </span><span style="color:#eb6772;">unit_label</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">char</span><span style="color:#abb2bf;">) {
+</span><span style="color:#abb2bf;">    println!(`The measurement is: {value}{unit_label}`);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>이 예제에서는 두 개의 매개변수를 사용하여 <code>print_labeled_measurement</code>라는 함수를 생성합니다. 첫 번째 매개변수의 이름은 <code>value</code>이고 <code>i32</code> 타입입니다. 두 번째는 <code>unit_label</code>이라는 이름이고 <code>char</code> 타입입니다. 이 후 이 함수는 <code>value</code>와 <code>unit_label</code>을 모두 포함하는 텍스트를 인쇄합니다.</p>
+<p>이 코드를 실행해 봅시다. 현재 함수 프로젝트의 src/main.rs 파일 에 있는 프로그램을 이전 예제로 바꾸고 <code>cargo run</code>을 사용하여 실행합니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">$ cargo run
+</span><span style="color:#abb2bf;">   Compiling functions v0.1.0 (file:///projects/functions)
+</span><span style="color:#abb2bf;">    Finished dev [unoptimized + debuginfo] target(s) in 0.31s
+</span><span style="color:#abb2bf;">     Running `target/debug/functions`
+</span><span style="color:#abb2bf;">The measurement is: 5h
+</span></code></pre>
+<p><code>value</code>의 값이 <code>5</code>이고 <code>unit_label</code>의 값이 <code>h</code>인 함수를 호출했기 때문에 프로그램 출력에는 해당 값이 포함됩니다.</p>
+<h3 id="gumungwa-pyohyeonssi-statements-and-expressions"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch03-03-how-functions-work.html#statements-and-expressions">구문과 표현식(Statements and Expressions)</a></h3>
+<p>함수 본문은 표현식으로 끝나는 명령문들로 구성됩니다. 지금까지 우리가 다룬 함수에는 종결 표현식이 포함되지 않았지만, 명령문의 일부로 표현식을 보았습니다. Rust는 표현식 기반 언어이기 때문에 이해해야 할 중요한 차이점입니다. 다른 언어에는 동일한 구분이 없으므로 명령문과 표현식이 무엇이며, 그 차이가 함수 본문에 어떤 영향을 미치는지 살펴보겠습니다.</p>
+<ul>
+<li>구문(Statements)은 어떤 작업을 수행하고, 값은 반환하지 않는 지침입니다.</li>
+<li>표현식(Expressions)은 결과값을 반환합니다.</li>
+</ul>
+<p>몇 가지 예를 살펴보겠습니다.</p>
+<p>우리는 이미 구문과 표현식을 사용했습니다. 변수를 만들고 <code>let</code> 키워드를 사용하여 값을 할당하는 것이 구문입니다. 목록 3-1에서 <code>let y = 6;</code>은 구문입니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">fn main() {
+</span><span style="color:#abb2bf;">    let y = 6;
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 3-1: 하나의 명령문을 포함하는 <code>main</code> 함수 선언</p>
+<p>함수 정의도 구문입니다. 앞의 전체 예는 그 자체로 구문입니다.</p>
+<br>
+<p>구문은 값을 반환하지 않습니다. 따라서 다음 코드와 같이 <code>let</code> 문을 다른 변수에 할당할 수 없습니다. 오류가 발생합니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">fn main() {
+</span><span style="color:#abb2bf;">    let x = (let y = 6);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>이 프로그램을 실행하면 다음과 같은 오류가 발생합니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">$ cargo run
+</span><span style="color:#abb2bf;">   Compiling functions v0.1.0 (file:///projects/functions)
+</span><span style="color:#abb2bf;">error: expected expression, found `let` statement
+</span><span style="color:#abb2bf;"> --&gt; src/main.rs:2:14
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">2 |     let x = (let y = 6);
+</span><span style="color:#abb2bf;">  |              ^^^
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">error: expected expression, found statement (`let`)
+</span><span style="color:#abb2bf;"> --&gt; src/main.rs:2:14
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">2 |     let x = (let y = 6);
+</span><span style="color:#abb2bf;">  |              ^^^^^^^^^
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">  = note: variable declaration using `let` is a statement
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">error[E0658]: `let` expressions in this position are unstable
+</span><span style="color:#abb2bf;"> --&gt; src/main.rs:2:14
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">2 |     let x = (let y = 6);
+</span><span style="color:#abb2bf;">  |              ^^^^^^^^^
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">  = note: see issue #53667 &lt;https://github.com/rust-lang/rust/issues/53667&gt; for more information
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">warning: unnecessary parentheses around assigned value
+</span><span style="color:#abb2bf;"> --&gt; src/main.rs:2:13
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">2 |     let x = (let y = 6);
+</span><span style="color:#abb2bf;">  |             ^         ^
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">  = note: `#[warn(unused_parens)]` on by default
+</span><span style="color:#abb2bf;">help: remove these parentheses
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">2 -     let x = (let y = 6);
+</span><span style="color:#abb2bf;">2 +     let x = let y = 6;
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">For more information about this error, try `rustc --explain E0658`.
+</span><span style="color:#abb2bf;">warning: `functions` (bin `functions`) generated 1 warning
+</span><span style="color:#abb2bf;">error: could not compile `functions` due to 3 previous errors; 1 warning emitted
+</span></code></pre>
+<p><code>let y = 6</code> 문은 값을 반환하지 않으므로 <code>x</code>가 바인딩할 항목이 없습니다. C 및 Ruby 와 같은 언어와 다른 점입니다. 이러한 언어에서는 <code>x = y = 6</code>이라고 쓰고 <code>x</code>와 <code>y</code> 모두 값이 <code>6</code>이 되도록 할 수 있습니다. Rust에서는 그렇지 않습니다.</p>
+<Br>
+<p>표현식은 값으로 평가(반환)되며, Rust 코드 대부분이 표현식입니다. <code>5 + 6</code> 과 같은 간단한 수학 연산을 살펴보면, 이는 <code>11</code>이란 값을 산출하는 표현식입니다. 표현식은 구문의 일부가 될 수 있습니다. Listing 3-1에서 <code>let y = 6;</code> 구문의 <code>6</code>은 값 <code>6</code>으로 평가되는 표현식입니다.</p>
+<p>함수 호출, 매크로 호출, 새로운 범위를 만드는 {} 은 모두 표현식입니다. 예를 들면 다음과 같습니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> y </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> x </span><span style="color:#adb7c9;">= </span><span style="color:#db9d63;">3</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">        x </span><span style="color:#adb7c9;">+ </span><span style="color:#db9d63;">1
+</span><span style="color:#abb2bf;">    };
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`The value of y is: {y}`);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>위 코드에서 아래 부분은 표현식입니다:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> x </span><span style="color:#adb7c9;">= </span><span style="color:#db9d63;">3</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">    x </span><span style="color:#adb7c9;">+ </span><span style="color:#db9d63;">1
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>이 경우 <code>4</code>로 평가되는 블록입니다. 해당 값은 <code>let</code> 문의 일부로 <code>y</code>에 바인딩됩니다. <code>x + 1</code> 행에는 지금까지 본 대부분의 행과 달리 끝에 세미콜론이 없습니다. 표현식에는 마지막에 세미콜론이 붙지 않습니다. 표현식 끝에 세미콜론을 추가하면 문장으로 바뀌고 값을 반환하지 않습니다. 이후에 함수의 반환 값과 표현식을 살펴볼 때 이 점을 유의하세요.</p>
+<h3 id="banhwan-ggabi-hisneun-hamsu"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch03-03-how-functions-work.html#functions-with-return-values">반환 값이 있는 함수</a></h3>
+<p>함수는 이를 호출하는 코드에 값을 반환할 수 있습니다. 반환 값의 이름은 지정하지 않지만 화살표(<code>-&gt;</code>) 다음에 반환 값의 유형을 선언해야 합니다. Rust에서 함수의 반환 값은 함수 본문 블록의 최종 표현식 값과 동의어입니다. 함수에서 <code>return</code> 키워드와 값을 사용하여 일찍 반환할 수 있지만, 대부분의 함수는 암시적으로 마지막 표현식을 반환합니다.</p>
+<p>다음은 값을 반환하는 함수의 예입니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">fn five() -&gt; i32 {
+</span><span style="color:#abb2bf;">    5
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">fn main() {
+</span><span style="color:#abb2bf;">    let x = five();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`The value of x is: {x}`);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p><code>five</code> 함수에는 함수 호출, 매크로 또는 <code>let</code> 문이 없으며 숫자 <code>5</code>만 있습니다. 이것은 Rust에서 완벽하게 유효한 함수입니다. 함수의 반환 유형도 <code>-&gt; i32</code>로 지정됩니다. 이 코드를 실행해 보십시오. 출력은 다음과 같습니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">$ cargo run
+</span><span style="color:#abb2bf;">   Compiling functions v0.1.0 (file:///projects/functions)
+</span><span style="color:#abb2bf;">    Finished dev [unoptimized + debuginfo] target(s) in 0.30s
+</span><span style="color:#abb2bf;">     Running `target/debug/functions`
+</span><span style="color:#abb2bf;">The value of x is: 5
+</span></code></pre>
+<p><code>five</code>의 <code>5</code>는 함수의 반환 값이며 반환 타입이 <code>i32</code>입니다. 이에 대해 자세히 살펴보겠습니다. 두 가지 중요한 부분이 있습니다.</p>
+<p>첫째, <code>let x = five();</code> 줄입니다. 변수를 초기화하기 위해 함수의 반환 값을 사용하고 있음을 보여줍니다. 함수 <code>five</code>는 <code>5</code>를 반환하므로 해당 행은 다음과 동일합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> x </span><span style="color:#adb7c9;">= </span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">;
+</span></code></pre>
+<p>둘째, <code>five</code> 함수는 매개변수가 없고 반환 값의 유형을 정의하지만 함수의 본문은 우리가 반환하려는 값을 가진 표현식이기 때문에 세미콜론이 없는 외로운 <code>5</code>입니다.</p>
+<br>
+<p>다른 예를 살펴보겠습니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">fn main() {
+</span><span style="color:#abb2bf;">    let x = plus_one(5);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`The value of x is: {x}`);
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">fn plus_one(x: i32) -&gt; i32 {
+</span><span style="color:#abb2bf;">    x + 1
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>이 코드를 실행하면 <code>The value of x is: 6</code>이 인쇄됩니다.</p>
+<br>
+<p>그러나 <code>x + 1</code>을 포함하는 줄 끝에 세미콜론을 배치하여 표현식에서 명령문으로 변경하면 오류가 발생합니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> x </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">plus_one</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`The value of x is: {x}`);
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">plus_one</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">x</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">) -&gt; </span><span style="color:#cd74e8;">i32 </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">    x </span><span style="color:#adb7c9;">+ </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>이 코드를 컴파일하면 다음과 같은 오류가 발생합니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">$ cargo run
+</span><span style="color:#abb2bf;">   Compiling functions v0.1.0 (file:///projects/functions)
+</span><span style="color:#abb2bf;">error[E0308]: mismatched types
+</span><span style="color:#abb2bf;"> --&gt; src/main.rs:7:24
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">7 | fn plus_one(x: i32) -&gt; i32 {
+</span><span style="color:#abb2bf;">  |    --------            ^^^ expected `i32`, found `()`
+</span><span style="color:#abb2bf;">  |    |
+</span><span style="color:#abb2bf;">  |    implicitly returns `()` as its body has no tail or `return` expression
+</span><span style="color:#abb2bf;">8 |     x + 1;
+</span><span style="color:#abb2bf;">  |          - help: remove this semicolon to return this value
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">For more information about this error, try `rustc --explain E0308`.
+</span><span style="color:#abb2bf;">error: could not compile `functions` due to previous error
+</span></code></pre>
+<p>기본 오류 메시지인 <code>mismatched types</code>은 이 코드의 핵심 문제를 나타냅니다. <code>plus_one</code> 함수의 정의는 <code>i32</code>를 반환한다고 하지만 <code>x + 1;</code> 구문은 값을 산출(반환)하지 않기 때문에, <code>()</code> 처럼 비어있는 튜플로 표현됩니다. 따라서 이 함수에서는 아무 것도 반환되지 않으며, 이는 함수 정의와 모순되고 오류가 발생합니다. 이 출력에서 ​​Rust는 이 문제를 수정하는 데 도움이 될 수 있는 메시지를 제공합니다. 오류를 수정하는 세미콜론을 제거할 것을 제안합니다.</p>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        <a class="previous" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;2-data-types&#x2F;"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        <a class="next" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;4-comments&#x2F;">></a>
+    
+
+            </div>
+        </div>
+
+        
+            
+                <script type="text/javascript" src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+                <script type="text/javascript" src="https://hwjskt.github.io/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://hwjskt.github.io/book.js"></script>
+        
+        </div>
+    </section>
+
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+  
+  
+
+  
+  
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js" integrity="sha384-Pulw7+h73841BQIK0LzJCydKRPChJUF9w8h8W0o3h+cLtoyNPJS847bQauLWOTwg" crossorigin="anonymous"></script>
+  
+  <script src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+  <script src="https://hwjskt.github.io/search_index.en.js"></script><script src="https://hwjskt.github.io/js/site.js"></script>
+
+  
+  
+
+  
+  
+</body>
+
+</html>

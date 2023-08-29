@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='&#x2F;icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='&#x2F;icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" integrity="sha384-oGm59HWAkwO32h2w8u0B98wKBZJwd6MbWtAJwQKCTffZjOXHXrnyv9Syjovgc+UV" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://hwjskt.github.io/deep-thought.css" rel="stylesheet" />
+  
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/book.css">
+    <link rel="stylesheet" href="https://hwjskt.github.io/deep-thought.css">
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/newsprint.css">
+
+
+  <title>
+    
+    
+    Dr.JUNG | Rust
+
+  </title>
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176984489-2"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-176984489-2");
+  </script>
+  
+  
+
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;">Dr.JUNG</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;about">
+            AboutMe
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;docs">
+            Docs
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;rust">
+            Rust
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  
+    
+    <section>
+        <div class="book-menu is-2">
+            
+            
+            <aside role="navigation">
+                <ul>
+                    
+                        
+                        
+                        <li >
+                            <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;">Introduction</a>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;">
+                                    <strong>1.</strong>
+                                    Getting Started
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;1-installation&#x2F;">
+                                                    <strong>1.1.</strong>
+                                                    Installation
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;2-helloworld&#x2F;">
+                                                    <strong>1.2.</strong>
+                                                    Hello, World!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;3-hellocargo&#x2F;">
+                                                    <strong>1.3.</strong>
+                                                    Hello, Cargo!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter2&#x2F;">
+                                    <strong>2.</strong>
+                                    Programming a Guessing Game
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;">
+                                    <strong>3.</strong>
+                                    Common Programming Concepts
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;1-variables-and-mutability&#x2F;">
+                                                    <strong>3.1.</strong>
+                                                    Variables and Mutability
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;2-data-types&#x2F;">
+                                                    <strong>3.2.</strong>
+                                                    Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;3-functions&#x2F;">
+                                                    <strong>3.3.</strong>
+                                                    Functions
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;4-comments&#x2F;">
+                                                    <strong>3.4.</strong>
+                                                    Comments
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;5-control-flow&#x2F;">
+                                                    <strong>3.5.</strong>
+                                                    Control Flow
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;">
+                                    <strong>4.</strong>
+                                    Understanding Ownership
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;1-what-is-ownership&#x2F;">
+                                                    <strong>4.1.</strong>
+                                                    What is Ownership?
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;2-references-and-borrowing&#x2F;">
+                                                    <strong>4.2.</strong>
+                                                    References and Borrowing
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;3-the-slice-type&#x2F;">
+                                                    <strong>4.3.</strong>
+                                                    The Slice Type
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;">
+                                    <strong>5.</strong>
+                                    Using Structs to Structure Related Data
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;1-defining-and-instantiating-structs&#x2F;">
+                                                    <strong>5.1.</strong>
+                                                    Defining and Instantiating Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;2-an-example-program-using-structs&#x2F;">
+                                                    <strong>5.2.</strong>
+                                                    An Example Program Using Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;3-method-syntax&#x2F;">
+                                                    <strong>5.3.</strong>
+                                                    Method Syntax
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;">
+                                    <strong>6.</strong>
+                                    Enums and Pattern Matching
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;1-defining-an-enum&#x2F;">
+                                                    <strong>6.1.</strong>
+                                                    Defining an Enum
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;2-the-match-control-flow-construct&#x2F;">
+                                                    <strong>6.2.</strong>
+                                                    The match Control Flow Construct
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;3-concise-control-flow-with-if-let&#x2F;">
+                                                    <strong>6.3.</strong>
+                                                    Concise Control Flow with if let.md
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;">
+                                    <strong>7.</strong>
+                                    Managing Growing Projects with Packages, Crates, and Modules
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;1-packages-and-crates&#x2F;">
+                                                    <strong>7.1.</strong>
+                                                    Packages and Crates
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;2-defining-modules-to-control-scope-and-privacy&#x2F;">
+                                                    <strong>7.2.</strong>
+                                                    Defining Modules to Control Scope and Privacy
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;3-paths-for-referring-to-an-item-in-the-module-tree&#x2F;">
+                                                    <strong>7.3.</strong>
+                                                    Paths for Referring to an Item in the Module Tree
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;4-bringing-paths-into-scope-with-the-use-keyword&#x2F;">
+                                                    <strong>7.4.</strong>
+                                                    Bringing Paths Into Scope with the use Keyword
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;5-separating-modules-into-different-files&#x2F;">
+                                                    <strong>7.5.</strong>
+                                                    Separating Modules into Different Files
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;">
+                                    <strong>8.</strong>
+                                    Common Collections
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li class="active">
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;1-storing-lists-of-values-with-vectors&#x2F;">
+                                                    <strong>8.1.</strong>
+                                                    Storing Lists of Values with Vectors
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;">
+                                                    <strong>8.2.</strong>
+                                                    Storing UTF-8 Encoded Text with Strings
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;3-storing-keys-with-associated-values-in-hash-maps&#x2F;">
+                                                    <strong>8.3.</strong>
+                                                    Storing Keys with Associated Values in Hash Maps
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </aside>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="book-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="book-search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <h1>Storing Lists of Values with Vectors</h1>
+    <h2 id="yohya">요약</h2>
+<ul>
+<li>
+<p>Vec<T> 와 vector 는 같은 말이다.</p>
+</li>
+<li>
+<p>파이썬 리스트처럼 하나에 여러개의 값을 저장</p>
+</li>
+<li>
+<p>각 데이터는 메모리에서 서로 옆에 저장</p>
+</li>
+<li>
+<p>어떤 타입이든 가능하지만, 동일한 타입의 값만 저장가능</p>
+</li>
+<li>
+<p>여러 종류의 타입을 포함하고 싶으면</p>
+<ul>
+<li>여러타입이 포함된 enum 을 만들어 사용한다. </li>
+<li>(enum은 하나의 타입으로 인식되니까)</li>
+</ul>
+</li>
+<li>
+<p>백터 만들기</p>
+<ul>
+<li>빈 백터를 만들 때 <code>new</code>사용 /  type 을 적어줘야한다.</li>
+<li>값을 가지는 백터를 만들때는 vec! 매크로를 사용하고, type은 자동이다.</li>
+</ul>
+</li>
+<li>
+<p>백터에 내용추가 : </p>
+<ul>
+<li>.push 사용</li>
+<li>메모리 위치가 바뀌어, 미리 참조해두었던 내용이 없어진다</li>
+</ul>
+</li>
+<li>
+<p>백터의 내용 읽기</p>
+<ul>
+<li>[index]  : 값을 바로 얻음</li>
+<li>.get(index) : Option&lt;&amp;T&gt; 형태로 값을 얻음</li>
+</ul>
+</li>
+<li>
+<p>벡터 내부 값 iteration</p>
+<ul>
+<li>일반적인 for 문 사용가능</li>
+<li>참조한 벡터를 for 문이 사용중이면, for문 내부에서 벡터를 수정할수 없다</li>
+</ul>
+</li>
+</ul>
+<h2 id="bbeteo-vector-reul-sahyonhahye-hyereo-ggabheu-jjejjan"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-01-vectors.html#storing-lists-of-values-with-vectors">벡터(Vector)를 사용하여 여러 값을 저장</a></h2>
+<p>우리가 살펴볼 첫 번째 컬렉션 타입은 <code>Vec&lt;T&gt;</code> 이며, <em>vector</em> 라고도 합니다. 벡터를 사용하면 단일 데이터 구조에 둘 이상의 값을 저장할 수 있으며, 모든 값은 메모리에서 나란히 배치됩니다. 벡터는 동일한 타입의 값만 저장할 수 있습니다. 벡터는 아이템 리스트의 경우에 유용합니다: 파일의 텍스트 줄, 장바구니 안의 항목의 가격</p>
+<h3 id="ssa-bbeteo-manddeugi"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-01-vectors.html#creating-a-new-vector">새 벡터 만들기</a></h3>
+<p>새로운 빈 벡터를 생성하기 위해 목록 8-1에 표시된 것처럼 <code>Vec::new</code> 함수를 호출합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> v: Vec&lt;</span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">&gt; </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">Vec::new();
+</span></code></pre>
+<p>목록 8-1: <code>i32</code> 타입의 값을 담을 새 빈 벡터 만들기</p>
+<p>여기에 타입 주석을 추가했습니다. 우리가 이 벡터에 어떤 값도 삽입하지 않기 때문에 Rust는 우리가 어떤 종류의 요소를 저장하려고 하는지 알지 못합니다. 이것은 중요한 포인트입니다. 벡터는 제네릭을 사용하여 구현됩니다. 10장에서 고유한 타입으로 제네릭을 사용하는 방법을 다룰 것입니다. 지금은 표준 라이브러리에서 제공하는  <code>Vec&lt;T&gt;</code> 타입은 모든 타입을 가질수 있다고만 알아주세요. 특정 타입을 보유하기 위해 벡터를 만들 때 꺾쇠 괄호 안에 타입을 지정할 수 있습니다. Listing 8-1에서 Rust에게 <code>v</code>의 <code>Vec&lt;T&gt;</code>는 <code>i32</code> 타입의 요소를 보유합니다.</p>
+<p>흔히, Rust가 저장하려는 값의 타입을 추론할수 있도록  <code>Vec&lt;T</code> 가 초기 값을 가지면, 이 타입 주석을 적어줄 필요가 없습니다. Rust는 <code>vec!</code> 매크로를 편리하게 제공하며, 이 매크로는 사용자가 지정한 값을 보유하는 새 벡터를 생성합니다. . 목록 8-2는 새로운 <code>Vec&lt;i32&gt;</code>는 값 <code>1</code>, <code>2</code> 및 <code>3</code>을 포함합니다. 정수 타입은 <code>i32</code>입니다. 3장의 <code>데이터 타입</code>](https://doc.rust-lang.org/book/ch03-02-data-types.html#data-types) 섹션 에서 논의한 것처럼 이것이 기본 정수 타입이기 때문입니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> v </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">vec![</span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">3</span><span style="color:#abb2bf;">];
+</span></code></pre>
+<p>목록 8-2: 값을 포함하는 새 벡터 만들기</p>
+<p>초기 <code>i32</code> 값을 제공했기 때문에 Rust는 <code>v</code>의 타입이 <code>Vec&lt;i32&gt;</code>임을 추론할 수 있습니다. 타입 어노테이션은 필요하지 않습니다. 다음으로 벡터를 수정하는 방법을 살펴보겠습니다.</p>
+<h3 id="bbeteo-heodeiteu"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-01-vectors.html#updating-a-vector">벡터 업데이트</a></h3>
+<p>벡터를 생성한 다음 여기에 요소를 추가하려면 Listing 8-3과 같이 <code>push</code> 방법을 사용할 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> v </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">Vec::new();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    v.</span><span style="color:#5ebfcc;">push</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    v.</span><span style="color:#5ebfcc;">push</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">6</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    v.</span><span style="color:#5ebfcc;">push</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">7</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    v.</span><span style="color:#5ebfcc;">push</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">8</span><span style="color:#abb2bf;">);
+</span></code></pre>
+<p>Listing 8-3: <code>push</code> 방법을 사용하여 벡터에 값 추가</p>
+<p>모든 변수와 마찬가지로, 값을 변경하려면 3장에서 설명한 것처럼 <code>mut</code> 키워드를 사용하여 변경 가능하게 만들어야 합니다. 내부에 배치하는 숫자는 모두 <code>i32</code> 타입이고 Rust 데이터에서 이것을 추론하므로 <code>Vec&lt;i32</code>&gt; 라고 주석을 적지 않아도 됩니다.</p>
+<h3 id="bbeteoyi-yoso-hilgi"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-01-vectors.html#reading-elements-of-vectors">벡터의 요소 읽기</a></h3>
+<p>벡터에 저장된 값을 참조하는 방법에는 인덱싱을 통하거나 <code>get</code> 메서드를 사용하는 두 가지 방법이 있습니다. 다음 예제에서는 명확성을 높이기 위해 이러한 함수에서 반환되는 값의 타입에 주석을 달았습니다.</p>
+<p>목록 8-4는 인덱싱 구문과 <code>get</code> 방법을 사용하여 벡터의 값에 액세스하는 두 가지 방법을 보여줍니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> v </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">vec![</span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">3</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">4</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> third: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">i32 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">v[</span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">    println!(`The third element is {third}`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> third: Option&lt;</span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">&gt; </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> v.</span><span style="color:#5ebfcc;">get</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">match</span><span style="color:#abb2bf;"> third {
+</span><span style="color:#abb2bf;">        Some(third) </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#abb2bf;">println!(`The third element is {third}`),
+</span><span style="color:#abb2bf;">        None </span><span style="color:#adb7c9;">=&gt; </span><span style="color:#abb2bf;">println!(`There is no third element.`),
+</span><span style="color:#abb2bf;">    }
+</span></code></pre>
+<p>목록 8-4: 인덱싱 구문 또는 <code>get</code> 메서드를 사용하여 벡터의 항목에 액세스</p>
+<p>여기에 몇 가지 세부 사항이 있습니다. 벡터는 0부터 시작하여 숫자로 인덱싱되기 때문에 인덱스 값 <code>2</code>를 사용하여 세 번째 요소를 얻습니다. <code>&amp;</code> 및 <code>[]</code>를 사용하면 인덱스 값에 있는 요소에 대한 참조를 제공합니다. 
+인수로 전달된 인덱스와 함께 <code>get</code> 메서드를 사용하면 <code>match</code>와 함께 사용할 수 있는 <code>Option&lt;&amp;T&gt;</code>를 얻습니다.</p>
+<p>Rust가 요소를 참조하는 이 두 가지 방법을 제공하는 이유는 기존 요소 범위 밖의 인덱스 값을 사용하려고 할 때 프로그램이 동작하는 방식을 선택할 수 있도록 하기 위함입니다. 예를 들어, 목록 8-5에 표시된 것처럼 5개 요소의 벡터가 있고 각 기술을 사용하여 인덱스 100의 요소에 액세스하려고 하면 어떤 일이 발생하는지 봅시다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> v </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">vec![</span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">3</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">4</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> does_not_exist </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">v[</span><span style="color:#db9d63;">100</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> does_not_exist </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> v.</span><span style="color:#5ebfcc;">get</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">100</span><span style="color:#abb2bf;">);
+</span></code></pre>
+<p>목록 8-5: 5개의 요소를 포함하는 벡터에서 인덱스 100의 요소에 액세스 시도</p>
+<p>이 코드를 실행할 때 첫 번째 <code>[]</code> 메서드는 존재하지 않는 요소를 참조하기 때문에 프로그램을 패닉 상태로 만듭니다. 이 방법은 벡터의 끝을 지나 요소에 액세스하려는 시도가 있는 경우 프로그램을 중단시키려는 경우에 가장 적합합니다.</p>
+<p><code>get</code> 메서드에 벡터 외부에 있는 인덱스가 전달되면 당황하지 않고 <code>None</code>을 반환합니다. 벡터 범위를 벗어난 요소에 액세스하는 것이 정상적인 상황에서 가끔 발생할 수 있는 경우 이 방법을 사용합니다. 그러면 코드는 6장에서 설명한 대로 <code>Some(&amp;element)</code> 또는 <code>None</code>을 처리하는 논리를 갖게 됩니다. 예를 들어 인덱스는 사람이 숫자를 입력하는 것에서 나올 수 있습니다. 사용자가 실수로 너무 큰 숫자를 입력하여 프로그램이 <code>None</code> 값을 얻는 경우 사용자에게 현재 벡터에 몇 개의 항목이 있는지 알려주고 유효한 값을 입력할 수 있는 또 다른 기회를 제공할 수 있습니다. 오타로 인해 프로그램이 충돌하는 것보다 더 사용자 친화적일 것입니다!</p>
+<p>프로그램 안에 유효한 참조가 있는 경우, 차용 검사기(borrow checker)는 소유권 및 차용 규칙(4장에서 다룸)을 시행하여 이 참조 및 벡터 내용에 대한 다른 참조가 유효한지 확인합니다. 동일한 범위에서 가변 및 불변 참조를 가질 수 없다는 규칙을 기억하세요. 이 규칙은 벡터의 첫 번째 요소에 대한 불변 참조를 보유하고 끝에 요소를 추가하려고 시도하는 목록 8-6에 적용됩니다. 이 프로그램은 나중에 함수에서 해당 요소를 참조하려고 하면 작동하지 않습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> v </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">vec![</span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">3</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">4</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> first </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">v[</span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">];  </span><span style="font-style:italic;color:#5f697a;">//첫번재 요소를 참조
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    v.</span><span style="color:#5ebfcc;">push</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">6</span><span style="color:#abb2bf;">);  </span><span style="font-style:italic;color:#5f697a;">// 마지막에 요소를 추가 -&gt; 메모리 새 공간으로 이동
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`The first element is: {first}`);
+</span></code></pre>
+<p>목록 8-6: 항목에 대한 참조를 유지하면서 벡터에 요소 추가 시도</p>
+<p>이 코드를 컴파일하면 다음 오류가 발생합니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> collections v0.1.0 (file:///projects/collections)
+</span><span style="color:#eb6772;">error[E0502]:</span><span style="color:#abb2bf;"> cannot borrow `</span><span style="color:#eb6772;">v</span><span style="color:#abb2bf;">` as mutable because it is also borrowed as immutable
+</span><span style="color:#abb2bf;"> </span><span style="color:#eb6772;">--</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> src/main.rs:6:5
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">4 </span><span style="color:#adb7c9;">|     </span><span style="color:#5ebfcc;">let</span><span style="color:#abb2bf;"> first </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">v[</span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|                  </span><span style="color:#eb6772;">-</span><span style="color:#abb2bf;"> immutable borrow occurs here
+</span><span style="color:#eb6772;">5 </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">6 </span><span style="color:#adb7c9;">|     </span><span style="color:#eb6772;">v.push</span><span style="color:#abb2bf;">(6)</span><span style="color:#adb7c9;">;
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|     </span><span style="color:#eb6772;">^^^^^^^^^</span><span style="color:#abb2bf;"> mutable borrow occurs here
+</span><span style="color:#eb6772;">7 </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">8 </span><span style="color:#adb7c9;">|     </span><span style="color:#eb6772;">println!</span><span style="color:#abb2bf;">(`</span><span style="color:#eb6772;">The</span><span style="color:#abb2bf;"> first element is: {first}`)</span><span style="color:#adb7c9;">;
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|                                      </span><span style="color:#eb6772;">-----</span><span style="color:#abb2bf;"> immutable borrow later used here
+</span><span style="color:#abb2bf;">
+</span><span style="color:#eb6772;">For</span><span style="color:#abb2bf;"> more information about this error, try `</span><span style="color:#eb6772;">rustc --explain</span><span style="color:#abb2bf;"> E0502`.
+</span><span style="color:#eb6772;">error:</span><span style="color:#abb2bf;"> could not compile `</span><span style="color:#eb6772;">collections</span><span style="color:#abb2bf;">` due to previous error
+</span></code></pre>
+<p>목록 8-6의 코드는 제대로 작동하는 것처럼 보일 수 있습니다. 벡터의 첫 번째 요소를 참조했는데, 벡터의 마지막에서 일어난 변경 사항에 대해 왜 관심을 가져야 할까요? 이 오류는 벡터가 작동하는 방식 때문입니다. 벡터는 메모리에서 값을 서로 옆에 위치시키기 때문에, 벡터 끝에 새 요소를 추가하려면 새 메모리를 할당하고 이전 요소를 새 공간에 복사해야 할 수 있습니다. 벡터가 현재 저장된 위치에 모든 요소를 나란히 놓을 공간이 충분하지 않습니다. 이 경우 첫 번째 요소에 대한 참조는 할당 해제된 메모리를 가리킵니다. 차용 규칙은 프로그램이 그러한 상황에서 종료되는 것을 방지합니다.</p>
+<blockquote>
+<p>참고: <code>Vec&lt;T&gt;</code>타입의 구현 세부 사항에 대한 자세한 내용은 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/nomicon/vec/vec.html">“The Rustonomicon”</a> 참조 .</p>
+</blockquote>
+<h3 id="bbeteoyi-ggabe-ddahan-banbbo-iterating"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-01-vectors.html#iterating-over-the-values-in-a-vector">벡터의 값에 대한 반복(iterating)</a></h3>
+<p>벡터의 각 요소에 차례로 액세스하려면 인덱스를 사용하여 한 번에 하나씩 액세스하는 대신 모든 요소를 반복합니다. 목록 8-7은 벡터에 있는 <code>i32</code> 값의  각 요소에 대한 불변 참조를 가져오고, 인쇄하기 위해 <code>for</code> 루프를 사용하는 방법을 보여줍니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> v </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">vec![</span><span style="color:#db9d63;">100</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">32</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">57</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">for</span><span style="color:#abb2bf;"> i </span><span style="color:#adb7c9;">in &amp;</span><span style="color:#abb2bf;">v {
+</span><span style="color:#abb2bf;">        println!(`{i}`);
+</span><span style="color:#abb2bf;">    }
+</span></code></pre>
+<p>목록 8-7: <code>for</code> 루프를 사용하여 요소를 반복하여 벡터의 각 요소 인쇄</p>
+<p>모든 요소를 변경하기 위해 가변 벡터의 각 요소에 대한 가변 참조를 반복할 수도 있습니다. 목록 8-8의 <code>for</code> 루프는 각 요소에 <code>50</code>을 추가합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> v </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">vec![</span><span style="color:#db9d63;">100</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">32</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">57</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">for</span><span style="color:#abb2bf;"> i </span><span style="color:#adb7c9;">in &amp;</span><span style="color:#cd74e8;">mut</span><span style="color:#abb2bf;"> v {
+</span><span style="color:#abb2bf;">        </span><span style="color:#adb7c9;">*</span><span style="color:#abb2bf;">i </span><span style="color:#adb7c9;">+= </span><span style="color:#db9d63;">50</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">    }
+</span></code></pre>
+<p>목록 8-8: 벡터의 요소에 대한 변경 가능한 참조에 대한 반복</p>
+<p>가변 참조가 참조하는 값을 변경하려면 <code>+=</code> 연산자를 사용하기 전에 <code>*</code> 역참조 연산자를 사용하여 <code>i</code>의 값을 가져와야 합니다. 역참조 연산자에 대한 자세한 내용은 15장의 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch15-02-deref.html#following-the-pointer-to-the-value-with-the-dereference-operator"><code>역참조 연산자를 사용하여 값에 대한 포인터 추적</code></a> 섹션 에서 설명합니다.</p>
+<p>불변이든 가변이든 벡터를 반복하는 것은 빌림 검사기의 규칙 때문에 안전합니다. Listing 8-7 및 Listing 8-8의 <code>for</code> 루프 본문에서 항목을 삽입하거나 제거하려고 시도하면 Listing 8-6의 코드에서 얻은 것과 유사한 컴파일러 오류가 발생합니다. <code>for</code> 루프가 &quot;참조하고 있는 벡터&quot; 를 사용하고 있으면, 전체 벡터는 수정될 수 없습니다. </p>
+<h3 id="hyeoggehyeongheu-sahyonhahye-hyereo-taib-jjejjan"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-01-vectors.html#using-an-enum-to-store-multiple-types">열거형을 사용하여 여러 타입 저장</a></h3>
+<p>벡터는 동일한 타입의 값만 저장할 수 있습니다. 이는 불편할 수 있습니다. 다양한 타입의 항목 리스트를 저장해야 하는 경우가 분명히 있습니다. 다행스럽게도 열거형(enum)의 변형들(variants)은 동일한 열거형 타입으로 정의되므로, 다른 타입의 요소를 나타내기 위해 하나의 타입이 필요할 때 열거형을 정의하고 사용할 수 있습니다!</p>
+<p>예를 들어 행의 일부 열에 정수, 부동 소수점 숫자 및 문자열이 포함된 스프레드시트의 행에서 값을 가져오고 싶다고 가정해 보겠습니다. 변형이 다른 값 타입을 보유할 열거형을 정의할 수 있으며 모든 열거형 변형은 동일한 타입, 즉 열거형으로 간주됩니다. 그런 다음 해당 열거형을 보유할 벡터를 생성할 수 있으므로 궁극적으로 다른 타입을 보유합니다. Listing 8-9에서 이를 증명했습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">enum </span><span style="color:#abb2bf;">SpreadsheetCell {
+</span><span style="color:#abb2bf;">        Int(</span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">),
+</span><span style="color:#abb2bf;">        Float(</span><span style="color:#cd74e8;">f64</span><span style="color:#abb2bf;">),
+</span><span style="color:#abb2bf;">        Text(String),
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> row </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">vec![
+</span><span style="color:#abb2bf;">        SpreadsheetCell::Int(</span><span style="color:#db9d63;">3</span><span style="color:#abb2bf;">),
+</span><span style="color:#abb2bf;">        SpreadsheetCell::Text(String::from(`blue`)),
+</span><span style="color:#abb2bf;">        SpreadsheetCell::Float(</span><span style="color:#db9d63;">10.12</span><span style="color:#abb2bf;">),
+</span><span style="color:#abb2bf;">    ];
+</span></code></pre>
+<p>Listing 8-9: 하나의 벡터에 다른 타입의 값을 저장하는 <code>enum</code> 정의</p>
+<p>Rust는 각 요소를 저장하는 데 필요한 힙의 메모리 양을 정확히 알기 위해 컴파일 시간에 벡터에 어떤 타입이 있는지 알아야 합니다. 또한 이 벡터에서 어떤 타입이 허용되는지 명시해야 합니다. Rust가 벡터가 어떤 타입이든 가질 수 있도록 허용했다면, 하나 이상의 타입이 벡터의 요소에 대해 수행되는 작업에서 오류를 일으킬 가능성이 있습니다. 열거형과 <code>match</code> 표현식을 사용한다는 것은 6장에서 논의한 것처럼 Rust가 컴파일 타임에 가능한 모든 경우를 처리한다는 것을 의미합니다.</p>
+<p>프로그램이 벡터에 저장하기 위해 런타임에 얻을 수 있는 전체 타입 세트를 모른다면 enum 기술이 작동하지 않습니다. 대신 17장에서 다룰 특성 개체를 사용할 수 있습니다.</p>
+<p>벡터를 사용하는 가장 일반적인 방법에 대해 논의했으므로, 표준라이브러리에서 <code>Vec&lt;T&gt;</code>에 정의된 모든 유용한 방법에 대한 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/std/vec/struct.Vec.html">API 문서</a>를 검토하십시오. 예를 들어 <code>push</code> 외에도 <code>pop</code> 메서드는 마지막 요소를 제거하고 반환합니다.</p>
+<h3 id="bbeteoreul-ssajehamyeon-yosoga-ssajeddoe"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-01-vectors.html#dropping-a-vector-drops-its-elements">벡터를 삭제하면 요소가 삭제됨</a></h3>
+<p>다른 <code>구조체(struct)</code>와 마찬가지로 벡터는 목록 8-10에 설명된 대로 범위를 벗어나면 해제됩니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> v </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">vec![</span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">3</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">4</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">        </span><span style="font-style:italic;color:#5f697a;">// do stuff with v
+</span><span style="color:#abb2bf;">    } </span><span style="font-style:italic;color:#5f697a;">// &lt;- v goes out of scope and is freed here
+</span></code></pre>
+<p>Listing 8-10: 벡터와 해당 요소가 놓이는 위치 표시</p>
+<p>벡터가 삭제되면 모든 내용도 삭제됩니다. 즉, 보유하고 있는 정수가 정리됩니다. 차용 검사기는 벡터 자체가 유효한 동안에만 벡터 내용에 대한 참조가 사용되는지 확인합니다.</p>
+<p>다음 컬렉션 타입인 <code>String</code>로 이동하겠습니다!</p>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        
+        
+        <a class="previous" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        <a class="next" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;">></a>
+    
+
+            </div>
+        </div>
+
+        
+            
+                <script type="text/javascript" src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+                <script type="text/javascript" src="https://hwjskt.github.io/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://hwjskt.github.io/book.js"></script>
+        
+        </div>
+    </section>
+
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+  
+  
+
+  
+  
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js" integrity="sha384-Pulw7+h73841BQIK0LzJCydKRPChJUF9w8h8W0o3h+cLtoyNPJS847bQauLWOTwg" crossorigin="anonymous"></script>
+  
+  <script src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+  <script src="https://hwjskt.github.io/search_index.en.js"></script><script src="https://hwjskt.github.io/js/site.js"></script>
+
+  
+  
+
+  
+  
+</body>
+
+</html>

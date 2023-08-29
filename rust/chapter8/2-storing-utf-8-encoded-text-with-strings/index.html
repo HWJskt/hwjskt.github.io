@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='&#x2F;icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='&#x2F;icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" integrity="sha384-oGm59HWAkwO32h2w8u0B98wKBZJwd6MbWtAJwQKCTffZjOXHXrnyv9Syjovgc+UV" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://hwjskt.github.io/deep-thought.css" rel="stylesheet" />
+  
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/book.css">
+    <link rel="stylesheet" href="https://hwjskt.github.io/deep-thought.css">
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/newsprint.css">
+
+
+  <title>
+    
+    
+    Dr.JUNG | Rust
+
+  </title>
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176984489-2"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-176984489-2");
+  </script>
+  
+  
+
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;">Dr.JUNG</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;about">
+            AboutMe
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;docs">
+            Docs
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;rust">
+            Rust
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  
+    
+    <section>
+        <div class="book-menu is-2">
+            
+            
+            <aside role="navigation">
+                <ul>
+                    
+                        
+                        
+                        <li >
+                            <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;">Introduction</a>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;">
+                                    <strong>1.</strong>
+                                    Getting Started
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;1-installation&#x2F;">
+                                                    <strong>1.1.</strong>
+                                                    Installation
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;2-helloworld&#x2F;">
+                                                    <strong>1.2.</strong>
+                                                    Hello, World!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;3-hellocargo&#x2F;">
+                                                    <strong>1.3.</strong>
+                                                    Hello, Cargo!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter2&#x2F;">
+                                    <strong>2.</strong>
+                                    Programming a Guessing Game
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;">
+                                    <strong>3.</strong>
+                                    Common Programming Concepts
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;1-variables-and-mutability&#x2F;">
+                                                    <strong>3.1.</strong>
+                                                    Variables and Mutability
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;2-data-types&#x2F;">
+                                                    <strong>3.2.</strong>
+                                                    Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;3-functions&#x2F;">
+                                                    <strong>3.3.</strong>
+                                                    Functions
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;4-comments&#x2F;">
+                                                    <strong>3.4.</strong>
+                                                    Comments
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;5-control-flow&#x2F;">
+                                                    <strong>3.5.</strong>
+                                                    Control Flow
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;">
+                                    <strong>4.</strong>
+                                    Understanding Ownership
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;1-what-is-ownership&#x2F;">
+                                                    <strong>4.1.</strong>
+                                                    What is Ownership?
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;2-references-and-borrowing&#x2F;">
+                                                    <strong>4.2.</strong>
+                                                    References and Borrowing
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;3-the-slice-type&#x2F;">
+                                                    <strong>4.3.</strong>
+                                                    The Slice Type
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;">
+                                    <strong>5.</strong>
+                                    Using Structs to Structure Related Data
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;1-defining-and-instantiating-structs&#x2F;">
+                                                    <strong>5.1.</strong>
+                                                    Defining and Instantiating Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;2-an-example-program-using-structs&#x2F;">
+                                                    <strong>5.2.</strong>
+                                                    An Example Program Using Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;3-method-syntax&#x2F;">
+                                                    <strong>5.3.</strong>
+                                                    Method Syntax
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;">
+                                    <strong>6.</strong>
+                                    Enums and Pattern Matching
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;1-defining-an-enum&#x2F;">
+                                                    <strong>6.1.</strong>
+                                                    Defining an Enum
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;2-the-match-control-flow-construct&#x2F;">
+                                                    <strong>6.2.</strong>
+                                                    The match Control Flow Construct
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;3-concise-control-flow-with-if-let&#x2F;">
+                                                    <strong>6.3.</strong>
+                                                    Concise Control Flow with if let.md
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;">
+                                    <strong>7.</strong>
+                                    Managing Growing Projects with Packages, Crates, and Modules
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;1-packages-and-crates&#x2F;">
+                                                    <strong>7.1.</strong>
+                                                    Packages and Crates
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;2-defining-modules-to-control-scope-and-privacy&#x2F;">
+                                                    <strong>7.2.</strong>
+                                                    Defining Modules to Control Scope and Privacy
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;3-paths-for-referring-to-an-item-in-the-module-tree&#x2F;">
+                                                    <strong>7.3.</strong>
+                                                    Paths for Referring to an Item in the Module Tree
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;4-bringing-paths-into-scope-with-the-use-keyword&#x2F;">
+                                                    <strong>7.4.</strong>
+                                                    Bringing Paths Into Scope with the use Keyword
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;5-separating-modules-into-different-files&#x2F;">
+                                                    <strong>7.5.</strong>
+                                                    Separating Modules into Different Files
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;">
+                                    <strong>8.</strong>
+                                    Common Collections
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;1-storing-lists-of-values-with-vectors&#x2F;">
+                                                    <strong>8.1.</strong>
+                                                    Storing Lists of Values with Vectors
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="active">
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;">
+                                                    <strong>8.2.</strong>
+                                                    Storing UTF-8 Encoded Text with Strings
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;3-storing-keys-with-associated-values-in-hash-maps&#x2F;">
+                                                    <strong>8.3.</strong>
+                                                    Storing Keys with Associated Values in Hash Maps
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </aside>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="book-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="book-search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <h1>Storing UTF-8 Encoded Text with Strings</h1>
+    <h2 id="yohya">요약</h2>
+<ul>
+<li>
+<p>문자열 타입(string type) 종류 (대소문자 구분해야)</p>
+<ul>
+<li>문자열 리터럴 string slice <code>str</code> : 기본 내장된 타입</li>
+<li><code>String</code> : 외부 (표준) 라이브러리에서 제공</li>
+</ul>
+</li>
+<li>
+<p>String 만들기</p>
+<ul>
+<li>vector 와 다르게 type 을 적지 않는다.</li>
+<li>빈 String 만들 때 <code>new</code>사용</li>
+<li>값을 가지는 String 을 만들 때 문자열 리터럴을 String 으로 변환
+<ul>
+<li><code>.to_string()</code> 또는 <code>from</code>  사용</li>
+<li>가독성의 차이뿐. 동일한 기능이다</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>String에 내용추가 : </p>
+<ul>
+<li><code>.push_str</code> 는 여러글자 추가 / <code>push</code> 는 한글자만 추가
+<ul>
+<li>원본, 추가한 내용 모두 소유권을 가져오지 않는다</li>
+</ul>
+</li>
+<li><code>+</code> 연산자
+<ul>
+<li>s1 + &amp;s2 처럼, 앞은 원본값, 뒤는 참조값으로 사용</li>
+<li>원본값은 사용되었으므로 사라진다</li>
+</ul>
+</li>
+<li><code>format!</code>
+<ul>
+<li>format!(&quot;{s1}-{s2}-{s3}&quot;) 이런식으로 사용</li>
+<li>소유권을 가져오지 않는다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>String의 내용 읽기</p>
+<ul>
+<li>[index]  : 지원하지 않는다</li>
+<li>[0...4] 같은 슬라이싱은 가능, 숫자는 글자가 아니라 바이트를 의미. 슬라이싱한 바이트값이 글자를 만들지 못하면 패닉</li>
+</ul>
+</li>
+<li>
+<p>String 내부 값 iteration</p>
+<ul>
+<li><code>.chars()</code> 또는 <code>.bytes()</code> 로 어떤걸 원하는지 명시한 후에</li>
+<li>for 문 사용</li>
+</ul>
+</li>
+</ul>
+<h2 id="utf-8ro-inkoweddddoe-tegsseteureul-string-euro-jjejjan"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-02-strings.html#storing-utf-8-encoded-text-with-strings">UTF-8로 인코딩된 텍스트를 String 으로 저장</a></h2>
+<p>4장에서 문자열에 대해 이야기했지만 이제 더 자세히 살펴보겠습니다. 새로운 Rustacean 이 된 사람들은 일반적으로 세 가지 이유로 문자열(String)을 어려워합니다: 생길수 있는 오류를 노출하는 Rust의 성향, 생각보다 더 복잡한 데이터 구조, 그리고 UTF-8 입니다. 이러한 요소 이 합쳐지면 다른 프로그래밍 언어에서 왔을 때 이 어렵게 보일 수 있습니다.</p>
+<p>String은 바이트 모음으로 구현되고 해당 바이트가 텍스트로 해석될 때 유용한 기능을 제공하는 일부 메서드로 구현되기 때문에 컬렉션(collections)의 맥락에서 문자열에 대해 논의합니다. 이 섹션에서는 생성, 업데이트 및 읽기와 같은 모든 컬렉션 타입이 갖는 <code>String</code>에 대한 작업에 대해 설명합니다. 또한 <code>String</code>이 다른 컬렉션과 다른 방식, 즉 사람과 컴퓨터가 <code>String</code> 데이터를 해석하는 방식의 차이로 인해 <code>String</code>에 대한 인덱싱이 복잡해지는 방식에 대해서도 설명합니다.</p>
+<h3 id="stringiran-muheoibnigga"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-02-strings.html#what-is-a-string">String이란 무엇입니까?</a></h3>
+<p>먼저 <em>String</em> 이라는 용어의 의미를 정의합니다. Rust는 그 핵심 언어에 단 하나의 문자열 타입을 가지고 있는데, 이는 일반적으로 차용된 형식 <code>&amp;str</code>으로 볼 수 있는 문자열 슬라이스 <code>str</code>입니다. 4장에서 다른 곳에 저장된 일부 UTF-8 인코딩 문자열 데이터에 대한 참조인 <em>문자열 슬라이스</em>에 대해 이야기했습니다. 예를 들어 문자열 리터럴(String literals)은 프로그램의 바이너리에 저장되므로 문자열 조각입니다.</p>
+<p>핵심 언어로 코딩되지 않고 Rust의 표준 라이브러리에서 제공하는 <code>String</code> 타입은 확장 가능하고, 변경 가능하며, 소유되는, UTF-8 인코딩 문자열 타입입니다. Rustacean이 Rust에서 <code>string</code>을 언급할 때, 그들은 <code>String</code> 또는 문자열 슬라이스 <code>&amp;str</code> 타입 중 하나를 참조할 수 있습니다. 이 섹션은 주로 <code>String</code>에 관한 것이지만 Rust의 표준 라이브러리에서 두 가지 타입이 많이 사용되며 <code>String</code>과 문자열 슬라이스(string slices)는 모두 UTF-8로 인코딩됩니다.</p>
+<h3 id="ssa-string-manddeugi"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-02-strings.html#creating-a-new-string">새 String 만들기</a></h3>
+<p><code>Vec&lt;T&gt;</code>에서 사용할 수 있는 많은 작업는 <code>String</code> 에서 동일하게 사용할 수 있습니다. <code>String</code>은 실제로 일부 추가 보증, 제한 및 기능이 있는 바이트 벡터 주위의 래퍼로 구현되기 때문입니다. <code>Vec&lt;T&gt;</code>과 동일한 방식으로 작동하는 함수의 예입니다. 및 <code>String</code>은 목록 8-11에 표시된 것처럼 인스턴스를 생성하는 <code>new</code> 함수입니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::new();
+</span></code></pre>
+<p>목록 8-11: 비어 있는 새 <code>String</code> 만들기</p>
+<p>이 줄은 데이터를 로드할 수 있는 <code>s</code>라는 새 빈 문자열을 만듭니다. 종종 문자열을 시작하려는 초기 데이터가 있습니다. 이를 위해 문자열 리터럴처럼 <code>Display</code> 특성을 구현하는 모든 타입에서 사용할 수 있는 <code>to_string</code> 메서드를 사용합니다. 목록 8-12는 두 가지 예를 보여줍니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> data </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> `initial contents`;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> data.</span><span style="color:#5ebfcc;">to_string</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// the method also works on a literal directly:
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> `initial contents`.</span><span style="color:#5ebfcc;">to_string</span><span style="color:#abb2bf;">();
+</span></code></pre>
+<p>목록 8-12: <code>to_string</code> 메서드를 사용하여 문자열 리터럴에서 <code>String</code> 생성</p>
+<p>이 코드는 <code>initial contents</code>을 포함하는 문자열을 생성합니다.</p>
+<p>문자열 리터럴에서 <code>String</code>을 생성하기 위해 <code>String::from</code> 함수를 사용할 수도 있습니다. 목록 8-13의 코드는 <code>to_string</code>을 사용하는 목록 8-12의 코드와 동일합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`initial contents`);
+</span></code></pre>
+<p>Listing 8-13: <code>String::from</code> 함수를 사용하여 문자열 리터럴에서 <code>String</code> 생성</p>
+<p>문자열은 매우 많은 용도로 사용되기 때문에 문자열에 대해 다양한 일반 API를 사용하여 많은 옵션을 제공할 수 있습니다. 그들 중 일부는 중복되는 것처럼 보일 수 있지만 모두 자리가 있습니다! 이 경우 <code>String::from</code>과 <code>to_string</code>은 동일한 작업을 수행하므로 어떤 것을 선택하느냐는 스타일과 가독성의 문제입니다.</p>
+<p>문자열은 UTF-8로 인코딩되어 있으므로 Listing 8-14와 같이 적절하게 인코딩된 데이터를 문자열에 포함할 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`السلام عليكم`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`Dobrý den`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`Hello`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`שָׁלוֹם`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`नमस्ते`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`こんにちは`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`안녕하세요`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`你好`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`Olá`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`Здравствуйте`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`Hola`);
+</span></code></pre>
+<p>Listing 8-14: 다양한 언어로 된 인사말을 문자열에 저장하기</p>
+<p>이들은 모두 유효한 <code>String</code> 값입니다.</p>
+<h3 id="string-heodeiteu"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-02-strings.html#updating-a-string">String 업데이트</a></h3>
+<p><code>String</code>은 <code>Vec&lt;T&gt;</code>의 내용과 마찬가지로 크기가 커지고 내용이 변경될 수 있습니다.더 많은 데이터를 푸시하면 추가로 <code>+</code> 연산자 또는 <code>format!</code> 매크로를 사용하여 <code>String</code> 값을 연결할 수 있습니다.</p>
+<h4 id="push-str-mic-pushreul-sahyonhahye-munjahyeoe-cuga"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-02-strings.html#appending-to-a-string-with-push_str-and-push"><code>push_str</code> 및 <code>push</code>를 사용하여 문자열에 추가</a></h4>
+<p>Listing 8-15와 같이 문자열 조각을 추가하기 위해 <code>push_str</code> 메서드를 사용하여 <code>String</code>을 늘릴 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`foo`);
+</span><span style="color:#abb2bf;">    s.</span><span style="color:#5ebfcc;">push_str</span><span style="color:#abb2bf;">(`bar`);  </span><span style="font-style:italic;color:#5f697a;">// s = `foobar`
+</span></code></pre>
+<p>목록 8-15: <code>push_str</code> 메서드를 사용하여 문자열 슬라이스를 <code>String</code>에 추가</p>
+<p>이 두 줄 뒤에 <code>s</code>는 <code>foobar</code>를 포함합니다. 매개변수의 소유권이 필요하지 않기 때문에  <code>push_str</code> 메서드는 문자열 슬라이스를 사용합니다. 예를 들어 Listing 8-16의 코드에서 <code>s1</code>에 내용을 추가한 후 <code>s2</code>를 사용할 수 있기를 원합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> s1 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`foo`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s2 </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> `bar`;
+</span><span style="color:#abb2bf;">    s1.</span><span style="color:#5ebfcc;">push_str</span><span style="color:#abb2bf;">(s2);
+</span><span style="color:#abb2bf;">    println!(`s2 is {s2}`);  </span><span style="font-style:italic;color:#5f697a;">// s1, s2 모두 사용가능
+</span></code></pre>
+<p>목록 8-16: <code>String</code>에 내용을 추가한 후 문자열 슬라이스 사용</p>
+<p><code>push_str</code> 메서드가 <code>s2</code>의 소유권을 가져간다면, 마지막 줄에 해당 값을 인쇄할 수 없습니다. 그러나 이 코드는 예상대로 작동합니다!</p>
+<p><code>push</code> 방법은 단일 문자를 매개변수로 사용하여 <code>String</code>에 추가합니다. Listing 8-17은 <code>push</code> 메소드를 사용하여 문자 <code>l</code>을 <code>String</code>에 추가합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`lo`);
+</span><span style="color:#abb2bf;">    s.</span><span style="color:#5ebfcc;">push</span><span style="color:#abb2bf;">(</span><span style="color:#9acc76;">&#39;l&#39;</span><span style="color:#abb2bf;">);  </span><span style="font-style:italic;color:#5f697a;">// s = `lol`
+</span></code></pre>
+<p>목록 8-17: <code>push</code>를 사용하여 <code>문자열</code> 값에 문자 하나 추가</p>
+<p>결과적으로 <code>s</code>에는 <code>lol</code>이 포함됩니다.</p>
+<h4 id="hyeossaja-ddoneun-format-maekeuro"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-02-strings.html#concatenation-with-the--operator-or-the-format-macro"><code>+</code> 연산자 또는 <code>format!</code> 매크로</a></h4>
+<p>종종 두 개의 기존 문자열을 결합하고 싶을 것입니다. 그렇게 하는 한 가지 방법은 목록 8-18에 표시된 것처럼 <code>+</code> 연산자를 사용하는 것입니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s1 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(</span><span style="color:#9acc76;">&quot;Hello, &quot;</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s2 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(</span><span style="color:#9acc76;">&quot;world!&quot;</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s3 </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> s1 </span><span style="color:#adb7c9;">+ &amp;</span><span style="color:#abb2bf;">s2; </span><span style="font-style:italic;color:#5f697a;">// s1 은 더이상 쓸수없다,  s2,s3 는 유지 중
+</span></code></pre>
+<p>Listing 8-18: <code>+</code> 연산자를 사용하여 두 개의 <code>String</code> 값을 새로운 <code>String</code> 값으로 결합</p>
+<p>문자열 <code>s3</code>에는 <code>Hello, world!</code>가 포함됩니다. 추가 후 <code>s1</code>이 더 이상 유효하지 않은 이유와 <code>s2</code>에 대한 참조를 사용한 이유는 <code>+</code> 연산자를 사용할 때 호출되는 메서드의 시그니처와 관련이 있습니다. <code>+</code> 연산자는 서명이 다음과 같은 <code>추가</code> 방법을 사용합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">add</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">, </span><span style="color:#eb6772;">s</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">str</span><span style="color:#abb2bf;">) -&gt; String {    </span><span style="font-style:italic;color:#5f697a;">// s1 이 s3로 바뀌는 것
+</span></code></pre>
+<p>표준 라이브러리에서 제네릭 및 관련 타입을 사용하여 정의된 <code>add</code>를 볼 수 있습니다. 여기서 우리는 <code>String</code> 값으로 이 메서드를 호출할 때 발생하는 구체적인 타입으로 대체했습니다. 10장에서 제네릭에 대해 논의할 것입니다. 이 서명은 <code>+</code> 연산자의 까다로운 부분을 이해하는 데 필요한 단서를 제공합니다.</p>
+<p>첫째, <code>s2</code>에는 <code>&amp;</code>가 있습니다. 즉, 첫 번째 문자열에 <em>두 번째 문자열의 참조</em>를 추가한다는 의미입니다. 이는 <code>add</code> 함수의 <code>s</code> 매개변수 때문입니다. <code>&amp;str</code>만 <code>String</code>에 추가할 수 있습니다. 두 개의 <code>String</code> 값을 함께 추가할 수 없습니다. 하지만 잠깐만요. <code>&amp;s2</code>의 타입은 <code>add</code>에 대한 두 번째 매개변수에 지정된 <code>&amp;str</code>이 아니라 <code>&amp;String</code>입니다. 그렇다면 Listing 8-18이 컴파일되는 이유는 무엇입니까?</p>
+<p><code>add</code> 호출에서 <code>&amp;s2</code>를 사용할 수 있는 이유는 컴파일러가 <code>&amp;String</code> 인수를 <code>&amp;str</code>로 <em>강제 할 수 있기 때문입니다.</em> 우리가 <code>add</code> 메소드를 호출할 때, Rust는 여기서 <code>&amp;s2</code>를 <code>&amp;s2[..]</code>로 바꾸는 <em>역참조 강제를 사용합니다.</em> 15장에서 역참조 강제에 대해 더 자세히 논의할 것입니다. <code>add</code>는 <code>s</code> 매개변수의 소유권을 가지지 않기 때문에 <code>s2</code>는 이 작업 후에도 여전히 유효한 <code>String</code>입니다.</p>
+<p>둘째, 서명에서 <code>add</code>가 <code>self</code>의 소유권을 갖는 것을 볼 수 있습니다. <code>self</code>에는 <code>&amp;</code>가 <em>없기 때문입니다.</em> 이는 Listing 8-18의 <code>s1</code>이 <code>add</code> 호출로 이동되고 그 이후에는 더 이상 유효하지 않음을 의미합니다. 따라서 <code>let s3 = s1 + &amp;s2;</code> 두 문자열을 모두 복사하고 새 문자열을 만드는 것처럼 보이지만 이 문은 실제로 <code>s1</code>의 소유권을 가져오고 <code>s2</code> 내용의 복사본을 추가한 다음 결과의 소유권을 반환합니다. 즉, 복사를 많이 하는 것처럼 보이지만 그렇지 않습니다. 구현은 복사보다 효율적입니다.</p>
+<p>여러 문자열을 연결해야 하는 경우 <code>+</code> 연산자의 동작이 다루기 어려워집니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s1 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`tic`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s2 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`tac`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s3 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`toe`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> s1 </span><span style="color:#adb7c9;">+</span><span style="color:#abb2bf;"> `</span><span style="color:#adb7c9;">-</span><span style="color:#abb2bf;">` </span><span style="color:#adb7c9;">+ &amp;</span><span style="color:#abb2bf;">s2 </span><span style="color:#adb7c9;">+</span><span style="color:#abb2bf;"> `</span><span style="color:#adb7c9;">-</span><span style="color:#abb2bf;">` </span><span style="color:#adb7c9;">+ &amp;</span><span style="color:#abb2bf;">s3;  </span><span style="font-style:italic;color:#5f697a;">//s1,s2,s3,s 모두사용가능
+</span></code></pre>
+<p>이 시점에서 <code>s</code>는 <code>tic-tac-toe</code>가 됩니다. <code>format!</code> 매크로는 <code>println!</code>처럼 작동하지만 결과를 화면에 출력하는 대신 내용이 포함된 문자열을 반환합니다. <code>format!</code>을 사용하는 코드가 읽기가 훨씬 쉽고, <code>format!</code> 매크로는 참조를 사용하므로 호출해도 매개변수의 소유권을 갖지 않습니다.</p>
+<p>모든 <code>+</code> 및 문자를 사용하면 무슨 일이 일어나고 있는지 보기가 어렵습니다. 더 복잡한 문자열 결합을 위해 대신 <code>format!</code> 매크로를 사용할 수 있습니다. </p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s1 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`tic`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s2 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`tac`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s3 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`toe`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">format!(`{s1}</span><span style="color:#adb7c9;">-</span><span style="color:#abb2bf;">{s2}</span><span style="color:#adb7c9;">-</span><span style="color:#abb2bf;">{s3}`);
+</span></code></pre>
+<p>이 코드는 또한 <code>s</code>를 <code>tic-tac-toe</code>로 설정합니다. <code>format!</code> 매크로는 <code>println!</code>처럼 작동하지만 출력을 화면에 인쇄하는 대신 내용이 포함된 <code>String</code>을 반환합니다. <code>format!</code>을 사용하는 코드 버전 훨씬 읽기 쉽고 <code>format!</code> 매크로는 이 호출이 해당 매개변수의 소유권을 가지지 않도록 참조를 사용합니다.</p>
+<h3 id="string-naebureul-inddekiss"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-02-strings.html#indexing-into-strings">String 내부를 인덱싱</a></h3>
+<p>다른 많은 프로그래밍 언어에서 인덱스로 참조하여 문자열의 개별 문자에 액세스하는 것은 유효하고 일반적인 작업입니다. 그러나 Rust에서 인덱싱 구문을 사용하여 <code>String</code>의 일부에 액세스하려고 하면 오류가 발생합니다. Listing 8-19의 유효하지 않은 코드를 고려하십시오.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s1 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello`);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> h </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> s1[</span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">];
+</span></code></pre>
+<p>Listing 8-19: 문자열로 인덱싱 구문 사용 시도</p>
+<p>이 코드는 다음 오류를 발생시킵니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> collections v0.1.0 (file:///projects/collections)
+</span><span style="color:#eb6772;">error[E0277]:</span><span style="color:#abb2bf;"> the type `</span><span style="color:#eb6772;">String</span><span style="color:#abb2bf;">` cannot be indexed by `</span><span style="color:#eb6772;">{integer</span><span style="color:#abb2bf;">}`
+</span><span style="color:#abb2bf;"> </span><span style="color:#eb6772;">--</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> src/main.rs:3:13
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">3 </span><span style="color:#adb7c9;">|     </span><span style="color:#5ebfcc;">let</span><span style="color:#abb2bf;"> h </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> s1[</span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">];
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|             </span><span style="color:#eb6772;">^^^^^ </span><span style="color:#abb2bf;">`</span><span style="color:#eb6772;">String</span><span style="color:#abb2bf;">` cannot be indexed by `</span><span style="color:#eb6772;">{integer</span><span style="color:#abb2bf;">}`
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">= </span><span style="color:#eb6772;">help:</span><span style="color:#abb2bf;"> the trait `</span><span style="color:#eb6772;">Index</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">{integer}</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;">` is not implemented for `</span><span style="color:#eb6772;">String</span><span style="color:#abb2bf;">`
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">= </span><span style="color:#eb6772;">help:</span><span style="color:#abb2bf;"> the following other types implement trait `</span><span style="color:#eb6772;">Index</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">Idx</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;">`:
+</span><span style="color:#abb2bf;">            </span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">String </span><span style="color:#eb6772;">as</span><span style="color:#abb2bf;"> Index</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">RangeFrom</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">usize</span><span style="color:#adb7c9;">&gt;&gt;&gt;
+</span><span style="color:#abb2bf;">            </span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">String </span><span style="color:#eb6772;">as</span><span style="color:#abb2bf;"> Index</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">RangeFull</span><span style="color:#adb7c9;">&gt;&gt;
+</span><span style="color:#abb2bf;">            </span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">String </span><span style="color:#eb6772;">as</span><span style="color:#abb2bf;"> Index</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">RangeInclusive</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">usize</span><span style="color:#adb7c9;">&gt;&gt;&gt;
+</span><span style="color:#abb2bf;">            </span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">String </span><span style="color:#eb6772;">as</span><span style="color:#abb2bf;"> Index</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">RangeTo</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">usize</span><span style="color:#adb7c9;">&gt;&gt;&gt;
+</span><span style="color:#abb2bf;">            </span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">String </span><span style="color:#eb6772;">as</span><span style="color:#abb2bf;"> Index</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">RangeToInclusive</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">usize</span><span style="color:#adb7c9;">&gt;&gt;&gt;
+</span><span style="color:#abb2bf;">            </span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">String </span><span style="color:#eb6772;">as</span><span style="color:#abb2bf;"> Index</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">std::ops::Range</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">usize</span><span style="color:#adb7c9;">&gt;&gt;&gt;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#eb6772;">For</span><span style="color:#abb2bf;"> more information about this error, try `</span><span style="color:#eb6772;">rustc --explain</span><span style="color:#abb2bf;"> E0277`.
+</span><span style="color:#eb6772;">error:</span><span style="color:#abb2bf;"> could not compile `</span><span style="color:#eb6772;">collections</span><span style="color:#abb2bf;">` due to previous error
+</span></code></pre>
+<p>오류와 메모는 이야기를 말해줍니다. Rust 문자열은 인덱싱을 지원하지 않습니다. 왜 안될까요? 이 질문에 답하기 위해 우리는 Rust가 문자열을 메모리에 저장하는 방법을 논의할 필요가 있습니다.</p>
+<h4 id="naebu-ddapyo"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-02-strings.html#internal-representation">내부 대표</a></h4>
+<p><code>문자열</code>은 <code>Vec&lt;u8&gt;</code>에 대한 래퍼입니다. Listing 8-14에서 적절하게 인코딩된 UTF-8 예제 문자열 중 일부를 살펴보겠습니다. 먼저 다음과 같습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`Hola`);
+</span></code></pre>
+<p>이 경우 <code>len</code>은 4가 됩니다. 즉, 문자열 <code>Hola</code>를 저장하는 벡터의 길이는 4바이트입니다. 이러한 각 문자는 UTF-8로 인코딩될 때 1바이트를 사용합니다. 그러나 다음 줄은 당신을 놀라게 할 수 있습니다. (이 문자열은 아라비아 숫자 3이 아닌 대문자 키릴 문자 Ze로 시작합니다.)</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`Здравствуйте`);
+</span></code></pre>
+<p>문자열의 길이를 묻는 질문에 12라고 답할 수 있습니다. 사실 Rust의 대답은 24입니다. UTF-8로 <code>Здравствуйте</code>를 인코딩하는 데 걸리는 바이트 수입니다. 해당 문자열의 각 유니코드 스칼라 값은 2바이트의 저장 공간을 차지하기 때문입니다.  따라서 문자열의 바이트에 대한 인덱스가 항상 유효한 유니코드 스칼라 값과 상관되지는 않습니다. 시연을 위해 다음과 같은 잘못된 Rust 코드를 고려하십시오.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> `Здравствуйте`;
+</span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> answer </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">hello[</span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">];
+</span></code></pre>
+<p>당신은 이미 <code>answer</code>이 첫 글자인 <code>З</code>가 아니라는 것을 알고 있습니다. UTF-8로 인코딩하면 <code>З</code>의 첫 번째 바이트는 <code>208</code>이고 두 번째 바이트는 <code>151</code>이므로 <code>answer</code>는 실제로 <code>208</code>이어야 하지만 <code>208</code>은 유효하지 않습니다.  사용자가 이 문자열의 첫 번째 문자를 요청한 경우 <code>208</code>을 반환하는 것은 원하는 것이 아닐 가능성이 높습니다. 그러나 <code>208</code>은 Rust가 바이트 인덱스 0에 있는 유일한 데이터입니다. </p>
+<p>사용자는 일반적으로 문자열에 라틴 문자만 포함되어 있어도 바이트 값이 반환되는 것을 원하지 않습니다. <code>&amp;&quot;hello&quot;[0]</code> 가 바이트 값을 반환한다면, <code>h</code>가 아니라 <code>104</code>를 반환합니다.</p>
+<p>그렇다면 대답은 예상치 못한 값을 반환하고 즉시 발견되지 않을 수 있는 버그를 유발하지 않기 위해 Rust가 이 코드를 전혀 컴파일하지 않고 개발 프로세스 초기에 오해를 방지한다는 것입니다.</p>
+<h4 id="baiteu-mic-ssekalra-ggabgwa-munjaso-keulreosseteo-eomeo"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-02-strings.html#bytes-and-scalar-values-and-grapheme-clusters-oh-my">바이트 및 스칼라 값과 문자소 클러스터! 어머!</a></h4>
+<p>UTF-8에 대한 또 다른 요점은 실제로 Rust의 관점에서 문자열을 보는 세 가지 방법이 있다는 것입니다: 바이트(bytes), 스칼라 값(scalar values) 및 문자소 클러스터(grapheme clusters)(우리가 문자라고 부르는 것에 가장 가까운 것 <em>)</em> .</p>
+<p>Devanagari 스크립트에 쓰여진 힌디어 단어 <code> “नमस्ते”</code>를 보면 다음과 같이 <code>u8</code> 값의 벡터로 저장됩니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">[224, 164, 168, 224, 164, 174, 224, 164, 184, 224, 165, 141, 224, 164, 164,
+</span><span style="color:#abb2bf;">224, 165, 135]
+</span></code></pre>
+<p>그것은 18바이트이며 컴퓨터가 궁극적으로 이 데이터를 저장하는 방법입니다. Rust의 <code>char</code> 타입인 유니코드 스칼라 값으로 보면 해당 바이트는 다음과 같습니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">[&#39;न&#39;, &#39;म&#39;, &#39;स&#39;, &#39;्&#39;, &#39;त&#39;, &#39;े&#39;]
+</span></code></pre>
+<p>여기에는 6개의 <code>char</code> 값이 있지만 네 번째와 여섯 번째는 문자가 아닙니다. 자체적으로 의미가 없는 분음 부호입니다. 마지막으로, 그것들을 문자소 클러스터로 보면 힌디어 단어를 구성하는 4개의 문자라고 부르는 것을 얻을 수 있습니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">[`न`, `म`, `स्`, `ते`]
+</span></code></pre>
+<p>Rust는 컴퓨터가 저장하는 원시 문자열 데이터를 해석하는 다양한 방법을 제공하므로 데이터가 어떤 인간 언어로 되어 있는지에 관계없이 각 프로그램이 필요한 해석을 선택할 수 있습니다.</p>
+<p>Rust가 문자를 얻기 위해 <code>String</code>로 색인하는 것을 허용하지 않는 마지막 이유는 색인 작업이 항상 일정한 시간(O(1))이 걸릴 것으로 예상되기 때문입니다. 그러나 <code>String</code>로 성능을 보장하는 것은 불가능합니다. 왜냐하면 Rust는 얼마나 많은 유효한 문자가 있는지 확인하기 위해 내용을 처음부터 인덱스까지 살펴봐야 하기 때문입니다.</p>
+<h3 id="munjahyeo-sseuraikiss"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-02-strings.html#slicing-strings">문자열 슬라이싱</a></h3>
+<p>문자열 인덱싱 작업의 반환 타입(바이트 값, 문자, 문자소 클러스터 또는 문자열 슬라이스)이 무엇인지 명확하지 않기 때문에 문자열로 인덱싱하는 것은 좋지 않은 생각인 경우가 많습니다. 문자열 슬라이스를 생성하기 위해 인덱스를 사용해야 한다면 Rust는 더 구체적으로 지정하도록 요청합니다.</p>
+<p>단일 숫자와 함께 <code>[]</code>를 사용하여 인덱싱하는 대신 범위와 함께 <code>[]</code>를 사용하여 특정 바이트를 포함하는 문자열 슬라이스를 만들 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> hello </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> `Здравствуйте`;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">hello[</span><span style="color:#db9d63;">0</span><span style="color:#adb7c9;">..</span><span style="color:#db9d63;">4</span><span style="color:#abb2bf;">];
+</span></code></pre>
+<p>여기서 <code>s</code>는 문자열의 처음 4바이트를 포함하는 <code>&amp;str</code>입니다. 앞서 우리는 이러한 각 문자가 2바이트이며 <code>s</code>가 <code>Зд</code>가 됨을 의미한다고 언급했습니다.</p>
+<p><code>&amp;hello[0..1]</code>과 같은 것으로 문자 바이트의 일부만 슬라이스하려고 하면 Rust는 벡터에서 유효하지 않은 인덱스에 액세스하는 것과 같은 방식으로 런타임에 패닉을 일으킬 것입니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> collections v0.1.0 (file:///projects/collections)
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">Finished</span><span style="color:#abb2bf;"> dev </span><span style="color:#cd74e8;">[</span><span style="color:#abb2bf;">unoptimized + debuginfo</span><span style="color:#cd74e8;">]</span><span style="color:#abb2bf;"> target(s) </span><span style="color:#eb6772;">in</span><span style="color:#abb2bf;"> 0.43s
+</span><span style="color:#abb2bf;">     </span><span style="color:#eb6772;">Running </span><span style="color:#abb2bf;">`</span><span style="color:#eb6772;">target/debug/collections</span><span style="color:#abb2bf;">`
+</span><span style="color:#eb6772;">thread </span><span style="color:#9acc76;">&#39;main&#39;</span><span style="color:#abb2bf;"> panicked at </span><span style="color:#9acc76;">&#39;byte index 1 is not a char boundary; it is inside &#39;</span><span style="color:#abb2bf;">З</span><span style="color:#9acc76;">&#39; (bytes 0..2) of `Здравствуйте`&#39;</span><span style="color:#abb2bf;">, src/main.rs:4:14
+</span><span style="color:#eb6772;">note:</span><span style="color:#abb2bf;"> run with `</span><span style="color:#eb6772;">RUST_BACKTRACE</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">1</span><span style="color:#abb2bf;">` environment variable to display a backtrace
+</span></code></pre>
+<p>범위를 사용하여 스트링 슬라이스를 만들면 프로그램이 중단될 수 있으므로 주의해야 합니다.</p>
+<h3 id="munjahyeo-banbbo-iterate-bbanbbeo"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-02-strings.html#methods-for-iterating-over-strings">문자열 반복(iterate) 방법</a></h3>
+<p>문자열 조각을 반복하는 가장 좋은 방법은 문자 또는 바이트 중에서 어떤걸 원하는지 명시하는 것입니다. 개별 유니코드 스칼라 값의 경우 <code>chars</code> 메서드를 사용합니다. <code>Зд</code>에서 <code>chars</code>를 호출하면 <code>char</code> 타입의 두 값을 분리하고 반환하며 결과를 반복하여 각 요소에 액세스할 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">for</span><span style="color:#abb2bf;"> c </span><span style="color:#adb7c9;">in</span><span style="color:#abb2bf;"> `Зд`.</span><span style="color:#5ebfcc;">chars</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    println!(`{c}`);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>이 코드는 다음을 인쇄합니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">З
+</span><span style="color:#abb2bf;">д
+</span></code></pre>
+<p>또는 <code>bytes</code> 메서드는 도메인에 적합할 수 있는 각 원시 바이트를 반환합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">for</span><span style="color:#abb2bf;"> b </span><span style="color:#adb7c9;">in</span><span style="color:#abb2bf;"> `Зд`.</span><span style="color:#5ebfcc;">bytes</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    println!(`{b}`);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>이 코드는 이 문자열을 구성하는 4바이트를 인쇄합니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">208
+</span><span style="color:#abb2bf;">151
+</span><span style="color:#abb2bf;">208
+</span><span style="color:#abb2bf;">180
+</span></code></pre>
+<p>그러나 유효한 유니코드 스칼라 값은 1바이트 이상으로 구성될 수 있음을 기억하십시오.</p>
+<p>Devanagari 스크립트를 사용하여 문자열에서 문자소 클러스터를 가져오는 것은 복잡하므로 이 기능은 표준 라이브러리에서 제공되지 않습니다. 필요한 기능인 경우 <a rel="noopener nofollow noreferrer" target="_blank" href="https://crates.io/">crates.io</a> 에서 크레이트를 사용할 수 있습니다.</p>
+<h3 id="munjahyeoheu-ggereohge-ggaddahaji-hansseunida"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch08-02-strings.html#strings-are-not-so-simple">문자열은 그렇게 간단하지 않습니다</a></h3>
+<p>요약하면 문자열은 복잡합니다. 다른 프로그래밍 언어는 이러한 복잡성을 프로그래머에게 제시하는 방법에 대해 다른 선택을 합니다. Rust는 <code>String</code> 데이터의 올바른 처리를 모든 Rust 프로그램의 기본 동작으로 만들기로 선택했습니다. 이는 프로그래머가 UTF-8 데이터를 미리 처리하는 데 더 많은 생각을 해야 한다는 것을 의미합니다. 이러한 트레이드오프는 다른 프로그래밍 언어에서 명백한 것보다 더 많은 문자열의 복잡성을 드러내지만 개발 수명 주기 후반에 비ASCII 문자와 관련된 오류를 처리하지 않아도 됩니다.</p>
+<p>좋은 소식은 표준 라이브러리가 이러한 복잡한 상황을 올바르게 처리하는 데 도움이 되는 <code>String</code> 및 <code>&amp;str</code> 타입으로 구성된 많은 기능을 제공한다는 것입니다. 문자열에서 검색하기 위한 <code>contains</code> 및 문자열의 일부를 다른 문자열로 대체하기 위한 <code>replace</code>와 같은 유용한 메서드에 대한 설명서를 확인하십시오.</p>
+<p>조금 덜 복잡한 것으로 전환해 봅시다: hash maps!</p>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        <a class="previous" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;1-storing-lists-of-values-with-vectors&#x2F;"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        <a class="next" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;3-storing-keys-with-associated-values-in-hash-maps&#x2F;">></a>
+    
+
+            </div>
+        </div>
+
+        
+            
+                <script type="text/javascript" src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+                <script type="text/javascript" src="https://hwjskt.github.io/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://hwjskt.github.io/book.js"></script>
+        
+        </div>
+    </section>
+
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+  
+  
+
+  
+  
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js" integrity="sha384-Pulw7+h73841BQIK0LzJCydKRPChJUF9w8h8W0o3h+cLtoyNPJS847bQauLWOTwg" crossorigin="anonymous"></script>
+  
+  <script src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+  <script src="https://hwjskt.github.io/search_index.en.js"></script><script src="https://hwjskt.github.io/js/site.js"></script>
+
+  
+  
+
+  
+  
+</body>
+
+</html>

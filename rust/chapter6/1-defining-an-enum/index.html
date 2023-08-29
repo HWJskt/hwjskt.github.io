@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='&#x2F;icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='&#x2F;icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" integrity="sha384-oGm59HWAkwO32h2w8u0B98wKBZJwd6MbWtAJwQKCTffZjOXHXrnyv9Syjovgc+UV" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://hwjskt.github.io/deep-thought.css" rel="stylesheet" />
+  
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/book.css">
+    <link rel="stylesheet" href="https://hwjskt.github.io/deep-thought.css">
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/newsprint.css">
+
+
+  <title>
+    
+    
+    Dr.JUNG | Rust
+
+  </title>
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176984489-2"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-176984489-2");
+  </script>
+  
+  
+
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;">Dr.JUNG</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;about">
+            AboutMe
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;docs">
+            Docs
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;rust">
+            Rust
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  
+    
+    <section>
+        <div class="book-menu is-2">
+            
+            
+            <aside role="navigation">
+                <ul>
+                    
+                        
+                        
+                        <li >
+                            <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;">Introduction</a>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;">
+                                    <strong>1.</strong>
+                                    Getting Started
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;1-installation&#x2F;">
+                                                    <strong>1.1.</strong>
+                                                    Installation
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;2-helloworld&#x2F;">
+                                                    <strong>1.2.</strong>
+                                                    Hello, World!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;3-hellocargo&#x2F;">
+                                                    <strong>1.3.</strong>
+                                                    Hello, Cargo!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter2&#x2F;">
+                                    <strong>2.</strong>
+                                    Programming a Guessing Game
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;">
+                                    <strong>3.</strong>
+                                    Common Programming Concepts
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;1-variables-and-mutability&#x2F;">
+                                                    <strong>3.1.</strong>
+                                                    Variables and Mutability
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;2-data-types&#x2F;">
+                                                    <strong>3.2.</strong>
+                                                    Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;3-functions&#x2F;">
+                                                    <strong>3.3.</strong>
+                                                    Functions
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;4-comments&#x2F;">
+                                                    <strong>3.4.</strong>
+                                                    Comments
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;5-control-flow&#x2F;">
+                                                    <strong>3.5.</strong>
+                                                    Control Flow
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;">
+                                    <strong>4.</strong>
+                                    Understanding Ownership
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;1-what-is-ownership&#x2F;">
+                                                    <strong>4.1.</strong>
+                                                    What is Ownership?
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;2-references-and-borrowing&#x2F;">
+                                                    <strong>4.2.</strong>
+                                                    References and Borrowing
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;3-the-slice-type&#x2F;">
+                                                    <strong>4.3.</strong>
+                                                    The Slice Type
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;">
+                                    <strong>5.</strong>
+                                    Using Structs to Structure Related Data
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;1-defining-and-instantiating-structs&#x2F;">
+                                                    <strong>5.1.</strong>
+                                                    Defining and Instantiating Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;2-an-example-program-using-structs&#x2F;">
+                                                    <strong>5.2.</strong>
+                                                    An Example Program Using Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;3-method-syntax&#x2F;">
+                                                    <strong>5.3.</strong>
+                                                    Method Syntax
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;">
+                                    <strong>6.</strong>
+                                    Enums and Pattern Matching
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li class="active">
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;1-defining-an-enum&#x2F;">
+                                                    <strong>6.1.</strong>
+                                                    Defining an Enum
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;2-the-match-control-flow-construct&#x2F;">
+                                                    <strong>6.2.</strong>
+                                                    The match Control Flow Construct
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;3-concise-control-flow-with-if-let&#x2F;">
+                                                    <strong>6.3.</strong>
+                                                    Concise Control Flow with if let.md
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;">
+                                    <strong>7.</strong>
+                                    Managing Growing Projects with Packages, Crates, and Modules
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;1-packages-and-crates&#x2F;">
+                                                    <strong>7.1.</strong>
+                                                    Packages and Crates
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;2-defining-modules-to-control-scope-and-privacy&#x2F;">
+                                                    <strong>7.2.</strong>
+                                                    Defining Modules to Control Scope and Privacy
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;3-paths-for-referring-to-an-item-in-the-module-tree&#x2F;">
+                                                    <strong>7.3.</strong>
+                                                    Paths for Referring to an Item in the Module Tree
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;4-bringing-paths-into-scope-with-the-use-keyword&#x2F;">
+                                                    <strong>7.4.</strong>
+                                                    Bringing Paths Into Scope with the use Keyword
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;5-separating-modules-into-different-files&#x2F;">
+                                                    <strong>7.5.</strong>
+                                                    Separating Modules into Different Files
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;">
+                                    <strong>8.</strong>
+                                    Common Collections
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;1-storing-lists-of-values-with-vectors&#x2F;">
+                                                    <strong>8.1.</strong>
+                                                    Storing Lists of Values with Vectors
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;">
+                                                    <strong>8.2.</strong>
+                                                    Storing UTF-8 Encoded Text with Strings
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;3-storing-keys-with-associated-values-in-hash-maps&#x2F;">
+                                                    <strong>8.3.</strong>
+                                                    Storing Keys with Associated Values in Hash Maps
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </aside>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="book-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="book-search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <h1>Defining an Enum</h1>
+    <h2 id="yohya">요약</h2>
+<ul>
+<li>열거형은 가능한 값들(변형, variant)을 열거해두고 그 중 하나만 선택하는 것</li>
+<li>구조체 대신 열거형을 사용하면 좋은점
+<ul>
+<li>데이터를 각 열거형 변형에 직접 넣으면 더 간결</li>
+<li>각 변형에는 연결된 데이터의 타입과 양이 다를 수 있다. (구조체는 필드(key)가 같으면 타입도 같아야 한다.)</li>
+<li>열거형 변형 내에 모든 종류의 데이터(예: 문자열, 숫자, 구조체, 다른 열거형 등 )를 넣을 수 있음</li>
+</ul>
+</li>
+<li>구조체처럼 <code>impl</code>을 사용하여  대한 메서드를 정의할 수 있다.</li>
+<li>Option 열거형
+<ul>
+<li>None 과 Some 변형을 가지고 있다.</li>
+<li>변형을 사용할 때, Option::Some 아니고, Some 으로 사용가능</li>
+<li>match 식을 함께 사용해서 각 변형에 따른 코드를 실행가능</li>
+</ul>
+</li>
+</ul>
+<h2 id="hyeoggehyeong-jjeonyi"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html#defining-an-enum">열거형 정의</a></h2>
+<p>구조체(structs)는 관련 필드와 데이터를 함께 그룹화하는 방법을 제공합니다. <code>width</code>와 <code>height</code>가 있는 <code>Rectangle</code>이 예입니다. 열거형은 값이 가능한 값 집합 중 하나라고 말하는 방법을 제공합니다. 예를 들어, <code>직사각형</code>은 <code>원</code>과 <code>삼각형</code>을 포함하는 가능한 도형 세트 중 하나라고 말하고 싶을 수 있습니다. 이를 위해 Rust는 이러한 가능성을 열거형으로 인코딩할 수 있도록 합니다.</p>
+<p>코드로 표현하고 싶은 상황을 살펴보고 이 경우 열거형이 구조체보다 유용하고 더 적합한 이유를 살펴보겠습니다. IP 주소로 작업해야 한다고 가정해 보겠습니다. 현재 IP 주소에는 버전 4와 버전 6의 두 가지 주요 표준이 사용됩니다. 이것이 우리 프로그램이 접하게 될 IP 주소에 대한 유일한 가능성이기 때문에 가능한 모든 변형을 <em>열거</em> 할 수 있습니다.</p>
+<p>모든 IP 주소는 버전 4 또는 버전 6 주소일 수 있지만 동시에 둘 다일 수는 없습니다. IP 주소의 이러한 속성 때문에 enum 데이터 구조가 적절합니다. enum 값은 변형들 중 하나일 수 밖에 없기 때문입니다.  버전 4 및 버전 6 주소는 여전히 기본적으로 IP 주소이므로, 코드가 모든 종류의 IP 주소에 적용되는 상황을 처리할 때 동일한 유형으로 취급되어야 합니다.</p>
+<p><code>IpAddrKind</code> 열거형을 정의하고 IP 주소가 될 수 있는 <code>V4</code> 및 <code>V6</code> 종류를 나열하여 이 개념을 코드로 표현할 수 있습니다. 열거형의 변형은 다음과 같습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">enum </span><span style="color:#abb2bf;">IpAddrKind {
+</span><span style="color:#abb2bf;">    </span><span style="color:#db9d63;">V4</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    </span><span style="color:#db9d63;">V6</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p><code>IpAddrKind</code>는 이제 코드의 다른 곳에서 사용할 수 있는 사용자 정의 데이터 유형입니다.</p>
+<h3 id="hyeoggehyeong-ggab-enum-values"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html#enum-values">열거형 값(Enum values)</a></h3>
+<p>다음과 같이 <code>IpAddrKind</code>의 두 변형 각각의 인스턴스를 만들 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> four </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">IpAddrKind::</span><span style="color:#db9d63;">V4</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> six </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">IpAddrKind::</span><span style="color:#db9d63;">V6</span><span style="color:#abb2bf;">;
+</span></code></pre>
+<p>열거형의 변형은 해당 식별자 아래에 네임스페이스가 지정되며 이중 콜론을 사용하여 둘을 구분합니다. 이제 <code>IpAddrKind::V4</code> 및 <code>IpAddrKind::V6</code> 값이 모두 <code>IpAddrKind</code>타입이기 때문에 유용합니다. 예를 들어, 이후 <code>IpAddrKind</code>를 사용하는 함수를 정의할 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">route</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">ip_kind</span><span style="color:#abb2bf;">: IpAddrKind) {}
+</span></code></pre>
+<p>그리고 우리는 이 함수를 두 변형으로 호출할 수 있습니다:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#5ebfcc;">route</span><span style="color:#abb2bf;">(IpAddrKind::</span><span style="color:#db9d63;">V4</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    </span><span style="color:#5ebfcc;">route</span><span style="color:#abb2bf;">(IpAddrKind::</span><span style="color:#db9d63;">V6</span><span style="color:#abb2bf;">);
+</span></code></pre>
+<p>열거형을 사용하면 더 많은 이점이 있습니다. <em>IP 주소 유형에 대해 더 생각해 보면 현재 실제 IP 주소 데이터를</em> 저장할 방법이 없습니다. 우리는 그것이 어떤 <em>종류</em> 인지 만 알고 있습니다. 5장에서 구조체에 대해 방금 배웠다면 목록 6-1에 표시된 대로 구조체를 사용하여 이 문제를 해결하고 싶은 유혹을 느낄 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">enum </span><span style="color:#abb2bf;">IpAddrKind {
+</span><span style="color:#abb2bf;">        </span><span style="color:#db9d63;">V4</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        </span><span style="color:#db9d63;">V6</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">IpAddr {
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">kind</span><span style="color:#abb2bf;">: IpAddrKind,
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">address</span><span style="color:#abb2bf;">: String,
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> home </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> IpAddr {
+</span><span style="color:#abb2bf;">        kind: IpAddrKind::</span><span style="color:#db9d63;">V4</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        address: String::from(`</span><span style="color:#db9d63;">127.0</span><span style="color:#abb2bf;">.</span><span style="color:#db9d63;">0.1</span><span style="color:#abb2bf;">`),
+</span><span style="color:#abb2bf;">    };
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> loopback </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> IpAddr {
+</span><span style="color:#abb2bf;">        kind: IpAddrKind::</span><span style="color:#db9d63;">V6</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        address: String::from(`::</span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">`),
+</span><span style="color:#abb2bf;">    };
+</span></code></pre>
+<p>목록 6-1: <code>struct</code>를 사용하여 데이터 및 IP 주소의 <code>IpAddrKind</code> 변형 저장</p>
+<p>여기에서 <code>IpAddrKind</code> 유형의 <code>kind</code> 필드(이전에 정의한 enum)와 <code>String</code> 유형의 <code>address</code> 필드가 있는 구조체 <code>IpAddr</code>를 정의했습니다. 이 구조체에는 두 개의 인스턴스가 있습니다. 첫 번째는 <code>home</code>이며 <code>127.0.0.1</code>의 관련 주소 데이터와 함께 <code>kind</code>로 <code>IpAddrKind::V4</code> 값을 가집니다. 두 번째 인스턴스는 <code>loopback</code>입니다. <code>kind</code> 값인 <code>V6</code>으로 <code>IpAddrKind</code>의 다른 변형이 있으며 이와 연결된 주소 <code>::1</code>이 있습니다. 구조체를 사용하여 <code>kind</code> 및 <code>address</code> 값을 함께 묶었으므로 이제 변형이 값과 연결됩니다.</p>
+<p>그러나 열거형만 사용하여 동일한 개념을 나타내는 것이 더 간결합니다. 구조체 내부에 열거형을 사용하는 것보다, 데이터를 각 열거형 변형에 직접 넣으면 더 간결합니다. 아래 코드에서 <code>IpAddr</code> 열거형의 이 새로운 정의는 <code>V4</code> 및 <code>V6</code> 변형 모두 연결된 <code>문자열</code> 값을 가질 것이라고 말합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">enum </span><span style="color:#abb2bf;">IpAddr {
+</span><span style="color:#abb2bf;">        </span><span style="color:#db9d63;">V4</span><span style="color:#abb2bf;">(String),
+</span><span style="color:#abb2bf;">        </span><span style="color:#db9d63;">V6</span><span style="color:#abb2bf;">(String),
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> home </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">IpAddr::</span><span style="color:#db9d63;">V4</span><span style="color:#abb2bf;">(String::from(`</span><span style="color:#db9d63;">127.0</span><span style="color:#abb2bf;">.</span><span style="color:#db9d63;">0.1</span><span style="color:#abb2bf;">`));
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> loopback </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">IpAddr::</span><span style="color:#db9d63;">V6</span><span style="color:#abb2bf;">(String::from(`::</span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">`));
+</span></code></pre>
+<p>열거형의 각 변형에 직접 데이터를 첨부하므로 추가 구조체가 필요하지 않습니다. 여기에서 열거형의 작동 방식에 대한 또 다른 세부 정보를 더 쉽게 볼 수 있습니다. 우리가 정의하는 각 열거형 변형의 이름도 열거형의 인스턴스를 구성하는 함수가 됩니다. 즉, <code>IpAddr::V4()</code>는 <code>String</code> 인수를 사용하고 <code>IpAddr</code> 유형의 인스턴스를 반환하는 함수 호출입니다. 열거형을 정의한 결과로 정의된 이 생성자 함수를 자동으로 얻습니다.</p>
+<p>구조체 대신 열거형을 사용하면 또 다른 이점이 있습니다. 각 변형에는 연결된 데이터의 유형과 양이 다를 수 있습니다. 버전 4 IP 주소에는 항상 0에서 255 사이의 값을 갖는 4개의 숫자 구성 요소가 있습니다. <code>V4</code> 주소를 4개의 <code>u8</code> 값으로 저장하고 싶지만 <code>V6</code> 주소를 하나의 <code>String</code> 값으로 표현하려면 구조체로는 할 수 없습니다. 열거형은 이 경우를 쉽게 처리합니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">enum </span><span style="color:#abb2bf;">IpAddr {
+</span><span style="color:#abb2bf;">        </span><span style="color:#db9d63;">V4</span><span style="color:#abb2bf;">(</span><span style="color:#cd74e8;">u8</span><span style="color:#abb2bf;">, </span><span style="color:#cd74e8;">u8</span><span style="color:#abb2bf;">, </span><span style="color:#cd74e8;">u8</span><span style="color:#abb2bf;">, </span><span style="color:#cd74e8;">u8</span><span style="color:#abb2bf;">),
+</span><span style="color:#abb2bf;">        </span><span style="color:#db9d63;">V6</span><span style="color:#abb2bf;">(String),
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> home </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">IpAddr::</span><span style="color:#db9d63;">V4</span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">127</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> loopback </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">IpAddr::</span><span style="color:#db9d63;">V6</span><span style="color:#abb2bf;">(String::from(`::</span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">`));
+</span></code></pre>
+<p>버전 4 및 버전 6 IP 주소를 저장하기 위해 데이터 구조를 정의하는 여러 가지 방법을 보여주었습니다. 그러나 밝혀진 바와 같이 IP 주소를 저장하고 어떤 종류인지 인코딩하려는 것은 너무 일반적이어서 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/std/net/enum.IpAddr.html">표준 라이브러리에 우리가 사용할 수 있는 정의가 있습니다! </a>표준 라이브러리가 <code>IpAddr</code>을 정의하는 방법을 살펴보겠습니다. 여기에는 우리가 정의하고 사용한 정확한 열거형 및 변형이 있지만 각각에 대해 다르게 정의되는 두 개의 서로 다른 구조체의 형태로 변형 내부에 주소 데이터를 포함합니다. 변종:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">Ipv4Addr {
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// --snip--
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">Ipv6Addr {
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// --snip--
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">enum </span><span style="color:#abb2bf;">IpAddr {
+</span><span style="color:#abb2bf;">    </span><span style="color:#db9d63;">V4</span><span style="color:#abb2bf;">(Ipv4Addr),
+</span><span style="color:#abb2bf;">    </span><span style="color:#db9d63;">V6</span><span style="color:#abb2bf;">(Ipv6Addr),
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>이 코드는 열거형 변형 내에 모든 종류의 데이터(예를 들어 문자열, 숫자 유형 또는 구조체와 같은 )를 넣을 수 있음을 보여줍니다. 다른 열거형을 포함할 수도 있습니다! 또한 표준 라이브러리 유형은 종종 여러분이 생각하는 것보다 훨씬 더 복잡하지 않습니다.</p>
+<p>표준 라이브러리에 <code>IpAddr</code>에 대한 정의가 포함되어 있지만 표준 라이브러리의 정의를 범위로 가져오지 않았기 때문에 여전히 충돌 없이 자체 정의를 만들고 사용할 수 있습니다. 유형을 범위로 가져오는 방법에 대해서는 7장에서 자세히 설명합니다.</p>
+<p>Listing 6-2에 있는 enum의 또 다른 예를 살펴보겠습니다. 이것은 변형에 다양한 유형이 내장되어 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">enum </span><span style="color:#abb2bf;">Message {
+</span><span style="color:#abb2bf;">    Quit,
+</span><span style="color:#abb2bf;">    Move { x: </span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">, y: </span><span style="color:#cd74e8;">i32 </span><span style="color:#abb2bf;">},
+</span><span style="color:#abb2bf;">    Write(String),
+</span><span style="color:#abb2bf;">    ChangeColor(</span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">, </span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">, </span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">),
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 6-2: 각각 다른 양과 유형의 값을 저장하는 변형이 있는 <code>메시지</code> 열거형</p>
+<p>이 열거형에는 유형이 다른 네 가지 변형이 있습니다.</p>
+<ul>
+<li><code>Quit</code>에는 이와 관련된 데이터가 전혀 없습니다.</li>
+<li><code>Move</code>에는 구조체와 마찬가지로 명명된 필드가 있습니다.</li>
+<li><code>Write</code>에는 단일 <code>문자열</code>이 포함됩니다.</li>
+<li><code>ChangeColor</code>에는 3개의 <code>i32</code> 값이 포함됩니다.</li>
+</ul>
+<p>목록 6-2에 있는 것과 같은 변형으로 열거형을 정의하는 것은 열거형이 <code>struct</code> 키워드를 사용하지 않고 모든 변형이 <code>Message</code> 유형 아래에 함께 그룹화된다는 점을 제외하면 다른 종류의 구조체 정의를 정의하는 것과 유사합니다. 다음 구조체는 이전 열거형 변형이 보유하는 것과 동일한 데이터를 보유할 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">QuitMessage; </span><span style="font-style:italic;color:#5f697a;">// unit struct
+</span><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">MoveMessage {
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">x</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">y</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">WriteMessage(String); </span><span style="font-style:italic;color:#5f697a;">// tuple struct
+</span><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">ChangeColorMessage(</span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">, </span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">, </span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">); </span><span style="font-style:italic;color:#5f697a;">// tuple struct
+</span></code></pre>
+<p>그러나 각각 고유한 유형이 있는 서로 다른 구조체를 사용하는 경우 Listing 6-2에 정의된 <code>Message</code> 열거형으로 할 수 있는 것처럼 이러한 종류의 메시지를 받는 함수를 쉽게 정의할 수 없습니다. 단일 유형입니다.</p>
+<p>열거형과 구조체 사이에는 또 다른 유사점이 있습니다. <code>impl</code>을 사용하여 구조체에 대한 메서드를 정의할 수 있는 것처럼 열거형에 대한 메서드도 정의할 수 있습니다. 다음은 <code>Message</code> 열거형에서 정의할 수 있는 <code>call</code>이라는 메서드입니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">impl </span><span style="color:#abb2bf;">Message {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">call</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#eb6772;">self</span><span style="color:#abb2bf;">) {
+</span><span style="color:#abb2bf;">            </span><span style="font-style:italic;color:#5f697a;">// method body would be defined here
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> m </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">Message::Write(String::from(`hello`));
+</span><span style="color:#abb2bf;">    m.</span><span style="color:#5ebfcc;">call</span><span style="color:#abb2bf;">();
+</span></code></pre>
+<p>메서드 본문은 <code>self</code>를 사용하여 메서드를 호출한 값을 가져옵니다. 이 예에서 우리는 <code>Message::Write(String::from(&quot;hello&quot;))</code> 값을 갖는 변수 <code>m</code>을 생성했으며 이것이 <code>m.call()</code>이 실행될 때 호출 메서드의 본문에 있는 <code>self</code>입니다.</p>
+<p>매우 일반적이고 유용한 표준 라이브러리의 또 다른 열거형인 <code>Option</code>을 살펴보겠습니다.</p>
+<h3 id="option-hyeoggehyeonggwa-null-ggabe-ddahan-ijjeo"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html#the-option-enum-and-its-advantages-over-null-values">Option 열거형과 Null 값에 대한 이점</a></h3>
+<p>이 섹션에서는 표준 라이브러리에서 정의한 또 다른 열거형인 <code>Option</code>의 사례 연구를 살펴봅니다. <code>Option</code> 유형은 값이 무언가가 될 수도 있고 아무것도 아닐 수도 있는 매우 일반적인 시나리오를 인코딩합니다.</p>
+<p>예를 들어 비어 있지 않은 목록의 첫 번째 항목을 요청하면 값을 받게 됩니다. 빈 목록의 첫 번째 항목을 요청하면 아무것도 얻지 못합니다. 유형 시스템 측면에서 이 개념을 표현하면 처리해야 하는 모든 사례를 처리했는지 여부를 컴파일러에서 확인할 수 있습니다. 이 기능은 다른 프로그래밍 언어에서 매우 일반적인 버그를 방지할 수 있습니다.</p>
+<p>프로그래밍 언어 설계는 종종 어떤 기능을 포함하는지에 따라 생각되지만 제외하는 기능도 중요합니다. Rust에는 다른 많은 언어에 있는 null 기능이 없습니다. <em>Null</em> 은 값이 없다는 의미의 값입니다. null이 있는 언어에서 변수는 항상 null 또는 null이 아닌 두 가지 상태 중 하나일 수 있습니다.</p>
+<p>2009년 프레젠테이션 <code>Null References: The Billion Dollar Mistake</code>에서 null의 발명가인 Tony Hoare는 다음과 같이 말했습니다.</p>
+<blockquote>
+<p>나는 그것을 나의 10억 달러짜리 실수라고 부른다. 그 당시 저는 객체 지향 언어의 참조를 위한 최초의 포괄적인 유형 시스템을 설계하고 있었습니다. 내 목표는 컴파일러가 자동으로 검사를 수행하여 모든 참조 사용이 절대적으로 안전하도록 하는 것이었습니다. 하지만 구현하기가 너무 쉽기 때문에 null 참조를 넣고 싶은 유혹을 뿌리칠 수 없었습니다. 이로 인해 수많은 오류, 취약성 및 시스템 충돌이 발생했으며 지난 40년 동안 아마도 10억 달러의 고통과 피해를 입혔을 것입니다.</p>
+</blockquote>
+<p>null 값의 문제는 null 값을 null이 아닌 값으로 사용하려고 하면 일종의 오류가 발생한다는 것입니다. 이 null 또는 null이 아닌 속성은 널리 퍼져 있기 때문에 이러한 종류의 오류를 만들기가 매우 쉽습니다.</p>
+<p>그러나 null이 표현하려는 개념은 여전히 유용합니다. null은 현재 유효하지 않거나 어떤 이유로 없는 값입니다.</p>
+<p>문제는 실제로 개념이 아니라 특정 구현에 있습니다. 따라서 Rust에는 null이 없지만 존재하거나 존재하지 않는 값의 개념을 인코딩할 수 있는 열거형이 있습니다. 이 열거형은 <code>Option&lt;T&gt;</code>이며 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/std/option/enum.Option.html">표준 라이브러리</a> 에 의해 다음과 같이 정의됩니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">enum </span><span style="color:#abb2bf;">Option&lt;T&gt; {
+</span><span style="color:#abb2bf;">    None,
+</span><span style="color:#abb2bf;">    Some(T),
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p><code>Option&lt;T&gt;</code> 열거형은 너무 유용해서 서문에 포함되어 있습니다. 명시적으로 범위로 가져올 필요가 없습니다. 해당 변형도 서문에 포함되어 있습니다. 접두어 <code>Option::</code> 없이 <code>Some</code> 및 <code>None</code>을 직접 사용할 수 있습니다. <code>Option&lt;T&gt;</code> 열거형은 여전히 일반 열거형이며 <code>Some(T)</code> 및 <code>None</code>은 여전히 <code>Option&lt;T&gt;</code> 유형의 변형입니다.</p>
+<p><code>&lt;T&gt;</code> 구문은 우리가 아직 이야기하지 않은 Rust의 기능입니다. 제네릭 유형 매개변수이며, 제네릭에 대해서는 10장에서 자세히 다룰 것입니다. 지금은 <code>Option</code> 열거형의 <code>Some</code> 변형이 어떤 타입의 데이터 한 조각을 보유할 수 있으며 <code>&lt;T&gt;</code> 대신 사용되는 각 구체적인 유형이 전체 <code>Option&lt;T&gt;</code>을 만든다는 것을 의미합니다. 다음은 <code>Option</code> 값을 사용하여 숫자 유형과 문자열 유형을 보유하는 몇 가지 예입니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> some_number </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">Some(</span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> some_char </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">Some(</span><span style="color:#9acc76;">&#39;e&#39;</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> absent_number: Option&lt;</span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">&gt; </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">None;
+</span></code></pre>
+<p><code>some_number</code>의 타입은 <code>Option&lt;i32&gt;</code>입니다. 
+<code>some_char</code>의 타입은 <code>Option&lt;char&gt;</code>, 이는 다른 타입입니다. <code>Some</code> 변형 내부에 값을 지정했기 때문에 Rust는 이러한 유형을 추론할 수 있습니다. 
+<code>absent_number</code>의 경우 Rust는 전체 <code>Option</code> 유형에 주석을 달도록 요구합니다. 컴파일러는 <code>None</code> 값만 보고 해당 <code>Some</code> 변형의 타입을 유추할 수 없습니다. 여기에서, 우리는 <code>absent_number</code>가 <code>Option&lt;i32&gt;</code> 유형임을 의미한다고 Rust에 알립니다.</p>
+<p><code>Some</code> 값이 있을 때 값이 존재하고 그 값이 <code>Some</code> 내에 있음을 알 수 있습니다. <code>None</code> 값이 있는 경우 어떤 의미에서는 null과 같은 의미입니다. 즉, 유효한 값이 없습니다. 그렇다면 왜 <code>Option&lt;T&gt;</code> 가 null 보다 낫습니까?</p>
+<p>간단히 말하면, <code>Option&lt;T&gt;</code>와 <code>T</code>(여기서 <code>T</code>는 모든 유형일 수 있음)가 서로 다른 유형입니다. 그래서 컴파일러는 확실히 유효한 값인 것처럼 <code>Option&lt;T&gt;</code>을 사용하도록 허용하지 않습니다. 예를 들어 이 코드는 <code>i8</code>을 <code>Option</code>에 추가하려고 하기 때문에 컴파일되지 않습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> x: </span><span style="color:#cd74e8;">i8 </span><span style="color:#adb7c9;">= </span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> y: Option&lt;</span><span style="color:#cd74e8;">i8</span><span style="color:#abb2bf;">&gt; </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">Some(</span><span style="color:#db9d63;">5</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> sum </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> x </span><span style="color:#adb7c9;">+</span><span style="color:#abb2bf;"> y;
+</span></code></pre>
+<p>이 코드를 실행하면 다음과 같은 오류 메시지가 나타납니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> enums v0.1.0 (file:///projects/enums)
+</span><span style="color:#eb6772;">error[E0277]:</span><span style="color:#abb2bf;"> cannot add `</span><span style="color:#eb6772;">Option</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">i8</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;">` to `</span><span style="color:#eb6772;">i8</span><span style="color:#abb2bf;">`
+</span><span style="color:#abb2bf;"> </span><span style="color:#eb6772;">--</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> src/main.rs:5:17
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">5 </span><span style="color:#adb7c9;">|     </span><span style="color:#5ebfcc;">let</span><span style="color:#abb2bf;"> sum </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> x </span><span style="color:#adb7c9;">+</span><span style="color:#abb2bf;"> y;
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|                 </span><span style="color:#eb6772;">^</span><span style="color:#abb2bf;"> no implementation for `</span><span style="color:#eb6772;">i8</span><span style="color:#abb2bf;"> + Option</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">i8</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;">`
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">= </span><span style="color:#eb6772;">help:</span><span style="color:#abb2bf;"> the trait `</span><span style="color:#eb6772;">Add</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">Option</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">i8</span><span style="color:#adb7c9;">&gt;&gt;</span><span style="color:#abb2bf;">` is not implemented for `</span><span style="color:#eb6772;">i8</span><span style="color:#abb2bf;">`
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">= </span><span style="color:#eb6772;">help:</span><span style="color:#abb2bf;"> the following other types implement trait `</span><span style="color:#eb6772;">Add</span><span style="color:#adb7c9;">&lt;</span><span style="color:#abb2bf;">Rhs</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;">`:
+</span><span style="color:#abb2bf;">            </span><span style="color:#adb7c9;">&lt;&amp;</span><span style="color:#9acc76;">&#39;a i8 as Add&lt;i8&gt;&gt;
+</span><span style="color:#9acc76;">            &lt;&amp;i8 as Add&lt;&amp;i8&gt;&gt;
+</span><span style="color:#9acc76;">            &lt;i8 as Add&lt;&amp;i8&gt;&gt;
+</span><span style="color:#9acc76;">            &lt;i8 as Add&gt;
+</span><span style="color:#9acc76;">
+</span><span style="color:#9acc76;">For more information about this error, try `rustc --explain E0277`.
+</span><span style="color:#9acc76;">error: could not compile `enums` due to previous error
+</span></code></pre>
+<p>극심한! 사실상 이 오류 메시지는 Rust가 <code>i8</code>과 <code>Option&lt;i8&gt;</code>을 더하는 방법을 이해하지 못한다는 것을 의미합니다.서로 다른 유형이기 때문입니다. Rust에서 <code>i8</code>과 같은 유형의 값이 있을 때, 컴파일러는 항상 유효한 값을 가지고 있는지 확인합니다. 해당 값을 사용하기 전에 null을 확인하지 않고도 자신 있게 진행할 수 있습니다.  <code>Option&lt;i8&gt;</code>이 있는 경우에만(또는 우리가 작업 중인 어떤 유형의 값이든) 값이 없을 가능성에 대해 걱정해야 하며 컴파일러는 값을 사용하기 전에 해당 사례를 처리하는지 확인합니다.</p>
+<p>즉, 작업을 수행하기 전에 <code>Option&lt;T&gt;</code>을 <code>T</code> 로 변환해야 합니다.  일반적으로 이것은 null과 관련된 가장 일반적인 문제 중 하나를 파악하는 데 도움이 됩니다. 실제로 null이 아닐 때 null이 아니라고 가정합니다.</p>
+<p>null이 아닌 값을 잘못 가정하는 위험을 제거하면 코드에 대한 확신을 가질 수 있습니다. null일 수 있는 값을 가지려면 해당 값의 유형을 <code>Option&lt;T&gt;</code>으로 만들어 명시적으로 옵트인해야 합니다. 그런 다음 해당 값을 사용할 때 값이 null인 경우를 명시적으로 처리해야 합니다. 값의 타입이 <code>Option&lt;T&gt;</code>가 아니라면, 값이 null이 아니라고 안전하게 가정할 수 있습니다. 이는 Rust가 null의 보급을 제한하고 Rust 코드의 안전성을 높이기 위한 의도적인 설계 결정이었습니다.</p>
+<p>그러면 <code>Option&lt;T&gt;</code> 타입의 값이 있을 때 <code>Some</code> 변형에서 <code>T</code> 값을 어떻게 얻어서 사용할까요?   <code>Option&lt;T&gt;</code> enum에는 다양한 상황에서 유용한 많은 메서드가 있습니다. <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/std/option/enum.Option.html">설명서</a> 에서 확인할 수 있습니다. <code>Option&lt;T&gt;</code>의 메서드에 익숙해지면 Rust와의 여정에 매우 유용할 것입니다.</p>
+<p>일반적으로 <code>Option&lt;T&gt;</code> 값을 사용하려면 각 변형을 처리할 코드가 있어야 합니다. <code>Some(T)</code> 값이 있을 때만 실행되는 코드가 필요하고, 이 코드는 내부<code> T</code>를 사용할 수 있습니다. <code>None</code> 값이 있는 경우에만 실행되는 코드를 원할 수 있습니다만, 이때는 T 값을 사용할 수 없습니다. <code>match </code>식은 열거형과 함께 사용할 때 바로 이 작업을 수행하는 제어 흐름 구성입니다. 포함된 열거형의 변형에 따라 다른 코드를 실행하고, 해당 코드는 일치하는 값 안에 있는 데이터를 사용할 수 있습니다.</p>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        
+        
+        <a class="previous" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        <a class="next" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;2-the-match-control-flow-construct&#x2F;">></a>
+    
+
+            </div>
+        </div>
+
+        
+            
+                <script type="text/javascript" src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+                <script type="text/javascript" src="https://hwjskt.github.io/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://hwjskt.github.io/book.js"></script>
+        
+        </div>
+    </section>
+
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+  
+  
+
+  
+  
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js" integrity="sha384-Pulw7+h73841BQIK0LzJCydKRPChJUF9w8h8W0o3h+cLtoyNPJS847bQauLWOTwg" crossorigin="anonymous"></script>
+  
+  <script src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+  <script src="https://hwjskt.github.io/search_index.en.js"></script><script src="https://hwjskt.github.io/js/site.js"></script>
+
+  
+  
+
+  
+  
+</body>
+
+</html>

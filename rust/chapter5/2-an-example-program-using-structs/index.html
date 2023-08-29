@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='&#x2F;icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='&#x2F;icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" integrity="sha384-oGm59HWAkwO32h2w8u0B98wKBZJwd6MbWtAJwQKCTffZjOXHXrnyv9Syjovgc+UV" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://hwjskt.github.io/deep-thought.css" rel="stylesheet" />
+  
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/book.css">
+    <link rel="stylesheet" href="https://hwjskt.github.io/deep-thought.css">
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/newsprint.css">
+
+
+  <title>
+    
+    
+    Dr.JUNG | Rust
+
+  </title>
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176984489-2"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-176984489-2");
+  </script>
+  
+  
+
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;">Dr.JUNG</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;about">
+            AboutMe
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;docs">
+            Docs
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;rust">
+            Rust
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  
+    
+    <section>
+        <div class="book-menu is-2">
+            
+            
+            <aside role="navigation">
+                <ul>
+                    
+                        
+                        
+                        <li >
+                            <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;">Introduction</a>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;">
+                                    <strong>1.</strong>
+                                    Getting Started
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;1-installation&#x2F;">
+                                                    <strong>1.1.</strong>
+                                                    Installation
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;2-helloworld&#x2F;">
+                                                    <strong>1.2.</strong>
+                                                    Hello, World!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;3-hellocargo&#x2F;">
+                                                    <strong>1.3.</strong>
+                                                    Hello, Cargo!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter2&#x2F;">
+                                    <strong>2.</strong>
+                                    Programming a Guessing Game
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;">
+                                    <strong>3.</strong>
+                                    Common Programming Concepts
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;1-variables-and-mutability&#x2F;">
+                                                    <strong>3.1.</strong>
+                                                    Variables and Mutability
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;2-data-types&#x2F;">
+                                                    <strong>3.2.</strong>
+                                                    Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;3-functions&#x2F;">
+                                                    <strong>3.3.</strong>
+                                                    Functions
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;4-comments&#x2F;">
+                                                    <strong>3.4.</strong>
+                                                    Comments
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;5-control-flow&#x2F;">
+                                                    <strong>3.5.</strong>
+                                                    Control Flow
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;">
+                                    <strong>4.</strong>
+                                    Understanding Ownership
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;1-what-is-ownership&#x2F;">
+                                                    <strong>4.1.</strong>
+                                                    What is Ownership?
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;2-references-and-borrowing&#x2F;">
+                                                    <strong>4.2.</strong>
+                                                    References and Borrowing
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;3-the-slice-type&#x2F;">
+                                                    <strong>4.3.</strong>
+                                                    The Slice Type
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;">
+                                    <strong>5.</strong>
+                                    Using Structs to Structure Related Data
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;1-defining-and-instantiating-structs&#x2F;">
+                                                    <strong>5.1.</strong>
+                                                    Defining and Instantiating Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="active">
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;2-an-example-program-using-structs&#x2F;">
+                                                    <strong>5.2.</strong>
+                                                    An Example Program Using Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;3-method-syntax&#x2F;">
+                                                    <strong>5.3.</strong>
+                                                    Method Syntax
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;">
+                                    <strong>6.</strong>
+                                    Enums and Pattern Matching
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;1-defining-an-enum&#x2F;">
+                                                    <strong>6.1.</strong>
+                                                    Defining an Enum
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;2-the-match-control-flow-construct&#x2F;">
+                                                    <strong>6.2.</strong>
+                                                    The match Control Flow Construct
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;3-concise-control-flow-with-if-let&#x2F;">
+                                                    <strong>6.3.</strong>
+                                                    Concise Control Flow with if let.md
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;">
+                                    <strong>7.</strong>
+                                    Managing Growing Projects with Packages, Crates, and Modules
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;1-packages-and-crates&#x2F;">
+                                                    <strong>7.1.</strong>
+                                                    Packages and Crates
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;2-defining-modules-to-control-scope-and-privacy&#x2F;">
+                                                    <strong>7.2.</strong>
+                                                    Defining Modules to Control Scope and Privacy
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;3-paths-for-referring-to-an-item-in-the-module-tree&#x2F;">
+                                                    <strong>7.3.</strong>
+                                                    Paths for Referring to an Item in the Module Tree
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;4-bringing-paths-into-scope-with-the-use-keyword&#x2F;">
+                                                    <strong>7.4.</strong>
+                                                    Bringing Paths Into Scope with the use Keyword
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;5-separating-modules-into-different-files&#x2F;">
+                                                    <strong>7.5.</strong>
+                                                    Separating Modules into Different Files
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;">
+                                    <strong>8.</strong>
+                                    Common Collections
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;1-storing-lists-of-values-with-vectors&#x2F;">
+                                                    <strong>8.1.</strong>
+                                                    Storing Lists of Values with Vectors
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;">
+                                                    <strong>8.2.</strong>
+                                                    Storing UTF-8 Encoded Text with Strings
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;3-storing-keys-with-associated-values-in-hash-maps&#x2F;">
+                                                    <strong>8.3.</strong>
+                                                    Storing Keys with Associated Values in Hash Maps
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </aside>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="book-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="book-search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <h1>An Example Program Using Structs</h1>
+    <h2 id="yohya">요약</h2>
+<ul>
+<li>
+<p>구조체 출력 방법1.  println! 와 <code>Debug</code> trait 을 사용</p>
+<ul>
+<li>구조체 정의 앞에 #[derive(Debug)] 를 붙이고, </li>
+<li>출력할때  println! 의 {} 대신 다른 걸 사용한다</li>
+<li>{:?} : 한줄로 출력</li>
+<li>{:#?} : 여러줄로 출력</li>
+</ul>
+</li>
+<li>
+<p>구조체 출력 방법2.  dbg! 사용</p>
+<ul>
+<li>
+<p>구조체 정의 앞에 #[derive(Debug)] 를 붙이고, </p>
+</li>
+<li>
+<p>파일이름, 위치까지 같이 출력</p>
+</li>
+<li>
+<p>값을 반환한다</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="gujocereul-sahyonhan-yeje-peuroggeraem"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch05-02-example-structs.html#an-example-program-using-structs">구조체를 사용한 예제 프로그램</a></h2>
+<p>언제 구조체를 사용해야 하는지 이해하기 위해 직사각형의 면적을 계산하는 프로그램을 작성해 봅시다. 단일 변수를 사용하여 시작한 다음, 구조체를 대신 사용할 때까지 프로그램을 리팩터링합니다.</p>
+<p>픽셀로 지정된 직사각형의 너비와 높이를 가져오고 직사각형의 면적을 계산하는 <em>rectangles</em> 이라는 Cargo로 새로운 바이너리 프로젝트를 만들어 봅시다. <em>Listing 5-8은 우리 프로젝트의 src/main.rs</em> 에서 정확히 그것을 수행하는 한 가지 방법이 있는 짧은 프로그램을 보여줍니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> width1 </span><span style="color:#adb7c9;">= </span><span style="color:#db9d63;">30</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> height1 </span><span style="color:#adb7c9;">= </span><span style="color:#db9d63;">50</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(
+</span><span style="color:#abb2bf;">        `The area of the rectangle is {} square pixels.`,
+</span><span style="color:#abb2bf;">        </span><span style="color:#5ebfcc;">area</span><span style="color:#abb2bf;">(width1, height1)
+</span><span style="color:#abb2bf;">    );
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">area</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">width</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">u32</span><span style="color:#abb2bf;">, </span><span style="color:#eb6772;">height</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">u32</span><span style="color:#abb2bf;">) -&gt; </span><span style="color:#cd74e8;">u32 </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">    width </span><span style="color:#adb7c9;">*</span><span style="color:#abb2bf;"> height
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 5-8: 별도의 너비 및 높이 변수로 지정된 사각형의 면적 계산</p>
+<p>이제 <code>cargo run</code>을 사용하여 이 프로그램을 실행합니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> rectangles v0.1.0 (file:///projects/rectangles)
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">Finished</span><span style="color:#abb2bf;"> dev </span><span style="color:#cd74e8;">[</span><span style="color:#abb2bf;">unoptimized + debuginfo</span><span style="color:#cd74e8;">]</span><span style="color:#abb2bf;"> target(s) </span><span style="color:#eb6772;">in</span><span style="color:#abb2bf;"> 0.42s
+</span><span style="color:#abb2bf;">     </span><span style="color:#eb6772;">Running </span><span style="color:#abb2bf;">`</span><span style="color:#eb6772;">target/debug/rectangles</span><span style="color:#abb2bf;">`
+</span><span style="color:#eb6772;">The</span><span style="color:#abb2bf;"> area of the rectangle is 1500 square pixels.
+</span></code></pre>
+<p>이 코드는 각 치수와 함께 <code>area</code> 함수를 호출하여 사각형의 면적을 파악하는 데 성공했지만 이 코드를 명확하고 읽기 쉽게 만들기 위해 더 많은 작업을 수행할 수 있습니다.</p>
+<p>이 코드의 문제는 <code>area</code>의 시그니쳐에서 잘 보입니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">area</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">width</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">u32</span><span style="color:#abb2bf;">, </span><span style="color:#eb6772;">height</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">u32</span><span style="color:#abb2bf;">) -&gt; </span><span style="color:#cd74e8;">u32 </span><span style="color:#abb2bf;">{
+</span></code></pre>
+<p><code>area</code> 함수는 하나의 직사각형의 면적을 계산하기로 되어 있지만, 우리가 작성한 함수에는 두 개의 매개변수가 있고 매개변수가 관련되어 있다는 것이 우리 프로그램의 어느 곳에서도 명확하지 않습니다. 너비와 높이를 함께 그룹화하는 것이 더 읽기 쉽고 관리하기 쉽습니다. 우리는 이미 3장의 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type">튜플 타입</a> 섹션에서 튜플을 사용하여 이를 수행할 수 있는 한 가지 방법에 대해 논의했습니다.</p>
+<h3 id="tyupeulro-ripaegtoring"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch05-02-example-structs.html#refactoring-with-tuples">튜플로 리팩토링</a></h3>
+<p>목록 5-9는 튜플을 사용하는 프로그램의 다른 버전을 보여줍니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> rect1 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">(</span><span style="color:#db9d63;">30</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">50</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(
+</span><span style="color:#abb2bf;">        `The area of the rectangle is {} square pixels.`,
+</span><span style="color:#abb2bf;">        </span><span style="color:#5ebfcc;">area</span><span style="color:#abb2bf;">(rect1)
+</span><span style="color:#abb2bf;">    );
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">area</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">dimensions</span><span style="color:#abb2bf;">: (</span><span style="color:#eb6772;">u32</span><span style="color:#abb2bf;">, </span><span style="color:#eb6772;">u32</span><span style="color:#abb2bf;">)) -&gt; </span><span style="color:#cd74e8;">u32 </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">    dimensions.</span><span style="color:#db9d63;">0 </span><span style="color:#adb7c9;">*</span><span style="color:#abb2bf;"> dimensions.</span><span style="color:#db9d63;">1
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 5-9: 튜플로 사각형의 너비와 높이 지정하기</p>
+<p>어떤 면에서는 이 프로그램이 더 좋습니다. 튜플을 사용하면 약간의 구조를 추가할 수 있으며 이제 하나의 인수만 전달합니다. 그러나 어떤면에서 이 버전은 덜 명확합니다. 튜플은 요소의 이름을 지정하지 않으므로 튜플의 일부를 인덱싱해야 하므로 계산이 덜 명확해집니다.</p>
+<p>너비와 높이를 섞는 것은 면적 계산에 문제가 되지 않지만 화면에 사각형을 그리려면 중요합니다! <code>width</code>는 튜플 인덱스 <code>0</code>이고 <code>height</code>는 튜플 인덱스 <code>1</code>이라는 점을 기억해야 하기 때문에 불편합니다. 이것은 다른 사람이 우리 코드를 사용한다면 훨씬 더 어려울 것입니다. 코드에서 데이터의 의미를 전달하지 않았기 때문에 이제 오류가 생기기 더 쉽습니다.</p>
+<h3 id="gujocero-ripaegtoring-dde-manhheu-yimi-cuga"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch05-02-example-structs.html#refactoring-with-structs-adding-more-meaning">구조체로 리팩토링: 더 많은 의미 추가</a></h3>
+<p>구조체를 사용하여 데이터에 레이블을 지정하여 의미를 추가합니다. Listing 5-10에 표시된 것처럼 사용 중인 튜플을 전체 이름과 부분 이름이 있는 구조체로 변환할 수 있습니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">Rectangle {
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">width</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">u32</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">height</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">u32</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> rect1 </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> Rectangle {
+</span><span style="color:#abb2bf;">        width: </span><span style="color:#db9d63;">30</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        height: </span><span style="color:#db9d63;">50</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    };
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(
+</span><span style="color:#abb2bf;">        `The area of the rectangle is {} square pixels.`,
+</span><span style="color:#abb2bf;">        </span><span style="color:#5ebfcc;">area</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">rect1)
+</span><span style="color:#abb2bf;">    );
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">area</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">rectangle</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">Rectangle) -&gt; </span><span style="color:#cd74e8;">u32 </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">    rectangle.width </span><span style="color:#adb7c9;">*</span><span style="color:#abb2bf;"> rectangle.height
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>Listing 5-10: <code>Rectangle</code> 구조체 정의하기</p>
+<p>여기서 우리는 구조체를 정의하고 이름을 <code>Rectangle</code>로 지정했습니다. 중괄호 안에 <code>width</code> 및 <code>height</code> 필드를 정의했으며 둘 다 <code>u32</code> 유형을 가집니다. 그런 다음 <code>main</code>에서 너비가 <code>30</code>이고 높이가 <code>50</code>인 <code>Rectangle</code>의 특정 인스턴스를 만들었습니다.</p>
+<p>우리의 <code>area</code> 함수는 이제 <code>rectangle</code>이라는 이름의 매개변수 하나를 사용하여 정의되며, 그 유형은 <code>Rectangle</code> 구조체 인스턴스의 불변 차용(immutable borrow)입니다. 4장에서 언급했듯이 소유권을 갖기보다 구조체를 빌리고 싶습니다. 이런 식으로 <code>main</code>은 소유권을 유지하고 <code>rect1</code>을 계속 사용할 수 있습니다. 이것이 우리가 함수 서명에서 <code>&amp;</code>를 사용하고 함수를 호출하는 이유입니다.</p>
+<p><code>area</code> 함수는 <code>Rectangle</code> 인스턴스의 <code>width</code> 및 <code>height</code> 필드에 액세스합니다(차용한 구조체 인스턴스의 필드에 액세스해도 필드 값이 이동하지 않으므로 구조체 차용을 자주 볼 수 있습니다). <code>area</code>에 대한 함수 시그니쳐는 이제 정확히 <code>width</code> 및 <code>height</code> 필드를 사용하여 <code>Rectangle</code>의 면적을 계산합니다. 이것은 너비와 높이가 서로 관련되어 있음을 전달하고 <code>0</code>과 <code>1</code>의 튜플 인덱스 값을 사용하는 대신 값에 설명적인 이름을 부여합니다. 이것은 명확성이라는 측면에서 승리입니다.</p>
+<h3 id="passaen-teugsseoneuro-yuhyonhan-gineung-cuga"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch05-02-example-structs.html#adding-useful-functionality-with-derived-traits">파생 특성으로 유용한 기능 추가</a></h3>
+<p>프로그램을 디버깅하고 모든 필드의 값을 보는 동안 <code>Rectangle</code>의 인스턴스를 인쇄할 수 있다면 유용할 것입니다. Listing 5-11은 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/std/macro.println.html"><code>println!</code> 매크로는</a> 이전 장에서 사용한 것과 같습니다. 그러나 이것은 작동하지 않습니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">Rectangle {
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">width</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">u32</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">height</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">u32</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> rect1 </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> Rectangle {
+</span><span style="color:#abb2bf;">        width: </span><span style="color:#db9d63;">30</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        height: </span><span style="color:#db9d63;">50</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    };
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`rect1 is {}`, rect1);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>Listing 5-11: <code>Rectangle</code> 인스턴스 인쇄 시도</p>
+<p>이 코드를 컴파일하면 다음 핵심 메시지와 함께 오류가 발생합니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">error[E0277]: `Rectangle` doesn&#39;t implement `std::fmt::Display`
+</span></code></pre>
+<p><code>println!</code> 매크로는 많은 종류의 서식을 지정할 수 있으며, 기본적으로 중괄호는 <code>println!</code> 에게 <code>Display</code>로 알려진 형식 사용한다고 이야기합니다. <code>Display</code> 형식은 최종 사용자가 직접 사용하기 위한 결과물입니다. 지금까지 본 기본 유형은 기본적으로 <code>Display</code>를 구현합니다. 왜냐하면 사용자에게 <code>1</code> 또는 다른 기본 유형을 표시하려는 방법은 한 가지뿐이기 때문입니다. 그러나 구조체를 사용하면 더 많은 표시 가능성이 있기 때문에 <code>println!</code>의 출력 형식이 명확하지 않습니다. 쉼표를 원하십니까? 중괄호를 인쇄하시겠습니까? 모든 필드를 표시해야 합니까? 이러한 모호성으로 인해 Rust는 우리가 원하는 것을 추측하려고 시도하지 않으며, 구조체에는 <code>println!</code> 및 <code>{}</code> 자리 표시자를 함께 사용할 <code>Display</code> 구현이 제공되지 않습니다. </p>
+<p>오류를 계속 읽으면 다음과 같은 유용한 메모를 찾을 수 있습니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">   = help: the trait `std::fmt::Display` is not implemented for `Rectangle`
+</span><span style="color:#abb2bf;">   = note: in format strings you may be able to use `{:?}` (or {:#?} for pretty-print) instead
+</span></code></pre>
+<p>고쳐봅시다! <code>println!</code> 매크로 호출은 이제 <code>println!(rect1 is {:?}, rect1);</code>처럼 보입니다. 중괄호 안에 지정자 <code>:?</code>를 넣으면  <code>println!</code>에게 <code>Debug</code>라는 출력 형식을 사용하게 합니다.  <code>Debug</code> 특성을 사용하면 개발자에게 유용한 방식으로 구조체를 인쇄할 수 있으므로 코드를 디버깅하는 동안 해당 값을 볼 수 있습니다.</p>
+<p>이 변경으로 코드를 컴파일합니다. 드랏! 여전히 오류가 발생합니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">error[E0277]: `Rectangle` doesn&#39;t implement `Debug`
+</span></code></pre>
+<p>그러나 다시 컴파일러는 다음과 같은 유용한 정보를 제공합니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">   = help: the trait `Debug` is not implemented for `Rectangle`
+</span><span style="color:#abb2bf;">   = note: add `#[derive(Debug)]` to `Rectangle` or manually `impl Debug for Rectangle`
+</span></code></pre>
+<p>Rust에는 디버깅 정보를 출력하는 기능이 <em>포함되어</em> 있지만 구조체에서 해당 기능을 사용할 수 있도록 명시적으로 선택해야 합니다. 이를 위해 Listing 5-12에 표시된 것처럼 구조체 정의 바로 앞에 외부 속성 <code>#[derive(Debug)]</code>를 추가합니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">#[</span><span style="color:#eb6772;">derive</span><span style="color:#abb2bf;">(Debug)]
+</span><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">Rectangle {
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">width</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">u32</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">height</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">u32</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> rect1 </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> Rectangle {
+</span><span style="color:#abb2bf;">        width: </span><span style="color:#db9d63;">30</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        height: </span><span style="color:#db9d63;">50</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    };
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`rect1 is {:</span><span style="color:#adb7c9;">?</span><span style="color:#abb2bf;">}`, rect1);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>Listing 5-12: <code>Debug</code> 트레이트를 유도하기 위한 속성 추가 및 디버그 포매팅을 사용하여 <code>Rectangle</code> 인스턴스 인쇄</p>
+<p>이제 프로그램을 실행하면 오류가 발생하지 않으며 다음과 같은 결과가 표시됩니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> rectangles v0.1.0 (file:///projects/rectangles)
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">Finished</span><span style="color:#abb2bf;"> dev </span><span style="color:#cd74e8;">[</span><span style="color:#abb2bf;">unoptimized + debuginfo</span><span style="color:#cd74e8;">]</span><span style="color:#abb2bf;"> target(s) </span><span style="color:#eb6772;">in</span><span style="color:#abb2bf;"> 0.48s
+</span><span style="color:#abb2bf;">     </span><span style="color:#eb6772;">Running </span><span style="color:#abb2bf;">`</span><span style="color:#eb6772;">target/debug/rectangles</span><span style="color:#abb2bf;">`
+</span><span style="color:#eb6772;">rect1</span><span style="color:#abb2bf;"> is Rectangle { width: 30, height: 50 }
+</span></code></pre>
+<p>멋진! 가장 예쁜 출력은 아니지만 이 인스턴스에 대한 모든 필드의 값을 표시하므로 디버깅 중에 확실히 도움이 됩니다. 더 큰 구조체가 있는 경우 좀 더 읽기 쉬운 출력을 갖는 것이 유용합니다. 이 경우 <code>println!</code>에서 <code>{:?}</code> 대신 <code>{:#?}</code>를 사용할 수 있습니다. 예시에서 <code>{:#?}</code> 스타일을 사용하면 다음이 출력됩니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> rectangles v0.1.0 (file:///projects/rectangles)
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">Finished</span><span style="color:#abb2bf;"> dev </span><span style="color:#cd74e8;">[</span><span style="color:#abb2bf;">unoptimized + debuginfo</span><span style="color:#cd74e8;">]</span><span style="color:#abb2bf;"> target(s) </span><span style="color:#eb6772;">in</span><span style="color:#abb2bf;"> 0.48s
+</span><span style="color:#abb2bf;">     </span><span style="color:#eb6772;">Running </span><span style="color:#abb2bf;">`</span><span style="color:#eb6772;">target/debug/rectangles</span><span style="color:#abb2bf;">`
+</span><span style="color:#eb6772;">rect1</span><span style="color:#abb2bf;"> is Rectangle {
+</span><span style="color:#abb2bf;">    width: 30,
+</span><span style="color:#abb2bf;">    height: 50,
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p><code>Debug</code> 형식을 사용하여 값을 출력하는 또 다른 방법은 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/std/macro.dbg.html">dbg! 매크로</a>를 사용하는 것입니다. 이것은 식의 소유권을 갖는데, 참조를 취하는 <code>println!</code>와는 반대입니다. <code>dbg!</code> 매크로 호출은 파일이름, 코드의 위치(줄 번호), 해당 식의 결과 값을 출력하고, 값의 소유권을 반환합니다.</p>
+<blockquote>
+<p>참고: <code>dbg!</code> 매크로는 표준 오류 콘솔 스트림(<code>stderr</code>)에 출력합니다. 표준 출력 콘솔 스트림(<code>stdout</code>)에 인쇄하는 <code>println!</code>과 차이가 있습니다. <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch12-06-writing-to-stderr-instead-of-stdout.html">12장의 표준 출력 대신 표준 오류에 오류 메시지 쓰기</a>  섹션에서 <code>stderr</code> 및 <code>stdout</code>에 대해 자세히 설명합니다.</p>
+</blockquote>
+<p>다음은 <code>rect1</code>의 전체 구조체 값뿐만 아니라 <code>width</code> 필드에 할당되는 값에 관심이 있는 예입니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">#[</span><span style="color:#eb6772;">derive</span><span style="color:#abb2bf;">(Debug)]
+</span><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">Rectangle {
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">width</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">u32</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">height</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">u32</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> scale </span><span style="color:#adb7c9;">= </span><span style="color:#db9d63;">2</span><span style="color:#abb2bf;">;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> rect1 </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> Rectangle {
+</span><span style="color:#abb2bf;">        width: dbg!(</span><span style="color:#db9d63;">30 </span><span style="color:#adb7c9;">*</span><span style="color:#abb2bf;"> scale), </span><span style="font-style:italic;color:#5f697a;">// 값이 (30 * scale) 과 같다
+</span><span style="color:#abb2bf;">        height: </span><span style="color:#db9d63;">50</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    };
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    dbg!(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">rect1);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p><code>30 * scale</code>이라는 식에 <code>dbg!</code>를 넣을 수 있습니다. 그리고 <code>dbg!</code> 가 표현식 값의 소유권을 반환하기 때문에  <code>width</code> 필드는 <code>dbg!</code>를 호출하지 않은것과 같은 값을 얻습니다.    우리는 <code>dbg!</code> 가 <code>rect1</code>의 소유권을 가지는 것을 원하지 않습니다. 그래서 다음 호출에서 <code>rect1</code>에 대한 참조를 사용합니다. 이 예제의 출력은 다음과 같습니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> rectangles v0.1.0 (file:///projects/rectangles)
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">Finished</span><span style="color:#abb2bf;"> dev </span><span style="color:#cd74e8;">[</span><span style="color:#abb2bf;">unoptimized + debuginfo</span><span style="color:#cd74e8;">]</span><span style="color:#abb2bf;"> target(s) </span><span style="color:#eb6772;">in</span><span style="color:#abb2bf;"> 0.61s
+</span><span style="color:#abb2bf;">     </span><span style="color:#eb6772;">Running </span><span style="color:#abb2bf;">`</span><span style="color:#eb6772;">target/debug/rectangles</span><span style="color:#abb2bf;">`
+</span><span style="color:#eb6772;">[src/main.rs:10]</span><span style="color:#abb2bf;"> 30 </span><span style="color:#adb7c9;">*</span><span style="color:#abb2bf;"> scale = 60
+</span><span style="color:#eb6772;">[src/main.rs:14] </span><span style="color:#adb7c9;">&amp;</span><span style="color:#eb6772;">rect1</span><span style="color:#abb2bf;"> = Rectangle {
+</span><span style="color:#abb2bf;">    width: 60,
+</span><span style="color:#abb2bf;">    height: 50,
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>첫 번째 출력 비트는 <em>src/main.rs</em> 라인 10에서 <code>30 * scale</code> 표현식을 디버깅하고 있으며 결과 값은 <code>60</code>입니다(정수에 대해 구현된 <code>디버그</code> 형식은 값만 출력). <em>src/main.rs</em> 의 14번째 줄에 있는 <code>dbg!</code> 호출은 <code>Rectangle</code> 구조체인 <code>&amp;rect1</code>의 값을 출력합니다. 이 출력은 <code>Rectangle</code> 타입의 예쁜 <code>디버그</code> 포매팅을 사용합니다. <code>dbg!</code> 매크로는 코드가 수행하는 작업을 파악하려고 할 때 정말 유용할 수 있습니다!</p>
+<p>Rust는 <code>Debug</code> 특성 외에도 사용자 지정 유형에 유용한 동작을 추가할 수 있는 <code>derive</code> 특성과 함께 사용할 여러 특성을 제공했습니다. 이러한 특성과 행동은 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/appendix-03-derivable-traits.html">부록 C</a> 에 나열되어 있습니다. 10장에서 사용자 지정 동작으로 이러한 특성을 구현하는 방법과 고유한 특성을 만드는 방법을 다룰 것입니다. <code>derive</code> 이외의 많은 특성도 있습니다. 자세한 정보는 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/reference/attributes.html">Rust 참조 문서의 <code>속성</code> 섹션을</a> 참조하세요 .</p>
+<p>우리의 <code>area</code> 함수는 매우 구체적입니다. 직사각형의 면적만 계산합니다. 다른 유형에서는 작동하지 않으므로 이 동작을 <code>Rectangle</code> 구조체에 더 밀접하게 연결하는 것이 도움이 될 것입니다. <code>area</code> 함수를, <code>Rectangle</code> 유형에 정의된 <code>area</code> <em>메서드</em> 로 전환하여 이 코드를 계속 리팩터링하는 방법을 살펴보겠습니다.</p>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        <a class="previous" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;1-defining-and-instantiating-structs&#x2F;"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        <a class="next" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;3-method-syntax&#x2F;">></a>
+    
+
+            </div>
+        </div>
+
+        
+            
+                <script type="text/javascript" src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+                <script type="text/javascript" src="https://hwjskt.github.io/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://hwjskt.github.io/book.js"></script>
+        
+        </div>
+    </section>
+
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+  
+  
+
+  
+  
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js" integrity="sha384-Pulw7+h73841BQIK0LzJCydKRPChJUF9w8h8W0o3h+cLtoyNPJS847bQauLWOTwg" crossorigin="anonymous"></script>
+  
+  <script src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+  <script src="https://hwjskt.github.io/search_index.en.js"></script><script src="https://hwjskt.github.io/js/site.js"></script>
+
+  
+  
+
+  
+  
+</body>
+
+</html>

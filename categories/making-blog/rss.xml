@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Dr.JUNG - making Blog</title>
+      <link>https://hwjskt.github.io/</link>
+      <description>A simple blog theme focused on writing powered by Bulma and Zola</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://hwjskt.github.io/categories/making-blog/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 25 Apr 2023 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>blog Deployment using Github Pages</title>
+          <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://hwjskt.github.io/posts/post-2/</link>
+          <guid>https://hwjskt.github.io/posts/post-2/</guid>
+          <description>&lt;p&gt;zola 를 이용해 만든 블로그를 localhost 에서 github-Pages 로 이동하는 과정입니다.&lt;br &#x2F;&gt;
+zola 의 &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;&quot;&gt;Documention&lt;&#x2F;a&gt;을 따라하면서 놓친 부분을 추가해서 메모해둡니다.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>테마 2가지 사용하기</title>
+          <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://hwjskt.github.io/posts/post-1/</link>
+          <guid>https://hwjskt.github.io/posts/post-1/</guid>
+          <description>&lt;p&gt;zola 의 Deep-Thought theme 을 이용해서 만들던 중, Book theme 을 함께 쓰려고 조금씩 수정을 했습니다.&lt;br &#x2F;&gt;
+그 과정에서 겪은 시행착오를 메모합니다.&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>

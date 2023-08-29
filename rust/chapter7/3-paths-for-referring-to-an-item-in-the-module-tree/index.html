@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='&#x2F;icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='&#x2F;icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" integrity="sha384-oGm59HWAkwO32h2w8u0B98wKBZJwd6MbWtAJwQKCTffZjOXHXrnyv9Syjovgc+UV" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://hwjskt.github.io/deep-thought.css" rel="stylesheet" />
+  
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/book.css">
+    <link rel="stylesheet" href="https://hwjskt.github.io/deep-thought.css">
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/newsprint.css">
+
+
+  <title>
+    
+    
+    Dr.JUNG | Rust
+
+  </title>
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176984489-2"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-176984489-2");
+  </script>
+  
+  
+
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;">Dr.JUNG</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;about">
+            AboutMe
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;docs">
+            Docs
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;rust">
+            Rust
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  
+    
+    <section>
+        <div class="book-menu is-2">
+            
+            
+            <aside role="navigation">
+                <ul>
+                    
+                        
+                        
+                        <li >
+                            <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;">Introduction</a>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;">
+                                    <strong>1.</strong>
+                                    Getting Started
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;1-installation&#x2F;">
+                                                    <strong>1.1.</strong>
+                                                    Installation
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;2-helloworld&#x2F;">
+                                                    <strong>1.2.</strong>
+                                                    Hello, World!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;3-hellocargo&#x2F;">
+                                                    <strong>1.3.</strong>
+                                                    Hello, Cargo!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter2&#x2F;">
+                                    <strong>2.</strong>
+                                    Programming a Guessing Game
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;">
+                                    <strong>3.</strong>
+                                    Common Programming Concepts
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;1-variables-and-mutability&#x2F;">
+                                                    <strong>3.1.</strong>
+                                                    Variables and Mutability
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;2-data-types&#x2F;">
+                                                    <strong>3.2.</strong>
+                                                    Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;3-functions&#x2F;">
+                                                    <strong>3.3.</strong>
+                                                    Functions
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;4-comments&#x2F;">
+                                                    <strong>3.4.</strong>
+                                                    Comments
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;5-control-flow&#x2F;">
+                                                    <strong>3.5.</strong>
+                                                    Control Flow
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;">
+                                    <strong>4.</strong>
+                                    Understanding Ownership
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;1-what-is-ownership&#x2F;">
+                                                    <strong>4.1.</strong>
+                                                    What is Ownership?
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;2-references-and-borrowing&#x2F;">
+                                                    <strong>4.2.</strong>
+                                                    References and Borrowing
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;3-the-slice-type&#x2F;">
+                                                    <strong>4.3.</strong>
+                                                    The Slice Type
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;">
+                                    <strong>5.</strong>
+                                    Using Structs to Structure Related Data
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;1-defining-and-instantiating-structs&#x2F;">
+                                                    <strong>5.1.</strong>
+                                                    Defining and Instantiating Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;2-an-example-program-using-structs&#x2F;">
+                                                    <strong>5.2.</strong>
+                                                    An Example Program Using Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;3-method-syntax&#x2F;">
+                                                    <strong>5.3.</strong>
+                                                    Method Syntax
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;">
+                                    <strong>6.</strong>
+                                    Enums and Pattern Matching
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;1-defining-an-enum&#x2F;">
+                                                    <strong>6.1.</strong>
+                                                    Defining an Enum
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;2-the-match-control-flow-construct&#x2F;">
+                                                    <strong>6.2.</strong>
+                                                    The match Control Flow Construct
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;3-concise-control-flow-with-if-let&#x2F;">
+                                                    <strong>6.3.</strong>
+                                                    Concise Control Flow with if let.md
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;">
+                                    <strong>7.</strong>
+                                    Managing Growing Projects with Packages, Crates, and Modules
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;1-packages-and-crates&#x2F;">
+                                                    <strong>7.1.</strong>
+                                                    Packages and Crates
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;2-defining-modules-to-control-scope-and-privacy&#x2F;">
+                                                    <strong>7.2.</strong>
+                                                    Defining Modules to Control Scope and Privacy
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="active">
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;3-paths-for-referring-to-an-item-in-the-module-tree&#x2F;">
+                                                    <strong>7.3.</strong>
+                                                    Paths for Referring to an Item in the Module Tree
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;4-bringing-paths-into-scope-with-the-use-keyword&#x2F;">
+                                                    <strong>7.4.</strong>
+                                                    Bringing Paths Into Scope with the use Keyword
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;5-separating-modules-into-different-files&#x2F;">
+                                                    <strong>7.5.</strong>
+                                                    Separating Modules into Different Files
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;">
+                                    <strong>8.</strong>
+                                    Common Collections
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;1-storing-lists-of-values-with-vectors&#x2F;">
+                                                    <strong>8.1.</strong>
+                                                    Storing Lists of Values with Vectors
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;">
+                                                    <strong>8.2.</strong>
+                                                    Storing UTF-8 Encoded Text with Strings
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;3-storing-keys-with-associated-values-in-hash-maps&#x2F;">
+                                                    <strong>8.3.</strong>
+                                                    Storing Keys with Associated Values in Hash Maps
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </aside>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="book-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="book-search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <h1>Paths for Referring to an Item in the Module Tree</h1>
+    <h2 id="yohya">요약</h2>
+<ul>
+<li>
+<p>경로(Paths) : 모듈 트리에서 아이템의 위치</p>
+</li>
+<li>
+<p>절대경로 : 외부크레이트 이름 , 또는 crate (같은 크레이트에 있는 경우) 라는 글자로 시작</p>
+</li>
+<li>
+<p>상대경로 : 동일한 수준의 모듈 트리에 정의된 모듈 이름으로 시작</p>
+<ul>
+<li><code>super</code> : 상위 모듈에서 시작하는 상대경로 지정</li>
+</ul>
+</li>
+<li>
+<p>부모 모듈의 아이템은 자식 모듈에 있는 아이템을 사용할 수 없다. 자식모듈에 pub 을 붙여야 접근가능</p>
+</li>
+<li>
+<p>자식모듈에 있는 아이템은 부모모듈의 아이템을 사용가능</p>
+</li>
+<li>
+<p>구조체(Structs) 정의 앞에 <code>pub</code> 를 붙이면</p>
+<ul>
+<li>구조체 자체는 공개, 내부의 필드는 비공개</li>
+</ul>
+</li>
+<li>
+<p>열거형(Enums) 정의 앞에 <code>pub</code> 를 붙이면</p>
+<ul>
+<li>열거형 자체와 내부 변형(variant) 모두 공개된다</li>
+</ul>
+</li>
+</ul>
+<h2 id="moddyu-teuriesse-thanmogheu-camjohagi-wihan-ggyeonro-paths"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html#paths-for-referring-to-an-item-in-the-module-tree">모듈 트리에서 항목을 참조하기 위한 경로(Paths)</a></h2>
+<p>Rust가 모듈 트리에서 항목을 찾을 위치를 보여주기 위해 파일 시스템을 탐색할 때 경로를 사용하는 것과 같은 방식으로 경로를 사용합니다. 함수를 호출하려면 경로를 알아야 합니다.</p>
+<p>경로는 두 가지 형식을 취할 수 있습니다.</p>
+<ul>
+<li><em>절대 경로는</em> 크레이트 루트에서 시작하는 전체 경로입니다. 외부 크레이트의 코드의 경우 절대 경로는 크레이트 이름으로 시작하고 현재 크레이트의 코드의 경우  <code>크레이트</code>라는 글자(리터럴)로 시작합니다.</li>
+<li><em>상대 경로는</em> 현재 모듈에서 시작하여 <code>self</code>, <code>super</code> 또는 현재 모듈의 식별자를 사용합니다.</li>
+</ul>
+<p>절대 경로와 상대 경로 모두 이중 콜론(<code>::</code>)으로 구분된 하나 이상의 식별자 뒤에 옵니다.</p>
+<p>목록 7-1로 돌아가서 <code>add_to_waitlist</code> 함수를 호출하고 싶다고 합시다. 이것은 <code>add_to_waitlist</code> 함수의 경로가 무엇인지 묻는 것과 같습니다. 목록 7-3에는 일부 모듈과 함수가 제거된 목록 7-1이 포함되어 있습니다.</p>
+<p>크레이트 루트에 정의된 새 함수 <code>eat_at_restaurant</code>에서 <code>add_to_waitlist</code> 함수를 호출하는 두 가지 방법을 보여줍니다. 이러한 경로는 정확하지만 이 예제를 있는 그대로 컴파일하지 못하게 하는 또 다른 문제가 남아 있습니다. 잠시 후에 그 이유를 설명하겠습니다.</p>
+<p><code>eat_at_restaurant</code> 함수는 라이브러리 크레이트의 공개 API의 일부이므로 <code>pub</code> 키워드로 표시합니다. <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html#exposing-paths-with-the-pub-keyword"><code>pub</code> 키워드를 사용하여 경로 노출</a> 섹션 에서 pub에 대해 자세히 설명합니다.</p>
+<p>파일 이름: src/lib.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">mod </span><span style="color:#abb2bf;">front_of_house {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">mod </span><span style="color:#abb2bf;">hosting {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">add_to_waitlist</span><span style="color:#abb2bf;">() {}
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">pub fn </span><span style="color:#5cb3fa;">eat_at_restaurant</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// Absolute path
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">crate</span><span style="color:#abb2bf;">::front_of_house::hosting::add_to_waitlist();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// Relative path
+</span><span style="color:#abb2bf;">    front_of_house::hosting::add_to_waitlist();
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 7-3: 절대 경로와 상대 경로를 사용하여 <code>add_to_waitlist</code> 함수 호출</p>
+<p><code>eat_at_restaurant</code>에서 <code>add_to_waitlist</code> 함수를 처음 호출할 때 절대 경로를 사용합니다. <code>add_to_waitlist</code> 함수는 <code>eat_at_restaurant</code>와 같은 크레이트에 정의되어 있습니다. 즉, <code>crate</code> 키워드를 사용하여 절대 경로를 시작할 수 있습니다. 그런 다음 <code>add_to_waitlist</code>로 이동할 때까지 각 연속 모듈을 포함합니다. 동일한 구조를 가진 파일 시스템을 상상할 수 있습니다. <code>add_to_waitlist</code> 프로그램을 실행하기 위해 <code>/front_of_house/hosting/add_to_waitlist</code> 경로를 지정합니다. 크레이트 루트에서 시작하기 위해 <code>크레이트</code> 이름을 사용하는 것은 쉘의 파일 시스템 루트에서 시작하기 위해 <code>/</code>를 사용하는 것과 같습니다.</p>
+<p>두 번째로 <code>eat_at_restaurant</code>에서 <code>add_to_waitlist</code>를 호출할 때는 상대 경로를 사용합니다. 경로는 <code>eat_at_restaurant</code>와 동일한 수준의 모듈 트리에 정의된 모듈 이름인 <code>front_of_house</code>로 시작합니다. 여기서 동등한 파일 시스템은 <code>front_of_house/hosting/add_to_waitlist</code> 경로를 사용합니다. 모듈 이름으로 시작하는 것은 경로가 상대적임을 의미합니다.</p>
+<p>상대 경로를 사용할지 절대 경로를 사용할지 선택하는 것은 프로젝트를 기반으로 결정하며 항목 정의 코드를 항목을 사용하는 코드와 별도로 또는 함께 이동할 가능성이 더 높은지에 따라 달라집니다. 예를 들어 <code>front_of_house</code> 모듈과 <code>eat_at_restaurant</code> 함수를 <code>customer_experience</code>라는 모듈로 이동하면 절대 경로를 <code>add_to_waitlist</code>로 업데이트해야 하지만 상대 경로는 여전히 유효합니다. 그러나 <code>eat_at_restaurant</code> 함수를 별도로 <code>dining</code>이라는 모듈로 이동하면 <code>add_to_waitlist</code> 호출에 대한 절대 경로는 동일하게 유지되지만 상대 경로는 업데이트해야 합니다.</p>
+<p>목록 7-3을 컴파일하고 왜 아직 컴파일되지 않는지 알아봅시다! 우리가 얻은 오류는 Listing 7-4에 나와 있습니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo build
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> restaurant v0.1.0 (file:///projects/restaurant)
+</span><span style="color:#eb6772;">error[E0603]:</span><span style="color:#abb2bf;"> module `</span><span style="color:#eb6772;">hosting</span><span style="color:#abb2bf;">` is private
+</span><span style="color:#abb2bf;"> </span><span style="color:#eb6772;">--</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> src/lib.rs:9:28
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">9 </span><span style="color:#adb7c9;">|     </span><span style="color:#5cb3fa;">crate::front_of_house::hosting::add_to_waitlist</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">  |                            ^^^^^^^ private module
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">note: the module `hosting` is defined here
+</span><span style="color:#abb2bf;"> --&gt; src/lib.rs:2:5
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">2 |     mod hosting {
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|     </span><span style="color:#eb6772;">^^^^^^^^^^^
+</span><span style="color:#abb2bf;">
+</span><span style="color:#eb6772;">error[E0603]:</span><span style="color:#abb2bf;"> module `</span><span style="color:#eb6772;">hosting</span><span style="color:#abb2bf;">` is private
+</span><span style="color:#abb2bf;">  </span><span style="color:#eb6772;">--</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> src/lib.rs:12:21
+</span><span style="color:#abb2bf;">   </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">12 </span><span style="color:#adb7c9;">|     </span><span style="color:#5cb3fa;">front_of_house::hosting::add_to_waitlist</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">   |                     ^^^^^^^ private module
+</span><span style="color:#abb2bf;">   |
+</span><span style="color:#abb2bf;">note: the module `hosting` is defined here
+</span><span style="color:#abb2bf;">  --&gt; src/lib.rs:2:5
+</span><span style="color:#abb2bf;">   |
+</span><span style="color:#abb2bf;">2  |     mod hosting {
+</span><span style="color:#abb2bf;">   </span><span style="color:#adb7c9;">|     </span><span style="color:#eb6772;">^^^^^^^^^^^
+</span><span style="color:#abb2bf;">
+</span><span style="color:#eb6772;">For</span><span style="color:#abb2bf;"> more information about this error, try `</span><span style="color:#eb6772;">rustc --explain</span><span style="color:#abb2bf;"> E0603`.
+</span><span style="color:#eb6772;">error:</span><span style="color:#abb2bf;"> could not compile `</span><span style="color:#eb6772;">restaurant</span><span style="color:#abb2bf;">` due to 2 previous errors
+</span></code></pre>
+<p>Listing 7-4: Listing 7-3의 코드를 빌드할 때 발생하는 컴파일러 오류</p>
+<p>오류 메시지는 모듈 <code>hosting</code>이 비공개라고 말합니다. 다시 말해, 우리는 <code>hosting</code> 모듈과 <code>add_to_waitlist</code> 함수에 대한 올바른 경로를 가지고 있지만 Rust는 개인 섹션에 대한 액세스 권한이 없기 때문에 우리가 사용하도록 허용하지 않습니다. Rust에서 모든 항목(함수, 메서드, 구조체, 열거형, 모듈 및 상수)은 기본적으로 부모 모듈에 대해 비공개입니다. 함수나 구조체와 같은 항목을 비공개로 만들고 싶다면 모듈에 넣습니다.</p>
+<p>상위 모듈의 항목은 하위 모듈 내의 개인 항목을 사용할 수 없지만 하위 모듈의 항목은 상위 모듈의 항목을 사용할 수 있습니다. 하위 모듈은 구현 세부 정보를 래핑하고 숨기지만 하위 모듈은 정의된 컨텍스트를 볼 수 있기 때문입니다. 우리의 은유를 계속하기 위해 프라이버시 규칙을 레스토랑의 백오피스와 같다고 생각하십시오. 그곳에서 일어나는 일은 레스토랑 고객에게만 공개되지만 사무실 관리자는 자신이 운영하는 레스토랑에서 모든 것을 보고 할 수 있습니다.</p>
+<p>Rust는 내부 구현 세부 사항을 숨기는 것이 기본값이 되도록 모듈 시스템 기능을 이런 방식으로 선택했습니다. 이렇게 하면 외부 코드를 손상시키지 않고 변경할 수 있는 내부 코드 부분을 알 수 있습니다. 그러나 Rust는 항목을 공개하기 위해 <code>pub</code> 키워드를 사용하여 자식 모듈 코드의 내부 부분을 외부 조상 모듈에 노출하는 옵션을 제공합니다.</p>
+<h3 id="pub-kihweddero-ggyeonro-nocul"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html#exposing-paths-with-the-pub-keyword"><code>pub</code> 키워드로 경로 노출</a></h3>
+<p>Listing 7-4에서 <code>hosting</code> 모듈이 비공개라는 오류로 돌아가 봅시다. 부모 모듈의 <code>eat_at_restaurant</code> 함수가 자식 모듈의 <code>add_to_waitlist</code> 함수에 액세스하기를 원하므로 목록 7-5에 표시된 것처럼 <code>pub</code> 키워드로 <code>hosting</code> 모듈을 표시합니다.</p>
+<p>파일 이름: src/lib.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">mod </span><span style="color:#abb2bf;">front_of_house {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">pub mod </span><span style="color:#abb2bf;">hosting {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">add_to_waitlist</span><span style="color:#abb2bf;">() {}
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">pub fn </span><span style="color:#5cb3fa;">eat_at_restaurant</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// Absolute path
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">crate</span><span style="color:#abb2bf;">::front_of_house::hosting::add_to_waitlist();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// Relative path
+</span><span style="color:#abb2bf;">    front_of_house::hosting::add_to_waitlist();
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>Listing 7-5: <code>eat_at_restaurant</code>에서 사용하기 위해 <code>hosting</code> 모듈을 <code>pub</code>으로 선언</p>
+<p>안타깝게도 Listing 7-5의 코드는 Listing 7-6과 같이 여전히 오류를 발생시킵니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo build
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> restaurant v0.1.0 (file:///projects/restaurant)
+</span><span style="color:#eb6772;">error[E0603]:</span><span style="color:#abb2bf;"> function `</span><span style="color:#eb6772;">add_to_waitlist</span><span style="color:#abb2bf;">` is private
+</span><span style="color:#abb2bf;"> </span><span style="color:#eb6772;">--</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> src/lib.rs:9:37
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">9 </span><span style="color:#adb7c9;">|     </span><span style="color:#5cb3fa;">crate::front_of_house::hosting::add_to_waitlist</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">  |                                     ^^^^^^^^^^^^^^^ private function
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">note: the function `add_to_waitlist` is defined here
+</span><span style="color:#abb2bf;"> --&gt; src/lib.rs:3:9
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">3 |         fn add_to_waitlist() {}
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|         </span><span style="color:#eb6772;">^^^^^^^^^^^^^^^^^^^^
+</span><span style="color:#abb2bf;">
+</span><span style="color:#eb6772;">error[E0603]:</span><span style="color:#abb2bf;"> function `</span><span style="color:#eb6772;">add_to_waitlist</span><span style="color:#abb2bf;">` is private
+</span><span style="color:#abb2bf;">  </span><span style="color:#eb6772;">--</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> src/lib.rs:12:30
+</span><span style="color:#abb2bf;">   </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">12 </span><span style="color:#adb7c9;">|     </span><span style="color:#5cb3fa;">front_of_house::hosting::add_to_waitlist</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">   |                              ^^^^^^^^^^^^^^^ private function
+</span><span style="color:#abb2bf;">   |
+</span><span style="color:#abb2bf;">note: the function `add_to_waitlist` is defined here
+</span><span style="color:#abb2bf;">  --&gt; src/lib.rs:3:9
+</span><span style="color:#abb2bf;">   |
+</span><span style="color:#abb2bf;">3  |         fn add_to_waitlist() {}
+</span><span style="color:#abb2bf;">   </span><span style="color:#adb7c9;">|         </span><span style="color:#eb6772;">^^^^^^^^^^^^^^^^^^^^
+</span><span style="color:#abb2bf;">
+</span><span style="color:#eb6772;">For</span><span style="color:#abb2bf;"> more information about this error, try `</span><span style="color:#eb6772;">rustc --explain</span><span style="color:#abb2bf;"> E0603`.
+</span><span style="color:#eb6772;">error:</span><span style="color:#abb2bf;"> could not compile `</span><span style="color:#eb6772;">restaurant</span><span style="color:#abb2bf;">` due to 2 previous errors
+</span></code></pre>
+<p>Listing 7-6: Listing 7-5의 코드를 빌드할 때 발생하는 컴파일러 오류</p>
+<p>무슨 일이에요? <code>mod hosting</code> 앞에 <code>pub</code> 키워드를 추가하면 모듈이 공개됩니다. 이 변경으로 <code>front_of_house</code>에 액세스할 수 있으면 <code>hosting</code>에 액세스할 수 있습니다. 그러나 <code>호스팅</code>의 <em>내용은 여전히 비공개입니다.</em> 모듈을 공개한다고 해서 내용이 공개되는 것은 아닙니다. 모듈의 <code>pub</code> 키워드는 상위 모듈의 코드가 내부 코드에 액세스하지 않고 참조만 허용합니다. 모듈은 컨테이너이기 때문에 모듈을 공개하는 것만으로는 할 수 있는 일이 많지 않습니다. 더 나아가 모듈 내의 항목 중 하나 이상을 공개하도록 선택해야 합니다.</p>
+<p>목록 7-6의 오류는 <code>add_to_waitlist</code> 함수가 비공개라고 말합니다. 개인 정보 보호 규칙은 구조체, 열거형, 함수 및 메서드와 모듈에 적용됩니다.</p>
+<p>목록 7-7에서와 같이 정의 앞에 <code>pub</code> 키워드를 추가하여 <code>add_to_waitlist</code> 함수를 공용으로 만들어 보겠습니다.</p>
+<p>파일 이름: src/lib.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">mod </span><span style="color:#abb2bf;">front_of_house {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">pub mod </span><span style="color:#abb2bf;">hosting {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">pub fn </span><span style="color:#5cb3fa;">add_to_waitlist</span><span style="color:#abb2bf;">() {}
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">pub fn </span><span style="color:#5cb3fa;">eat_at_restaurant</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// Absolute path
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">crate</span><span style="color:#abb2bf;">::front_of_house::hosting::add_to_waitlist();
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// Relative path
+</span><span style="color:#abb2bf;">    front_of_house::hosting::add_to_waitlist();
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 7-7: <code>mod hosting</code> 및 <code>fn add_to_waitlist</code>에 <code>pub</code> 키워드를 추가하면 <code>eat_at_restaurant</code>에서 함수를 호출할 수 있습니다.</p>
+<p>이제 코드가 컴파일됩니다! <code>pub</code> 키워드를 추가하면 프라이버시 룰(privacy rules)과 관련하여 <code>add_to_waitlist</code>에서 이러한 경로를 사용할 수 있는 이유를 알아보기 위해 절대 경로와 상대 경로를 살펴보겠습니다.</p>
+<p>절대 경로에서 크레이트 모듈 트리의 루트인 <code>크레이트</code>로 시작합니다. <code>front_of_house</code> 모듈은 크레이트 루트에 정의되어 있습니다. <code>front_of_house</code>는 공개되지 않지만 <code>eat_at_restaurant</code> 함수는 <code>front_of_house</code>와 동일한 모듈에서 정의되기 때문에(즉, <code>eat_at_restaurant</code>와 <code>front_of_house</code>는 형제임) <code>eat_at_restaurant</code>에서 <code>front_of_house</code>를 참조할 수 있습니다. 다음은 <code>pub</code>으로 표시된 <code>hosting</code> 모듈입니다. <code>hosting</code>의 상위 모듈에 액세스할 수 있으므로 <code>hosting</code>에 액세스할 수 있습니다. 마지막으로, <code>add_to_waitlist</code> 함수는 <code>pub</code>로 표시되고 부모 모듈에 액세스할 수 있으므로 이 함수 호출이 작동합니다!</p>
+<p>상대 경로에서 논리는 첫 번째 단계를 제외하고는 절대 경로와 동일합니다. 경로는 크레이트 루트에서 시작하지 않고 <code>front_of_house</code>에서 시작합니다. <code>front_of_house</code> 모듈은 <code>eat_at_restaurant</code>와 동일한 모듈 내에서 정의되므로 <code>eat_at_restaurant</code>가 정의된 모듈에서 시작하는 상대 경로가 작동합니다. 그런 다음 <code>hosting</code> 및 <code>add_to_waitlist</code>가 <code>pub</code>로 표시되기 때문에 나머지 경로가 작동하고 이 함수 호출이 유효합니다!</p>
+<p>다른 프로젝트에서 코드를 사용할 수 있도록 라이브러리 크레이트를 공유할 계획이라면, 공개 API는 크레이트 사용자가 코드와 상호 작용할 수 있는 방법을 결정하는 계약입니다. 사람들이 당신의 크레이트에 더 쉽게 의존할 수 있도록 공개 API에 대한 변경 사항을 관리하는 것과 관련하여 많은 고려 사항이 있습니다. 이러한 고려 사항은 이 책의 범위를 벗어납니다. 이 주제에 관심이 있다면 <a rel="noopener nofollow noreferrer" target="_blank" href="https://rust-lang.github.io/api-guidelines/">Rust API 가이드라인 을</a> 참조하세요 .</p>
+<blockquote>
+<h4 id="baineori-mic-raibbereoriga-pohamddoe-paekijie-ddahan-mobbeo-sarye"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html#best-practices-for-packages-with-a-binary-and-a-library">바이너리 및 라이브러리가 포함된 패키지에 대한 모범 사례</a></h4>
+<p>우리는 패키지가 <em>src/main.rs</em> 바이너리 크레이트 루트와 <em>src/lib.rs</em> 라이브러리 크레이트 루트를 모두 포함할 수 있으며 두 크레이트 모두 기본적으로 패키지 이름을 가질 것이라고 언급했습니다. 일반적으로 라이브러리와 바이너리 크레이트를 모두 포함하는 이 패턴을 가진 패키지는 바이너리 크레이트에 라이브러리 크레이트로 코드를 호출하는 실행 파일을 시작하기에 충분한 코드만 있습니다. 이렇게 하면 라이브러리 크레이트의 코드를 공유할 수 있으므로 다른 프로젝트에서 패키지가 제공하는 대부분의 기능을 활용할 수 있습니다.</p>
+<p>모듈 트리는 <em>src/lib.rs</em> 에 정의되어야 합니다. 그런 다음 패키지 이름으로 경로를 시작하여 바이너리 크레이트에서 공용 항목을 사용할 수 있습니다. 바이너리 크레이트는 완전히 외부에 있는 크레이트가 라이브러리 크레이트를 사용하는 것처럼 라이브러리 크레이트의 사용자가 됩니다. 공용 API만 사용할 수 있습니다. 이는 좋은 API를 설계하는 데 도움이 됩니다. 당신은 저자일 뿐만 아니라 고객이기도 합니다!</p>
+<p><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch12-00-an-io-project.html">12장</a> 에서는 바이너리 크레이트와 라이브러리 크레이트를 모두 포함하는 명령줄 프로그램을 사용하여 이 조직적 관행을 시연할 것입니다.</p>
+</blockquote>
+<h3 id="superro-ssandda-ggyeonro-sijja"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html#starting-relative-paths-with-super"><code>super</code>로 상대 경로 시작</a></h3>
+<p>경로 시작 부분에 <code>super</code>를 사용하여, 현재 모듈이나 크레이트 루트가 아닌, 상위 모듈에서 시작하는 상대 경로를 구성할 수 있습니다. 이것은 파일 시스템 경로에서  <code>..</code> 으로 시작하는 것과 같습니다. <code>super</code>를 사용하면 부모 모듈에 있는 것으로 알고 있는 항목을 참조할 수 있으므로 모듈이 부모와 밀접하게 관련되어 있을 때 모듈 트리를 쉽게 재정렬할 수 있지만, 부모는 언젠가 모듈 트리의 다른 곳으로 이동할 수 있습니다.</p>
+<p>셰프가 잘못된 주문을 수정하고 직접 고객에게 가져오는 상황을 모델링하는 목록 7-8의 코드를 고려하십시오. <code>back_of_house</code> 모듈에 정의된 <code>fix_incorrect_order</code> 함수는 <code>super</code>로 시작하는 <code>deliver_order</code>에 대한 경로를 지정하여 상위 모듈에 정의된 <code>deliver_order</code> 함수를 호출합니다.</p>
+<p>파일 이름: src/lib.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">deliver_order</span><span style="color:#abb2bf;">() {}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">mod </span><span style="color:#abb2bf;">back_of_house {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">fix_incorrect_order</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">        </span><span style="color:#5ebfcc;">cook_order</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">super</span><span style="color:#abb2bf;">::deliver_order();
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">cook_order</span><span style="color:#abb2bf;">() {}
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 7-8: <code>super</code>로 시작하는 상대 경로를 사용하여 함수 호출</p>
+<p><code>fix_incorrect_order</code> 함수는 <code>back_of_house</code> 모듈에 있으므로 <code>super</code>를 사용하여 <code>back_of_house</code>의 상위 모듈로 이동할 수 있습니다. 이 경우 루트인 <code>crate</code>입니다. 거기에서 <code>deliver_order</code>를 찾아 찾습니다. 성공! 우리는 <code>back_of_house</code> 모듈과 <code>deliver_order</code> 기능이 서로 같은 관계를 유지하고 상자의 모듈 트리를 재구성하기로 결정하면 함께 이동할 가능성이 있다고 생각합니다. 따라서 우리는 <code>super</code>를 사용하여 이 코드가 다른 모듈로 이동될 경우 향후에 코드를 업데이트할 위치가 줄어들게 됩니다.</p>
+<h3 id="gujocewa-hyeoggehyeongheu-ggonggahagi"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html#making-structs-and-enums-public">구조체와 열거형을 공개하기</a></h3>
+<p>또한 <code>pub</code>을 사용하여 구조체 및 열거형을 공용으로 지정할 수 있지만, 구조체 및 열거형과 함께 <code>pub</code>를 사용하는 데 추가로 몇 가지 세부 정보가 있습니다. 구조체 정의 전에 <code>pub</code>를 사용하면 구조체를 공개하지만, 구조체의 필드는 여전히 비공개입니다. 사례별로 각 필드를 공개하거나 공개하지 않을 수 있습니다. 목록 7-9에서 공개 <code>toast</code> 필드와 비공개 <code>seasonal_fruit</code> 필드가 있는 공개 <code>back_of_house::Breakfast</code> 구조체를 정의했습니다. 이것은 고객이 식사와 함께 제공되는 빵의 종류를 선택할 수 있는 레스토랑의 경우를 모델로 하지만, 요리사는 계절과 재고에 따라 식사와 함께 제공되는 과일을 결정합니다. 사용 가능한 과일은 빠르게 변경되므로 고객은 과일을 선택할 수 없으며 어떤 과일을 얻을지 알 수도 없습니다.</p>
+<p>파일 이름: src/lib.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">mod </span><span style="color:#abb2bf;">back_of_house {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">pub struct </span><span style="color:#abb2bf;">Breakfast {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">pub </span><span style="color:#eb6772;">toast</span><span style="color:#abb2bf;">: String,
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">seasonal_fruit</span><span style="color:#abb2bf;">: String,
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">impl </span><span style="color:#abb2bf;">Breakfast {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">pub fn </span><span style="color:#5cb3fa;">summer</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">toast</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">str</span><span style="color:#abb2bf;">) -&gt; Breakfast {
+</span><span style="color:#abb2bf;">            Breakfast {
+</span><span style="color:#abb2bf;">                toast: String::from(toast),
+</span><span style="color:#abb2bf;">                seasonal_fruit: String::from(`peaches`),
+</span><span style="color:#abb2bf;">            }
+</span><span style="color:#abb2bf;">        }
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">pub fn </span><span style="color:#5cb3fa;">eat_at_restaurant</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// Order a breakfast in the summer with Rye toast
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> meal </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">back_of_house::Breakfast::summer(`Rye`);
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// Change our mind about what bread we&#39;d like
+</span><span style="color:#abb2bf;">    meal.toast </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`Wheat`);
+</span><span style="color:#abb2bf;">    println!(`I</span><span style="color:#cd74e8;">&#39;d</span><span style="color:#abb2bf;"> like {} toast please`, meal.toast);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// The next line won&#39;t compile if we uncomment it; we&#39;re not allowed
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// to see or modify the seasonal fruit that comes with the meal
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// meal.seasonal_fruit = String::from(`blueberries`);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>Listing 7-9: 일부 공개 필드와 일부 비공개 필드가 있는 구조체</p>
+<p><code>back_of_house::Breakfast</code> 구조체의 <code>toast</code> 필드가 공개되어 있기 때문에 <code>eat_at_restaurant</code>에서 점 표기법을 사용하여 <code>toast</code> 필드에 쓰고 읽을 수 있습니다. <code>seasonal_fruit</code>가 비공개이기 때문에 <code>eat_at_restaurant</code>에서 <code>seasonal_fruit</code> 필드를 사용할 수 없습니다. <code>seasonal_fruit</code> 필드 값을 수정하는 줄의 주석을 제거하여 어떤 오류가 발생하는지 확인하십시오!</p>
+<p>또한 <code>back_of_house::Breakfast</code>에는 전용 필드가 있기 때문에 구조체는 <code>Breakfast</code>(여기서는 <code>summer</code>라고 함)의 인스턴스를 구성하는 공용 관련 함수를 제공해야 합니다. <code>Breakfast</code>에 이러한 기능이 없으면 <code>eat_at_restaurant</code>에서 비공개 <code>seasonal_fruit</code> 필드의 값을 설정할 수 없기 때문에 <code>eat_at_restaurant</code>에서 <code>Breakfast</code> 인스턴스를 생성할 수 없습니다.</p>
+<p>반대로 열거형을 공개하면 내부의 모든 변형이 공개됩니다. Listing 7-10과 같이 <code>enum</code> 키워드 앞에 <code>pub</code>만 있으면 됩니다.</p>
+<p>파일 이름: src/lib.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">mod </span><span style="color:#abb2bf;">back_of_house {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">pub enum </span><span style="color:#abb2bf;">Appetizer {
+</span><span style="color:#abb2bf;">        Soup,
+</span><span style="color:#abb2bf;">        Salad,
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">pub fn </span><span style="color:#5cb3fa;">eat_at_restaurant</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> order1 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">back_of_house::Appetizer::Soup;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> order2 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">back_of_house::Appetizer::Salad;
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 7-10: 열거형을 공개로 지정하면 모든 변형이 공개됩니다.</p>
+<p><code>Appetizer</code> 열거형을 공개했기 때문에 <code>eat_at_restaurant</code>에서 <code>Soup</code> 및 <code>Salad</code> 변형을 사용할 수 있습니다.</p>
+<p>열거형은 해당 변형이 공개되지 않는 한 그다지 유용하지 않습니다. 모든 경우에 <code>pub</code>로 모든 열거형 변형에 주석을 달아야 하는 것은 성가신 일이므로 열거형 변형의 기본값은 공개입니다. 구조체는 필드가 공개되지 않아도 유용한 경우가 많으므로, 구조체 필드는 <code>pub</code>로 주석이 지정되지 않는 한 기본적으로 모든 것이 비공개라는 일반적인 규칙을 따릅니다.</p>
+<p>우리가 다루지 않은 <code>pub</code>와 관련된 또 다른 상황이 있습니다. 그것은 우리의 마지막 모듈 시스템 기능인 <code>use</code> 키워드입니다. 먼저 <code>use</code> 자체를 다룬 다음 <code>pub</code>와 <code>use</code>를 결합하는 방법을 보여줍니다.</p>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        <a class="previous" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;2-defining-modules-to-control-scope-and-privacy&#x2F;"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        <a class="next" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;4-bringing-paths-into-scope-with-the-use-keyword&#x2F;">></a>
+    
+
+            </div>
+        </div>
+
+        
+            
+                <script type="text/javascript" src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+                <script type="text/javascript" src="https://hwjskt.github.io/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://hwjskt.github.io/book.js"></script>
+        
+        </div>
+    </section>
+
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+  
+  
+
+  
+  
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js" integrity="sha384-Pulw7+h73841BQIK0LzJCydKRPChJUF9w8h8W0o3h+cLtoyNPJS847bQauLWOTwg" crossorigin="anonymous"></script>
+  
+  <script src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+  <script src="https://hwjskt.github.io/search_index.en.js"></script><script src="https://hwjskt.github.io/js/site.js"></script>
+
+  
+  
+
+  
+  
+</body>
+
+</html>

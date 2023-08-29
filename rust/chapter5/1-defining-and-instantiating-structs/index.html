@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='&#x2F;icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='&#x2F;icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" integrity="sha384-oGm59HWAkwO32h2w8u0B98wKBZJwd6MbWtAJwQKCTffZjOXHXrnyv9Syjovgc+UV" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://hwjskt.github.io/deep-thought.css" rel="stylesheet" />
+  
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/book.css">
+    <link rel="stylesheet" href="https://hwjskt.github.io/deep-thought.css">
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/newsprint.css">
+
+
+  <title>
+    
+    
+    Dr.JUNG | Rust
+
+  </title>
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176984489-2"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-176984489-2");
+  </script>
+  
+  
+
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;">Dr.JUNG</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;about">
+            AboutMe
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;docs">
+            Docs
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;rust">
+            Rust
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  
+    
+    <section>
+        <div class="book-menu is-2">
+            
+            
+            <aside role="navigation">
+                <ul>
+                    
+                        
+                        
+                        <li >
+                            <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;">Introduction</a>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;">
+                                    <strong>1.</strong>
+                                    Getting Started
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;1-installation&#x2F;">
+                                                    <strong>1.1.</strong>
+                                                    Installation
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;2-helloworld&#x2F;">
+                                                    <strong>1.2.</strong>
+                                                    Hello, World!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;3-hellocargo&#x2F;">
+                                                    <strong>1.3.</strong>
+                                                    Hello, Cargo!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter2&#x2F;">
+                                    <strong>2.</strong>
+                                    Programming a Guessing Game
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;">
+                                    <strong>3.</strong>
+                                    Common Programming Concepts
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;1-variables-and-mutability&#x2F;">
+                                                    <strong>3.1.</strong>
+                                                    Variables and Mutability
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;2-data-types&#x2F;">
+                                                    <strong>3.2.</strong>
+                                                    Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;3-functions&#x2F;">
+                                                    <strong>3.3.</strong>
+                                                    Functions
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;4-comments&#x2F;">
+                                                    <strong>3.4.</strong>
+                                                    Comments
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;5-control-flow&#x2F;">
+                                                    <strong>3.5.</strong>
+                                                    Control Flow
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;">
+                                    <strong>4.</strong>
+                                    Understanding Ownership
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;1-what-is-ownership&#x2F;">
+                                                    <strong>4.1.</strong>
+                                                    What is Ownership?
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;2-references-and-borrowing&#x2F;">
+                                                    <strong>4.2.</strong>
+                                                    References and Borrowing
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;3-the-slice-type&#x2F;">
+                                                    <strong>4.3.</strong>
+                                                    The Slice Type
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;">
+                                    <strong>5.</strong>
+                                    Using Structs to Structure Related Data
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li class="active">
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;1-defining-and-instantiating-structs&#x2F;">
+                                                    <strong>5.1.</strong>
+                                                    Defining and Instantiating Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;2-an-example-program-using-structs&#x2F;">
+                                                    <strong>5.2.</strong>
+                                                    An Example Program Using Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;3-method-syntax&#x2F;">
+                                                    <strong>5.3.</strong>
+                                                    Method Syntax
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;">
+                                    <strong>6.</strong>
+                                    Enums and Pattern Matching
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;1-defining-an-enum&#x2F;">
+                                                    <strong>6.1.</strong>
+                                                    Defining an Enum
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;2-the-match-control-flow-construct&#x2F;">
+                                                    <strong>6.2.</strong>
+                                                    The match Control Flow Construct
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;3-concise-control-flow-with-if-let&#x2F;">
+                                                    <strong>6.3.</strong>
+                                                    Concise Control Flow with if let.md
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;">
+                                    <strong>7.</strong>
+                                    Managing Growing Projects with Packages, Crates, and Modules
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;1-packages-and-crates&#x2F;">
+                                                    <strong>7.1.</strong>
+                                                    Packages and Crates
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;2-defining-modules-to-control-scope-and-privacy&#x2F;">
+                                                    <strong>7.2.</strong>
+                                                    Defining Modules to Control Scope and Privacy
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;3-paths-for-referring-to-an-item-in-the-module-tree&#x2F;">
+                                                    <strong>7.3.</strong>
+                                                    Paths for Referring to an Item in the Module Tree
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;4-bringing-paths-into-scope-with-the-use-keyword&#x2F;">
+                                                    <strong>7.4.</strong>
+                                                    Bringing Paths Into Scope with the use Keyword
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;5-separating-modules-into-different-files&#x2F;">
+                                                    <strong>7.5.</strong>
+                                                    Separating Modules into Different Files
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;">
+                                    <strong>8.</strong>
+                                    Common Collections
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;1-storing-lists-of-values-with-vectors&#x2F;">
+                                                    <strong>8.1.</strong>
+                                                    Storing Lists of Values with Vectors
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;">
+                                                    <strong>8.2.</strong>
+                                                    Storing UTF-8 Encoded Text with Strings
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;3-storing-keys-with-associated-values-in-hash-maps&#x2F;">
+                                                    <strong>8.3.</strong>
+                                                    Storing Keys with Associated Values in Hash Maps
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </aside>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="book-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="book-search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <h1>Defining and Instantiating Structs</h1>
+    <h2 id="yohya">요약</h2>
+<ul>
+<li>구조체 
+<ul>
+<li>파이썬의 딕셔너리와 비슷한 형태</li>
+<li>우선 구조체를 정의해서 템플릿을 만든다. {} 내부에 field (데이터 이름과 타입)을 적는 방식</li>
+<li>정의할 때 구조체가 가변,불변인지 정한다. 데이터 별로 지정할 수는 없다.</li>
+<li>사용은 인스턴스를 만들고 내용을 채운다. 내용을 채우는 방식은 딕셔너리와 동일하게 key : value 형태이다. </li>
+</ul>
+</li>
+<li>구조체 업데이트
+<ul>
+<li>field 에 <code>..</code> 를 사용해서 일부만 다른 구조체를 쉽게 만들수 있다. </li>
+<li>원본 구조체는 사용 못하게 되는 경우가 있다.</li>
+</ul>
+</li>
+<li>튜플 구조체(tuple structs)
+<ul>
+<li>구조체와 비슷한데 key 정의 없이 value 의 type 만 정의한다.</li>
+</ul>
+</li>
+<li>단위 유사 구조체(unit-like structs)
+<ul>
+<li>field 가 없는 구조체 (데이터가 없다)</li>
+</ul>
+</li>
+</ul>
+<h2 id="gujoce-jjeonyi-mic-insseteonssehwa"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch05-01-defining-structs.html#defining-and-instantiating-structs">구조체 정의 및 인스턴스화</a></h2>
+<p>구조체는 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type">튜플 타입</a> 섹션 에서 논의한 튜플과 유사하며, 둘 다 여러 관련 값을 보유합니다. 튜플과 마찬가지로, 구조체의 조각은 다른 유형일 수 있습니다. 튜플과 달리 구조체에서는 값이 의미하는 바가 명확하도록 각 데이터 조각의 이름을 지정합니다. 이러한 이름을 추가한다는 것은 구조체가 튜플보다 더 유연하다는 것을 의미합니다. 인스턴스 값을 지정하거나 액세스하기 위해 데이터 순서에 의존할 필요가 없습니다.</p>
+<p>구조체를 정의하려면 키워드 <code>struct</code>를 입력하고 전체 구조체의 이름을 지정합니다. 구조체의 이름은 함께 그룹화되는 데이터 조각의 중요성을 설명해야 합니다. 그런 다음 {}중괄호 안에 필드(<em>fields</em>)라고 하는 데이터 조각의 이름과 유형을 <em>정의</em>합니다 . 예를 들어 Listing 5-1은 사용자 계정에 대한 정보를 저장하는 구조체를 보여줍니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">User {
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">active</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">bool</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">username</span><span style="color:#abb2bf;">: String,
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">email</span><span style="color:#abb2bf;">: String,
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">sign_in_count</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">u64</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 5-1: <code>user</code> 구조체 정의</p>
+<p>구조체를 정의한 후 사용하려면 각 필드에 구체적인 값을 지정하여 해당 구조체의 <em>인스턴스를 만듭니다.</em> 구조체의 이름을 명시하여 인스턴스를 생성한 다음 <em>key: value</em> 쌍을 포함하는 중괄호를 추가합니다. 여기서 키는 필드의 이름이고 값은 해당 필드에 저장하려는 데이터입니다. 구조체에서 선언한 것과 동일한 순서로 필드를 지정할 필요가 없습니다. 즉, 구조체 정의는 유형에 대한 일반적인 템플릿과 같으며 인스턴스는 유형의 값을 생성하기 위해 특정 데이터로 해당 템플릿을 채웁니다. 예를 들어 Listing 5-2와 같이 특정 사용자를 선언할 수 있습니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> user1 </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> User {
+</span><span style="color:#abb2bf;">        active: </span><span style="color:#db9d63;">true</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        username: String::from(`someusername123`),
+</span><span style="color:#abb2bf;">        email: String::from(`someone</span><span style="color:#adb7c9;">@</span><span style="color:#abb2bf;">example.com`),
+</span><span style="color:#abb2bf;">        sign_in_count: </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    };
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 5-2: <code>User</code> 구조체의 인스턴스 만들기</p>
+<p>구조체에서 특정 값을 얻으려면 점 표기법을 사용합니다. 예를 들어 이 사용자의 이메일 주소에 액세스하려면 <code>user1.email</code>을 사용합니다. 인스턴스가 변경 가능한 경우 점 표기법을 사용하고 특정 필드에 할당하여 값을 변경할 수 있습니다. Listing 5-3은 변경 가능한 <code>User</code> 인스턴스의 <code>email</code> 필드 값을 변경하는 방법을 보여줍니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> user1 </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> User {
+</span><span style="color:#abb2bf;">        active: </span><span style="color:#db9d63;">true</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        username: String::from(`someusername123`),
+</span><span style="color:#abb2bf;">        email: String::from(`someone</span><span style="color:#adb7c9;">@</span><span style="color:#abb2bf;">example.com`),
+</span><span style="color:#abb2bf;">        sign_in_count: </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    };
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    user1.email </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`anotheremail</span><span style="color:#adb7c9;">@</span><span style="color:#abb2bf;">example.com`);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>Listing 5-3: <code>User</code> 인스턴스의 <code>email</code> 필드 값 변경</p>
+<p>전체 인스턴스는 변경 가능해야 합니다. Rust는 특정 필드만 가변으로 표시하는 것을 허용하지 않습니다. 모든 표현식과 마찬가지로 구조체의 새 인스턴스를 함수 본문의 마지막 표현식으로 구성하여 해당 새 인스턴스를 암시적으로 반환할 수 있습니다.</p>
+<p>Listing 5-4는 주어진 이메일과 사용자 이름으로 <code>User</code> 인스턴스를 반환하는 <code>build_user</code> 함수를 보여줍니다. <code>활성</code> 필드는 <code>true</code> 값을 가져오고 <code>sign_in_count</code>는 <code>1</code> 값을 가져옵니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">build_user</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">email</span><span style="color:#abb2bf;">: String, </span><span style="color:#eb6772;">username</span><span style="color:#abb2bf;">: String) -&gt; User {
+</span><span style="color:#abb2bf;">    User {
+</span><span style="color:#abb2bf;">        active: </span><span style="color:#db9d63;">true</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        username: username,
+</span><span style="color:#abb2bf;">        email: email,
+</span><span style="color:#abb2bf;">        sign_in_count: </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>Listing 5-4: 이메일과 사용자 이름을 받아 <code>User</code> 인스턴스를 반환하는 <code>build_user</code> 함수</p>
+<p>username: username 처럼 구조체 필드와 같은 이름으로 함수 매개변수의 이름을 지정하는 것은 의미가 있지만 <code>email</code> 및 <code>username</code> 필드 이름과 변수를 반복해야 하는 것은 약간 지루합니다. 구조체에 더 많은 필드가 있는 경우 각 이름을 반복하면 훨씬 더 짜증이 날 것입니다. 다행히도 편리한 속기가 있습니다!</p>
+<h3 id="pildde-cogihwa-hyaeo-sahyon"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch05-01-defining-structs.html#using-the-field-init-shorthand">필드 초기화 약어 사용</a></h3>
+<p>목록 5-4에서 매개변수 이름과 구조체 필드 이름이 정확히 동일하기 때문에 <em>필드 초기화 약식</em> 구문을 사용하여 <code>build_user</code>를 다시 작성할 수 있습니다. Listing 5-5와 같이 하면 정확히 동일하게 작동하지만 <code>username</code> 및 <code>email</code>을 반복하진 않습니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">build_user</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">email</span><span style="color:#abb2bf;">: String, </span><span style="color:#eb6772;">username</span><span style="color:#abb2bf;">: String) -&gt; User {
+</span><span style="color:#abb2bf;">    User {
+</span><span style="color:#abb2bf;">        active: </span><span style="color:#db9d63;">true</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        username,
+</span><span style="color:#abb2bf;">        email,
+</span><span style="color:#abb2bf;">        sign_in_count: </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    }
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 5-5: <code>username</code> 및 <code>email</code> 매개변수가 구조체 필드와 이름이 같기 때문에 필드 초기화 약어를 사용하는 <code>build_user</code> 함수</p>
+<p>여기서는 <code>email</code>이라는 필드가 있는 <code>User</code> 구조체의 새 인스턴스를 만듭니다. <code>email</code> 필드의 값을 <code>build_user</code> 함수의 <code>email</code> 매개변수 값으로 설정하려고 합니다. <code>email</code> 필드와 <code>email</code> 매개변수의 이름이 같기 때문에 <code>email: email</code>이 아닌 <code>email</code>만 작성하면 됩니다.</p>
+<h3 id="gujoce-heodeiteu-gumunheu-sahyonhahye-dareun-insseteonsseesse-insseteonsse-ssaensseon"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-from-other-instances-with-struct-update-syntax">구조체 업데이트 구문을 사용하여 다른 인스턴스에서 인스턴스 생성</a></h3>
+<p>구조체에서 다른 인스턴스의 값 대부분을 포함하지만 일부만 변경된 새 인스턴스를 만드는 것이 종종 유용합니다. <em>구조체 업데이트 구문을</em> 사용하여 이 작업을 수행할 수 있습니다.</p>
+<p>먼저 Listing 5-6에서 업데이트 구문 없이 정기적으로 <code>user2</code>에 새 <code>User</code> 인스턴스를 생성하는 방법을 보여줍니다. <code>email</code>에 새 값을 설정하지만 그 외에는 Listing 5-2에서 생성한 <code>user1</code>의 동일한 값을 사용합니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// --snip--
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> user2 </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> User {
+</span><span style="color:#abb2bf;">        active: user1.active,
+</span><span style="color:#abb2bf;">        username: user1.username,
+</span><span style="color:#abb2bf;">        email: String::from(`another</span><span style="color:#adb7c9;">@</span><span style="color:#abb2bf;">example.com`),
+</span><span style="color:#abb2bf;">        sign_in_count: user1.sign_in_count,
+</span><span style="color:#abb2bf;">    };
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 5-6: <code>user1</code>의 값 중 하나를 사용하여 새 <code>User</code> 인스턴스 만들기</p>
+<p>구조체 업데이트 구문을 사용하면 Listing 5-7과 같이 더 적은 코드로 동일한 효과를 얻을 수 있습니다. 구문 <code>..</code>은 명시되지 않은 나머지 필드가 <code>..</code> 뒤에 지정된 인스턴스의 필드와 동일한 값을 갖도록 지정합니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// --snip--
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> user2 </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> User {
+</span><span style="color:#abb2bf;">        email: String::from(`another</span><span style="color:#adb7c9;">@</span><span style="color:#abb2bf;">example.com`),
+</span><span style="color:#abb2bf;">        </span><span style="color:#adb7c9;">..</span><span style="color:#abb2bf;">user1
+</span><span style="color:#abb2bf;">    };
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 5-7: 구조체 업데이트 구문을 사용하여 <code>User</code> 인스턴스에 대한 새 <code>email</code> 값을 설정하지만 <code>user1</code>의 나머지 값을 사용</p>
+<p>목록 5-7의 코드는 또한 <code>이메일</code>에 대해 다른 값을 갖지만 <code>user1</code>의 <code>username</code>, <code>active</code> 및 <code>sign_in_count</code> 필드에 대해 동일한 값을 갖는 <code>user2</code>에 인스턴스를 생성합니다. <code>..user1</code>은 나머지 필드가 <code>user1</code>의 해당 필드에서 값을 가져와야 함을 지정하기 위해 마지막에 와야 하지만,구조체 정의에 있는 필드의 순서에 상관없이 원하는 만큼 많은 필드에 대한 값을 지정하도록 선택할 수 있습니다. </p>
+<p>구조체 업데이트 구문은 할당처럼 <code>=</code>를 사용합니다. <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#variables-and-data-interacting-with-move">이동과 상호 작용하는 변수 및 데이터</a> 섹션 에서 본 것처럼 데이터를 이동하기 때문입니다. 이 예제에서는 <code>user1</code>의 <code>username</code> 필드에 있는 <code>String</code>이 <code>user2</code>로 이동되었기 때문에 <code>user2</code>를 생성한 후 더 이상 <code>user1</code>을 전체적으로 사용할 수 없습니다. 만약 <code>user2</code>에 <code>email</code>과 <code>username</code> 에 대해 새 <code>String</code> 값을 지정하고,  <code>user1</code>에서 <code>active</code> 및 <code>sign_in_count</code> 값만 가져와 사용한 경우, <code>user1</code>은  <code>user2</code>생성 후에도 여전히 유효합니다. <code>active</code> 및 <code>sign_in_count</code>는 모두 <code>Copy</code> 특성을 구현하는 유형입이기 때문입니다. </p>
+<h3 id="myeongmyeongddoe-pildde-heobi-tyupeul-gujocereul-sahyonhahye-dareun-yuhyeong-manddeugi"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch05-01-defining-structs.html#using-tuple-structs-without-named-fields-to-create-different-types">명명된 필드 없이 튜플 구조체를 사용하여 다른 유형 만들기</a></h3>
+<p>Rust는 <em>튜플 구조체(tuple structs)</em> 라고 하는 튜플과 비슷하게 보이는 구조체를 지원합니다. 튜플 구조체에는 구조체 이름이 제공하는 추가 의미가 있지만 해당 필드와 연결된 이름은 없습니다. 오히려 그들은 단지 필드의 유형을 가지고 있습니다. 튜플 구조체는 전체 튜플에 이름을 지정하고 튜플을 다른 튜플과 다른 유형으로 만들고 싶을 때 그리고 일반 구조체에서와 같이 각 필드의 이름을 지정하는 것이 장황하거나 중복될 때 유용합니다.</p>
+<p>튜플 구조체를 정의하려면 <code>struct</code> 키워드로 시작하고 구조체 이름 뒤에 튜플의 유형이 옵니다. 예를 들어 여기에서는 <code>Color</code>와 <code>Point</code>라는 두 개의 튜플 구조체를 정의하고 사용합니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">Color(</span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">, </span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">, </span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">);
+</span><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">Point(</span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">, </span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">, </span><span style="color:#cd74e8;">i32</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> black </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> Color(</span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> origin </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> Point(</span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">, </span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p><code>black</code> 및 <code>origin</code> 값은 서로 다른 튜플 구조체의 인스턴스이기 때문에 서로 다른 유형입니다. 정의하는 각 구조체는 구조체 내의 필드가 동일한 유형을 가질 수 있더라도 고유한 유형입니다. 예를 들어 <code>Color</code> 유형의 매개변수를 사용하는 함수는 두 유형 모두 세 개의 <code>i32</code> 값으로 구성되어 있어도 <code>Point</code>을 인수로 사용할 수 없습니다. 그렇지 않으면 튜플 구조체 인스턴스는 개별 조각으로 분해할 수 있고 <code>.</code>를 사용할 수 있다는 점에서 튜플과 유사합니다. 개별 값에 액세스하기 위한 인덱스가 뒤따릅니다.</p>
+<h3 id="pilddega-heobneun-ddawi-yusa-gujoce"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch05-01-defining-structs.html#unit-like-structs-without-any-fields">필드가 없는 단위 유사 구조체</a></h3>
+<p>필드가 없는 구조체를 정의할 수도 있습니다! 이들은 <a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type">튜플 타입</a> 섹션 에서 언급한 단위 유형인 <code>()</code>와 유사하게 동작하기 때문에 <em>단위 유사 구조체(unit-like structs)</em> 라고 합니다. 단위와 같은 구조체는 일부 유형에 특성을 구현해야 하지만 유형 자체에 저장하려는 데이터가 없을 때 유용할 수 있습니다. 특성에 대해서는 10장에서 논의할 것입니다. 다음은 <code>AlwaysEqual</code>이라는 단위 구조체를 선언하고 인스턴스화하는 예입니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">AlwaysEqual;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> subject </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> AlwaysEqual;
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p><code>AlwaysEqual</code>을 정의하려면 <code>struct</code> 키워드, 원하는 이름, 세미콜론을 사용합니다. 중괄호나 괄호가 필요하지 않습니다! 그런 다음 유사한 방식으로 <code>subject</code> 변수에서 <code>AlwaysEqual</code> 인스턴스를 얻을 수 있습니다. 중괄호나 괄호 없이 정의한 이름을 사용합니다. 나중에 <code>AlwaysEqual</code>의 모든 인스턴스가 항상 다른 유형의 모든 인스턴스와 동일하도록 이 유형에 대한 동작을 구현하여 테스트 목적으로 알려진 결과를 가질 것이라고 상상해 보십시오. 해당 동작을 구현하는 데 데이터가 필요하지 않습니다! 10장에서 특성을 정의하고 유닛과 같은 구조체를 포함하여 모든 유형에서 구현하는 방법을 볼 수 있습니다.</p>
+<blockquote>
+<h3 id="gujoce-deiteoyi-soyuggweo"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch05-01-defining-structs.html#ownership-of-struct-data">구조체 데이터의 소유권</a></h3>
+<p>Listing 5-1의 <code>User</code> 구조체 정의에서 우리는 <code>&amp;str</code> 문자열 슬라이스 유형이 아닌 소유된 <code>String</code> 유형을 사용했습니다. 이것은 이 구조체의 각 인스턴스가 모든 데이터를 소유하고 전체 구조체가 유효한 한 해당 데이터가 유효하기를 원하기 때문에 의도적인 선택입니다.</p>
+<p>구조체가 다른 것이 소유한 데이터에 대한 참조를 저장하는 것도 가능하지만 그렇게 하려면 10장에서 논의할 Rust 기능인 lifetimes 를 <em>사용해야</em> 합니다. 수명은 구조체가 있는 동안 구조체가 참조하는 데이터가 유효하도록 보장합니다. 다음과 같이 수명을 지정하지 않고 구조체에 참조를 저장하려고 한다고 가정해 보겠습니다. 이것은 작동하지 않습니다:</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">struct </span><span style="color:#abb2bf;">User {
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">active</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">bool</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">username</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">str</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">email</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">str</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">sign_in_count</span><span style="color:#abb2bf;">: </span><span style="color:#cd74e8;">u64</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> user1 </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> User {
+</span><span style="color:#abb2bf;">        active: </span><span style="color:#db9d63;">true</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">        username: `someusername123`,
+</span><span style="color:#abb2bf;">        email: `someone</span><span style="color:#adb7c9;">@</span><span style="color:#abb2bf;">example.com`,
+</span><span style="color:#abb2bf;">        sign_in_count: </span><span style="color:#db9d63;">1</span><span style="color:#abb2bf;">,
+</span><span style="color:#abb2bf;">    };
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>컴파일러는 수명 지정자가 필요하다고 불평합니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> structs v0.1.0 (file:///projects/structs)
+</span><span style="color:#eb6772;">error[E0106]:</span><span style="color:#abb2bf;"> missing lifetime specifier
+</span><span style="color:#abb2bf;"> </span><span style="color:#eb6772;">--</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> src/main.rs:3:15
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">3 </span><span style="color:#adb7c9;">|     </span><span style="color:#eb6772;">username: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#eb6772;">str,
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|               </span><span style="color:#eb6772;">^</span><span style="color:#abb2bf;"> expected named lifetime parameter
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">help:</span><span style="color:#abb2bf;"> consider introducing a named lifetime parameter
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">1 ~</span><span style="color:#abb2bf;"> struct User</span><span style="color:#adb7c9;">&lt;</span><span style="color:#9acc76;">&#39;a&gt; {
+</span><span style="color:#9acc76;">2 |     active: bool,
+</span><span style="color:#9acc76;">3 ~     username: &amp;&#39;</span><span style="color:#abb2bf;">a str,
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#abb2bf;">
+</span><span style="color:#eb6772;">error[E0106]:</span><span style="color:#abb2bf;"> missing lifetime specifier
+</span><span style="color:#abb2bf;"> </span><span style="color:#eb6772;">--</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> src/main.rs:4:12
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">4 </span><span style="color:#adb7c9;">|     </span><span style="color:#eb6772;">email: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#eb6772;">str,
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|            </span><span style="color:#eb6772;">^</span><span style="color:#abb2bf;"> expected named lifetime parameter
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">help:</span><span style="color:#abb2bf;"> consider introducing a named lifetime parameter
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">1 ~</span><span style="color:#abb2bf;"> struct User</span><span style="color:#adb7c9;">&lt;</span><span style="color:#9acc76;">&#39;a&gt; {
+</span><span style="color:#9acc76;">2 |     active: bool,
+</span><span style="color:#9acc76;">3 |     username: &amp;str,
+</span><span style="color:#9acc76;">4 ~     email: &amp;&#39;</span><span style="color:#abb2bf;">a str,
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#abb2bf;">
+</span><span style="color:#eb6772;">For</span><span style="color:#abb2bf;"> more information about this error, try `</span><span style="color:#eb6772;">rustc --explain</span><span style="color:#abb2bf;"> E0106`.
+</span><span style="color:#eb6772;">error:</span><span style="color:#abb2bf;"> could not compile `</span><span style="color:#eb6772;">structs</span><span style="color:#abb2bf;">` due to 2 previous errors
+</span></code></pre>
+<p>10장에서 구조체에 참조를 저장할 수 있도록 이러한 오류를 수정하는 방법에 대해 논의하지만 지금은 <code>&amp;str</code>과 같은 참조 대신 <code>String</code>과 같은 소유 유형을 사용하여 이러한 오류를 수정합니다.</p>
+</blockquote>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        
+        
+        <a class="previous" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        <a class="next" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;2-an-example-program-using-structs&#x2F;">></a>
+    
+
+            </div>
+        </div>
+
+        
+            
+                <script type="text/javascript" src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+                <script type="text/javascript" src="https://hwjskt.github.io/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://hwjskt.github.io/book.js"></script>
+        
+        </div>
+    </section>
+
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+  
+  
+
+  
+  
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js" integrity="sha384-Pulw7+h73841BQIK0LzJCydKRPChJUF9w8h8W0o3h+cLtoyNPJS847bQauLWOTwg" crossorigin="anonymous"></script>
+  
+  <script src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+  <script src="https://hwjskt.github.io/search_index.en.js"></script><script src="https://hwjskt.github.io/js/site.js"></script>
+
+  
+  
+
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='&#x2F;icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='&#x2F;icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" integrity="sha384-oGm59HWAkwO32h2w8u0B98wKBZJwd6MbWtAJwQKCTffZjOXHXrnyv9Syjovgc+UV" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://hwjskt.github.io/deep-thought.css" rel="stylesheet" />
+  
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/book.css">
+    <link rel="stylesheet" href="https://hwjskt.github.io/deep-thought.css">
+    
+    <link rel="stylesheet" href="https://hwjskt.github.io/newsprint.css">
+
+
+  <title>
+    
+    
+    Dr.JUNG | Rust
+
+  </title>
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176984489-2"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-176984489-2");
+  </script>
+  
+  
+
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;">Dr.JUNG</a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;about">
+            AboutMe
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;docs">
+            Docs
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;rust">
+            Rust
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+  
+    
+    <section>
+        <div class="book-menu is-2">
+            
+            
+            <aside role="navigation">
+                <ul>
+                    
+                        
+                        
+                        <li >
+                            <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;">Introduction</a>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;">
+                                    <strong>1.</strong>
+                                    Getting Started
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;1-installation&#x2F;">
+                                                    <strong>1.1.</strong>
+                                                    Installation
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;2-helloworld&#x2F;">
+                                                    <strong>1.2.</strong>
+                                                    Hello, World!
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter1&#x2F;3-hellocargo&#x2F;">
+                                                    <strong>1.3.</strong>
+                                                    Hello, Cargo!
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter2&#x2F;">
+                                    <strong>2.</strong>
+                                    Programming a Guessing Game
+                                </a>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;">
+                                    <strong>3.</strong>
+                                    Common Programming Concepts
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;1-variables-and-mutability&#x2F;">
+                                                    <strong>3.1.</strong>
+                                                    Variables and Mutability
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;2-data-types&#x2F;">
+                                                    <strong>3.2.</strong>
+                                                    Data Types
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;3-functions&#x2F;">
+                                                    <strong>3.3.</strong>
+                                                    Functions
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;4-comments&#x2F;">
+                                                    <strong>3.4.</strong>
+                                                    Comments
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter3&#x2F;5-control-flow&#x2F;">
+                                                    <strong>3.5.</strong>
+                                                    Control Flow
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;">
+                                    <strong>4.</strong>
+                                    Understanding Ownership
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;1-what-is-ownership&#x2F;">
+                                                    <strong>4.1.</strong>
+                                                    What is Ownership?
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="active">
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;2-references-and-borrowing&#x2F;">
+                                                    <strong>4.2.</strong>
+                                                    References and Borrowing
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;3-the-slice-type&#x2F;">
+                                                    <strong>4.3.</strong>
+                                                    The Slice Type
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;">
+                                    <strong>5.</strong>
+                                    Using Structs to Structure Related Data
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;1-defining-and-instantiating-structs&#x2F;">
+                                                    <strong>5.1.</strong>
+                                                    Defining and Instantiating Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;2-an-example-program-using-structs&#x2F;">
+                                                    <strong>5.2.</strong>
+                                                    An Example Program Using Structs
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter5&#x2F;3-method-syntax&#x2F;">
+                                                    <strong>5.3.</strong>
+                                                    Method Syntax
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;">
+                                    <strong>6.</strong>
+                                    Enums and Pattern Matching
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;1-defining-an-enum&#x2F;">
+                                                    <strong>6.1.</strong>
+                                                    Defining an Enum
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;2-the-match-control-flow-construct&#x2F;">
+                                                    <strong>6.2.</strong>
+                                                    The match Control Flow Construct
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter6&#x2F;3-concise-control-flow-with-if-let&#x2F;">
+                                                    <strong>6.3.</strong>
+                                                    Concise Control Flow with if let.md
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;">
+                                    <strong>7.</strong>
+                                    Managing Growing Projects with Packages, Crates, and Modules
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;1-packages-and-crates&#x2F;">
+                                                    <strong>7.1.</strong>
+                                                    Packages and Crates
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;2-defining-modules-to-control-scope-and-privacy&#x2F;">
+                                                    <strong>7.2.</strong>
+                                                    Defining Modules to Control Scope and Privacy
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;3-paths-for-referring-to-an-item-in-the-module-tree&#x2F;">
+                                                    <strong>7.3.</strong>
+                                                    Paths for Referring to an Item in the Module Tree
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;4-bringing-paths-into-scope-with-the-use-keyword&#x2F;">
+                                                    <strong>7.4.</strong>
+                                                    Bringing Paths Into Scope with the use Keyword
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter7&#x2F;5-separating-modules-into-different-files&#x2F;">
+                                                    <strong>7.5.</strong>
+                                                    Separating Modules into Different Files
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            
+                            <li >
+                                
+                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;">
+                                    <strong>8.</strong>
+                                    Common Collections
+                                </a>
+                                
+                                    <ul>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;1-storing-lists-of-values-with-vectors&#x2F;">
+                                                    <strong>8.1.</strong>
+                                                    Storing Lists of Values with Vectors
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;2-storing-utf-8-encoded-text-with-strings&#x2F;">
+                                                    <strong>8.2.</strong>
+                                                    Storing UTF-8 Encoded Text with Strings
+                                                </a>
+                                            </li>
+                                        
+                                            <li >
+                                                <a href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter8&#x2F;3-storing-keys-with-associated-values-in-hash-maps&#x2F;">
+                                                    <strong>8.3.</strong>
+                                                    Storing Keys with Associated Values in Hash Maps
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    
+                </ul>
+            </aside>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="book-menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="book-search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <h1>References and Borrowing</h1>
+    <h2 id="yohya">요약</h2>
+<ul>
+<li>참조를 하면 소유하지 않고 변수를 사용할 수 있다.</li>
+<li>원래 변수가 불변이면, borrowing 해와도 불변이다</li>
+<li>값에 대한 가변 참조는 하나만 가능하다.</li>
+<li>값에 대한 불변 참조는 여러개 만들 수 있다. </li>
+<li>값에 대한 불변 참조가 있으면, 가변 참조를 가질 수 없습니다.</li>
+</ul>
+<h2 id="camjo-reference-mic-cahyon-borrowing"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#references-and-borrowing">참조(reference) 및 차용(borrowing)</a></h2>
+<p>Filename: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s1 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(</span><span style="color:#9acc76;">&quot;hello&quot;</span><span style="color:#abb2bf;">);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let </span><span style="color:#abb2bf;">(s2, len) </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">calculate_length</span><span style="color:#abb2bf;">(s1);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(</span><span style="color:#9acc76;">&quot;The length of &#39;</span><span style="color:#db9d63;">{}</span><span style="color:#9acc76;">&#39; is </span><span style="color:#db9d63;">{}</span><span style="color:#9acc76;">.&quot;</span><span style="color:#abb2bf;">, s2, len);
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">calculate_length</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">s</span><span style="color:#abb2bf;">: String) -&gt; (String, </span><span style="color:#cd74e8;">usize</span><span style="color:#abb2bf;">) {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> length </span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;"> s.</span><span style="color:#5ebfcc;">len</span><span style="color:#abb2bf;">(); </span><span style="font-style:italic;color:#5f697a;">// len() returns the length of a String
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    (s, length)
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 4-5: 매개변수 소유권 반환</p>
+<p>Listing 4-5에 있는 튜플 코드의 문제는 <code>calculate_length</code>를 호출한 후에 <code>String</code>을 계속 사용하려면 호출 함수에서 <code>String</code>을 반환해야 한다는 것입니다. 왜냐하면 <code>String</code> 이 <code>calculate_length</code> 함수로 이동했기 때문입니다.<br />
+대신 <code>String</code>값에 대한 참조(reference)를 사용할 수 있습니다. <em>참조</em>는 해당 주소에 저장된 데이터에 액세스하기 위한 주소라는 점에서 포인터와 같습니다. 해당 데이터는 다른 변수가 소유합니다. 포인터와 달리 참조는 해당 참조의 수명 동안 특정 유형의 유효한 값을 가리키도록 보장됩니다.</p>
+<p>아래 코드는 값의 소유권을 가져오는 대신, 개체에 대한 참조를 매개 변수로 포함하는 <code>calculate_length</code> 함수를 정의하고 사용하는 방법입니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s1 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> len </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">calculate_length</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">s1);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`The length of </span><span style="color:#adb7c9;">&#39;</span><span style="color:#abb2bf;">{}</span><span style="color:#adb7c9;">&#39;</span><span style="color:#abb2bf;"> is {}.`, s1, len);
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">calculate_length</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">s</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">String) -&gt; </span><span style="color:#cd74e8;">usize </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">    s.</span><span style="color:#5ebfcc;">len</span><span style="color:#abb2bf;">()
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>먼저, 변수 선언의 모든 튜플 코드와 함수 반환 값이 사라진 것을 확인하십시오. 둘째, <code>&amp;s1</code>을 <code>calculate_length</code>에 전달하고 정의에서 <code>String</code>이 아닌 <code>&amp;String</code>을 사용합니다. 이러한 앰퍼샌드는 <em>참조를</em> 나타내며, 소유권을 갖지 않고 일부 값을 참조할 수 있습니다. 그림 4-5는 이 개념을 보여줍니다.</p>
+<p><img src="https://doc.rust-lang.org/book/img/trpl04-05.svg" alt="세 개의 테이블: s에 대한 테이블에는 s1에 대한 테이블에 대한 포인터만 포함됩니다.  s1에 대한 테이블은 s1에 대한 스택 데이터를 포함하고 힙의 문자열 데이터를 가리킵니다." /></p>
+<p>그림 4-5: <code>String s1</code>을 가리키는 <code>&amp;String s</code> 다이어그램</p>
+<blockquote>
+<p>참고: <code>&amp;</code>를 사용한 참조의 반대는 역 <em>참조</em> 연산자 <code>*</code>를 사용하는 역참조입니다. 8장에서 역참조 연산자의 일부 사용법을 살펴보고 15장에서 역참조에 대한 자세한 내용을 논의합니다.</p>
+</blockquote>
+<p>여기서 함수 호출을 자세히 살펴보겠습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s1 </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> len </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">calculate_length</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">s1);
+</span></code></pre>
+<p><code>&amp;s1</code> 구문을 사용하면 <code>s1</code> 값을 참조하지만 소유하지는 않는 <em>참조</em> 를 만들 수 있습니다. 소유하지 않기 때문에 참조가 사용을 중지해도 가리키는 값은 삭제되지 않습니다.</p>
+<p>마찬가지로 함수의 시그니처는 <code>&amp;</code>를 사용하여 매개변수 <code>s</code>의 유형이 참조임을 나타냅니다. 몇 가지 설명 주석을 추가해 보겠습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">calculate_length</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">s</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">String) -&gt; </span><span style="color:#cd74e8;">usize </span><span style="color:#abb2bf;">{ </span><span style="font-style:italic;color:#5f697a;">// s is a reference to a String
+</span><span style="color:#abb2bf;">    s.</span><span style="color:#5ebfcc;">len</span><span style="color:#abb2bf;">()
+</span><span style="color:#abb2bf;">} </span><span style="font-style:italic;color:#5f697a;">// Here, s goes out of scope. But because it does not have ownership of what
+</span><span style="color:#abb2bf;">  </span><span style="font-style:italic;color:#5f697a;">// it refers to, it is not dropped.
+</span></code></pre>
+<p>변수 <code>s</code>가 유효한 범위는 모든 함수 매개 변수의 범위와 동일하지만 <code>s</code>는 소유권이 없기 때문에 <code>s</code>가 사용 중지될 때 참조가 가리키는 값은 삭제되지 않습니다. 함수에 실제 값 대신 매개 변수로 참조가 있으면 소유권을 가져본 적이 없기 때문에 소유권을 돌려주기 위해 값을 반환할 필요가 없습니다.</p>
+<p><em>참조 차용</em>(reference borrowing) 을 만드는 작업을 호출합니다. 실생활에서와 마찬가지로 사람이 무언가를 소유하고 있으면 그 사람에게서 빌릴 수 있습니다. 끝나면 돌려줘야 합니다. 당신은 그것을 소유하지 않습니다.</p>
+<p>그렇다면 빌린 것을 수정하려고 하면 어떻게 될까요? 목록 4-6의 코드를 사용해 보십시오. 이 코드는 작동하지 않습니다!</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#5ebfcc;">change</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">s);
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">change</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">some_string</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">String) {
+</span><span style="color:#abb2bf;">    some_string.</span><span style="color:#5ebfcc;">push_str</span><span style="color:#abb2bf;">(`, world`);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>목록 4-6: 빌린 값 수정 시도</p>
+<p>오류는 다음과 같습니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> ownership v0.1.0 (file:///projects/ownership)
+</span><span style="color:#eb6772;">error[E0596]:</span><span style="color:#abb2bf;"> cannot borrow `</span><span style="color:#eb6772;">*some_string</span><span style="color:#abb2bf;">` as mutable, as it is behind a `</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">` reference
+</span><span style="color:#abb2bf;"> </span><span style="color:#eb6772;">--</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> src/main.rs:8:5
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">7 </span><span style="color:#adb7c9;">| </span><span style="color:#eb6772;">fn</span><span style="color:#abb2bf;"> change(some_string: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#eb6772;">String</span><span style="color:#abb2bf;">) {
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|                        </span><span style="color:#eb6772;">-------</span><span style="color:#abb2bf;"> help: consider changing this to be a mutable reference: `</span><span style="color:#adb7c9;">&amp;</span><span style="color:#eb6772;">mut</span><span style="color:#abb2bf;"> String`
+</span><span style="color:#eb6772;">8 </span><span style="color:#adb7c9;">|     </span><span style="color:#eb6772;">some_string.push_str</span><span style="color:#abb2bf;">(`</span><span style="color:#eb6772;">,</span><span style="color:#abb2bf;"> world`)</span><span style="color:#adb7c9;">;
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|     </span><span style="color:#eb6772;">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ </span><span style="color:#abb2bf;">`</span><span style="color:#eb6772;">some_string</span><span style="color:#abb2bf;">` is a `</span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">` reference, so the data it refers to cannot be borrowed as mutable
+</span><span style="color:#abb2bf;">
+</span><span style="color:#eb6772;">For</span><span style="color:#abb2bf;"> more information about this error, try `</span><span style="color:#eb6772;">rustc --explain</span><span style="color:#abb2bf;"> E0596`.
+</span><span style="color:#eb6772;">error:</span><span style="color:#abb2bf;"> could not compile `</span><span style="color:#eb6772;">ownership</span><span style="color:#abb2bf;">` due to previous error
+</span></code></pre>
+<p>변수가 기본적으로 불변인 것처럼 참조도 마찬가지입니다. 우리는 우리가 참조하는 것을 수정할 수 없습니다.</p>
+<h3 id="bbyeoggyeon-ganeunghan-camjo"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#mutable-references">변경 가능한 참조</a></h3>
+<p><em>목록 4-6의 코드를 수정하여 변경 가능한 참조</em> 대신 사용하는 몇 가지 작은 조정만으로 빌린 값을 수정할 수 있습니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#5ebfcc;">change</span><span style="color:#abb2bf;">(</span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">mut</span><span style="color:#abb2bf;"> s);
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">change</span><span style="color:#abb2bf;">(</span><span style="color:#eb6772;">some_string</span><span style="color:#abb2bf;">: </span><span style="color:#adb7c9;">&amp;</span><span style="color:#cd74e8;">mut</span><span style="color:#abb2bf;"> String) {
+</span><span style="color:#abb2bf;">    some_string.</span><span style="color:#5ebfcc;">push_str</span><span style="color:#abb2bf;">(`, world`);
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>먼저 <code>s</code>를 <code>mut</code>로 변경합니다. 그런 다음 <code>change</code> 함수를 호출할 때 <code>&amp;mut s</code>로 변경 가능한 참조를 사용합니다. 그리고 <code>change 함수</code> 정의에서 변경 가능한 참조를 허용하도록   <code>some_string: &amp;mut String</code> 으로 함수 시그니처를 업데이트합니다. 이것은 <code>change 함수</code>가 빌린 값을 변경한다는 것을 매우 분명하게 합니다.</p>
+<p>변경 가능한 참조에는 한 가지 큰 제한이 있습니다. 값에 대한 변경 가능한 참조가 이미 있는 경우, 해당 값에 대한 다른 참조를 가질 수 없습니다. <code>s</code>에 대한 두 개의 변경 가능한 참조를 만들려고 시도하는 이 코드는 실패합니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> r1 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#cd74e8;">mut</span><span style="color:#abb2bf;"> s;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> r2 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#cd74e8;">mut</span><span style="color:#abb2bf;"> s;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`{}, {}`, r1, r2);
+</span></code></pre>
+<p>오류는 다음과 같습니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> ownership v0.1.0 (file:///projects/ownership)
+</span><span style="color:#eb6772;">error[E0499]:</span><span style="color:#abb2bf;"> cannot borrow `</span><span style="color:#eb6772;">s</span><span style="color:#abb2bf;">` as mutable more than once at a time
+</span><span style="color:#abb2bf;"> </span><span style="color:#eb6772;">--</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> src/main.rs:5:14
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">4 </span><span style="color:#adb7c9;">|     </span><span style="color:#5ebfcc;">let</span><span style="color:#abb2bf;"> r1 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">mut s;
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|              </span><span style="color:#eb6772;">------</span><span style="color:#abb2bf;"> first mutable borrow occurs here
+</span><span style="color:#eb6772;">5 </span><span style="color:#adb7c9;">|     </span><span style="color:#5ebfcc;">let</span><span style="color:#abb2bf;"> r2 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">mut s;
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|              </span><span style="color:#eb6772;">^^^^^^</span><span style="color:#abb2bf;"> second mutable borrow occurs here
+</span><span style="color:#eb6772;">6 </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">7 </span><span style="color:#adb7c9;">|     </span><span style="color:#eb6772;">println!</span><span style="color:#abb2bf;">(`</span><span style="color:#eb6772;">{</span><span style="color:#abb2bf;">}</span><span style="color:#eb6772;">, </span><span style="color:#abb2bf;">{}`, r1, r2)</span><span style="color:#adb7c9;">;
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|                        </span><span style="color:#eb6772;">--</span><span style="color:#abb2bf;"> first borrow later used here
+</span><span style="color:#abb2bf;">
+</span><span style="color:#eb6772;">For</span><span style="color:#abb2bf;"> more information about this error, try `</span><span style="color:#eb6772;">rustc --explain</span><span style="color:#abb2bf;"> E0499`.
+</span><span style="color:#eb6772;">error:</span><span style="color:#abb2bf;"> could not compile `</span><span style="color:#eb6772;">ownership</span><span style="color:#abb2bf;">` due to previous error
+</span></code></pre>
+<p>이 오류는 <code>s</code>를 한 번에 두 번 이상 가변(mutable)으로 빌릴 수 없기 때문에 이 코드가 유효하지 않다고 말합니다. 첫 번째 변경 가능한 차용은 <code>r1</code>에 있으며 <code>println!</code>에서 사용될 때까지 지속되어야 합니다. 그런데 변경 가능한 참조의 생성과 사용 사이에 <code>r2</code> 라는 가변 참조(mutable references)를 만들었고, 이것은 <code>r1</code>과 동일한 데이터를 빌린 것입니다. </p>
+<p>동일한 데이터에 대한 여러 가변 참조를 동시에 금지하는 것은 매우 통제된 방식으로 변형을 허용합니다. 대부분의 언어에서는 원할 때마다 변경할 수 있기 때문에 새로운 Rustacean이 어려움을 겪고 있습니다. 이 제한을 갖는 이점은 Rust가 컴파일 시간에 데이터 경쟁(<em>data race</em>)을 방지할 수 있다는 것입니다. 데이터 경쟁은 경쟁 조건과 유사하며, 다음 세 가지 동작이 발생할 때 발생합니다.</p>
+<ul>
+<li>두 개 이상의 포인터가 동시에 동일한 데이터에 액세스합니다.</li>
+<li>적어도 하나의 포인터가 데이터에 쓰는 데 사용되고 있습니다.</li>
+<li>데이터에 대한 액세스를 동기화하는 데 사용되는 메커니즘이 없습니다.</li>
+</ul>
+<p>데이터 경쟁은 정의되지 않은 동작을 유발하며 런타임 시 추적하려고 할 때 진단 및 수정이 어려울 수 있습니다. Rust는 데이터 경쟁으로 코드를 컴파일하는 것을 거부함으로써 이 문제를 방지합니다!</p>
+<p>항상 그렇듯이 중괄호를 사용하여 새 스코프를 생성할 수 있으므로 <em>동시</em> 참조가 아닌 여러 변경 가능한 참조를 허용할 수 있습니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    {
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> r1 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#cd74e8;">mut</span><span style="color:#abb2bf;"> s;
+</span><span style="color:#abb2bf;">    } </span><span style="font-style:italic;color:#5f697a;">// r1 goes out of scope here, so we can make a new reference with no problems.
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> r2 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#cd74e8;">mut</span><span style="color:#abb2bf;"> s;
+</span></code></pre>
+<p>Rust는 변경 가능한 참조와 변경 불가능한 참조를 결합하기 위해 유사한 규칙을 적용합니다. 이 코드는 오류를 발생시킵니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> r1 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">s; </span><span style="font-style:italic;color:#5f697a;">// no problem
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> r2 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">s; </span><span style="font-style:italic;color:#5f697a;">// no problem
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> r3 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#cd74e8;">mut</span><span style="color:#abb2bf;"> s; </span><span style="font-style:italic;color:#5f697a;">// BIG PROBLEM
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    println!(`{}, {}, and {}`, r1, r2, r3);
+</span></code></pre>
+<p>오류는 다음과 같습니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> ownership v0.1.0 (file:///projects/ownership)
+</span><span style="color:#eb6772;">error[E0502]:</span><span style="color:#abb2bf;"> cannot borrow `</span><span style="color:#eb6772;">s</span><span style="color:#abb2bf;">` as mutable because it is also borrowed as immutable
+</span><span style="color:#abb2bf;"> </span><span style="color:#eb6772;">--</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> src/main.rs:6:14
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">4 </span><span style="color:#adb7c9;">|     </span><span style="color:#5ebfcc;">let</span><span style="color:#abb2bf;"> r1 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">s; </span><span style="color:#adb7c9;">//</span><span style="color:#abb2bf;"> no problem
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|              </span><span style="color:#eb6772;">--</span><span style="color:#abb2bf;"> immutable borrow occurs here
+</span><span style="color:#eb6772;">5 </span><span style="color:#adb7c9;">|     </span><span style="color:#5ebfcc;">let</span><span style="color:#abb2bf;"> r2 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">s; </span><span style="color:#adb7c9;">//</span><span style="color:#abb2bf;"> no problem
+</span><span style="color:#eb6772;">6 </span><span style="color:#adb7c9;">|     </span><span style="color:#5ebfcc;">let</span><span style="color:#abb2bf;"> r3 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">mut s; </span><span style="color:#adb7c9;">//</span><span style="color:#abb2bf;"> BIG PROBLEM
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|              </span><span style="color:#eb6772;">^^^^^^</span><span style="color:#abb2bf;"> mutable borrow occurs here
+</span><span style="color:#eb6772;">7 </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">8 </span><span style="color:#adb7c9;">|     </span><span style="color:#eb6772;">println!</span><span style="color:#abb2bf;">(`</span><span style="color:#eb6772;">{</span><span style="color:#abb2bf;">}</span><span style="color:#eb6772;">, </span><span style="color:#abb2bf;">{}, and {}`, r1, r2, r3)</span><span style="color:#adb7c9;">;
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|                                </span><span style="color:#eb6772;">--</span><span style="color:#abb2bf;"> immutable borrow later used here
+</span><span style="color:#abb2bf;">
+</span><span style="color:#eb6772;">For</span><span style="color:#abb2bf;"> more information about this error, try `</span><span style="color:#eb6772;">rustc --explain</span><span style="color:#abb2bf;"> E0502`.
+</span><span style="color:#eb6772;">error:</span><span style="color:#abb2bf;"> could not compile `</span><span style="color:#eb6772;">ownership</span><span style="color:#abb2bf;">` due to previous error
+</span></code></pre>
+<p>아휴! <em>또한</em> 동일한 값에 대한 불변 참조가 있는 동안에는 가변 참조를 가질 수 없습니다.</p>
+<p>불변 참조의 사용자는 값이 갑자기 변경될 것이라고 기대하지 않습니다! 그러나 데이터를 읽기만 하는 사람은 다른 사람의 데이터 읽기에 영향을 줄 수 없기 때문에 여러 불변 참조가 허용됩니다.</p>
+<p>참조의 범위는 도입된 위치에서 시작하여 해당 참조가 마지막으로 사용된 시간까지 계속됩니다. 예를 들어, 이 코드는 가변 참조가 도입되기 전에 불변 참조의 마지막 사용인 <code>println!</code>이 발생하기 때문에 컴파일됩니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let mut</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> r1 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">s; </span><span style="font-style:italic;color:#5f697a;">// no problem
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> r2 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#abb2bf;">s; </span><span style="font-style:italic;color:#5f697a;">// no problem
+</span><span style="color:#abb2bf;">    println!(`{} and {}`, r1, r2);
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">// variables r1 and r2 will not be used after this point
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> r3 </span><span style="color:#adb7c9;">= &amp;</span><span style="color:#cd74e8;">mut</span><span style="color:#abb2bf;"> s; </span><span style="font-style:italic;color:#5f697a;">// no problem
+</span><span style="color:#abb2bf;">    println!(`{}`, r3);
+</span></code></pre>
+<p>불변 참조 <code>r1</code> 및 <code>r2</code>의 범위는 <code>println!</code> 다음에 끝납니다. 변경 가능한 참조 <code>r3</code>이 생성되기 전 마지막으로 사용되는 위치입니다. 이러한 범위는 겹치지 않으므로 이 코드가 허용됩니다. 컴파일러는 범위가 끝나기 전 지점에서 참조가 더 이상 사용되지 않는다는 것을 알 수 있습니다.</p>
+<p>차용 오류가 때때로 실망스러울 수 있지만, 잠재적인 버그를 일찍(런타임이 아닌 컴파일 타임에) 지적하고 문제가 있는 곳을 정확히 보여주는 것은 Rust 컴파일러라는 점을 기억하십시오. 그러면 데이터가 생각했던 것과 다른 이유를 추적할 필요가 없습니다.</p>
+<h3 id="maeddarin-camjo-dangling-references"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#dangling-references">매달린 참조(Dangling References)</a></h3>
+<p><em>포인터가 있는 언어에서는 해당 메모리에 대한 포인터를 유지하면서 일부 메모리를 해제하여 댕글링 포인터</em> (다른 사람에게 제공되었을 수 있는 메모리의 위치를 참조하는 포인터)를 잘못 생성하기 쉽습니다. 대조적으로 Rust에서 컴파일러는 참조가 댕글링 참조가 되지 않도록 보장합니다. 일부 데이터에 대한 참조가 있는 경우 컴파일러는 데이터에 대한 참조가 범위를 벗어나기 전에 데이터가 범위를 벗어나지 않도록 합니다.</p>
+<p>러스트가 어떻게 컴파일 타임 오류를 방지하는지 알아보기 위해 댕글링 참조를 생성해 봅시다:</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> reference_to_nothing </span><span style="color:#adb7c9;">= </span><span style="color:#5ebfcc;">dangle</span><span style="color:#abb2bf;">();
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">dangle</span><span style="color:#abb2bf;">() -&gt; </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">String {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">s
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>오류는 다음과 같습니다.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#eb6772;">$</span><span style="color:#abb2bf;"> cargo run
+</span><span style="color:#abb2bf;">   </span><span style="color:#eb6772;">Compiling</span><span style="color:#abb2bf;"> ownership v0.1.0 (file:///projects/ownership)
+</span><span style="color:#eb6772;">error[E0106]:</span><span style="color:#abb2bf;"> missing lifetime specifier
+</span><span style="color:#abb2bf;"> </span><span style="color:#eb6772;">--</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> src/main.rs:5:16
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">5 </span><span style="color:#adb7c9;">| </span><span style="color:#eb6772;">fn</span><span style="color:#abb2bf;"> dangle() </span><span style="color:#eb6772;">-</span><span style="color:#adb7c9;">&gt; &amp;</span><span style="color:#eb6772;">String </span><span style="color:#abb2bf;">{
+</span><span style="color:#abb2bf;">  |                ^ expected named lifetime parameter
+</span><span style="color:#abb2bf;">  |
+</span><span style="color:#abb2bf;">  = help: this function</span><span style="color:#9acc76;">&#39;s return type contains a borrowed value, but there is no value for it to be borrowed from
+</span><span style="color:#9acc76;">help: consider using the `&#39;</span><span style="color:#abb2bf;">static` </span><span style="color:#eb6772;">lifetime
+</span><span style="color:#abb2bf;">  </span><span style="color:#adb7c9;">|
+</span><span style="color:#eb6772;">5 </span><span style="color:#adb7c9;">| </span><span style="color:#eb6772;">fn</span><span style="color:#abb2bf;"> dangle() </span><span style="color:#eb6772;">-</span><span style="color:#adb7c9;">&gt; &amp;</span><span style="color:#9acc76;">&#39;static String {
+</span><span style="color:#9acc76;">  |                 +++++++
+</span><span style="color:#9acc76;">
+</span><span style="color:#9acc76;">For more information about this error, try `rustc --explain E0106`.
+</span><span style="color:#9acc76;">error: could not compile `ownership` due to previous error
+</span></code></pre>
+<p>이 오류 메시지는 아직 다루지 않은 기능인 수명을 나타냅니다. 10장에서 수명에 대해 자세히 논의할 것입니다. 그러나 수명에 대한 부분을 무시하면 메시지에는 이 코드가 문제인 이유에 대한 핵심이 포함되어 있습니다.</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">this function&#39;s return type contains a borrowed value, but there is no value
+</span><span style="color:#abb2bf;">for it to be borrowed from
+</span></code></pre>
+<p><code>dangle</code> 코드의 각 단계에서 정확히 어떤 일이 발생하는지 자세히 살펴보겠습니다.</p>
+<p>파일 이름: src/main.rs</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">dangle</span><span style="color:#abb2bf;">() -&gt; </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">String { </span><span style="font-style:italic;color:#5f697a;">// dangle returns a reference to a String
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello`); </span><span style="font-style:italic;color:#5f697a;">// s is a new String
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#adb7c9;">&amp;</span><span style="color:#abb2bf;">s </span><span style="font-style:italic;color:#5f697a;">// we return a reference to the String, s
+</span><span style="color:#abb2bf;">} </span><span style="font-style:italic;color:#5f697a;">// Here, s goes out of scope, and is dropped. Its memory goes away.
+</span><span style="color:#abb2bf;">  </span><span style="font-style:italic;color:#5f697a;">// Danger!
+</span></code></pre>
+<p><code>dangle</code> 내부에 <code>s</code>가 생성되기 때문에 <code>dangle</code>의 코드가 완료되면 <code>s</code>가 할당 해제됩니다. 그러나 우리는 그것에 대한 참조를 반환하려고 했습니다. 이는 이 참조가 잘못된 <code>문자열</code>을 가리키고 있음을 의미합니다. 좋지 않아! Rust는 우리가 이것을 하도록 허용하지 않을 것입니다.</p>
+<p>여기서 해결책은 <code>문자열</code>을 직접 반환하는 것입니다.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">no_dangle</span><span style="color:#abb2bf;">() -&gt; String {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">let</span><span style="color:#abb2bf;"> s </span><span style="color:#adb7c9;">= </span><span style="color:#abb2bf;">String::from(`hello`);
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    s
+</span><span style="color:#abb2bf;">}
+</span></code></pre>
+<p>아무 문제 없이 작동합니다. 소유권이 이동되고 할당이 취소되지 않습니다.</p>
+<h3 id="camjo-ggycig"><a rel="noopener nofollow noreferrer" target="_blank" href="https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#the-rules-of-references">참조 규칙</a></h3>
+<p>참조에 대해 논의한 내용을 요약해 보겠습니다.</p>
+<ul>
+<li>주어진 시간에 <em>하나</em> 의 가변 참조 <em>또는</em> 여러 불변 참조를 가질 수 있습니다.</li>
+<li>참조는 항상 유효해야 합니다.</li>
+</ul>
+<p>다음으로 다른 종류의 참조인 슬라이스를 살펴보겠습니다.</p>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+        <a class="previous" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;1-what-is-ownership&#x2F;"><</a>
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        <a class="next" href="https:&#x2F;&#x2F;hwjskt.github.io&#x2F;rust&#x2F;chapter4&#x2F;3-the-slice-type&#x2F;">></a>
+    
+
+            </div>
+        </div>
+
+        
+            
+                <script type="text/javascript" src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+                <script type="text/javascript" src="https://hwjskt.github.io/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://hwjskt.github.io/book.js"></script>
+        
+        </div>
+    </section>
+
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+  
+  
+
+  
+  
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js" integrity="sha384-Pulw7+h73841BQIK0LzJCydKRPChJUF9w8h8W0o3h+cLtoyNPJS847bQauLWOTwg" crossorigin="anonymous"></script>
+  
+  <script src="https://hwjskt.github.io/elasticlunr.min.js"></script>
+  <script src="https://hwjskt.github.io/search_index.en.js"></script><script src="https://hwjskt.github.io/js/site.js"></script>
+
+  
+  
+
+  
+  
+</body>
+
+</html>
